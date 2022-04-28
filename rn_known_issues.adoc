@@ -1,0 +1,88 @@
+---
+sidebar: sidebar 
+permalink: rn_known_issues.html 
+keywords: netapp, keystone, release notes, known issues 
+summary: Problèmes connus dans le moteur de service NetApp 
+---
+= Problèmes connus dans le moteur de service NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Les problèmes connus suivants ont été signalés dans le moteur de service NetApp. Vous pouvez être confronté à ces problèmes lorsque vous provisionnez ou utilisez votre stockage dans le cadre de votre abonnement Flex.
+
+[cols="3*"]
+|===
+| Problème connu | Description | Solution de contournement 
+
+
+| Limites de la protection synchrone des données | Il y a un problème où les VLAN, les IPspaces et les domaines de diffusion ne sont pas définis sur le partenaire secondaire d'un cluster MetroCluster. Ce problème peut affecter la récupération des données de la zone de réplica. | Faites une demande de service pour que GSSC effectue une configuration de réseau manuelle sur le cluster partenaire. La configuration réseau peut être effectuée à l'avance si les composants réseau (VLAN, IPspace et broadcast domain) sont connus. 
+
+
+| Limitations de désactivation et de suppression de volumes activés pour la reprise d'activité | Si deux volumes ou plus d'une machine virtuelle de stockage sont activés pour la reprise après incident, la reprise après incident ne peut pas être désactivée pour un partage de fichiers ou un disque. | Demandez à GSSC de résoudre le problème. 
+
+
+| Limitations lors de la suppression de serveurs de fichiers et de magasins de blocs activés pour la reprise après incident | La suppression d'un magasin de blocs ou d'un partage de fichiers activé pour la reprise après incident peut échouer, car le peering n'est pas supprimé en raison du délai d'attente. | L'échec de la suppression est disponible dans « Contact support » et le support sera notifié via OpsRamp Ticket. 
+
+
+| Limitation lors de la création de plusieurs instantanés | Lorsque plusieurs instantanés sont déclenchés pour la création, la page Web affiche initialement uniquement le dernier instantané émis. | Le travail automatique récupère les autres instantanés dans les 15 minutes. 
+
+
+| Les serveurs de fichiers activés pour la reprise après sinistre sur les contrôleurs secondaires ne sont pas supprimés. | Tous les volumes primaires et les relations de réplication sont supprimés. Cependant, l'objet de reprise après sinistre n'est pas supprimé. Cet objet ne consomme aucune capacité ni aucun réseau. | Il n'existe aucune solution pour ce problème. 
+
+
+| Limitation de la désactivation de la sauvegarde sur les volumes | Demandez à GSSC de résoudre le problème. | Il n'existe aucune solution pour ce problème. 
+
+
+| Limitation de la suppression des sous-réseaux réseau | Les clients ne peuvent pas supprimer les sous-réseaux du réseau. | Demandez à GSSC de résoudre le problème. 
+
+
+| Limitation de la suppression de VLAN à l'aide de l'API | La suppression d'un VLAN associé à un sous-réseau laisse un stub de sous-réseau vide dans l'interface utilisateur. | Demandez à GSSC de résoudre le problème. 
+
+
+| Limitation de l'importation des VM de stockage avec un sous-réseau non standard | Les machines virtuelles de stockage (SVM, également appelées Storage Virtual machines), créées en dehors de NetApp Service Engine ne peuvent pas être opérationnelles en raison d'un sous-réseau non standard. Les machines virtuelles de stockage sont importées avec le statut `contacté support'. | Demandez à GSSC de résoudre le problème. 
+
+
+| Les rapports de capacité et de facturation peuvent être imprécis dans les environnements gérés par NetApp | Dans un environnement géré par NetApp, la capacité et les rapports de facturation générés par l'interface utilisateur peuvent être affectés en raison des mesures de taille de LUN et des niveaux de service manquants sur les volumes de sauvegarde. | Demandez à GSSC de résoudre le problème. 
+
+
+ a| 
+Délai de 15 minutes pour la génération de rapports sur la capacité engagée sur les graphiques après la création de l'abonnement.
+ a| 
+Lorsqu'un abonnement locataire est créé et que les graphiques du rapport sont vérifiés immédiatement (dans les 15 minutes suivant la création de l'abonnement), la capacité engagée n'est pas signalée correctement.
+ a| 
+Vérifiez les graphiques de rapport au moins 15 minutes après la création de l'abonnement.
+
+
+
+ a| 
+La modification des niveaux de services de performances ne déplace pas de volumes
+ a| 
+Si deux agrégats différents du même cluster sont utilisés pour deux niveaux de service, le fait de changer le niveau de service d'un volume à l'autre ne déplace pas le volume vers l'autre agrégat. Seule la règle de QoS adaptative est appliquée.
+ a| 
+Demandez à GSSC de résoudre le problème.
+
+
+
+ a| 
+La création du SVM FCP requiert une activation iSCSI
+ a| 
+Pour créer un serveur virtuel de stockage (SVM) et activer la prise en charge FCP dessus, une activation d'interface iSCSI est requise.
+ a| 
+Demandez à GSSC de résoudre le problème.
+
+
+
+ a| 
+Restriction avec plusieurs groupes hôtes avec le même initiateur
+ a| 
+Si plusieurs groupes d'hôtes sont créés avec le même nom d'initiateur et que les disques sont mappés à tous les groupes d'hôtes, les disques ne sont mappés qu'à un seul groupe d'hôtes du cluster.
+ a| 
+Demandez à GSSC de résoudre le problème.
+
+|===

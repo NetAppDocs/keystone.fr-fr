@@ -1,0 +1,55 @@
+---
+sidebar: sidebar 
+permalink: nkfsosm_site_requirements.html 
+keywords: netapp, keystone, sire, requirements, 
+summary: Exigences du site Keystone 
+---
+= Exigences du site
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+L'activation des services d'abonnement NetApp Keystone Flex (Flex Subscription) dans votre environnement est très obligatoire, notamment en termes d'espace, de racks, de PDU, d'alimentation, et le refroidissement, avec des exigences supplémentaires en matière de réseau et de sécurité abordées plus loin.
+
+
+
+== Espace
+
+Espace au sol pour héberger l'équipement d'infrastructure Flex Subscription (à fournir par les clients). NetApp fournit les spécifications de poids en fonction de la configuration finale.
+
+
+
+== Portoirs
+
+Quatre porte-vêtements à poste dans l'offre gérée par le client (à fournir par les clients). Dans l'offre gérée par NetApp, NetApp ou le client peuvent fournir les racks, selon les besoins. NetApp fournit 42 racks complets.
+
+
+
+== PDU
+
+Vous devez fournir les unités de distribution de l'alimentation (PDU), connectées à deux circuits distincts protégés avec suffisamment de prises C13. Dans l'offre gérée par le client, dans certains cas, des points de vente C19 sont requis. Dans l'offre exploitée par NetApp, NetApp ou le client peuvent fournir les PDU, selon les exigences.
+
+
+
+== Puissance
+
+Vous devez fournir l'alimentation requise. NetApp fournit les spécifications relatives à la consommation électrique en fonction de la tension nominale de 200 V (typique A, Max A, typique W, Max W, type de cordon d'alimentation, et quantité), en fonction de la configuration finale. Tous les composants disposent d'une alimentation redondante. NetApp fournit les câbles d'alimentation de l'armoire.
+
+
+
+== Refroidissement
+
+NetApp peut fournir les spécifications relatives à la climatisation (BTU typique, BTU max.) en fonction de la configuration et des exigences finales.
+
+
+
+== Mise en réseau
+
+Selon les besoins du client et les contrôleurs de stockage utilisés, NetApp offre une connectivité de 10 Go, 40 Go et 100 Go sur le site du client.
+
+NetApp fournit les émetteurs-récepteurs nécessaires uniquement pour les dispositifs d'infrastructure à abonnement Flex fournis par NetApp. Vous devez fournir les émetteurs-récepteurs requis pour les périphériques du client et le câblage aux périphériques d'infrastructure Flex Subscription fournis par NetApp.

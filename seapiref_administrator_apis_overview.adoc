@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: seapiref_administrator_apis_overview.html 
+keywords: netapp, keystone, administrator, apis, overview, 
+summary: 'Présentation des API de l"administrateur Keystone' 
+---
+= Présentation
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cette section décrit les API d'administration suivantes :
+
+* Locataires
+* Sous-locataires
+* Utilisateurs
++
+Des activités telles que la réinitialisation des mots de passe utilisateur, l'actualisation des jetons ou la connexion en tant qu'utilisateur sont disponibles dans la suite d'API grand public. Voir API d'administration (grand public).
+
+* Zones
+* Régions
+* Clusters ONTAP
+* Instances StorageGRID
+* Niveaux de services
+* Demandes de service
+* Emplois
+

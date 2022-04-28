@@ -1,0 +1,58 @@
+---
+sidebar: sidebar 
+permalink: index.html 
+keywords: netapp, keystone, service, offering, 
+summary: Bienvenue dans le portail de documentation Keystone. 
+---
+= Documentation pour l'abonnement NetApp Keystone Flex
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+L'abonnement NetApp Keystone Flex fait partie de l'offre de service NetApp Keystone. NetApp Keystone propose un portefeuille d'alternatives de dépenses d'investissement (CapEx) sur site pour une transition vers le cloud qui inclut les services NetApp Keystone Flex Pay et NetApp Keystone Flex Subscription. NetApp Keystone assure une expérience fluide du cloud hybride avec des services de stockage qui s'étendent sur site et dans le cloud. Pour plus d'informations sur NetApp Keystone, voir link:https://www.netapp.com/services/subscriptions/keystone/["NetApp Keystone"]
+
+Pour plus d'informations sur l'abonnement NetApp Keystone Flex, reportez-vous à la section link:https://www.netapp.com/services/subscriptions/keystone/flex-subscription["Abonnement Keystone Flex"]
+
+Flex Subscription est une offre de stockage en tant que service qui offre une expérience similaire à celle du cloud sur vos systèmes locaux avec la connectivité au cloud, disponible à votre rythme. * * NetApp Keystone Flex Pay* - NetApp Keystone Flex Pay (Flex Pay) est un portefeuille d'options financières flexibles incluant le financement traditionnel, le crédit-bail et des options fixes/variables pour répondre aux besoins de votre client en matière de flux de trésorerie. * *Abonnement NetApp Keystone Flex* - abonnement NetApp Keystone Flex (abonnement Flex) : service d'abonnement payant à l'utilisation, basé sur les résultats, qui offre une expérience cloud sur site.
+
+image:nkfsosm_image1.png["Erreur : image graphique manquante"]
+
+
+
+== Abonnement Flex
+
+Vous bénéficiez d'un abonnement Flex avec paiement à l'utilisation pour les services basés sur un abonnement, qui offre une expérience de cloud hybride transparente pour les modèles de consommation d'exploitation, lesquels préférant faire l'acquisition de CapEx en amont ou la location. Il permet aux clients d'accélérer le retour sur investissement en réduisant les obstacles liés à la gestion de la croissance imprévisible de la capacité et à la complexité des cycles d'approvisionnement. L'abonnement Flex permet aux clients d'aligner les aspects économiques et opérationnels sur leurs priorités commerciales.
+
+image:nkfsosm_image2.png["Erreur : image graphique manquante"]
+
+Flex Subscription est une offre de service basée sur un abonnement qui fournit une capacité de stockage, avec des niveaux de service de performance prédéfinis, pour les types de données de bloc, fichier et objet pouvant être déployés sur site et qui peut être exploitée par NetApp, un partenaire ou le client. En plus du service de base offert par Flex Subscription, les services complémentaires peuvent être choisis moyennant des frais supplémentaires. Ces services sont décrits dans la figure ci-dessous.
+
+* *Le service Data protection Basic* fournit les fonctionnalités NetApp SnapMirror et NetApp SnapVault avec des paramètres par défaut.
+* *Data protection Advanced* fournit un service avec des contrats de niveau de service RPO=0 en exploitant les fonctionnalités NetApp MetroCluster.
+
+
+
+NOTE: Flex Subscription exploite la technologie SnapVault pour les opérations de sauvegarde et SnapMirror pour la reprise après incident afin de répliquer les données à distance. Le basculement et la restauration des applications ne sont pas automatiques.
+
+image:nkfsosm_image3.png["Erreur : image graphique manquante"]
+
+
+
+=== Avantages de l'abonnement Flex
+
+L'abonnement Flex offre les avantages suivants :
+
+* Libérez vos équipes IT des tâches complexes liées au stockage et peuvent ainsi se concentrer sur la gestion des applications
+* Réduit l'investissement initial
+* Permet aux clients de répondre aux besoins sans surprovisionnement
+* Alignement des coûts du stockage de données avec les besoins/activités de l'entreprise
+* Simplifie le provisionnement de l'infrastructure en contournant les procédures d'approvisionnement complexes
+* Sécurise les données sur site
+* Permet un contrôle approprié de la conformité, des performances et de la sécurité
+
+
+image:nkfsosm_image4.png["Erreur : image graphique manquante"]

@@ -1,0 +1,128 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_netapp_service_engine_web_interface_overview.html 
+keywords: netapp, keystone, service, engine, web, interface, overview, 
+summary: 'Présentation de l"interface Web du moteur de service NetApp' 
+---
+= Présentation de l'interface Web du moteur de service NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+La figure ci-dessous illustre l'interface Web du moteur de service NetApp. Elle se compose des éléments suivants :
+
+* *Zone d'affichage.* il s'agit de la zone de travail principale de l'écran; elle a deux vues :
++
+** Vue tableau de bord : affiche différents outils pour surveiller l'utilisation, la facturation, les alertes et les demandes de service.
+** Vue liste : affiche des listes d'éléments pouvant être navigué et triés (plus d'informations ultérieurement).
+
+
+* *Menu.* utilisez le menu pour afficher et gérer les éléments de stockage, afficher les rapports et accéder à l'assistance.
+* *Logo NetApp.* cliquez sur ce bouton à tout moment pour revenir à la vue du tableau de bord.
+* *Tenant.* affiche le locataire actuellement sélectionné. Pour modifier le locataire, voir link:sewebiug_select_tenant.html["Sélectionnez le locataire"].
+* *Jobs.* cliquez sur pour afficher l'état des tâches de provisionnement les plus récentes. L'icône change de couleur pour afficher l'état du travail de configuration. Pour plus d'informations, voir link:sewebiug_netapp_service_engine_web_interface_overview.html#jobs-and-job-status-indicator["Tâches et indicateur d'état du travail"].
+* *Connexion utilisateur.* affiche le nom de l'utilisateur actuellement connecté. Cliquez sur cette icône pour vous déconnecter. Pour plus d'informations, voir link:sewebiug_log_in_to_the_netapp_service_engine_web_interface.html#log-out-of-the-netapp-service-engine-web-interface["Déconnectez-vous de l'interface Web du moteur de services NetApp"].
+
+
+image:sewebiug_image9_dashboard1.png["Tableau de bord NSE-1"]
+
+image:sewebiug_image9_dashboard2.png["NSE Tableau de bord-2"]
+
+
+
+== Vue tableau de bord
+
+Le tableau de bord affiche des informations sur vos abonnements au stockage NetApp Keystone, telles que la capacité utilisée, la facturation en fonction de votre utilisation, ainsi que les alertes récentes et les demandes de service. C'est la vue par défaut lorsque vous vous connectez pour la première fois au moteur de service NetApp. Pour plus d'informations sur le tableau de bord, reportez-vous à la section link:sewebiug_dashboard.html["Afficher le tableau de bord des abonnements Flex"].
+
+
+
+== Vue liste
+
+Une vue liste est utilisée pour afficher une liste d'objets. Par exemple, la liste des serveurs qui prennent en charge les partages de fichiers dans un abonnement s'affiche dans une vue liste, comme indiqué dans la capture d'écran ci-dessous.
+
+Depuis une vue liste, vous pouvez :
+
+* Effectuez des actions sur les éléments de la liste : voir link:sewebiug_netapp_service_engine_web_interface_overview.html#list-view["Actions de vue de liste"].
+
+
+
+
+=== Actions de vue de liste
+
+Une vue liste affiche une liste d'éléments et fournit un aperçu rapide de certains détails de l'élément (y compris l'état). Dans une vue liste, vous pouvez effectuer les actions répertoriées dans le tableau suivant.
+
+|===
+| Action | Description 
+
+
+| Créer un élément | Utilisez le bouton Créer pour créer un nouvel élément. 
+
+
+| Utiliser les icônes action | Utilisez les icônes action pour effectuer une action sur l'élément de liste. 
+
+
+| Trier la liste | Utilisez les flèches de la colonne liste pour trier la liste par colonne dans l'ordre croissant ou décroissant. Les icônes de flèche sont visibles lorsque vous placez le curseur à côté du nom de la colonne. 
+
+
+| Modifier le nombre d'éléments affichés, naviguer dans la liste | Modifiez le nombre d'éléments affichés sur la page et naviguez dans la liste à l'aide du champ éléments par page et des icônes < et > en bas de la liste. 
+
+
+| Actualisez la page | Actualisez la page à l'aide de l'icône Actualiser : 
+|===
+
+
+== États de l'objet
+
+Lors du provisionnement et de la modification, les objets de stockage passent par une série d'États avant qu'ils ne deviennent opérationnels. L'état des objets de stockage s'affiche dans la vue liste pour ces éléments. Les objets peuvent être dans l'un des États suivants :
+
+* *Création.* la ressource de stockage est en cours de création.
+* *Mise à jour.* l'élément est en cours de modification.
++
+Survient lorsqu'une modification est apportée à la ressource de stockage (serveur de fichiers, lièvre, blockstore, disque, etc.). Il inclut le redimensionnement des partages, la modification des paramètres des règles de snapshot, la modification des règles d'exportation, la création d'un snapshot, l'attribution d'un nouveau nom aux éléments, etc.
+
+* *Opérationnel.* indique que la ressource de stockage a été correctement provisionnée/modifiée et qu'elle est disponible, en ligne et fonctionnelle.
+* *Suppression.* l'objet est en cours de suppression et est en cours de traitement.
+* *L'objet en file d'attente.* est à l'état en file d'attente et est en cours de traitement.
+* *Les objets importés* approvisionnés en dehors du moteur de services NetApp sont importés avec ce statut lorsqu'ils ne remplissent pas les critères de l'abonnement NetApp Keystone Flex (Flex Subscription).
++
+
+NOTE: Ce statut indique généralement qu'aucune politique de QoS n'est appliquée à l'objet et ne peut donc pas être gérée par NetApp Service Engine dans le cadre de votre abonnement Flex. Vous pouvez modifier l'objet (à l'aide du stylet d'édition) et attribuer un niveau de service approprié. Le statut de cet objet est alors opérationnel.
+
+* *Les objets non-standard* provisionnés en dehors du moteur de service NetApp sont importés avec ce statut lorsqu'ils ne remplissent pas les critères d'abonnement NetApp Keystone Flex (abonnement Flex).
++
+
+NOTE: Ce statut implique généralement que l'objet ne passe pas à un ou plusieurs critères gérés par le moteur de services NetApp, dans le cadre de votre abonnement Flex. C'est possible link:https://docs.netapp.com/us-en/keystone/sewebiug_raise_a_service_request.html["demander un service"] Afin qu'ils soient standardisés et gérés via le portail NetApp Service Engine et opérationnels par l'équipe de support.
+
+* *Contact support.* cet état se produit lorsque la tâche de provisionnement ou de modification ne s'effectue pas complètement. Pour les éléments dans cet état, envoyez une demande de support pour résoudre le problème.
+* *Opérationnel (pour l'objet source d'une sauvegarde).* les États suivants sont les États possibles :
++
+** Avec Edit Pen : indique que l'objet de sauvegarde est opérationnel et fonctionnel.
+** Sans modifier le stylet : indique que la sauvegarde est orpheline, c'est-à-dire la relation SnapMirror de l'objet de sauvegarde avec son volume source qui est interrompue ou le volume source a été supprimé.
+
+
+
+
+
+
+== Tâches et indicateur d'état du travail
+
+Certaines tâches de provisionnement dans le moteur de services NetApp, telles que la création, la modification ou la suppression d'éléments de stockage, peuvent prendre un certain temps. Au lieu d'être exécutées immédiatement (comme pour les tâches synchrones), ces tâches sont exécutées de façon asynchrone. Lors de l'initialisation de telles tâches, NetApp Service Engine renvoie un enregistrement de tâche. L'état peut être suivi via l'icône en forme de cloche située dans le coin supérieur droit pour indiquer si la tâche soumise a été correctement terminée. L'état du travail peut également être suivi à l'aide des API. Pour plus d'informations, reportez-vous à la section link:https://docs.netapp.com/us-en/keystone/seapiref_jobs.html#retrieve-jobs["ici"]
+
+|===
+| Couleur de l'indicateur | Description 
+
+
+| Noir | Une tâche est en cours d'exécution. 
+
+
+| Rouge | La dernière tâche n'a pas pu être terminée. 
+
+
+| Vert | La dernière tâche s'est terminée avec succès. 
+|===
+Cliquez sur l'indicateur d'état pour afficher l'état des 10 tâches les plus récentes.

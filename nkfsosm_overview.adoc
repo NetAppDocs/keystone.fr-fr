@@ -1,0 +1,92 @@
+---
+sidebar: sidebar 
+permalink: nkfsosm_overview.html 
+keywords: netapp, keystone, kfs, overview, 
+summary: 'Présentation de l"abonnement NetApp Flex' 
+---
+= Modèle opérationnel, rôles et responsabilités
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+L'abonnement NetApp Keystone Flex (abonnement Flex) repose sur le modèle de location.
+
+L'abonnement Flex offre trois modèles opérationnels pour la prestation de services.
+
+* *Le modèle exploité par NetApp* permet au client de souscrire aux services proposés (selon les tiers de performance et les types de service de stockage sélectionnés) et de sélectionner l'option gérée par NetApp à un coût supplémentaire. NetApp définit l'architecture et les produits, installe les installations sur site du client et gère les opérations quotidiennes de gestion de l'infrastructure à l'aide des ressources informatiques et du stockage NetApp. Les types de services de stockage disponibles sont les suivants : fichier, bloc et objet. Les abonnements au stockage basés sur Cloud Volumes Service pour GCP et AWS peuvent également être gérés via votre instance NetApp Keystone.
+* *Modèle* * exploité par nos partenaires* est similaire au modèle opéré par NetApp, mais avec les partenaires qui exploitent le service pour leurs clients finaux. Dans ce modèle, le partenaire est la partie sous contrat référencée. Les locataires sont des clients de partenaires ou de fournisseurs de services et n'ont aucune relation de facturation avec NetApp. Un modèle opéré par le partenaire se compose généralement d'un environnement mutualisé, où les locataires et clients finaux/sous-locataires disposent de leurs propres abonnements facturés par le fournisseur de services/partenaire. L'administrateur partenaire effectue les tâches administratives de tous les locataires. Les fonctions qu'un administrateur peut exécuter sur un modèle géré par des partenaires sont différentes de celles d'un administrateur sur un modèle géré par NetApp.
+* *Exploité par le client* *model* permet au client de souscrire à un service offert, selon les niveaux de performance et les types de service de stockage choisis. NetApp définit l'architecture, les produits et les installations sur site du client et permet aux clients de gérer l'infrastructure à l'aide de leurs ressources de stockage et IT. Les clients peuvent être liés à NetApp ou à un partenaire/fournisseur de services. Selon cela, les demandes de service peuvent être formulées et adressées à NetApp ou au fournisseur de services. Un administrateur client peut effectuer les tâches administratives dans un environnement géré par le client. Ces tâches sont liées aux locataires et sous-locataires du client spécifique.
+
+
+Les caractéristiques et options de l'offre varient en fonction des modèles. Pour plus d'informations, reportez-vous à la section link:https://docs.netapp.com/us-en/keystone/sewebiug_partner_service_provider.html["Rôles et opérations des fournisseurs de services et des clients"]
+
+
+
+== Rôles et responsabilités tout au long du cycle de vie des services
+
+* *Modèle opéré par NetApp* : NetApp se charge de la gestion de bout en bout de l'installation, du déploiement, des opérations, de la surveillance, de l'optimisation et du support.
+* *Modèle géré par un partenaire* : la part des rôles et responsabilités dépend du SLA entre vous et le fournisseur de services ou le partenaire. Contactez votre fournisseur de services pour plus d'informations.
+* *Modèle géré par le client* : le tableau suivant résume le modèle global de cycle de vie du service ainsi que les rôles et responsabilités qui leur sont associés dans un environnement géré par le client.
+
+
+|===
+| Tâche | NetApp | Client 
+
+
+ a| 
+Installation et tâches associées
+
+* Installer
+* Configurer
+* Déployez
+* Intégration
+
+| image:check.png[""] | Aucune 
+
+
+ a| 
+Administration et contrôle
+
+* Superviser
+* Rapport
+* Effectuer des tâches administratives
+* Alerte
+
+| Aucune | image:check.png[""] 
+
+
+ a| 
+Opérations et optimisation
+
+* Gestion de la capacité
+* Gestion des performances
+* Gestion du niveau de service
+
+| Aucune | image:check.png[""] 
+
+
+ a| 
+Assistance
+
+* Client de support
+* Réparation du remplacement du matériel
+* Support logiciel
+* Mises à niveau et correctifs
+
+| image:check.png[""] | Aucune 
+|===
+
+
+=== Résumé des rôles et des responsabilités
+
+La liste suivante résume les rôles et les responsabilités de NetApp :
+
+* NetApp fournit, installe, configure et active le service concerné (y compris la version applicable du moteur de services NetApp dans un data Center ou une colocation). NetApp est responsable de la désinstallation à la fin de la période du contrat ou si le client décide de mettre un terme au contrat plus rapidement.
+* Lors d'une liaison avec d'autres fournisseurs DE services IT, NetApp coopère avec les fournisseurs de services IT du client ou avec leur équipe technique.
+* Les performances des services gérés par NetApp sont incluses, avec l'hypothèse que des responsabilités partagées sont applicables à l'environnement pris en charge.
+

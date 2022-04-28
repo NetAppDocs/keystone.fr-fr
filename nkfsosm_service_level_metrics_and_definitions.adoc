@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: nkfsosm_service_level_metrics_and_definitions.html 
+keywords: netapp, keystone, service, level, metrics, definitions, 
+summary: Définitions et metrics de niveau de service Keystone 
+---
+= Définitions et metrics des niveaux de service
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Les termes et définitions suivants sont utilisés dans le service NetApp Keystone Flex Subscription (Flex Subscription) :
+
+* *Gio, Tio et Pio.* mesures de la capacité de stockage de données utilisant la base de 1024 (1 Gio = 1024^3^ octets, 1 Tio = 1024^4^ octets et 1 Pio = 1024^5^ octets).
+* *IOPS/Tio* opérations de protocole par seconde demandées par l'application, divisées par la taille logique allouée du volume.
+* *La disponibilité* est mesurée en pourcentage du nombre de demandes d'E/S auxquelles le service a répondu avec succès, divisé par le nombre total de demandes d'E/S faites par le service, mesuré à la démarcation du service, dans un mois donné, sans inclure les temps d'arrêt prévus du service ou l'indisponibilité des installations requises, réseau ou autres services fournis par le client.
+* *La durabilité* est le pourcentage de données accessibles sans perte de fidélité, à l'exclusion de la suppression ou de la corruption causées par le client.
+* *IOPS cibles par Tio.* les IOPS garanties pour toutes les demandes d'E/S envoyées à un volume avant que le seuil d'IOPS par Tio cible soit atteint. La performance du volume est plafonnée à la quantité d'IOPS sélectionnée par Tio.
+
+
+
+NOTE: La mesure de performance des IOPS cibles par Tio est calculée sur la base de la capacité logique consommée en Tio.
+
+* *Latence.* temps de traitement d'une demande d'E/S reçue d'un client, mesuré à la ligne de démarcation du service (port E/S du contrôleur de stockage).
+

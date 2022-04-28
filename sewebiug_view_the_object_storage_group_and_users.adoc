@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_view_the_object_storage_group_and_users.html 
+keywords: netapp, keystone, view, object, storage, group, users, 
+summary: Keystone affiche le groupe de stockage objet et les utilisateurs 
+---
+= Afficher les utilisateurs et les groupes de stockage objet
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+La liste gestion des utilisateurs affiche les utilisateurs et les groupes de stockage d'objets d'un sous-locataire spécifié.
+
+.Étapes
+. Dans ce menu, sélectionnez stockage objet > utilisateurs.
+. Utilisez le menu déroulant sous-locataire pour sélectionner un autre sous-locataire, si nécessaire.
+. Utilisez les liens utilisateurs et groupes pour basculer entre les utilisateurs et les groupes.
++
+** La liste utilisateurs affiche les utilisateurs de stockage objet définis pour le sous-tenant sélectionné. Pour chaque utilisateur, il affiche son nom ainsi que les groupes de stockage objet auxquels ils appartiennent.
+** La liste groupes affiche les groupes de stockage d'objets définis pour le sous-tenant sélectionné. Le nom du groupe et la règle S3 sont affichés pour chaque groupe.
++
+Pour plus d'informations sur l'utilisation des fonctions d'une liste, voir link:sewebiug_netapp_service_engine_web_interface_overview.html#list-view["Vue liste"].
+
+
+
+

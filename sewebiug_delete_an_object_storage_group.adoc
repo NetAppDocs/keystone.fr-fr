@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_delete_an_object_storage_group.html 
+keywords: netapp, keystone, delete, object, storage, group, 
+summary: Keystone supprime un groupe de stockage objet 
+---
+= Supprime un groupe de stockage objet
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Utilisez cette méthode pour supprimer un groupe de stockage d'objets.
+
+.Étapes
+. Afficher link:sewebiug_view_host_groups.html#view-host-groups["La liste des groupes"].
+. Assurez-vous que le sous-locataire correct est sélectionné et que l'affichage indique des groupes (et non des utilisateurs).
+. Recherchez le groupe dans la liste et cliquez sur l'icône Supprimer pour ce groupe.
+. Pour confirmer l'action de suppression, cliquez sur *confirmer*. Le groupe de stockage d'objets est supprimé de la liste.
+

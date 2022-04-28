@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_delete_a_user.html 
+keywords: netapp, keystone, delete, user, 
+summary: Suppression de Keystone par un utilisateur 
+---
+= Supprimer un utilisateur
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Utilisez cette méthode pour supprimer un utilisateur.
+
+
+NOTE: Il n'est pas possible de récupérer un utilisateur supprimé.
+
+.Étapes
+. Sélectionnez Administration > utilisateurs dans le menu.
+. Recherchez l'utilisateur dans la liste et cliquez sur l'icône Supprimer.
+. Dans la boîte de dialogue confirmer la suppression, entrez le nom de l'utilisateur à supprimer.
+. Cliquez sur *confirmer*.
+

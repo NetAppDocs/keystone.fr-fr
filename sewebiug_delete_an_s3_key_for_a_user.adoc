@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_delete_an_s3_key_for_a_user.html 
+keywords: netapp, keystone, s3, key, user, 
+summary: 'Keystone supprime une clé S3 d"un utilisateur' 
+---
+= Supprimez une clé S3 d'un utilisateur
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Utilisez cette méthode pour supprimer une clé S3 pour un utilisateur.
+
+.Étapes
+. Afficher le link:sewebiug_view_a_list_of_users.html#view-a-list-of-users["Liste des utilisateurs"].
+. Assurez-vous que le sous-locataire correct est sélectionné et que l'affichage indique les utilisateurs (et non les groupes).
+. Localisez l'utilisateur dans la liste et cliquez sur l'icône clé de ce groupe.
++
+Pour plus d'informations sur l'utilisation des éléments dans les listes, reportez-vous à la section link:sewebiug_netapp_service_engine_web_interface_overview.html#list-view["Actions de vue de liste"].
+
+. La boîte de dialogue gérer les clés S3 s'affiche et affiche la liste des clés pour l'utilisateur.
+. Dans la liste des clés, localisez la clé à supprimer et cliquez sur l'icône Supprimer.
+. Cliquez sur *confirmer* pour confirmer l'action de suppression. La clé est supprimée de la liste des clés utilisateur.
+. Cliquez sur *Fermer* pour fermer la boîte de dialogue gestion des clés S3.
+

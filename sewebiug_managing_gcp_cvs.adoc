@@ -1,0 +1,67 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_managing_gcp_cvs.html 
+keywords: netapp, keystone, managing CVS for GCP, gcp, Google Cloud Volume, CVS, Cloud Volumes Service 
+summary: Gestion des abonnements Cloud Volume sur Google Cloud Platform 
+---
+= Gestion de Cloud Volumes Service pour GCP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Les abonnements à Cloud Volumes Service pour Google Cloud Platform (GCP) sont associés à des sous-locataires spécifiques sous un locataire. Un sous-locataire est abonné à un seul service Google Cloud. Vous pouvez créer et gérer des services Cloud (instances Google Cloud) pour vos locataires et sous-locataires, et provisionner le stockage sur Google Cloud en fonction des locations. Les comptes Cloud Volumes Service des locataires et sous-locataires doivent être configurés avant de gérer les instances Google Cloud via NetApp Service Engine. Pour plus d'informations sur Cloud Volumes Service sur GCP, reportez-vous à https://docs.netapp.com/us-en/occm/concept_cvs_gcp.html["En savoir plus sur Cloud Volumes Service pour Google Cloud"].
+
+
+NOTE: Les comptes Cloud Volumes Service des locataires et sous-locataires doivent déjà être configurés pour GCP. Contactez l'assistance technique pour obtenir les détails du compte de service. Pour gérer Google Cloud volumes, vous avez besoin d'un accès administrateur client.
+
+
+
+== Gestion de vos services cloud sur GCP
+
+Vous pouvez gérer vos services Cloud sur Google Cloud à partir du menu *SERVICES CLOUD* du volet de navigation de gauche. La page Services cloud affiche tous les services cloud pour tous les sous-locataires d'un locataire sélectionné. Vous pouvez afficher, modifier et supprimer les services Cloud de cette page. Vous pouvez également ajouter un nouveau service en suivant ces étapes.
+
+Vous devez vous assurer que :
+
+* Le sous-locataire est abonné au service Google Cloud.
+* Vous disposez du fichier JSON pour le compte de service de l'abonné et vous connaissez le numéro de projet GCP associé à l'instance Google Cloud.
+* Pour vous assurer que Cloud Volumes Service pour GCP est déjà configuré sur Cloud Manager par votre équipe de support. Pour plus d'informations, voir https://docs.netapp.com/us-en/occm/task_setup_cvs_gcp.html["Configuration de Cloud Volumes Service pour Google Cloud"].
+
+
+.Étapes
+. Sélectionnez *CLOUD SERVICES* dans le menu.
+. Cliquez sur *Créer*, puis sur *Google Cloud*.
+. Sur la page Créer un service cloud pour Google Cloud, sélectionnez le sous-locataire pour lequel vous souhaitez créer le service, puis ajoutez un nom et le numéro de projet GCP.
+. Dans la section identifiants Google Cloud, téléchargez le fichier JSON avec les informations d'identification du compte de service.
+. Si nécessaire, ajoutez des balises au service.
+. Cliquez sur *Créer*. Lorsqu'il est créé, l'état du service devient `séparé` sur la page Services de Cloud.
+
+
+
+
+== Gestion des volumes sur GCP
+
+Avant de gérer des volumes cloud sur GCP, le compte Cloud Volumes Service du locataire doit être créé et le compte doit être abonné à Cloud volumes. Contactez l'assistance technique pour vous assurer que ces étapes sont terminées.
+
+Vous pouvez gérer les volumes d'un sous-locataire sur GCP à partir de *SERVICES DE FICHIERS > volumes GCP* dans le volet de navigation de gauche. La page GCP volumes répertorie les volumes cloud existants créés sur GCP pour le sous-locataire sélectionné et la région correspondante. Vous pouvez afficher, modifier et supprimer les volumes existants de cette page. Vous pouvez également provisionner un nouveau volume cloud en suivant ces étapes.
+
+.Étapes
+. Sélectionnez *SERVICES DE FICHIERS > volumes GCP* dans le menu.
+. Cliquez sur *Créer*. La page Créer un volume GCP s'affiche.
+. Sélectionnez le sous-locataire pour lequel vous souhaitez créer le volume.
+. Sélectionnez la région et le réseau. La liste est filtrée en fonction du compte Cloud Volumes Service du sous-locataire dans GCP.
+. Ajouter un nom pour le volume.
+. Sélectionnez le niveau de service approprié.
+. Entrez le chemin d'accès au fichier du volume comme jeton de création.
+. Attribuez le quota de volume en octets.
+. Si nécessaire, ajoutez des balises pour le volume.
+. Cliquez sur *Créer*. Lorsqu'il est créé, l'état du volume devient `séparé` sur la page volumes GCP.
+
+
+Regardez la vidéo suivante pour découvrir comment créer un volume sur GCP via Cloud Volumes Service et le moteur de services NetApp :
+
+video::Crq5a1zi1Vg[youtube, width=750,height=400]

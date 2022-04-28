@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_modify_a_file_share.html 
+keywords: netapp, keystone, modify, file, share, 
+summary: Keystone modifie un partage de fichiers 
+---
+= Modifier un partage de fichiers
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez modifier le nom du partage, le type de partage (CIFS, NFS, multiprotocole), le niveau de service, la capacité, La policy Snapshot, l'export policy, la liste de contrôle d'accès (ACL) et les balises
+
+
+NOTE: Cette méthode vous permet de déplacer vos partages vers différents niveaux de performances, le cas échéant. Vous ne pouvez modifier le type de partage que si le serveur prend en charge les services respectifs.
+
+Le partage de fichiers doit être à l'état opérationnel. Pour comprendre les États de volume et les étapes à suivre pour les rendre opérationnels, voir link:https://docs.netapp.com/us-en/keystone/sewebiug_view_shares.html["Afficher les disques"] et link:https://docs.netapp.com/us-en/keystone/sewebiug_netapp_service_engine_web_interface_overview.html#Object-states["États de l'objet"]
+
+.Étapes
+. Afficher le link:sewebiug_view_shares.html#view-shares["Liste des partages"].
+. Localisez le partage dans la liste et cliquez sur l'icône Modifier pour ce partage. (Pour plus de détails sur l'utilisation des éléments dans les listes, voir link:sewebiug_netapp_service_engine_web_interface_overview.html#list-view["Actions de vue de liste"]).
+. Apportez les modifications nécessaires ; pour les descriptions de champ, reportez-vous à la section link:sewebiug_create_a_new_file_share.html["Créez un nouveau partage de fichiers"].
+. Cliquez sur *Done*. Cela crée un travail pour modifier le partage.
+
+
+Modifier le partage est exécuté comme une tâche asynchrone. Vous pouvez :
+
+* Vérifiez l'état du travail dans la liste des travaux. Pour plus d'informations sur le suivi des travaux, reportez-vous à la section link:https://docs.netapp.com/us-en/keystone/sewebiug_netapp_service_engine_web_interface_overview.html#jobs-and-job-status-indicator["ici"].
+* Une fois le travail terminé, vérifiez le statut du partage dans la liste partages.
+

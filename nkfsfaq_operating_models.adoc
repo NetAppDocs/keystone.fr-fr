@@ -1,0 +1,100 @@
+---
+sidebar: sidebar 
+permalink: nkfsfaq_operating_models.html 
+keywords: netapp, keystone, operating, models, 
+summary: Modèles opérationnels 
+---
+= Modèles opérationnels et responsabilités
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Il existe trois modèles opérationnels dans les abonnements Flex. Ces FAQ sont liées à ces modèles opérationnels.
+
+
+
+=== Quels sont les différents modèles opérationnels et qui est responsable des principales activités?
+
+Le tableau ci-dessous présente les trois modèles d'exploitation qu'un client peut choisir : le système opéré par NetApp ou par ses partenaires ou par le client.
+
+* *Modèle opéré par NetApp* : NetApp se charge de la gestion de bout en bout de l'installation, du déploiement, des opérations, de la surveillance, de l'optimisation et du support.
+* *Modèle géré par un partenaire* : la part des rôles et responsabilités dépend du SLA entre vous et le fournisseur de services ou le partenaire. Contactez votre fournisseur de services pour plus d'informations.
+* *Modèle géré par le client* : le tableau suivant résume le modèle global de cycle de vie du service ainsi que les rôles et responsabilités qui leur sont associés dans un environnement géré par le client.
+
+
+|===
+| Tâche | NetApp | Client 
+
+
+ a| 
+Installation et tâches associées
+
+* Installer
+* Configurer
+* Déployez
+* Intégration
+
+| image:check.png[""] | Aucune 
+
+
+ a| 
+Administration et contrôle
+
+* Superviser
+* Rapport
+* Effectuer des tâches administratives
+* Alerte
+
+| Aucune | image:check.png[""] 
+
+
+ a| 
+Opérations et optimisation
+
+* Gestion de la capacité
+* Gestion des performances
+* Gestion du niveau de service
+
+| Aucune | image:check.png[""] 
+
+
+ a| 
+Assistance
+
+* Client de support
+* Réparation du remplacement du matériel
+* Support logiciel
+* Mises à niveau et correctifs
+
+| image:check.png[""] | Aucune 
+|===
+
+
+=== Qu'est-ce qu'un modèle opéré par NetApp ?
+
+Ce modèle d'exploitation permet au client de souscrire aux services proposés, selon les tiers de performance et les types de services de stockage sélectionnés, et de sélectionner l'option exploitée par NetApp à un coût supplémentaire. NetApp définit l'architecture et les produits, les installations sur site du client et NetApp gère les opérations quotidiennes de gestion de l'infrastructure à l'aide de nos ressources informatiques et de stockage. Les types de services de stockage disponibles sont les suivants : fichier, bloc (iSCSI) et objet. Cloud Volumes Service pour GCP et AWS sont également pris en charge.
+
+NetApp crée et gère aussi les partenaires et les locataires, le cas échéant, et gère les abonnements.
+
+
+
+=== Qu'est-ce qu'un modèle opéré par nos partenaires ?
+
+Le modèle d'exploitation du partenaire ou du fournisseur de services est identique au modèle exploité par NetApp, mais avec l'équipe partenaire qui exploite le service pour son client final. Dans ce modèle, le partenaire est la partie sous contrat référencée. Les locataires sont des clients des fournisseurs de services et n'ont aucune relation de facturation avec NetApp. Ils gèrent leur location et leurs clients. Les demandes de support des locataires sont formulées en premier lieu par le fournisseur de services avant d'être transmises à NetApp.
+
+
+
+=== Qu'est-ce qu'un modèle géré par le client ?
+
+Ce modèle d'exploitation permet au client de souscrire à un service offert, en fonction des tiers de performance et des types de services de stockage sélectionnés. NetApp définit l'architecture, les produits et les installations sur site du client et permet aux clients de gérer l'infrastructure à l'aide de leurs ressources de stockage et IT. Les types de services de stockage disponibles sont les suivants : fichier, bloc (iSCSI) et objet. Dans ce modèle, le client fait référence à la partie sous contrat, qui peut être un utilisateur final ou un partenaire.
+
+
+
+=== Qui est propriétaire de l'équipement?
+
+Dans les trois modèles d'exploitation, NetApp est propriétaire de la propriété de tout le matériel et les logiciels installés sur le site du client.

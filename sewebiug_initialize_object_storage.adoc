@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_initialize_object_storage.html 
+keywords: netapp, keystone, initialize, object, storage, 
+summary: Keystone initialise le stockage objet 
+---
+= Initialiser le stockage d'objets
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Le stockage objet doit être initialisé avant de pouvoir être utilisé.
+
+Si vous tentez de créer un compartiment de stockage sur un stockage objet qui n'a pas encore été initialisé, le message d'initialisation du stockage s'affiche. La section suivante décrit le processus.
+
+.Étapes
+. Afficher le link:sewebiug_view_buckets.html#view-buckets["Liste des compartiments"] Et sélectionnez le sous-locataire sous lequel créer le compartiment.
+. Si le stockage objet n'a pas été initialisé pour ce sous-tenant, le message suivant s'affiche :
++
+image:sewebiug_image31.png["Erreur : image graphique manquante"]
+
+. Cliquez sur *initialiser le stockage d'objets*.
+. Dans la boîte de dialogue initialiser le stockage d'objets, sélectionnez le quota pour le stockage d'objets et cliquez sur *Créer*.
++
+image:sewebiug_image32.png["Erreur : image graphique manquante"]
+
+. Vérifiez la liste des travaux pour vous assurer que le stockage d'objets a bien été initialisé.
+

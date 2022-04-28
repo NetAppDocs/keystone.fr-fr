@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_managing_tenants_and_subtenants.html 
+keywords: netapp, keystone, managing, subtenants, 
+summary: Gestion des sous-locataires par Keystone 
+---
+= Gestion des locataires et sous-locataires
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Grâce à NetApp Service Engine, vous pouvez afficher et gérer vos locataires et sous-locataires. La colocation initiale est définie par l'équipe de support NetApp pour les fournisseurs de services, les partenaires et les locataires. La région, la zone et l'abonnement sont déjà configurés par le support et sont disponibles lorsque vous créez des locataires et des sous-locataires sous votre location.
+
+
+
+== Locataires
+
+Si vous êtes un administrateur partenaire, vous pouvez créer, modifier et supprimer un tenant de *ADMINISTRATION* > *locataires*. Les administrateurs de locataires ne peuvent afficher que leurs abonnements et sous-locataires respectifs. Vous pouvez également définir le réseau pour les locataires qui relèvent de votre entreprise partenaire.
+
+
+
+=== Créez un locataire
+
+Vous pouvez créer un locataire si vous êtes un administrateur partenaire. Vous pouvez également créer et gérer les réseaux pour chaque locataire. Pour plus d'informations sur la création de réseaux, reportez-vous à la section link:sewebiug_define_network_configurations.html["Définissez des configurations réseau avec des sous-réseaux"].
+
+.Étapes
+. Cliquez sur *Créer locataire*.
+. Ajoutez un nom et le code. Le code qui représente le locataire doit être unique dans une instance NetApp Service Engine et se composer de caractères inférieurs.
+. Cliquez sur *Créer*.
+
+
+
+NOTE: Vous pouvez uniquement modifier le nom et la description d'un locataire existant. En outre, vous ne pouvez pas supprimer un locataire auquel sont associés des sous-locataires ou des composants de stockage.
+
+
+
+== Sous-locataires
+
+Si vous êtes un administrateur partenaire ou un administrateur de tenant, vous pouvez afficher et gérer les sous-locataires.
+
+
+
+=== Créez un sous-locataire
+
+Si vous êtes un administrateur partenaire ou un administrateur de tenant, vous pouvez créer, modifier et supprimer un sous-locataire de *ADMINISTRATION* > *sous-locataires*. Vous pouvez également créer et gérer des réseaux pour chaque sous-locataire.
+
+Pour plus d'informations sur la création de réseaux, reportez-vous à la section link:sewebiug_define_network_configurations.html["Définissez des configurations réseau avec des sous-réseaux"].
+
+.Étapes
+. Cliquez sur *Créer un sous-locataire*.
+. Ajoutez un nom et le code. Le code qui représente le sous-locataire doit être unique dans une instance NetApp Service Engine et se composer de caractères inférieurs.
+. Cliquez sur *Créer*.
+
+
+
+NOTE: Vous pouvez uniquement modifier le nom d'un sous-locataire existant. En outre, vous ne pouvez pas supprimer un sous-locataire auquel sont associés des composants de stockage.

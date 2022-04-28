@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_working_with_block_storage_overview.html 
+keywords: netapp, keystone, working, block, storage, overview, 
+summary: Keystone fonctionne avec une présentation du stockage en mode bloc 
+---
+= Présentation
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Dans les systèmes de stockage en mode bloc, le stockage des données est divisé en éléments individuels dotés chacun d'un identifiant unique. Le moteur de service NetApp désigne le stockage de données en mode bloc comme un magasin de blocs et les éléments individuels comme des disques.
+
+Les magasins de blocs appartiennent à un sous-locataire et sont spécifiés dans une zone (un magasin de blocs par zone par sous-locataire). Un magasin de blocs possède des attributs de mise en réseau (par exemple, une adresse IP et un ID VLAN) qui sont utilisés pour accéder aux disques via le protocole iSCSI ou FC. La reprise après incident DP peut être activée sur un magasin en mode bloc. Pour plus d'informations, voir link:sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html#disaster-recovery.html["Reprise après incident"].
+
+Les magasins de blocs doivent être initialisés avant de pouvoir être utilisés. Lorsque le stockage en bloc est disponible et qu'il n'a pas été initialisé, il peut être initialisé avant de créer le premier disque sur le magasin en bloc dans le cadre du processus de création de disque.
+
+Les disques sont créés dans des magasins de blocs. Les disques ont de nombreux attributs configurables inclus la capacité et le niveau de service associé. Des options DP telles que link:sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html#snapshots["Snapshots"] et link:sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html#disaster-recovery["Reprise après incident"] peut être activé pour un disque.
+
+L'accès aux disques est contrôlé par des groupes hôtes. Les groupes d'hôtes sont des noms de nœud initiateurs ; en mappant un ou plusieurs groupes d'hôtes sur un disque, vous pouvez définir quels initiateurs ont accès au disque.
+
+Groupes hôtes :
+
+* Sont spécifiques à un protocole. Il peut s'agir de :
++
+** Groupes hôtes du protocole FC : ces groupes comprennent des initiateurs FC World Wide Port Name (WWPN). Par exemple, `20:56:00:a0:98:5c:0d:da`).
+** Groupes d'hôtes du protocole iSCSI : ils se composent d'initiateurs qui sont des noms qualifiés iSCSI (IQN). Par exemple, `iqn.1998-01.com.vmware:esx2`.
+
+
+* Se compose de paires alias/initiateur. Un alias permet d'identifier facilement l'initiateur. Par exemple, `esxserver1'.
+* Peuvent être créées sans aucun initiateur. Les groupes d'hôtes vides peuvent être mappés sur des disques en tant qu'espaces réservés, mais doivent être entièrement définis pour permettre l'accès au disque. L'utilisation de groupes d'hôtes permet :
+* Mappage de plusieurs disques sur le même ensemble d'initiateurs
+* Mise à jour de l'ensemble des initiateurs sur plusieurs disques.
+
+
+Cette section contient des informations sur :
+
+* Utilisation des groupes hôtes :
++
+** Afficher les groupes d'hôtes
+** Créez un groupe d'hôtes
+** Modifier les initiateurs du groupe hôte
+** Supprimer un groupe d'hôtes
+
+
+* Fonctionnement avec des disques :
++
+** Afficher les disques
+** Créer un nouveau disque
+** Créer un disque à partir d'un snapshot
+** Modifier un disque
+** Supprimer un disque
+** Créer un snapshot ad hoc d'un disque
+
+
+

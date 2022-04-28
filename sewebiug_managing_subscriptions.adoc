@@ -1,0 +1,88 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_managing_subscriptions.html 
+keywords: netapp, keystone, managing, subscriptions, 
+summary: Gestion des abonnements Keystone 
+---
+= Gestion des abonnements
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+La gestion des abonnements implique l'attribution de niveaux de service à votre abonnement NetApp Keystone Flex (Flex Subscription) et aux services d'abonnement aux locataires, ou l'allocation et la modification des capacités aux niveaux de service à l'aide de l'interface du moteur de services NetApp.
+
+Les abonnements flexibles représentés par la relation entre les fournisseurs/partenaires de services et NetApp et les abonnements aux locataires représentent la relation entre le fournisseur de services et ses locataires et sous-locataires (clients finaux). Lorsque les administrateurs NetApp ou GSSC créent des services d'abonnement Flex pour les partenaires et les locataires, cela implique que l'allocation du stockage a été réalisée. Toutefois, à moins que les niveaux de service ne soient créés et que la capacité allouée correspondante ne soit complète, le stockage ne peut pas être consommé par les sous-locataires ou les clients finaux. Les administrateurs partenaires peuvent gérer le stockage de leurs abonnements Flex Subscription et locataires. Les administrateurs de locataires ne peuvent voir que les détails de l'abonnement aux locataires et les services pour leur propre location.
+
+
+
+== Gestion de l'abonnement Flex (abonnements Keystone)
+
+Si vous êtes un administrateur partenaire, vous pouvez afficher et gérer vos services d'abonnement Flex à partir de *ABONNEMENTS* > *abonnements Keystone*. *Les abonnements Keystone* représentent les services d'abonnement Flex créés par les administrateurs NetApp pour les partenaires. Les administrateurs partenaires peuvent consulter leurs services d'abonnement Flex et créer des demandes de service pour :
+
+* Augmentez la capacité d'un abonnement
+* Ajouter un service à un abonnement (attribuer un niveau de service et de la capacité)
+
+
+Les demandes de service sont reçues et traitées par l'équipe d'assistance.
+
+Vous pouvez également afficher et gérer les services de protection des données et de protection avancée auxquels vous êtes abonné, dans des onglets séparés.
+
+
+
+=== Augmentez la capacité d'un abonnement
+
+Ainsi, vous pouvez augmenter la capacité dédiée aux niveaux de service souscrits pour répondre aux besoins croissants.
+
+.Étapes
+. Sélectionnez l'abonnement pour lequel vous souhaitez augmenter la capacité dans le menu déroulant.
+. Cliquez sur *augmenter la capacité* pour le niveau de service souhaité.
+. Spécifiez la capacité (en Tio) requise.
+. Cliquez sur *confirmer*.
+
+
+
+
+=== Ajoutez un service à un abonnement
+
+Vous pouvez ajouter un service à un abonnement. L'ajout d'un service inclut l'attribution d'un niveau de service à votre abonnement et la spécification de la capacité pour le même niveau de service.
+
+Un abonnement peut n'avoir qu'un seul de chaque niveau de performance, par exemple si votre abonnement contient déjà un service Extreme et Standard, vous pouvez ajouter un service Premium ou Block.
+
+.Étapes
+. Sélectionnez l'abonnement pour lequel vous souhaitez augmenter la capacité dans le menu déroulant.
+. Cliquez sur *Ajouter service*.
+. Sélectionnez le service d'abonnement que vous souhaitez ajouter dans le menu déroulant et ajoutez la capacité (en Tio) que vous souhaitez attribuer au niveau de service.
+. Cliquez sur *confirmer*.
+
+
+
+NOTE: Si vous êtes abonné à la hiérarchisation extrême ou à la hiérarchisation premium, vous pouvez modifier le niveau de performance de tout abonnement existant et choisir un niveau de performance Tiering. Vous pouvez également choisir de passer d'un niveau de performance avec Tiering à un niveau de performance sans Tiering.
+
+
+
+== Gérez les abonnements aux locataires
+
+Si vous êtes un administrateur partenaire, vous pouvez créer, afficher et mettre à jour vos abonnements de tenant à partir de *ABONNEMENTS* > *abonnements de tenant*. Si vous êtes un administrateur de tenant, vous ne pouvez afficher que les abonnements.
+
+
+
+=== Créez un abonnement de locataire
+
+Vous pouvez créer de nouveaux abonnements pour vos locataires.
+
+.Étapes
+. Cliquez sur *Nouveau abonnement*.
+. Spécifiez la région, la zone, la durée de l'abonnement, les plans tarifaires et d'autres détails. L'abonnement au locataire est attribué à un abonnement Keystone en fonction de la zone sélectionnée. En effet, chaque abonnement Keystone est lié à une zone.
++
+
+NOTE: Vous ne pouvez pas créer d'abonnements se chevauchant. La date de début doit être au moins le jour suivant, car les abonnements commencent un jour avant la date de début spécifiée. De plus, il ne peut pas être plus de 30 jours à compter de la date du jour.
+
+. Cliquez sur *Créer*.
+
+
+Vous ne pouvez supprimer aucun abonnement. Vous pouvez uniquement modifier les abonnements de tenant existants et ajouter de nouveaux niveaux de service, augmenter la capacité d'engagement pour un niveau de service et ajouter des balises aux abonnements.

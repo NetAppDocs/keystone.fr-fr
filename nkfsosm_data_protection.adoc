@@ -1,0 +1,45 @@
+---
+sidebar: sidebar 
+permalink: nkfsosm_data_protection.html 
+keywords: netapp, keystone, data, protection, 
+summary: Protection des données 
+---
+= La protection des données
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Le service de protection des données NetApp Keystone Flex Subscription (Flex Subscription) peut sauvegarder vos données et les récupérer si nécessaire. Les services de protection des données disponibles sont les suivants :
+
+* Snapshots de disques et partages
+* Sauvegardes de disques et partages (service de protection des données requis dans le cadre de l'abonnement)
+* Reprise sur incident pour les disques et les partages (service de protection des données requis dans le cadre de l'abonnement)
+
+
+
+NOTE: Les services de sauvegarde et de reprise après incident sont disponibles en tant que services d'extension, tandis que Snapshot est disponible dans le service de stockage de base.
+
+|===
+|  | Snapshots d'une seule région (disponibles dans le cadre du service de stockage de base) | Sauvegarde dans plusieurs régions (extension de protection des données) | Reprise après incident dans plusieurs régions (extension de protection des données) 
+
+
+| Cas d'utilisation | Limitez les risques de suppression ou de corruption des données des utilisateurs ou des applications, et non de perte ou de défaillance de l'infrastructure | Limitez le risque de perte totale de données sur le volume primaire en raison de la perte ou de la défaillance de l'infrastructure | Limitez le risque de perte complète de données sur le volume principal due à une perte ou une défaillance de l'infrastructure avec un objectif de délai de restauration 
+
+
+| Politique | Toutes les heures, tous les jours, toutes les semaines et tous les mois | Nombre de sauvegardes à conserver selon les copies Snapshot toutes les heures, tous les jours, toutes les semaines et tous les mois | 1 heure, 4 heures et tous les jours 
+
+
+| Topologie | Source uniquement | Sauvegarde | Cible de réplication asynchrone 
+
+
+| Niveau de service de réplication cible^1^ | s/o | Standard | Identique au primaire 
+|===
+^1^capacité de stockage supplémentaire à inscrire
+
+
+NOTE: L'abonnement à un service d'abonnement Flex de base ne sauvegarde pas automatiquement vos données. Vous devez vous abonner à des services supplémentaires de protection des données et configurer votre système pour les services de sauvegarde de données et de reprise sur incident. Si votre système de stockage n'est pas géré par les services Flex Subscription, NetApp peut toujours prendre en charge la protection des données de votre système de stockage et vous aider à le connecter à vos services Flex Subscription. Toutefois, NetApp n'est pas responsable des défaillances des sauvegardes.

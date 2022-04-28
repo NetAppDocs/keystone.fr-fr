@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_raise_a_service_request.html 
+keywords: netapp, keystone, raise, service, request, NetApp GSSC, tenant support 
+summary: Keystone demande de service 
+---
+= Demander un service
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+L'écran demandes de service vous permet de répondre à de nouvelles demandes de service qui sont traitées par votre propre équipe de support ou par le service GSSC de NetApp.
+
+Vous pouvez afficher le résumé des demandes de service les plus récentes, triées par priorité et par heure de création, dans le widget *demandes de service* du tableau de bord. Vous pouvez également accéder à l'écran demandes de service pour rechercher et afficher les détails de toutes les demandes de service soulevées dans votre environnement.
+
+Pour créer une nouvelle demande de service, suivre cette procédure.
+
+.Étapes
+. Dans le menu, sélectionnez *SUPPORT > demandes de service* et cliquez sur *Nouvelle demande de service*.
+. Sur la page Nouvelle demande de service, sélectionnez la catégorie et la priorité de la demande, puis cliquez sur *Suivant*.
+. Les champs de l'écran Détails changent en fonction de la catégorie sélectionnée. Entrez les informations requises. Cliquez sur *Suivant*.
+. Vérifiez les détails de la demande. Si vous souhaitez corriger quelque chose, utilisez le bouton Retour pour revenir à la page précédente et corriger les détails. Si tous les détails sont corrects, cliquez sur *Envoyer*.
+. La demande de service est créée et répertoriée sur l'écran demandes de service. Une nouvelle demande de service a le statut «Nouveau».
+
+
+Un e-mail est envoyé au demandeur pour indiquer que la demande a été créée. L'e-mail est envoyé à l'adresse e-mail enregistrée pour l'utilisateur qui a demandé le moteur de services NetApp.

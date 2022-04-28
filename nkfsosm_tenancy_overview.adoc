@@ -1,0 +1,75 @@
+---
+sidebar: sidebar 
+permalink: nkfsosm_tenancy_overview.html 
+keywords: netapp, keystone, tenants, subtenants, hierarchy, tenancy 
+summary: 'Présentation de l"abonnement flexible NetApp Keystone' 
+---
+= Colocation et colocation dans Flex Subscription
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+L'abonnement NetApp Keystone Flex (Flex Subscription) utilise les concepts de *tenant* et *Subtenant* comme entités hiérarchiques qui possèdent des ressources de stockage logique. Le concept de colocation est également pris en charge, dans lequel plusieurs locataires sont liés à un partenaire ou à un fournisseur de services. Les entités partenaire et fournisseur de services sont utilisées de manière interchangeable dans ce document.
+
+
+NOTE: Dans le cadre de Flex Subscription, une location unique est un modèle géré par NetApp, tandis que la colocation est un modèle géré par nos partenaires.
+
+Un locataire est l'entité de facturation principale définie dans Flex Subscription. Chaque client qui est intégré dans l'abonnement Flex et qui détient un abonnement aux services existe en tant que locataire Flex Subscription. Le client fournit à NetApp un nom de client et/ou un identifiant à des fins d'intégration et de suivi des dates d'abonnement et des conditions d'engagement.
+
+Dans le cadre d'une colocation, le partenaire est un locataire/client de NetApp dans un environnement Flex Subscription. Le partenaire peut, à son tour, prendre en charge plusieurs locataires ou clients liés à des clients finaux/sous-locataires. Dans ce modèle, les locataires/sous-locataires sont les clients des fournisseurs de services et n'ont aucune relation de facturation avec NetApp.
+
+Les sous-locataires Flex Subscription existent entièrement au sein d'un locataire parent avec une relation plusieurs-à-un. Les sous-locataires fournissent une séparation des ressources logiques au sein d'une location et servent de base au reporting à la démonstration. Toutes les ressources de stockage (c'est-à-dire les services de fichiers, le stockage bloc et le stockage objet) appartiennent à un sous-locataire.
+
+image:nkfsosm_image10.png[""]
+
+
+
+== Modèle d'abonnement à un environnement géré par NetApp (location unique)
+
+* Un abonnement est créé par un administrateur NetApp ou GSSC pour un locataire et une zone.
+* Les noms d'abonnement sont dérivés de l'entité de facturation pour laquelle le locataire est abonné.
+* Dans l'abonnement, la date de début et la durée du contrat sont configurées.
+* Il ne peut y avoir qu'un seul abonnement actif pour chaque zone de locataire
+* Un abonnement peut avoir plusieurs forfaits et chaque abonnement correspond à un niveau de service.
+* Chaque plan tarifaire dispose d'une capacité engagée par niveau de service.
+* Les niveaux de service peuvent inclure :
++
+** Extrême
+** Hiérarchisation extrême
+** Performance
+** Tiering des performances
+** Valeur
+** Protection des données pour chaque niveau de service
+** Protection avancée des données pour des performances, une valeur extrêmes
+** Objets de stockage
+
+
+
+
+
+
+== Modèle d'abonnement dans un environnement mutualisé
+
+* Les fournisseurs de services sont des clients Flex Subscription et ont des abonnements en tant que locataires. Les abonnements se basent sur :
++
+** Engagement par niveau et zone de service
+** Facturation sur la capacité allouée de 100 Tio au minimum
+** Des frais de rafale s'appliquent à 100 à 120 % de la capacité engagée
+
+
+* Tous les mois, NetApp facture les fournisseurs dans le cadre de leurs conditions de location habituelles.
+* Pour qu'un niveau de service soit disponible pour les locataires, le fournisseur de services ou le partenaire doit au préalable disposer d'un abonnement Flex pour le niveau de service.
+* Le fournisseur de services crée des abonnements aux locataires par niveau de service, par zone et par minimum flexible.
+* Les Service Providers peuvent vendre plus de capacité à leurs locataires qu'ils n'ont acheté de NetApp (sursouscription). Par conséquent, la capacité utilisée par les locataires n'est pas limitée par la capacité à laquelle le fournisseur de services est abonné.
+* Les locataires peuvent utiliser la capacité de stockage sur le montant souscrit, indiqué dans les rapports d'utilisation.
+* Les rapports d'utilisation des locataires sont consultables tous les jours ou tous les mois.
+* Les locataires peuvent créer des abonnements pour une plus longue durée par rapport à l'abonnement Flex correspondant, mais un message d'avertissement s'affiche au client final pendant cette activité.
+* L'abonnement Flex pour un partenaire est configuré par les administrateurs NetApp ou GSSC. La gestion des abonnements Flex Subscription et tenant est effectuée par un utilisateur disposant du rôle d'administrateur partenaire.
+* Les utilisateurs disposant des rôles d'administrateur de tenant peuvent uniquement afficher l'abonnement au locataire (pas l'abonnement Flex du partenaire). Ils peuvent mettre à jour l'abonnement donné pour modifier la capacité et le niveau de service. Ils peuvent émettre des demandes de service pour des abonnements supplémentaires.
+* L'administrateur partenaire peut créer un autre abonnement lorsque l'abonnement existant a expiré ou pour une date ultérieure lorsque l'abonnement existant n'est plus valide. La date de début d'un nouvel abonnement doit être supérieure ou égale à la date de fin actuelle.
+

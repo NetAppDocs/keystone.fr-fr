@@ -1,0 +1,130 @@
+---
+sidebar: sidebar 
+permalink: nkfsosm_performance.html 
+keywords: netapp, keystone, performance, 
+summary: 'Performances de l"abonnement Keystone Flex' 
+---
+= Niveaux de services de performances
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+L'abonnement NetApp Keystone Flex (abonnement Flex) offre la capacité selon des niveaux de performances prédéfinis.
+
+Chaque niveau de service de performance est défini par sa densité d'E/S, qui correspond au rapport de performance (opérations d'entrée/sortie par seconde [IOPS]) et de stockage utilisé (Tio de données stockées), correspondant aux IOPS/Tio.
+
+Chaque volume géré par les services Flex Subscription est associé à un niveau de service de performance. Toutes les opérations d'E/S et tous les stockages utilisés sur le volume respectif sont pris en compte dans le calcul de la densité d'E/S du volume.
+
+Le tableau ci-dessous définit les niveaux de service de performance.
+
+
+
+== Des niveaux de services de performance adaptés aux différents types de stockage
+
+Les niveaux de service pour le stockage fichier, bloc et objet sont répertoriés ici.
+
+Les calculs de densité des E/S au niveau du volume sont rapportés pour indiquer le pic de densité des E/S au cours de la semaine précédente. Les performances maximales sont déterminées sur un intervalle horaire. Les rapports de densité d'E/S par volume sont générés tous les mois pour évaluer le respect des niveaux de service respectifs.
+
+
+
+=== Service de fichiers
+
+*Protocoles pris en charge* : NFS, CIFS, iSCSI et FC
+
+|===
+
+
+| *Niveau de service* | *Extrême* | *Premium* | *Standard* | *Valeur* 
+
+
+| *Type de charge de travail* | Analytique, bases de données | VDI, applications de virtualisation, développement logiciel | Partages de fichiers, serveurs web | Sauvegarde 
+
+
+| *IOPS cibles/Tio* | 6,144 | 2,048 | 128 | S/O 
+
+
+| *IOPS max./Tio* | 12,288 | 4,096 | 512 | S/O 
+
+
+| *Débit max. Mbit/s (32 Ko/IOP)* | 384 | 128 | 16 | S/O 
+
+
+| * Latence* | <1 ms | <2 ms | <17 ms | S/O 
+
+
+.2+| *Capacité minimale*^1,2^ 4+| 100 Tio^1^ 
+
+
+| 15 Tio^2^ | 25 Tio^2^ | 50 Tio^2^ | 50 Tio^2^ 
+|===
+
+NOTE: ^1^ capacité minimale de 100 Tio pour une combinaison de tous les niveaux de partage de fichiers et de services de performances en mode bloc pour les opportunités directes de NetApp. ^2^ durée minimale d'un an et capacité minimale déclarée par niveau de service sélectionné pour les opportunités de canal.
+
+
+
+=== Stockage basé sur des blocs
+
+*Protocoles pris en charge* : FC et iSCSI
+
+|===
+
+
+| *Niveau de service* | *Extrême* | *Premium* | *Standard* 
+
+
+| *Type de charge de travail* | HPC | Vidéosurveillance | Sauvegarde 
+
+
+| *IOPS cibles/Tio* 3+| S/O 
+
+
+| *IOPS max./Tio* | 5.500 | 4,000 | S/O 
+
+
+| *Débit max. Mbit/s (32 Ko/IOP)* | 43 | 31 | S/O 
+
+
+| * Latence* | <0.5 ms | <0.5 ms | S/O 
+
+
+| *Capacité minimale*^1,2^ | 100 Tio^3^ | 100 Tio^3^ | 300 Tio^3^ 
+|===
+
+NOTE: ^1^ capacité minimale de 100 Tio pour une combinaison de tous les niveaux de partage de fichiers et de services de performances en mode bloc pour les opportunités directes de NetApp. ^2^ durée minimale d'un an et capacité minimale déclarée par niveau de service sélectionnée pour les opportunités de canal. ^3^ durée minimale d'un an et capacité minimale déclarée par niveau de service sélectionnée pour l'un ou l'autre type d'opportunité.
+
+
+
+=== Stockage objet
+
+*Protocole pris en charge* : S3
+
+|===
+
+
+| *Niveau de service* | Objet 
+
+
+| *Type de charge de travail* | Référentiel multimédia, archivage 
+
+
+| *IOPS cibles/Tio* | S/O 
+
+
+| *IOPS max./Tio* | S/O 
+
+
+| *Débit max. Mbit/s (32 Ko/IOP)* | S/O 
+
+
+| * Latence* | S/O 
+
+
+| *Capacité minimale*^1,2^ | 500 Tio^3^ 
+|===
+
+NOTE: ^1^ capacité minimale de 100 Tio pour une combinaison de tous les niveaux de partage de fichiers et de services de performances en mode bloc pour les opportunités directes de NetApp. ^2^ durée minimale d'un an et capacité minimale déclarée par niveau de service sélectionnée pour les opportunités de canal. ^3^ durée minimale d'un an et capacité minimale déclarée par niveau de service sélectionnée pour l'un ou l'autre type d'opportunité.

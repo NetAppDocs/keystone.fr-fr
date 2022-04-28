@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: nkfsosm_tiering.html 
+keywords: netapp, keystone, tiering, 
+summary: Tiering Keystone 
+---
+= Tiering
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Le service NetApp Keystone Flex Subscription comprend une fonctionnalité de hiérarchisation qui identifie les données les moins utilisées et les transfère vers un stockage à froid qui est détenu, déployé et géré par NetApp.
+
+La fonctionnalité de Tiering exploite la technologie NetApp FabricPool qui permet le Tiering automatisé des données vers des tiers de stockage objet à faible coût, sur site ou hors site. Les données rarement utilisées sont ainsi automatiquement transférées vers un stockage à moindre coût sur site ou dans le cloud, en fonction des services convenus.
+
+Les partenaires et les locataires peuvent profiter de cette fonctionnalité facilement en optant pour deux niveaux de service préconfigurés, à savoir le Tiering extrême et le Tiering Premium, tout en provisionnant leur stockage. Le Tiering extrême dispose des mêmes règles de QoS que les niveaux de services Standard, Extreme et Premium.
+
+La fonctionnalité de Tiering complémentaire est disponible uniquement avec les tiers de service Extreme et Premium. NetApp suppose que 25 % des données sont actives et que 75 % d'entre elles sont moins utilisées et que vous pouvez passer à un stockage à froid. La facturation est déterminée en fonction de la durée par volume de chaque niveau de service.
+
+Les fonctions suivantes sont activées :
+
+* Vous pouvez créer des rapports sur les données inactives de vos disques et partages de fichiers et décider de modifier le niveau de service. Lors de l'déplacement ou de la modification de la règle de Tiering, la latence peut être plus élevée si les données sont accessibles depuis le Tier froid.
+* Vous pouvez modifier le niveau de service des volumes Extreme et Premium respectivement en tiers Extreme et en hiérarchisation Premium, à condition que le Tiering de destination soit activé sur le cluster.
+* De la même manière, il est possible de modifier les niveaux de service de Tiering en non-Tiering pour vos volumes.
+* Activer et désactiver les sauvegardes d'un volume au niveau du service de Tiering.
+* Activer et désactiver la reprise après incident pour un volume au niveau des services de Tiering.
+

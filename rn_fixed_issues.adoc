@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: rn_fixed_issues.html 
+keywords: netapp, keystone, release notes, fixed issues, hot fixes 
+summary: Problèmes résolus dans le moteur de service NetApp 
+---
+= Problèmes résolus dans le moteur de service NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Les problèmes suivants rencontrés dans une précédente version du moteur de services NetApp ont été résolus pour que vous puissiez utiliser correctement les services d'abonnement NetApp Keystone Flex.
+
+[cols="3*"]
+|===
+| Description du problème | Après la réparation | Corrigé dans la version 
+
+
+| Le déplacement de volume a été automatiquement déclenché lorsque des agrégats non FabricPool existaient sur le cluster. Toute modification des volumes ou des disques a déclenché un déplacement d'un volume vers un autre agrégat. | Aucun déplacement de volume n'est déclenché pour le fonctionnement du volume. | NetApp Service Engine 2.2 
+
+
+| Les groupes d'hôtes ont supprimé des groupes d'hôtes de l'interface utilisateur (UI) du moteur de service NetApp, mais pas du cluster. | Résolu. | NetApp Service Engine 2.2 
+
+
+| Le mappage des groupes d'hôtes a pu être annulé sur les disques de l'interface utilisateur du moteur de service NetApp, mais pas sur le cluster. | Résolu. | NetApp Service Engine 2.2 
+
+
+| Les règles d'exportation n'ont pas pu être supprimées de l'interface utilisateur du moteur de service NetApp. | Les règles modifiées peuvent être enregistrées dans l'interface utilisateur. | NetApp Service Engine 2.2 
+|===

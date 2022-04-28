@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: seapiref_consumer_apis_overview.html 
+keywords: netapp, keystone, consumer, apis, overview, 
+summary: Présentation des API grand public Keystone 
+---
+= Présentation
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cette section décrit les API grand public suivantes :
+
+* API d'orchestration cloud
+* Les API de stockage bloc
+* Les API de services de fichiers
+* API de stockage objet
+* API de reporting
+* Les API d'administration (grand public)
+

@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: nkfsosm_keystone_service_delivery_architecture_overview.html 
+keywords: netapp, keystone, service, delivery, architecture, overview, 
+summary: 'Présentation de l"architecture de réalisation des services' 
+---
+= Infrastructure d'abonnement Flex
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cette section décrit l'architecture d'infrastructure NetApp Keystone Flex Subscription (Flex Subscription) et l'application de gestion pour les environnements NetApp et clients.
+
+L'architecture, le design, le choix de technologies et de composants de l'infrastructure d'abonnement Flex appartiennent exclusivement à NetApp. NetApp se réserve le droit de prendre les mesures suivantes :
+
+* Sélectionnez, remplacez ou requalifiez des produits.
+* Actualisez les produits avec une nouvelle technologie lorsque cela est approprié.
+* Augmenter ou diminuer la capacité des produits afin de répondre aux exigences en matière de service.
+* Modification de l'architecture, de la technologie et/ou des produits pour répondre aux exigences en matière de services
+
+
+L'infrastructure Flex Subscription comprend plusieurs composants :
+
+* Interface utilisateur (portail Web) du moteur de service NetApp.
+* API du moteur de service NetApp pour l'intégration.
+* L'infrastructure Flex Subscription qui inclut des contrôleurs de stockage
+* Outils de gestion et d'utilisation du service tels que OpsRamp, Active IQ et Active IQ Unified Manager.
+
+
+Pour plus d'informations sur l'intégration de NetApp Keystone à Active IQ, reportez-vous à la section link:https://docs.netapp.com/us-en/active-iq/["Documentation Active IQ sur le conseiller digital"]
+
+image:nkfsosm_image8.png["Erreur : image graphique manquante"]
+
+
+
+== Moteur de service NetApp
+
+Vous pouvez utiliser le portail Web Service Engine de NetApp pour gérer et contrôler votre service d'abonnement Flex sur un modèle NetApp, partenaire ou client. Le portail se compose des fonctionnalités suivantes :
+
+* Une interface graphique (interface web NetApp Service Engine) qui prend en charge la surveillance et le provisionnement simple du stockage.
+* Un ensemble d'API REST NetApp Service Engine qui permettent des actions plus avancées dans la configuration et la gestion du stockage.
+
+
+image:nkfsosm_image9.png["Erreur : image graphique manquante"]
+
+Le portail NetApp Service Engine est une interface unique qui permet aux clients d'effectuer les tâches suivantes :
+
+* Tableau de bord des abonnements. Affichez l'état de la capacité souscrite et le nombre de ressources consommées.
+* Provisionnement du stockage. Des workflows pour créer vos partages de fichiers NFS/CIFS, vos disques FC/iSCSI et un compartiment S3.
+* Protection des données. Créez des snapshots et définissez une stratégie de sauvegarde ou une réplication des données sur le disque ou le partage de fichiers provisionné.
+* Rapports. Affichage des partages de fichiers et des inventaires de disques, ainsi que des tendances en matière d'utilisation de la capacité par rapport à différents niveaux de service.
+* Gestion de l'abonnement. Commandez de la capacité supplémentaire à un abonnement existant ou à un nouveau service via le portail.
+* Soumettez des demandes de service ou des problèmes d'assistance et consultez leur état
+
+
+Les fonctionnalités complètes du moteur de service NetApp sont disponibles uniquement sur le modèle opéré par NetApp. En cas de modèle client ou partenaire, les fonctionnalités du moteur de service NetApp se limitent à la création de rapports et à la gestion des abonnements.

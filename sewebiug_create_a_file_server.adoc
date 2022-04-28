@@ -1,0 +1,92 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_create_a_file_server.html 
+keywords: netapp, keystone, create, file, server, 
+summary: Keystone crée un serveur de fichiers 
+---
+= Créez un serveur de fichiers
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Les serveurs de fichiers appartiennent à un sous-locataire et sont créés au sein d'une zone. Lors de la création d'un serveur, vous pouvez éventuellement :
+
+* Activez la reprise après incident DP pour le serveur. Pour plus d'informations sur le fonctionnement de la reprise après incident dans le moteur de service NetApp, consultez la section link:sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html#disaster-recovery["Reprise après incident"].
+* Rendre compatible CIFS. Pour les serveurs compatibles CIFS :
++
+** Vous devez fournir le nom d'utilisateur Active Directory, le mot de passe Active Directory, le domaine, les serveurs DNS, le nom du serveur et, Vous pouvez éventuellement utiliser l'unité organisationnelle (ou) Active Directory.
+** Les informations d'identification Active Directory (nom d'utilisateur Active Directory et mot de passe Active Directory) doivent correspondre à un utilisateur disposant du privilège de rejoindre un ordinateur au domaine Active Directory.
+** Lorsque la structure UO Active Directory est hiérarchique, comme illustré dans l'image ci-dessous, spécifiez les UO du niveau le plus bas au haut. Dans cet exemple, pour spécifier l'UO de Melbourne, définissez `cifs_ou```` cifs_ou': «Ou=melbourne,ou=cifs»
+
+
+
+
+image:sewebiug_image20.png["Erreur : image graphique manquante"]
+
+Assurez-vous que vous disposez des éléments suivants pour créer le serveur :
+
+* Sous-locataire qui hébergera le serveur.
+* Région et zone dans laquelle le serveur appartient.
+* Détails de mise en réseau tels que le sous-réseau et l'adresse IP (facultatif). Si vous n'êtes pas familier avec votre réseau, vérifiez avec votre service INFORMATIQUE les valeurs appropriées.
+* Pour activer la reprise après sinistre asynchrone sur le serveur de fichiers, la zone de reprise après sinistre (la zone à laquelle le serveur de fichiers sera répliqué).
+
+
+.Étapes
+. Afficher le link:sewebiug_view_servers.html#view-servers["Liste serveurs de fichiers"].
+. Cliquez sur *Créer serveur*.
+. Sur la page Créer un serveur, renseignez les champs suivants :
++
+|===
+| Champ | Description 
+
+
+| Sous-locataire | Sélectionnez le sous-locataire dans la liste. 
+
+
+| Région | Sélectionnez la région dans laquelle le serveur va résider. 
+
+
+| Zone | Sélectionnez la zone dans laquelle le serveur va résider. 
+
+
+| Nom | Entrez le nom du serveur. 
+
+
+| Sous-réseau | Sélectionnez un sous-réseau prédéfini dans la liste. 
+
+
+| Adresse IP | (Facultatif) spécifiez une adresse IP. S'il n'est pas spécifié, le serveur reçoit la prochaine adresse IP disponible. 
+|===
+. Sélectionnez les services :
++
+NFS est activé par défaut. Le protocole NFS utilisé s'affiche.
+
++
+Si vous créez un serveur de fichiers compatible CIFS :
+
++
+.. Basculer le bouton CIFS activé pour afficher les champs relatifs à CIFS.
+.. Complétez le nom d'utilisateur Active Directory, le mot de passe Active Directory, le domaine, les serveurs DNS, le nom du serveur et, L'unité organisationnelle d'Active Directory est facultative. Les informations d'identification Active Directory doivent être pour un utilisateur disposant du privilège de rejoindre un ordinateur au domaine Active Directory.
+
+
+. Pour activer la reprise après incident asynchrone DP sur ce serveur de fichiers :
++
+.. Activer/désactiver le bouton Asynchronous Disaster Recovery pour l'activer.
+.. Sélectionnez la région et la zone de reprise après sinistre.
+.. Sélectionnez la planification de réplication de reprise après incident.
+
+
+. Si la reprise après incident synchrone est activée, le bascule reprise après incident synchrone est activé et ne peut pas être désactivé.
+. Cliquez sur *Créer*. Cela crée un travail pour créer le serveur.
+
+
+Créer un serveur est exécuté comme une tâche asynchrone. Vous pouvez :
+
+* Vérifiez l'état du travail dans la liste des travaux.
+* Une fois le travail terminé, vérifiez l'état du serveur dans la liste serveurs.
+

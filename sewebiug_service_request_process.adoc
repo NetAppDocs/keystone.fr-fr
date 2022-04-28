@@ -1,0 +1,73 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_service_request_process.html 
+keywords: netapp, keystone, service, request, process, 
+summary: Processus de demande de service Keystone 
+---
+= Processus de demande de service
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cette section décrit un flux de processus de demande de service simplifié.
+
+La figure ci-dessous illustre le flux sous forme de schéma, et le tableau ci-dessous décrit les acteurs, les actions et l'état de la demande de service à la suite de l'action.
+
+image:sewebiug_image45.png["Erreur : image graphique manquante"]
+
+|===
+|  | Qui | Action | État de la demande dans le moteur de service NetApp après action | Notification 
+
+
+| 1 | Moteur de service NetApp | Générer une nouvelle demande de service. | Nouveau | Un e-mail de confirmation automatique a été créé 
+
+
+| 2 | NetApp GSSC | Accuser réception de la demande. | La transparence  a| 
+* E-mail d'accusé de réception : GSSC
+* E-mail automatisé indiquant le statut dans Ouvrir
+
+
+
+
+| 3 | NetApp GSSC | Trier et attribuer à l'ingénieur de traitement. | La transparence | – 
+
+
+| 4 | NetApp GSSC | Suivi et suivi de la demande tout au long du processus d'exécution de la demande. | – | – 
+
+
+| 5 | Ingénieur NetApp | Examiner la demande. | La transparence | – 
+
+
+| 6 | Ingénieur NetApp | Si des informations supplémentaires sont requises, envoyez un e-mail au demandeur pour obtenir des informations supplémentaires. | En attente  a| 
+* E-mail automatisé indiquant que l'état est en attente.
+* Communiquer par e-mail pour demander des informations supplémentaires
+
+
+
+
+| 7 | Client | Fournir plus d'informations. | En attente | Communiquer par e-mail 
+
+
+| 8 |  | Répétez les étapes 6 et 7 jusqu'à ce qu'il y ait suffisamment d'informations pour faire avancer la demande. | En attente | Communiquer par e-mail pour demander des informations supplémentaires 
+
+
+| 9 | Ingénieur NetApp | Remplir la demande | La transparence | E-mail automatique indiquant que le statut est ouvert. 
+
+
+| 10 | Ingénieur NetApp | Résoudre la demande et conseiller la demande du client est résolue. | Résolu  a| 
+* E-mail de demande de confirmation la demande de service est résolue
+* Message électronique automatique indiquant que l'état est résolu.
+
+
+
+
+| 11 | Client | La demande d'avis de service est résolue. | Résolu | E-mail pour confirmer que la demande de service est résolue. 
+
+
+| 12 | Automatique | Si aucune autre action n'est requise après trois jours , la demande de service est automatiquement fermée. | Fermée | Message électronique automatique indiquant que le statut est fermé. 
+|===

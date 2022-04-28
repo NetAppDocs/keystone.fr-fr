@@ -1,0 +1,274 @@
+---
+sidebar: sidebar 
+permalink: seapiref_storagegrid_instances.html 
+keywords: netapp, keystone, storagegrid, instances, 
+summary: Instances StorageGRID Keystone 
+---
+= Instances StorageGRID
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Utilisez les méthodes répertoriées dans le tableau suivant pour configurer et gérer les instances StorageGRID afin de prendre en charge le stockage objet.
+
+|===
+| Méthode HTTP | Chemin | Description 
+
+
+| `GET' | `/v2.1/storagegridinstances` | Récupère les instances StorageGRID. 
+
+
+| «POST» | `/v2.1/storagegridinstances` | Créez une nouvelle instance StorageGRID pour héberger le stockage objet. 
+
+
+| `GET' | `/v2.1/storagegridinstances/{id}' | Récupérer une instance StorageGRID par ID. 
+
+
+| `METTRE' | `/v2.1/storagegridinstances/{id}' | Mettez à jour une instance StorageGRID. 
+|===
+
+
+=== Attributs des instances StorageGRID
+
+Le tableau suivant répertorie les attributs de l'instance StorageGRID.
+
+|===
+| Attribut | Type | Description 
+
+
+| `id' | Chaîne | Identifiant unique de l'instance StorageGRID. 
+
+
+| `nom' | Chaîne | Nom de l'instance StorageGRID. 
+
+
+| `admin_rest_uri' | Chaîne($uri) | Le noeud final du noeud d'administration StorageGRID. 
+
+
+| `s3_noeuds finauxs' | Chaîne($uri) | Terminaux StorageGRID Par exemple : [ `"https://s3.examplegrid.com"[], "https://s3.location.company.com"`[] ] 
+
+
+| `nom_de_grille' | Chaîne | Nom d'utilisateur StorageGRID. 
+
+
+| `grid_mot_de_passe' | Chaîne | Mot de passe StorageGRID. 
+
+
+| nom_utilisateur_tenant | Chaîne | Nom d'utilisateur du locataire StorageGRID. 
+
+
+| `tenant_mot_de_passe' | Chaîne | Mot de passe du locataire StorageGRID. 
+
+
+| `numéro_inscription' | Chaîne | Numéro d'abonnement Zuora. 
+|===
+
+
+=== Récupère les instances StorageGRID
+
+Utilisez la méthode indiquée dans le tableau suivant pour récupérer les instances StorageGRID.
+
+|===
+| Méthode HTTP | Chemin | Description | Paramètres 
+
+
+| `GET' | `/v2.1/storagegridinstances` | Récupère les instances StorageGRID. | Aucune 
+|===
+Attributs de corps de demande requis: `aucun'
+
+*Exemple corps de la demande :*
+
+....
+none
+....
+*Exemple de corps de réponse :*
+
+....
+{
+  "status": {
+    "user_message": "Okay. Returned 1 record.",
+    "verbose_message": "",
+    "code": 200
+  },
+  "result": {
+    "returned_records": 1,
+    "records": [
+      {
+        "id": "5e3ba2840271823644cb8ab6",
+        "name": "NSE StorageGRID Dev1",
+        "user_id": "5bbee380a2df7a04d43acaee",
+        "admin_rest_uri": "https://sggmi-dev.dev.ausngs.netapp.au",
+        "s3_endpoints": [
+          "https://sgs3.dev.ausngs.netapp.au"
+        ],
+        "subscription_number": "A-S00004566"
+      }
+    ]
+  }
+}
+....
+
+
+=== Récupère les instances StorageGRID par ID
+
+Utilisez la méthode indiquée dans le tableau suivant pour récupérer les instances StorageGRID par ID.
+
+|===
+| Méthode HTTP | Chemin | Description | Paramètres 
+
+
+| `GET' | `/v2.1/storagegridinstances/{id}' | Récupérer une instance StorageGRID par ID. | `ID (chaîne)`: L'identifiant unique de l'instance StorageGRID. 
+|===
+Attributs de corps de demande requis: `aucun'
+
+*Exemple corps de la demande :*
+
+....
+none
+....
+*Exemple de corps de réponse :*
+
+....
+{
+  "status": {
+    "user_message": "Okay. Returned 1 record.",
+    "verbose_message": "",
+    "code": 200
+  },
+  "result": {
+    "returned_records": 1,
+    "records": [
+      {
+        "id": "5e3ba2840271823644cb8ab6",
+        "name": "NSE StorageGRID Dev1",
+        "user_id": "5bbee380a2df7a04d43acaee",
+        "admin_rest_uri": "https://sggmi-dev.dev.ausngs.netapp.au",
+        "s3_endpoints": [
+          "https://sgs3.dev.ausngs.netapp.au"
+        ],
+        "subscription_number": "A-S00004566"
+      }
+    ]
+  }
+}
+....
+
+
+=== Créez une instance StorageGRID par ID
+
+Utilisez la méthode indiquée dans le tableau suivant pour créer une instance StorageGRID par ID.
+
+|===
+| Méthode HTTP | Chemin | Description | Paramètres 
+
+
+| «POST» | `/v2.1/storagegridinstances/{id}' | Récupérer une instance StorageGRID par ID. | `ID (chaîne):` l'identifiant unique de l'instance StorageGRID. 
+|===
+Attributs de corps de demande requis: `aucun'
+
+*Exemple corps de la demande :*
+
+....
+{
+  "name": "Grid1",
+  "admin_rest_uri": "https://examplegrid.com",
+  "s3_endpoints": [
+    "https://s3.examplegrid.com",
+    "https://s3.location.company.com"
+  ],
+  "grid_username": "root",
+  "grid_password": "string",
+  "tenant_username": "root",
+  "tenant_password": "string",
+  "subscription_number": "A-S00003969"
+}
+....
+*Exemple de corps de réponse :*
+
+....
+{
+  "status": {
+    "user_message": "string",
+    "verbose_message": "string",
+    "code": "string"
+  },
+  "result": {
+    "returned_records": 1,
+    "records": [
+      {
+        "id": "5d2fb0fb4f47df00015274e3",
+        "name": "Grid1",
+        "admin_rest_uri": "https://examplegrid.com",
+        "user_id": "5d2fb0fb4f47df00015274e3",
+        "s3_endpoints": [
+          "https://s3.examplegrid.com",
+          "https://s3.location.company.com"
+        ],
+        "subscription_number": "A-S00003969"
+      }
+    ]
+  }
+}
+....
+
+
+=== Modifiez une instance StorageGRID par ID
+
+Utilisez la méthode indiquée dans le tableau suivant pour modifier l'ID d'une instance StorageGRID.
+
+|===
+| Méthode HTTP | Chemin | Description | Paramètres 
+
+
+| `METTRE' | `/v2.1/storagegridinstances/{id}' | Modifiez une instance StorageGRID par ID. | `ID (chaîne)`: L'identifiant unique de l'instance StorageGRID. 
+|===
+Attributs de corps de demande requis : `aucun'
+
+*Exemple corps de la demande :*
+
+....
+{
+  "name": "Grid1",
+  "admin_rest_uri": "https://examplegrid.com",
+  "s3_endpoints": [
+    "https://s3.examplegrid.com",
+    "https://s3.location.company.com"
+  ],
+  "grid_username": "root",
+  "grid_password": "string",
+  "tenant_username": "root",
+  "tenant_password": "string",
+  "subscription_number": "A-S00003969"
+....
+*Exemple de corps de réponse :*
+
+....
+{
+  "status": {
+    "user_message": "string",
+    "verbose_message": "string",
+    "code": "string"
+  },
+  "result": {
+    "returned_records": 1,
+    "records": [
+      {
+        "id": "5d2fb0fb4f47df00015274e3",
+        "name": "Grid1",
+        "admin_rest_uri": "https://examplegrid.com",
+        "user_id": "5d2fb0fb4f47df00015274e3",
+        "s3_endpoints": [
+          "https://s3.examplegrid.com",
+          "https://s3.location.company.com"
+        ],
+        "subscription_number": "A-S00003969"
+      }
+    ]
+  }
+}
+....

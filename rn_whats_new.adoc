@@ -1,0 +1,266 @@
+---
+sidebar: sidebar 
+permalink: rn_whats_new.html 
+keywords: 'netapp, keystone, release notes, new features, what"s new,' 
+summary: Nouvelles fonctionnalités du moteur de service NetApp 
+---
+= Nouveautés de cette version des services d'abonnement NetApp Keystone Flex
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Les notes de mise à jour vous informent des nouvelles fonctionnalités et améliorations introduites dans les services NetApp Keystone Flex Subscription (Flex Subscription), ainsi que des limitations et correctifs connus.
+
+
+
+== Consulter votre taux d'utilisation et la facturation de Cloud Volumes ONTAP (05 décembre 2021)
+
+Si vous êtes un client NetApp Keystone Flex Subscription (Flex Subscription) et que vous êtes abonné à Cloud Volumes ONTAP, vous pouvez utiliser Flex Subscription pour facturer votre utilisation de Cloud Volumes ONTAP et consulter vos informations de facturation et de consommation. Cloud Manager peut désormais découvrir vos comptes d'abonnement Flex et afficher les détails de l'interface Cloud Manager. En cliquant sur l'onglet *tous les services > Portefeuille numérique > abonnement Keystone Flex*, vous pouvez effectuer les opérations suivantes :
+
+* Affichez un écran d'accueil à partir duquel vous pouvez demander à votre administrateur Flex Subscription d'associer votre ID utilisateur Cloud Manager à votre ID utilisateur Flex Subscription et ainsi accéder à l'onglet *Keystone Flex Subscription*.
+* Consultez les données de consommation des capacités validées et consommées des services souscrits sur vos systèmes sur site et sur Cloud Volumes ONTAP.
+* Consultez les détails de l'abonnement Flex associé à votre compte Cloud Manager. Les détails, tels que la capacité engagée, consommée et en rafale, sont affichés.
+* Associez votre compte Cloud Volumes ONTAP à vos identifiants d'abonnement Flex pour associer le compte aux rapports de facturation et d'utilisation de la capacité.
+* Demande d'augmentation ou de diminution de la capacité engagée pour les services Flex Subscription souscrits.
+* Affichez et utilisez l'ID d'abonnement Flex lié comme méthode de facturation pour la facturation de la consommation Cloud Volumes ONTAP (uniquement les ID liés).
+
+
+Pour en savoir plus, consultez les liens suivants dans les documents Cloud Manager :link:https://docs.netapp.com/us-en/occm/concept_licensing.html#keystone-flex-subscription["Abonnement Keystone Flex"]
+link:https://docs.netapp.com/us-en/occm/task_managing_licenses.html#manage-keystone-flex-subscriptions["Gérez les abonnements Keystone Flex"]
+
+{Sp} + {sp} + {sp} les fonctionnalités suivantes ont été introduites dans différentes versions du moteur de services NetApp pour prendre en charge les fonctionnalités améliorées offertes par l'abonnement NetApp Keystone Flex (Flex Subscription) :
+
+
+
+== Fonctionnalités introduites dans NetApp Service Engine 2.2
+
+Les nouvelles fonctionnalités de cette version incluent un tableau de bord repensé pour les nouveaux widgets sur la facturation, l'utilisation de la capacité, les demandes de service et les alertes. Cette version inclut également de nouveaux écrans pour la gestion de la facturation et des alertes, et elle permet de renommer le menu Services abonnés en Services clouds.
+
+
+
+=== Vue améliorée du tableau de bord
+
+Le tableau de bord du moteur de services NetApp a été repensé pour inclure les nouveaux composants suivants :
+
+* *Utilisation de la capacité* pour afficher la capacité utilisée pour vos services abonnés.
+* *Frais mensuels (facturation)* pour l'affichage des frais mensuels agrégés pour tous vos abonnements.
+* *Alertes* pour afficher le résumé des alertes les plus récentes dans votre environnement.
+* *Demandes de service* pour afficher la liste des demandes de service les plus récentes générées dans votre environnement. Pour plus d'informations, voir link:sewebiug_dashboard.html["Afficher le tableau de bord des abonnements Flex"].
+
+
+
+
+=== Nouvel écran facturation
+
+Un nouvel écran *Billing* a été ajouté pour faciliter l'accessibilité et le calcul de vos données historiques de facturation. L'écran fournit une vue globale des frais mensuels associés à tous vos services souscrits.
+
+Accédez à cet écran à partir du widget *charges mensuelles* du tableau de bord ou de *ADMINISTRATION > facturation* pour afficher une répartition mensuelle des frais de tous vos services abonnés. Les données de facturation sont basées sur votre utilisation de la capacité engagé et en rafale. Elles sont disponibles pour votre utilisation au cours des mois précédents. Pour plus d'informations, voir link:sewebiug_billing.html["Afficher la facturation"].
+
+
+
+=== Nouvel écran alertes
+
+Un nouvel écran *alertes* est introduit dans cette version qui répertorie toutes les alertes générées par le système et générées par l'utilisateur. L'écran vous permet également de créer des messages d'alerte personnalisés pour les événements critiques concernant votre environnement et de les transmettre à d'autres utilisateurs. Ils peuvent consulter et rejeter les alertes, le cas échéant. Pour plus d'informations, voir link:sewebiug_alerts.html["Création et gestion des alertes"].
+
+
+
+=== Interface utilisateur améliorée
+
+L'interface utilisateur du moteur de service NetApp a apporté les améliorations suivantes :
+
+* Le menu *Dashboard* du volet de navigation de gauche présente un point de navigation intuitif pour accéder au tableau de bord.
+* Le menu *Services souscrits* du volet de navigation de gauche a été renommé *Services Cloud*. + + +
+
+
+
+
+== Fonctionnalités introduites dans NetApp Service Engine 2.1
+
+Cette version prend notamment en charge la colocation dans un environnement Flex Subscription et une fonctionnalité de hiérarchisation qui facilite le déplacement des données inactives vers un niveau local ou cloud à moindre coût.
+
+
+
+=== Présentation des services d'abonnement Flex pour les fournisseurs de services
+
+Le moteur de services NetApp prend désormais en charge la gestion d'un environnement mutualisé par un fournisseur de services. Vous pouvez exécuter les fonctions de provisionnement, de création de rapports, de facturation et de gestion des clients possédant leurs propres abonnements. Pour la prise en charge de cette fonctionnalité, les améliorations suivantes ont été apportées :
+
+* *Tableau de bord:* le tableau de bord affiche des informations sur les abonnements au stockage, tels que les niveaux de service, l'utilisation de la capacité pour chaque niveau de service et les services complémentaires de protection des données, pour un numéro d'abonnement spécifique. En tant que fournisseur de services, vous pouvez consulter les détails de votre abonnement NetApp Keystone Flex et de vos abonnements aux locataires. En tant qu'administrateur de tenant, vous pouvez afficher les détails de tous les abonnements de tenant pour votre location.
+* *Rapports :* vous pouvez créer des rapports de capacité et de performances en fonction de votre utilisation de l'abonnement NetApp Keystone Flex et aussi pour votre utilisation par locataire. En tant qu'administrateur partenaire, vous pouvez consulter le rapport sur la capacité de votre abonnement Flex à partir de *Rapports* > *utilisation Keystone*. En tant qu'administrateur partenaire, vous pouvez afficher les rapports d'utilisation de la capacité d'un locataire spécifique dans *Rapports* > *utilisation du tenant*/*utilisation de la capacité*. En tant qu'administrateur de tenant, vous pouvez afficher les rapports de location à partir de *Rapports* > *utilisation de tenant*.
+* *Abonnement:* en tant qu'administrateur partenaire, vous pouvez afficher et mettre à jour vos abonnements Flex et locataires à partir de *ABONNEMENTS* > *abonnements Keystone* et *ABONNEMENTS* > *abonnements tenant* respectivement. En tant qu'administrateur de tenant, vous ne pouvez consulter que les abonnements de vos locataires.
+* *Utilisateurs :* en fonction de votre rôle, vous pouvez attribuer des privilèges à un nouvel utilisateur ou à un utilisateur existant dans une location selon les besoins. Le rôle peut être l'administrateur NetApp et l'administrateur NetApp avec des privilèges en lecture seule, l'administrateur partenaire ou l'administrateur du locataire. En tant qu'administrateur partenaire, vous pouvez uniquement attribuer des rôles d'administrateur partenaire ou d'administrateur de tenant aux nouveaux utilisateurs. Un utilisateur administrateur de tenant ne peut attribuer que le rôle d'administrateur de tenant à d'autres utilisateurs.
+* *Menu réseaux :* en tant qu'administrateur partenaire, vous pouvez afficher les réseaux définis pour votre location. Vous pouvez également créer des sous-réseaux pour votre sous-tenant et votre zone à partir de *RÉSEAUX* > *sous-réseaux*. Cela est nécessaire lors du provisionnement du stockage par les clients finaux ou les sous-locataires.
+* Prise en charge de l'API : les API `/tenants/{tenant_ID}/zones/{zone_name}/sous-réseaux` et `/tenants/{tenant_ID}/zones/{zone_name}/sous-réseaux/{ID}/tags` sont proposées dans le cadre de cette version pour créer et afficher les sous-réseaux des sous-locataires.
+
+
+Pour plus d'informations sur cette fonction, consultez les liens suivants :
+
+* link:nkfsosm_overview.html["Modèle opérationnel, rôles et responsabilités"]
+* link:nkfsosm_tenancy_overview.html["Colocation et colocation dans Flex Subscription"]
+* link:sewebiug_dashboard.html["Afficher le tableau de bord des abonnements Flex"]
+* link:sewebiug_working_with_reports.html["Afficher les rapports"]
+* link:sewebiug_managing_subscriptions.html["Gestion des abonnements"]
+* link:sewebiug_managing_tenants_and_subtenants.html["Gestion des locataires et sous-locataires"]
+* link:sewebiug_define_network_configurations.html["Définissez des réseaux pour les locataires et les sous-locataires"]
+
+
+
+
+=== Tiering
+
+Le service d'abonnement NetApp Keystone Flex inclut désormais une fonctionnalité de hiérarchisation qui tire parti de la technologie FabricPool de NetApp. Il identifie les données les moins utilisées et les transfère vers un stockage à froid qui est détenu, déployé et géré par NetApp sur site. Vous pouvez opter pour la hiérarchisation en vous abonnant aux niveaux de performance de Tiering extrême ou Premium.
+
+Les API suivantes ont été modifiées pour inclure de nouvelles valeurs d'attribut pour les nouveaux niveaux de service de Tiering :
+
+* Les API de services de fichiers
+* API de magasin de blocs
+
+
+Pour plus d'informations, consultez les liens suivants :
+
+* link:nkfsosm_tiering.html["Tiering"]
+* link:nkfsosm_performance.html["Niveaux de services de performances"]
+
+
+{sp} + {sp} + {sp}
+
+
+
+== Fonctionnalités introduites dans NetApp Service Engine 2.0.1
+
+Plusieurs nouvelles fonctionnalités sont disponibles dans cette nouvelle version :
+
+
+
+=== Prise en charge étendue à Cloud volumes Services pour Google Cloud Platform
+
+NetApp Service Engine prend désormais en charge NetApp Cloud volumes Services pour Google Cloud Platform (GCP) en plus de son support existant pour Azure NetApp Files. Vous pouvez désormais gérer les services abonnés, provisionner et modifier Google Cloud volumes à partir de NetApp Service Engine.
+
+
+NOTE: Les abonnements aux services Cloud volumes sont gérés en dehors du moteur de services NetApp. Les identifiants pertinents sont fournis à NetApp Service Engine pour permettre la connexion aux services cloud.
+
+
+
+=== Capacité à gérer les objets provisionnés en dehors du NetApp Service Engine
+
+Les volumes (disques et partages de fichiers) qui existent déjà dans l'environnement du client et qui appartiennent aux machines virtuelles de stockage configurées dans NetApp Service Engine, peuvent à présent être affichés et gérés dans le cadre de votre abonnement NetApp Keystone Flex (abonnement Flex). Les volumes provisionnés en dehors du moteur de service NetApp sont désormais répertoriés sur les pages *partages* et *disques* avec les codes d'état appropriés. Un processus en arrière-plan s'exécute à intervalles réguliers et importe les charges de travail étrangères dans votre instance du moteur de services NetApp.
+
+Les disques et partages de fichiers importés ne doivent pas être conformes à la norme des disques et partages de fichiers existants sur le moteur de services NetApp. Après importation, ces disques et partages de fichiers sont classés avec le statut «non standard». Vous pouvez soumettre une demande de service à l'aide du portail *support > demande de service > nouvelle demande de service*, qui leur sera standardisée et gérée par le biais du portail NetApp Service Engine.
+
+
+
+=== Intégration de SnapCenter avec le moteur de service NetApp
+
+Grâce à l'intégration de SnapCenter avec le moteur de services NetApp, vous pouvez désormais cloner vos disques et vos partages de fichiers à partir des snapshots créés dans votre environnement SnapCenter, en dehors de votre instance NetApp Service Engine. Lors du clonage d'un partage de fichiers ou d'un disque à partir d'un snapshot existant sur le portail NetApp Service Engine, ces snapshots sont répertoriés pour votre sélection. Un processus d'acquisition s'exécute en arrière-plan à un intervalle périodique pour importer les snapshots dans votre instance NetApp Service Engine.
+
+
+
+=== Nouvel écran pour la maintenance des sauvegardes
+
+Le nouvel écran *Backup* vous permet d'afficher et de gérer les sauvegardes des disques et des partages de fichiers créés dans votre environnement. Vous pouvez modifier les stratégies de sauvegarde, rompre la relation de sauvegarde avec le volume source et supprimer le volume de sauvegarde avec tous ses points de restauration. Cette fonctionnalité permet de conserver les sauvegardes (sous forme de sauvegardes orphelines), même lorsque les volumes source sont supprimés, pour une restauration ultérieure. Pour restaurer un partage de fichiers ou un disque à partir d'un point de récupération spécifique, vous pouvez émettre une demande de service à partir de *support > demande de service > Nouvelle demande de service*.
+
+
+
+=== Provisionnement permettant de restreindre l'accès des utilisateurs aux partages CIFS
+
+Vous pouvez désormais spécifier la liste de contrôle d'accès (ACL) pour restreindre l'accès des utilisateurs sur un partage CIFS (SMB) ou multi-protocole. Vous pouvez spécifier des utilisateurs ou des groupes Windows en fonction des paramètres Active Directory (AD) à ajouter à la liste de contrôle d’accès.link:https://docs.netapp.com/us-en/keystone/sewebiug_create_a_new_file_share.html#steps["En savoir plus >>"].
+
+
+
+== Fonctionnalités introduites dans NetApp Service Engine 2.0
+
+Plusieurs nouvelles fonctionnalités sont disponibles dans cette nouvelle version :
+
+
+
+=== Prise en charge de MetroCluster
+
+NetApp Service Engine prend en charge les sites configurés avec les configurations MetroCluster. MetroCluster est une fonction de protection des données de ONTAP qui permet d'atteindre des objectifs de point de récupération (RPO) 0 ou de délai de restauration (RTO) 0 à l'aide d'un miroir synchrone pour un stockage disponible en continu. La prise en charge d'MetroCluster est synonyme de fonctionnalité de reprise après incident synchrone dans le moteur de services NetApp. Chaque côté d'une instance MetroCluster est enregistré en tant que zone distincte, chacun avec son propre abonnement qui inclut un plan tarifaire avancé de protection des données. Les partages ou disques créés dans une zone compatible MetroCluster répliquez les données de manière synchrone sur la seconde zone. La consommation de la zone répliquée suit le plan tarifaire avancé de protection des données applicable à la zone où le stockage est provisionné.
+
+
+
+=== Prise en charge de Cloud volumes Services
+
+NetApp Service Engine peut désormais prendre en charge les services Cloud volumes. Elle peut désormais prendre en charge Azure NetApp Files.
+
+
+NOTE: Les abonnements aux services Cloud volumes sont gérés en dehors du moteur de services NetApp. Les identifiants pertinents sont fournis à NetApp Service Engine pour permettre la connexion aux services cloud.
+
+NetApp Service Engine prend en charge :
+
+* Provisionnement ou modification des volumes Cloud volumes Services (y compris la possibilité de créer des snapshots)
+* Sauvegarde des données dans une zone Cloud volumes Services
+* Affichage des volumes Cloud volumes Services dans l'inventaire NSE
+* Affichage de l'utilisation des services Cloud volumes.
+
+
+
+
+=== Groupes d'hôtes
+
+NetApp Service Engine prend en charge l'utilisation des groupes d'hôtes. Un groupe d'hôtes est un groupe de noms de ports (WWPN) ou de nœuds hôtes iSCSI (IQN). Vous pouvez définir des groupes hôtes et les mapper sur des disques pour contrôler les initiateurs auxquels les initiateurs ont accès aux disques. Les groupes d'hôtes remplacent le besoin de spécifier des initiateurs individuels pour chaque disque et permettent les éléments suivants :
+
+* Un disque supplémentaire à afficher au même ensemble d'initiateurs
+* Mise à jour de l'ensemble des initiateurs sur plusieurs disques
+
+
+
+
+=== Utilisation en rafale et notifications
+
+Certains abonnements au stockage pris en charge par le moteur de services NetApp permettent aux clients d'utiliser une capacité de rafale sur leur capacité allouée, ce qui est facturé séparément supérieur à la capacité souscrite. Il est important pour les utilisateurs de savoir à quel moment ils sont sur le point d'utiliser ou de disposer de la capacité en rafale pour contrôler leur utilisation et leurs coûts.
+
+
+
+==== Notification lorsqu'une modification proposée entraîne l'utilisation de la capacité en rafale
+
+Notification d'affichage d'une modification du provisionnement proposé pour faire en rafale d'un abonnement. L'utilisateur peut choisir de continuer, sachant que l'abonnement sera mis en rafale ou choisir de ne pas continuer l'action.link:sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html#burst-usage-notifications["En savoir plus >>"].
+
+
+
+==== Notification lorsque l'abonnement est en rafale
+
+Une bannière de notification s'affiche lorsqu'un abonnement est en rafale.link:sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html#burst-usage-notifications["En savoir plus >>"].
+
+
+
+==== Le rapport sur la capacité indique l'utilisation en rafale
+
+Rapport de capacité indiquant le nombre de jours pendant lesquels l'abonnement a été en rafale et la quantité de capacité en rafale utilisée.link:sewebiug_working_with_reports.html#capacity-usage["En savoir plus >>"].
+
+
+
+=== Rapport sur les performances
+
+Un nouveau rapport sur les performances disponible dans l'interface web du moteur de services NetApp affiche des informations sur les performances de chaque disque ou partage sur les mesures de performances suivantes :
+
+* IOPS/Tio (opérations d'entrée/sortie par seconde et par tébioctet) : vitesse à laquelle les opérations d'entrée et de sortie par seconde (IOPS) sont exécutées sur le périphérique de stockage.
+* Débit en Mbit/s : taux de transfert des données vers et depuis le support de stockage en mégaoctets par seconde.
+* Latence (ms) : temps moyen des lectures et des écritures à partir du disque ou du partage en millisecondes.
+
+
+
+
+=== Gestion des abonnements
+
+La gestion des abonnements a été améliorée. Vous pouvez désormais :
+
+* Demandez une extension de protection des données ou demandez-en davantage de capacité pour compléter la protection des données par un abonnement ou un service
+* Affichez l'utilisation de la protection des données
+
+
+
+
+=== Amélioration de la facturation
+
+La facturation prend désormais en charge la possibilité de mesurer et de facturer l'utilisation des snapshots pour le stockage ONTAP (fichier et bloc).
+
+
+
+=== Partages CIFS masqués
+
+NetApp Service Engine prend en charge la création de partages CIFS masqués.

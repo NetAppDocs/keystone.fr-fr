@@ -1,0 +1,292 @@
+---
+sidebar: sidebar 
+permalink: seapiref_block_storage_apis.html 
+keywords: netapp, keystone, block storage, block stores, disks, host groups, initiators, apis 
+summary: API de stockage bloc Keystone 
+---
+= Les API de stockage bloc
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez utiliser les API de stockage en mode bloc pour afficher et gérer votre stockage en mode bloc.
+
+Avant de créer des disques, vous devez créer des magasins de blocs. Lorsque vous créez un disque, vous devez créer un groupe d'hôtes ou sélectionner un groupe d'hôtes existant pour accéder au disque. Pour plus d'informations, voir link:sewebiug_working_with_block_storage_overview.html["Utilisation du stockage en mode bloc"].
+
+
+
+== Magasins de blocs
+
+Vous pouvez utiliser les API Block Store pour récupérer et gérer vos magasins en mode bloc.
+
+[cols="1,1,3,2"]
+|===
+| Verb. HTTP | Chemin | Description | Paramètres obligatoires/corps de la demande 
+
+
+ a| 
+`GET'
+ a| 
+`/v2.1/blockstores`
+| Vous pouvez récupérer les détails de tous vos magasins de blocs. Récupère les détails des magasins du bloc, tels que l'ID du magasin du bloc, l'adresse IP, la région, la zone, l'ID du sous-réseau, et balises.  a| 
+`offset': Nombre d'éléments à ignorer avant de commencer à collecter le jeu de résultats. «Limite»: Le nombre d'articles à retourner.
+
+
+
+ a| 
+`GET'
+ a| 
+`/v2.1/blockstores/{id}'
+| Vous pouvez récupérer les détails d'un magasin de blocs spécifique. Récupère les détails du magasin de blocs, tels que l'adresse IP, la région, la zone, l'ID de sous-réseau et les balises en fonction de l'ID saisi.  a| 
+`ID`: L'ID du magasin de blocs.
+
+
+
+ a| 
+«POST»
+ a| 
+`/v2.1/blockstores`
+| Vous pouvez créer un magasin de blocs. Ajoutez les valeurs dans le corps de demande pour créer un magasin de blocs avec les paramètres spécifiés, tels que le protocole de service, l'ID de sous-locataire, la zone, l'ID de sous-réseau et les balises.  a| 
+`subtenant_ID`: L'ID du sous-locataire. «Zone»: Le nom de la zone. `subnet_ID`: L'ID du sous-réseau.
+
+
+
+ a| 
+«POST»
+ a| 
+`/v2.1/blockstores/{id}/"tags"
+| Vous pouvez créer ou remplacer des étiquettes pour un magasin de blocs. Ajoutez l'ID du magasin de blocs et les valeurs des balises dans le format « paire clé:valeur » dans le corps de la demande.  a| 
+`ID`: L'ID du magasin de blocs.
+
+
+
+ a| 
+`METTRE'
+ a| 
+`/v2.1/blockstores/{id}'
+| Vous pouvez modifier n'importe quel magasin de blocs en fonction de son ID. Ajoutez l'ID du magasin de blocs et les valeurs que vous souhaitez modifier dans le corps de la demande, telles que la zone, le protocole de service et les balises.  a| 
+`ID`: L'ID du magasin de blocs.
+
+
+
+ a| 
+`SUPPRIMER'
+ a| 
+`/v2.1/blockstores/{id}'
+ a| 
+Vous pouvez supprimer n'importe quel stockage de blocs par son ID.
+ a| 
+`ID`: L'ID du magasin de blocs.
+
+|===
+
+NOTE: Avant de supprimer un magasin de blocs, vous devez supprimer tous les disques qui lui sont mappés.
+
+
+
+== Disques
+
+Vous pouvez utiliser les API disques pour récupérer et gérer vos disques.
+
+[cols="1,1,3,2"]
+|===
+| Verb. HTTP | Chemin | Description | Paramètres obligatoires/corps de la demande 
+
+
+ a| 
+`GET'
+ a| 
+`/v2.1/disks`
+| Vous pouvez récupérer les détails de tous vos disques. Récupère les détails des disques, tels que l'ID du magasin de blocs, le nom, le chemin du disque, le protocole, la politique de snapshot, et balises.  a| 
+`offset': Nombre d'éléments à ignorer avant de commencer à collecter le jeu de résultats. «Limite»: Le nombre d'articles à retourner.
+
+
+
+ a| 
+`GET'
+ a| 
+`/v2.1/disks/{id}`
+| Vous pouvez récupérer les détails d'un disque spécifique. Récupère les détails du disque, tels que l'ID du magasin de blocs, le nom, le chemin du disque, le protocole, la politique de snapshot, Et les étiquettes basées sur l'ID saisi.  a| 
+`ID`: L'ID du disque.
+
+
+
+ a| 
+«POST»
+ a| 
+`/v2.1/disks`
+| Vous pouvez créer un disque. Ajoutez les valeurs dans le corps de la demande pour créer un disque avec les paramètres spécifiés, tels que l'ID de sous-tenant, la zone, le nom, le chemin du disque, la stratégie de snapshot, stratégie de sauvegarde, et balises.  a| 
+`subtenant_ID`: L'ID du sous-locataire. «Zone»: Le nom de la zone. `name`: Le nom du disque. `disque_path`: Le chemin du disque. `protocole`: Protocole de stockage utilisé pour l'accès aux périphériques en mode bloc. `os_type`: Le type du système d'exploitation hôte. `hostgroup_mappings' : mappages de groupes d'hôtes. `niveau_service`: Le nom du niveau de service s'applique: Standard, Premium, Premium-Tiering, Extreme ou Extreme-Tiering. `mettre_gb`: La taille du disque en GB.
+
+
+
+ a| 
+«POST»
+ a| 
+`/v2.1/disks/{id}/``napshot/{name}'
+| Vous pouvez créer un snapshot d'un disque.  a| 
+`ID`: L'ID du disque. `name`: Le nom du snapshot.
+
+
+
+ a| 
+«POST»
+ a| 
+`/v2.1/disks/{id}/"tags"
+| Vous pouvez créer ou remplacer des étiquettes pour un disque. Ajoutez l'ID du disque et les valeurs des balises au format « paire clé:valeur » dans le corps de la demande.  a| 
+`ID`: L'ID du disque.
+
+
+
+ a| 
+`METTRE'
+ a| 
+`/v2.1/disks/{id}`
+| Vous pouvez modifier n'importe quel disque en fonction de son ID. Ajoutez l'ID du disque et les valeurs que vous souhaitez modifier dans le corps de la demande, telles que le nom, le niveau de service, la stratégie d'instantané, la stratégie de sauvegarde et les balises.  a| 
+`ID`: L'ID du disque. `hostgroup_mappings' : mappages de groupes d'hôtes.
+
+
+
+ a| 
+`SUPPRIMER'
+ a| 
+`/v2.1/disks/{id}`
+| Vous pouvez supprimer n'importe quel disque par son ID.  a| 
+`ID`: L'ID du disque.
+
+
+
+ a| 
+`SUPPRIMER'
+ a| 
+`/v2.1/disks/{id}/``napshot/{name}'
+| Vous pouvez supprimer tout instantané d'un disque par l'ID du disque et le nom de l'instantané.  a| 
+`ID`: L'ID du disque. `name`: Le nom du snapshot.
+
+|===
+
+
+== Groupes d'hôtes
+
+Le contrôle d'accès aux disques est géré avec des groupes hôtes. Vous pouvez récupérer et gérer des groupes hôtes à l'aide des API Host Groups.
+
+[cols="1,1,3,2"]
+|===
+| Verb. HTTP | Chemin | Description | Paramètres obligatoires/corps de la demande 
+
+
+ a| 
+`GET'
+ a| 
+`/v2.1/hostgroups`
+| Vous pouvez récupérer les détails de tous vos groupes hôtes. Récupère les détails des groupes d'hôtes, tels que le nom, les détails du sous-locataire, les détails du locataire, la zone, protocole, initiateurs, disques utilisant le groupe d'hôtes et balises.  a| 
+`offset': Nombre d'éléments à ignorer avant de commencer à collecter le jeu de résultats. «Limite»: Le nombre d'articles à retourner.
+
+
+
+ a| 
+`GET'
+ a| 
+`/v2.1/hostgroups/{id}'
+| Vous pouvez récupérer les détails d'un groupe d'hôtes spécifique. Récupère les détails du groupe hôte, tels que le nom, les détails du sous-locataire, les détails du locataire, la zone, protocole, initiateurs, disques utilisant les groupes hôtes et balises en fonction de l'ID saisi.  a| 
+`ID`: L'ID du groupe hôte.
+
+
+
+ a| 
+«POST»
+ a| 
+`/v2.1/hostgroups`
+| Vous pouvez créer un groupe d'hôtes. Ajoutez les valeurs dans le corps de demande pour créer un groupe hôte avec les paramètres spécifiés, tels que nom, ID de sous-tenant, zone, protocole, initiateurs, et balises.  a| 
+`name`: Le nom du groupe hôte. `subtenant_ID`: L'ID du sous-locataire. «Zone»: Le nom de la zone. `protocole`: Protocole de stockage utilisé pour l'accès aux périphériques en mode bloc. `os_type`: Le type du système d'exploitation hôte.
+
+
+
+ a| 
+«POST»
+ a| 
+`/v2.1/hostgroups/{id}/"tags"
+| Vous pouvez créer ou remplacer des balises pour un groupe d'hôtes. Ajoutez l'ID du groupe hôte et les valeurs des balises dans le format « paire clé:valeur » dans le corps de la demande.  a| 
+`ID`: L'ID du groupe hôte.
+
+
+
+ a| 
+`SUPPRIMER'
+ a| 
+`/v2.1/hostgroups/{id}'
+| Vous pouvez supprimer n'importe quel groupe d'hôtes par son ID.  a| 
+`ID`: L'ID du groupe hôte.
+
+|===
+
+
+== Initiateurs dans un groupe d'hôtes
+
+Vous pouvez utiliser les API Host Groups pour récupérer et gérer les initiateurs mappés sur vos groupes hôtes.
+
+[cols="1,1,3,2"]
+|===
+| Verb. HTTP | Chemin | Description | Paramètres obligatoires/corps de la demande 
+
+
+ a| 
+`GET'
+ a| 
+`/v2.1/hostgroups/{id}/` `initiateurss'
+| Vous pouvez récupérer les détails de tous vos initiateurs. Récupère les initiateurs et leurs alias.  a| 
+`ID`: L'ID du groupe hôte.
+
+
+
+ a| 
+`GET'
+ a| 
+`/v2.1/hostgroups/{id}/` `initiateurs/{alias}'
+| Vous pouvez récupérer les détails d'un initiateur spécifique. Récupère l'initiateur en fonction de l'ID et de l'alias saisis.  a| 
+`ID`: L'ID du groupe hôte. `alias`: Le nom d'alias de l'initiateur.
+
+
+
+ a| 
+«POST»
+ a| 
+`/v2.1/hostgroups/{id}/` `initiateurss'
+ a| 
+Vous pouvez créer un initiateur pour un groupe d'hôtes. Ajoutez les valeurs de l'initiateur et de son alias dans le corps de la demande pour créer un initiateur pour le groupe hôte.
+ a| 
+`ID`: L'ID du groupe hôte. `alias`: Le nom d'alias de l'initiateur. `initiateur`: L'initiateur (noms qualifiés iSCSI ou WWPN FC).
+
+
+
+ a| 
+`PATCHS'
+ a| 
+`/v2.1/hostgroups/{id}/` `initiateurs/{alias}'
+| Vous pouvez modifier un initiateur. Ajoutez le nouvel initiateur dans le corps de la demande.  a| 
+`ID`: L'ID du groupe hôte. `alias`: Le nom d'alias de l'initiateur. `initiateur`: L'initiateur (noms qualifiés iSCSI ou WWPN FC).`
+
+
+
+ a| 
+`SUPPRIMER'
+ a| 
+`/v2.1/hostgroups/{id}/` `initiateurs/{alias}'
+ a| 
+Vous pouvez supprimer un initiateur par l'ID du groupe d'hôtes et l'alias de l'initiateur.
+ a| 
+`ID`: L'ID du groupe hôte. `alias`: Le nom d'alias de l'initiateur.
+
+|===
+[NOTE]
+====
+Lors de l'ajout d'initiateurs à un groupe hôte, l'initiateur doit correspondre au protocole du groupe hôte. Vous devez utiliser des IQN pour les groupes hôtes avec le protocole iSCSI et les WWPN pour les groupes d'hôtes avec le protocole FC.
+
+La suppression d'un initiateur d'un groupe d'hôtes affecte tous les disques auxquels le groupe d'hôtes est mappé.
+
+====

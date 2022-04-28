@@ -1,0 +1,387 @@
+---
+sidebar: sidebar 
+permalink: seapiref_tenants.html 
+keywords: netapp, keystone, tenants, 
+summary: Locataires Keystone 
+---
+= Locataires
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Utilisez les méthodes répertoriées dans le tableau suivant pour récupérer, créer, modifier et supprimer des locataires.
+
+|===
+| Méthode HTTP | Chemin | Description 
+
+
+| `GET' | `/v2.1/tenants` | Récupérer une liste de tous les locataires. 
+
+
+| `GET' | `/v2.1/tenants/{id}' | Récupérez un locataire par son ID. 
+
+
+| «POST» | `/v2.1/tenants` | Créez un nouveau locataire. 
+
+
+| `METTRE' | `/v2.1/tenants/{id}' | Modifier les détails d'un locataire. 
+
+
+| `SUPPRIMER' | `/v2.1/tenants/{id}' | Supprime un locataire. 
+|===
+
+
+=== Attributs des locataires
+
+Le tableau suivant répertorie les attributs du locataire.
+
+|===
+| Attribut | Type | Description 
+
+
+| `id' | Chaîne | Identifiant unique du locataire. 
+
+
+| `code' | Chaîne | Code spécifié par le client (ou par défaut) qui représente le locataire. Cet attribut peut contenir des lettres minuscules, des chiffres et des caractères de soulignement. 
+
+
+| `nom' | Chaîne | Nom du locataire. 
+
+
+| `zuora_account_name' | Chaîne | Le nom du compte de facturation : le nom de l'abonnement dans Zuora. 
+
+
+| `zuora_account_number' | Chaîne | Le numéro de compte de facturation : le numéro d'abonnement dans Zuora. 
+
+
+| `descriptions' | Chaîne | Description du locataire. 
+
+
+| «usage» | – | Détails des services et du service applicables au locataire. Pour chaque niveau de service, cet attribut affiche les éléments suivants : *nom:* Nom du niveau de service *Used_size_gb:* Nom du niveau de service *Nom_rôle:* rôle utilisateur (utilisateur, administrateur, lecture, partenaire ou root) 
+|===
+
+
+=== Récupérer tous les locataires
+
+Utilisez la méthode indiquée dans le tableau suivant pour récupérer tous les locataires ou un sous-ensemble de tous les locataires.
+
+|===
+| Méthode HTTP | Chemin | Description | Paramètres 
+
+
+| `GET' | `/v2.1/tenants` | Récupérer tous les locataires. | «offset» et «limite» – voir link:seapiref_netapp_service_engine_rest_apis.html#pagination>["Pagination commune"] 
+|===
+Attributs de corps de demande requis: `aucun'
+
+*Exemple corps de la demande :*
+
+....
+none
+....
+*Exemple de corps de réponse :*
+
+....
+{
+  "status": {
+    "user_message": "Okay. Returned 2 records.",
+    "verbose_message": "",
+    "code": 200
+  },
+  "result": {
+    "returned_records": 2,
+    "total_records": 23,
+    "sort_by": "created",
+    "order_by": "desc",
+    "offset": 0,
+    "limit": 2,
+    "records": [
+      {
+        "id": "5e7c3af7aab46c00014ce877",
+        "name": "MyTenant",
+        "zuora_account_name": "MyAccount",
+        "zuora_account_number": "A00000415",
+        "description": "",
+        "code": "mytenantcode",
+        "usage": {
+          "A-S00003875": [
+            {
+              "service_level": "extreme",
+              "consumed": 0,
+              "committed": 10,
+              "burst": 0
+            },
+            {
+              "service_level": "standard",
+              "consumed": 1.94,
+              "committed": 30,
+              "burst": 0
+            }
+          ],
+          "A-S00004566": [
+            {
+              "service_level": "object",
+              "consumed": 3.31,
+              "committed": 300,
+              "burst": 0
+            }
+          ]
+        }
+      },
+      {
+        "id": "5d914499869caefed0f39eee",
+        "name": "MyOrg",
+        "zuora_account_name": "MyOrg Inc",
+        "zuora_account_number": "A00000415",
+        "description": "",
+        "code": "myorg",
+        "usage": {
+          "A-S00003875": [
+            {
+              "service_level": "standard",
+              "consumed": 12.33,
+              "committed": 30,
+              "burst": 0
+            },
+            {
+              "service_level": "object",
+              "consumed": 0,
+              "committed": 40,
+              "burst": 0
+            }
+          ],
+          "A-S00003969": [
+            {
+              "service_level": "extreme",
+              "consumed": 0,
+              "committed": 5,
+              "burst": 0
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+....
+
+
+=== Récupérer un locataire par ID
+
+Utilisez la méthode indiquée dans le tableau suivant pour récupérer un locataire par ID.
+
+|===
+| Méthode HTTP | Chemin | Description | Paramètres 
+
+
+| `GET' | `/v2.1/tenants/{id}' | Récupérez le locataire spécifié par l'ID. | `ID (chaîne)`: L'identifiant unique du locataire. 
+|===
+Attributs de corps de demande requis: `aucun'
+
+Exemple de corps de la demande :
+
+....
+none
+....
+*Exemple de corps de réponse :*
+
+....
+{
+  "status": {
+    "user_message": "Okay. Returned 1 record.",
+    "verbose_message": "",
+    "code": 200
+  },
+  "result": {
+    "returned_records": 1,
+    "records": [
+      {
+        "id": "5e7c3af7aab46c00014ce877",
+        "name": "MyTenant",
+        "zuora_account_name": "MyAccount",
+        "zuora_account_number": "A00000415",
+        "description": "",
+        "code": "mytenantcode",
+        "usage": {
+          "A-S00003875": [
+            {
+              "service_level": "extreme",
+              "consumed": 0,
+              "committed": 10,
+              "burst": 0
+            },
+            {
+              "service_level": "premium",
+              "consumed": 2.4,
+              "committed": 20,
+              "burst": 0
+            },
+            {
+              "service_level": "standard",
+              "consumed": 1.94,
+              "committed": 30,
+              "burst": 0
+            },
+            {
+              "service_level": "object",
+              "consumed": 0,
+              "committed": 40,
+              "burst": 0
+            }
+          ],
+          "A-S00003969": [
+            {
+              "service_level": "extreme",
+              "consumed": 0,
+              "committed": 5,
+              "burst": 0
+            },
+            {
+              "service_level": "standard",
+              "consumed": 0,
+              "committed": 30,
+              "burst": 0
+            }
+          ],
+          "A-S00004566": [
+            {
+              "service_level": "object",
+              "consumed": 3.31,
+              "committed": 300,
+              "burst": 0
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+....
+
+
+=== Créez un locataire
+
+Utilisez la méthode indiquée dans le tableau suivant pour créer un locataire.
+
+|===
+| Méthode HTTP | Chemin | Description | Paramètres 
+
+
+| «POST» | `/v2.1/tenants` | Créez un nouveau locataire. | Aucune 
+|===
+Attributs de corps de demande requis: `code', `nom', `zuora_account_name', `zuora_account_number'
+
+*Exemple corps de la demande :*
+
+....
+{
+  "name": "MyNewTenant",
+  "code": "mytenant",
+  "zuora_account_name": "string",
+  "zuora_account_number": "A00000415",
+  "description": "DescriptionOfMyTenant"
+}
+....
+*Exemple de corps de réponse :*
+
+....
+{
+  "status": {
+    "user_message": "Okay. New resource created.",
+    "verbose_message": "",
+    "code": 201
+  },
+  "result": {
+    "returned_records": 1,
+    "records": [
+      {
+        "id": "5ed5ac802c356a0001a735af",
+        "name": "MyNewTenant",
+        "zuora_account_name": "string",
+        "zuora_account_number": "A00000415",
+        "description": "DescriptionOfMyTenant",
+        "code": "mytenant",
+        "usage": null
+      }
+    ]
+  }
+}
+....
+
+
+=== Modifiez le locataire
+
+Utilisez la méthode indiquée dans le tableau suivant pour modifier le locataire.
+
+|===
+| Méthode HTTP | Chemin | Description | Paramètres 
+
+
+| `METTRE' | `/v2.1/tenants/{id}' | Modifiez le locataire spécifié par l'ID. Vous pouvez modifier le nom, les détails de l'abonnement Zuora (nom de compte ou numéro d'abonnement) et la description du locataire. | `ID (chaîne)`: L'identifiant unique du locataire. 
+|===
+Attributs corps de la demande requis: `code'
+
+*Exemple corps de la demande :*
+
+....
+{
+  "name": "MyNewTenant",
+  "code": "mytenant",
+  "zuora_account_name": "string",
+  "zuora_account_number": "A00000415",
+  "description": "New description of my tenant"
+}
+....
+*Exemple de corps de réponse :*
+
+....
+{
+  "status": {
+    "user_message": "Okay. Returned 1 record.",
+    "verbose_message": "",
+    "code": 200
+  },
+  "result": {
+    "returned_records": 1,
+    "records": [
+      {
+        "id": "5ed5ac802c356a0001a735af",
+        "name": "MyNewTenant",
+        "zuora_account_name": "string",
+        "zuora_account_number": "A00000415",
+        "description": "New description of my tenant",
+        "code": "mytenant",
+        "usage": null
+      }
+    ]
+  }
+}
+....
+
+
+=== Supprimez le locataire
+
+Utilisez la méthode indiquée dans le tableau suivant pour supprimer le locataire.
+
+|===
+| Méthode HTTP | Chemin | Description | Paramètres 
+
+
+| `SUPPRIMER' | `/v2.1/tenants/{id}' | Supprimez le locataire spécifié par l'ID. | `ID (chaîne)`: L'identifiant unique du locataire. 
+|===
+Attributs de corps de demande requis: `aucun'
+
+*Exemple corps de la demande :*
+
+....
+none
+....
+*Exemple de corps de réponse :*
+
+....
+No content for successful delete
+....

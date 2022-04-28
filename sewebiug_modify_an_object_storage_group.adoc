@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_modify_an_object_storage_group.html 
+keywords: netapp, keystone, modify, object, storage, group 
+summary: Keystone permet de modifier un groupe de stockage objet 
+---
+= Modifier un groupe de stockage d'objets
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Utilisez cette méthode pour modifier les détails d'un groupe de stockage objet, comme le nom du groupe et la règle S3.
+
+.Étapes
+. Afficher le link:sewebiug_view_host_groups.html#view-host-groups["Liste des groupes"].
+. Assurez-vous que le sous-locataire correct est sélectionné et que l'affichage indique des groupes (et non des utilisateurs).
+. Recherchez le groupe dans la liste et cliquez sur l'icône Modifier pour ce groupe.
++
+Pour plus d'informations sur l'utilisation des éléments dans les listes, reportez-vous à la section link:sewebiug_netapp_service_engine_web_interface_overview.html#list-view["Actions de vue de liste"].
+
+. Dans la boîte de dialogue Modifier le groupe, entrez le nom d'utilisateur.
+. Sélectionnez la règle S3 qui s'applique au groupe modifié.
+. Cliquez sur *Créer*. Cela crée un travail pour modifier le groupe avec les paramètres spécifiés.
+

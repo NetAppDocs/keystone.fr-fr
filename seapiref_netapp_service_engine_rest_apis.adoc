@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: seapiref_netapp_service_engine_rest_apis.html 
+keywords: netapp, keystone, service, engine, rest, apis, 
+summary: API REST des moteurs de service NetApp 
+---
+= API REST NetApp Service Engine
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+
+
+=== Pagination
+
+De nombreux appels API renvoient un grand nombre d'enregistrements. Il est possible de limiter le nombre d'enregistrements en spécifiant les valeurs «offset» et «limite»:
+
+* *Limite.* le nombre d'enregistrements à retourner.
+* *Décaler.* le nombre d'enregistrements à ignorer avant de retourner le premier enregistrement. Par exemple, un décalage de l'un d'entre eux permet d'ignorer le premier enregistrement et de renvoyer les enregistrements commençant à deux.
+
+
+Vous pouvez également trier et trier les réponses :
+
+* *Trier_par.* Trier les enregistrements à l'aide de l'attribut spécifié. Par exemple, pour trier par date de création, spécifiez créé.
+* *Order_by.* commande les enregistrements par ordre croissant (asc) ou décroissant (desc).
+

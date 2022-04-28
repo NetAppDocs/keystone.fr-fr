@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_create_buckets.html 
+keywords: netapp, keystone, create, buckets, 
+summary: Création de compartiments Keystone 
+---
+= Créer des compartiments
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Les compartiments sont créés sous un sous-locataire.
+
+.Étapes
+. Afficher le link:sewebiug_view_buckets.html#view-buckets["Liste des compartiments"] et sélectionnez le sous-locataire sous lequel créer le compartiment.
+. Cliquez sur *Créer un compartiment*.
+. Dans la boîte de dialogue Créer un compartiment, entrez le nom du nouveau compartiment et cliquez sur *Créer*. Cela crée un travail pour créer le compartiment.
+
+
+La fonction de création de compartiment est exécutée sous la forme d'une tâche asynchrone. Vous pouvez :
+
+* Vérifiez l'état du travail dans la liste des travaux.
+* Une fois le travail terminé, vérifiez l'état du serveur dans la liste compartiments.
+

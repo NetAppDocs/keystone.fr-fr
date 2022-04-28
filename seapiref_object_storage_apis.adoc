@@ -1,0 +1,1285 @@
+---
+sidebar: sidebar 
+permalink: seapiref_object_storage_apis.html 
+keywords: netapp, keystone, object, storage, apis, 
+summary: API de stockage objet Keystone 
+---
+= API de stockage objet
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cette section fournit les API nécessaires pour gérer le stockage objet, les utilisateurs de stockage objet et le groupe de stockage objet.
+
+Ce workflow de stockage objet inclut les tâches suivantes :
+
+* Créez un compte de stockage objet.
+* Créer un groupe de stockage objet.
+* Créez un utilisateur de stockage objet.
+* Créez une clé S3 pour l'utilisateur.
+
+
+
+
+=== Groupes de stockage d'objets
+
+Utilisez les méthodes répertoriées dans le tableau ci-dessous pour extraire, créer ou modifier des groupes de stockage d'objets.
+
+|===
+| Méthode HTTP | Chemin | Description 
+
+
+| `GET' | `/v2.1/objectiam/groups` | Récupérer les groupes de stockage d'objets. 
+
+
+| `GET' | `/v2.1/objectiam/groups/{id}' | Récupère un groupe de stockage objet par ID. 
+
+
+| «POST» | `/v2.1/objectiam/groups` | Créez un groupe de gestion de l'accès aux identités de stockage objet. 
+
+
+| `METTRE' | `/v2.1/objectiam/groups/{id}' | Modifiez un groupe de stockage d'objets identifié par ID. 
+
+
+| `SUPPRIMER' | `/v2.1/objectiam/groups/{id}' | Supprime un groupe de stockage objet identifié par l'ID. 
+|===
+
+
+==== Attributs du groupe de stockage objet
+
+Le tableau ci-dessous répertorie les attributs de stockage objet.
+
+|===
+| Attribut | Type | Description 
+
+
+| `id' | Chaîne | Identifiant unique du groupe de stockage objet. 
+
+
+| `nom' | Chaîne | Nom du groupe de stockage objet. 
+
+
+| `locataires' | Chaîne | Nom du sous-locataire auquel appartient le groupe. 
+
+
+| `subtenant_id' | Chaîne | Identifiant du sous-locataire auquel appartient le groupe. 
+
+
+| «locataire» | Chaîne | Nom du locataire auquel appartient le groupe. 
+
+
+| `tenant_id' | Chaîne | Identifiant du locataire auquel appartient le groupe. 
+
+
+| `s3_policy' |   a| 
+Règle S3 par exemple :
+
+[listing]
+----
+"s3_policy": {
+    "Statement": [
+      {
+        "Effect": "Allow",
+        "Action": "s3:*",
+        "Resource": "arn:aws:s3:::*"
+      }
+    ]
+  }
+----
+|===
+
+
+=== Récupérer les groupes de stockage d'objets
+
+Utilisez la méthode indiquée dans le tableau ci-dessous pour extraire tous les groupes de stockage objet ou un sous-ensemble de groupes de stockage objet. En spécifiant un `subtenant_ID`, vous ne renverra que les groupes de stockage objet appartenant à ce sous-locataire.
+
+|===
+| Méthode HTTP | Chemin | Description | Paramètres 
+
+
+| `GET' | `/v2.1/objectiam/groups` | Récupère tous les groupes de stockage objet. Vous pouvez également spécifier un ID de sous-locataire pour ne récupérer que les groupes de stockage objet associés au sous-tenant. | `subtenant_ID (chaîne)`: L'ID du sous-locataire associé aux utilisateurs/groupes de gestion des identités et des accès (IAM). «offset» et «limite»– voir link:seapiref_netapp_service_engine_rest_apis.html#pagination>["Pagination commune"] 
+|===
+Attributs de corps de demande requis: `aucun'
+
+*Exemple corps de la demande :*
+
+....
+none
+....
+*Exemple de corps de réponse :*
+
+....
+{
+  "status": {
+    "user_message": "Okay. Returned 1 record.",
+    "verbose_message": "",
+    "code": 200
+  },
+  "result": {
+    "returned_records": 1,
+    "total_records": 1,
+    "sort_by": "created",
+    "order_by": "desc",
+    "offset": 0,
+    "limit": 20,
+    "records": [
+      {
+        "id": "5eb1eff8bc5c0300011c989c",
+        "name": "MyGroup",
+        "tenant_id": "5e7c3af7aab46c00014ce877",
+        "tenant": "MyTenant",
+        "subtenant_id": "5e7c3af8aab46c00014ce878",
+        "subtenant": "MySubtenant",
+        "s3_policy": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:*"
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:s3:::*"
+            }
+          ]
+        }
+      }
+    ]
+
+....
+
+
+==== Récupère un groupe de stockage objet par ID
+
+Utilisez la méthode indiquée dans le tableau ci-dessous pour récupérer un groupe de stockage objet par ID.
+
+|===
+| Méthode HTTP | Chemin | Description | Paramètres 
+
+
+| `GET' | `/v2.1/objectiam/groups/{id}' | Récupère un groupe de stockage objet par ID. | `ID (chaîne)`: L'identifiant unique du groupe de stockage objet. 
+|===
+Attributs de corps de demande requis: `aucun'
+
+*Exemple corps de la demande :*
+
+....
+none
+....
+*Exemple de corps de réponse :*
+
+....
+{
+  "status": {
+    "user_message": "Okay. Returned 1 record.",
+    "verbose_message": "",
+    "code": 200
+  },
+  "result": {
+    "returned_records": 1,
+    "records": [
+      {
+        "id": "5eb1eff8bc5c0300011c989c",
+        "name": "MyGroup",
+        "tenant_id": "5e7c3af7aab46c00014ce877",
+        "tenant": "MyTenant",
+        "subtenant_id": "5e7c3af8aab46c00014ce878",
+        "subtenant": "MySubtenant",
+        "s3_policy": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:*"
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:s3:::*"
+            }
+          ]
+        }
+      }
+    ]
+  }
+....
+
+
+==== Créer un groupe de stockage objet
+
+Utilisez la méthode indiquée ci-dessous pour créer un groupe de stockage objet.
+
+|===
+| Méthode HTTP | Chemin | Description | Paramètres 
+
+
+| «POST» | `/v2.1/objectiam/groups/` | Créez un nouveau service de groupe de stockage objet pour héberger les utilisateurs de stockage objet. | Aucune 
+|===
+Attributs de corps de demande requis: `name`, `subtenant_ID`, `s3Policy`
+
+*Exemple corps de la demande :*
+
+....
+{
+  "name": "MyNewGroup",
+  "subtenant_id": "5e7c3af8aab46c00014ce878",
+  "s3_policy": {
+    "Statement": [
+      {
+        "Effect": "Allow",
+        "Action": "s3:*",
+        "Resource": "arn:aws:s3:::*"
+      }
+    ]
+  }
+}
+....
+*Exemple de corps de réponse :*
+
+....
+{
+  "status": {
+    "user_message": "Okay. Accepted for processing.",
+    "verbose_message": "",
+    "code": 202
+  },
+  "result": {
+    "returned_records": 1,
+    "records": [
+      {
+        "id": "5ed5fa312c356a0001a73841",
+        "action": "create",
+        "job_summary": "Create request is successfully submitted",
+        "created": "2020-06-02T07:05:21.130260774Z",
+        "updated": "2020-06-02T07:05:21.130260774Z",
+        "object_id": "5ed5fa312c356a0001a73840",
+        "object_type": "sg_groups",
+        "object_name": "MyNewGroup",
+        "status": "pending",
+        "status_detail": "",
+        "last_error": "",
+        "user_id": "5ec626c0f038943eb46b0af1",
+        "job_tasks": null
+      }
+    ]
+  }
+}
+....
+
+
+==== Modifier un groupe de stockage d'objets
+
+Utilisez la méthode indiquée dans le tableau ci-dessous pour modifier un groupe de stockage objet.
+
+|===
+| Méthode HTTP | Chemin | Description | Paramètres 
+
+
+| `METTRE' | `/v2.1/objectiam/groups/{id}' | Modifier un groupe de stockage d'objets. | `ID (chaîne)`: L'identifiant unique du groupe de stockage objet. 
+|===
+Attributs de corps de demande requis: `name`, `subtenant_ID`, `s3Policy`
+
+*Exemple corps de la demande :*
+
+....
+{
+  "s3_policy": {
+    "Statement": [
+        {
+        "Action": [
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket",
+            "s3:ListBucketVersions",
+            "s3:GetObject",
+            "s3:GetObjectTagging",
+            "s3:GetObjectVersion",
+            "s3:GetObjectVersionTagging"
+        ],
+        "Effect": "Allow",
+        "Resource": "arn:aws:s3:::*"
+        }
+    ]
+  }
+}
+....
+*Exemple de corps de réponse :*
+
+....
+{
+  "status": {
+    "user_message": "Okay. Accepted for processing.",
+    "verbose_message": "",
+    "code": 202
+  },
+  "result": {
+    "returned_records": 1,
+    "records": [
+      {
+        "id": "5ed5fe822c356a0001a73859",
+        "action": "update",
+        "job_summary": "Update request is successfully submitted",
+        "created": "2020-06-02T07:23:46.43550235Z",
+        "updated": "2020-06-02T07:23:46.43550235Z",
+        "object_id": "5ed5fa312c356a0001a73840",
+        "object_type": "sg_groups",
+        "object_name": "MyNewGroup",
+        "status": "pending",
+        "status_detail": "",
+        "last_error": "",
+        "user_id": "5ec626c0f038943eb46b0af1",
+        "job_tasks": null
+      }
+    ]
+  }
+}
+....
+
+
+==== Supprime un groupe de stockage objet par ID
+
+Utilisez la méthode indiquée dans le tableau ci-dessous pour supprimer un groupe de stockage objet par ID.
+
+|===
+| Méthode HTTP | Chemin | Description | Paramètres 
+
+
+| `supprimer' | `/v2.1/objectiam/groups/{id}' | Supprime un groupe de stockage objet par ID. | `ID (chaîne)`: L'identifiant unique du groupe de stockage objet. 
+|===
+Attributs de corps de demande requis: `aucun'
+
+*Exemple corps de la demande :*
+
+....
+none
+....
+*Exemple de corps de réponse :*
+
+....
+{
+  "status": {
+    "user_message": "Okay. Returned 1 record.",
+    "verbose_message": "",
+    "code": 200
+  },
+  "result": {
+    "returned_records": 1,
+    "records": [
+      {
+        "id": "5eb1eff8bc5c0300011c989c",
+        "name": "MyGroup",
+        "tenant_id": "5e7c3af7aab46c00014ce877",
+        "tenant": "MyTenant",
+        "subtenant_id": "5e7c3af8aab46c00014ce878",
+        "subtenant": "MySubtenant",
+        "s3_policy": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:*"
+              ],
+              "Effect": "Allow",
+              "Resource": "arn:aws:s3:::*"
+            }
+          ]
+        }
+      }
+    ]
+  }
+....
+
+
+=== Utilisateurs du stockage objet
+
+Utilisez les méthodes répertoriées dans le tableau suivant pour effectuer les tâches suivantes :
+
+* Récupérez, créez ou modifiez des utilisateurs du stockage objet.
+* Créez des clés S3, récupérez les clés S3 pour un utilisateur ou récupérez les clés selon l'ID de clé.
+
+
+|===
+| Méthode HTTP | Chemin | Description 
+
+
+| `GET' | `/v2.1/objectiam/users` | Récupérer les utilisateurs de stockage objet 
+
+
+| `GET' | `/v2.1/objectiam/users/{id}' | Récupère un utilisateur de stockage objet par ID. 
+
+
+| «POST» | `/v2.1/objectiam/users` | Créez un utilisateur de stockage objet. 
+
+
+| `METTRE' | `/v2.1/objectiam/users/{id}' | Modifiez un utilisateur de stockage objet identifié par ID. 
+
+
+| `SUPPRIMER' | `/v2.1/objectiam/users/{id}' | Supprime un utilisateur de stockage objet par ID. 
+
+
+| `GET' | `/v2.1/objectiam/users/{user_id}/s3keys` | Obtenir toutes les clés S3 mappées à un utilisateur. 
+
+
+| «POST» | `/v2.1/objectiam/users/{user_id}/s3keys` | Création de clés S3. 
+
+
+| `GET' | `/v2.1/objectiam/users/{user_id}/s3keys/{key_id}` | Obtenir les clés S3 par ID de clé. 
+
+
+| `SUPPRIMER' | `/v2.1/objectiam/users/{user_id}/s3keys/{key_id}` | Supprimez les clés S3 par ID de clé. 
+|===
+
+
+==== Attributs utilisateur du stockage objet
+
+Le tableau ci-dessous répertorie les attributs utilisateur du stockage objet.
+
+|===
+| Attribut | Type | Description 
+
+
+| `id' | Chaîne | Identificateur unique de l'utilisateur de stockage objet. 
+
+
+| `nom_de_jeu' | Chaîne | Nom d'affichage de l'utilisateur. 
+
+
+| `locataires' | Chaîne | Nom du sous-locataire auquel appartient l'utilisateur. 
+
+
+| `subtenant_id' | Chaîne | Identifiant du sous-locataire auquel appartient l'utilisateur. 
+
+
+| «locataire» | Chaîne | Nom du locataire auquel appartient l'utilisateur. 
+
+
+| `tenant_id' | Chaîne | Identifiant du locataire auquel appartient l'utilisateur. 
+
+
+| `objectiam_user_urn' | Chaîne | L'URN. 
+
+
+| `sg_group_membership` | Chaîne | Membres du groupe NetApp StorageGRID. Par exemple : "sg_group_membership" : [ "5 portes-jeux 0fb4f47df00015274e3" ] 
+|===
+
+
+=== Récupérer les utilisateurs de stockage objet
+
+Utilisez la méthode indiquée dans le tableau ci-dessous pour extraire tous les utilisateurs du stockage objet ou un sous-ensemble d'utilisateurs du stockage objet. En spécifiant un `subtenant_ID`, vous ne renverra que les groupes de stockage objet appartenant à ce sous-locataire.
+
+|===
+| Méthode HTTP | Chemin | Description | Paramètres 
+
+
+| `GET' | `/v2.1/objectiam/users` | Récupérer tous les utilisateurs de stockage objet | `subtenant_ID (chaîne)`: L'ID de sous-locataire associé aux utilisateurs/groupes IAM. «offset» et «limite» – voir link:seapiref_netapp_service_engine_rest_apis.html#pagination>["Pagination commune"] 
+|===
+Attributs de corps de demande requis: `aucun'
+
+*Exemple corps de la demande :*
+
+....
+none
+....
+*Exemple de corps de réponse :*
+
+....
+{
+  "status": {
+    "user_message": "Okay. Returned 1 record.",
+    "verbose_message": "",
+    "code": 200
+  },
+  "result": {
+    "returned_records": 1,
+    "total_records": 1,
+    "sort_by": "created",
+    "order_by": "desc",
+    "offset": 0,
+    "limit": 20,
+    "records": [
+      {
+        "id": "5eb2212d1cbe3b000134762e",
+        "display_name": "MyUser",
+        "subtenant": "MySubtenant",
+        "subtenant_id": "5e7c3af8aab46c00014ce878",
+        "tenant_id": "5e7c3af7aab46c00014ce877",
+        "tenant": "MyTenant",
+        "objectiam_user_urn": "urn:sgws:identity::96465636379595351967:user/myuser",
+        "sg_group_membership": [
+          "5eb1eff8bc5c0300011c989c"
+        ]
+      }
+    ]
+  }
+}
+....
+
+
+==== Récupère un utilisateur de stockage objet par ID
+
+Utilisez la méthode indiquée dans le tableau ci-dessous pour récupérer un ID de stockage objet utilisé.
+
+|===
+| Méthode HTTP | Chemin | Description | Paramètres 
+
+
+| `GET' | `/v2.1/objectiam/users{id}' | Récupère un utilisateur de stockage objet par ID. | `ID`: L'ID du compte de stockage objet. 
+|===
+Attributs de corps de demande requis: `aucun'
+
+*Exemple corps de la demande :*
+
+....
+none
+....
+*Exemple de corps de réponse :*
+
+....
+{
+  "status": {
+    "user_message": "Okay. Returned 1 record.",
+    "verbose_message": "",
+    "code": 200
+  },
+  "result": {
+    "returned_records": 1,
+    "records": [
+      {
+        "id": "5eb2212d1cbe3b000134762e",
+        "display_name": "MyUser",
+        "subtenant": "MySubtenant",
+        "subtenant_id": "5e7c3af8aab46c00014ce878",
+        "tenant_id": "5e7c3af7aab46c00014ce877",
+        "tenant": "MyTenant",
+        "objectiam_user_urn": "urn:sgws:identity::96465636379595351967:user/myuser",
+        "sg_group_membership": [
+          "5eb1eff8bc5c0300011c989c"
+        ]
+      }
+    ]
+  }
+}
+....
+
+
+==== Créez un utilisateur de stockage objet
+
+Utilisez la méthode indiquée dans le tableau ci-dessous pour créer un utilisateur de stockage objet.
+
+|===
+| Méthode HTTP | Chemin | Description | Paramètres 
+
+
+| «POST» | `/v2.1/objectiam/users` | Créez un nouvel utilisateur de stockage objet. | Aucune 
+|===
+Attributs de corps de requête requis : `display_name`, `subtenant_ID`, `sg_group_memberships'
+
+*Exemple corps de la demande :*
+
+....
+{
+  "display_name": "MyUserName",
+  "subtenant_id": "5e7c3af8aab46c00014ce878",
+  "sg_group_membership": [
+    "5ed5fa312c356a0001a73840"
+  ]
+}
+....
+*Exemple de corps de réponse :*
+
+....
+{
+  "status": {
+    "user_message": "Okay. Accepted for processing.",
+    "verbose_message": "",
+    "code": 202
+  },
+  "result": {
+    "returned_records": 1,
+    "records": [
+      {
+        "id": "5ed603712c356a0001a7386c",
+        "action": "create",
+        "job_summary": "Activate request is successfully submitted",
+        "created": "2020-06-02T07:44:49.647815816Z",
+        "updated": "2020-06-02T07:44:49.647815816Z",
+        "object_id": "5ed603712c356a0001a7386d",
+        "object_type": "sg_users",
+        "object_name": "MyUserName",
+        "status": "pending",
+        "status_detail": "",
+        "last_error": "",
+        "user_id": "5ec626c0f038943eb46b0af1",
+        "job_tasks": null
+      }
+    ]
+  }
+}
+....
+
+
+==== Modifier un utilisateur de stockage objet
+
+Utilisez la méthode indiquée dans le tableau ci-dessous pour modifier un utilisateur de stockage objet.
+
+|===
+| Méthode HTTP | Chemin | Description | Paramètres 
+
+
+| `METTRE' | `/v2.1/objectiam/users/{id}' | Modifiez un utilisateur de stockage objet identifié par ID. | `ID`: L'ID utilisateur de stockage objet. 
+|===
+Attributs de corps de requête requis : `display_name`, `subtenant_ID`, `sg_group_memberships'
+
+*Exemple corps de la demande :*
+
+....
+{
+  "display_name": "MyModifiedObjectStorageUser",
+  "subtenant_id": "5e57a465896bd80001dd4961",
+  "sg_group_membership": [
+    "5e60754f9b64790001fe937b"
+  ]
+}
+....
+*Exemple de corps de réponse :*
+
+....
+{
+  "status": {
+    "user_message": "Okay. Accepted for processing.",
+    "verbose_message": "",
+    "code": 202
+  },
+  "result": {
+    "returned_records": 1,
+    "records": [
+      {
+        "id": "5ed604002c356a0001a73880",
+        "action": "update",
+        "job_summary": "Update request is successfully submitted",
+        "created": "2020-06-02T07:47:12.205889873Z",
+        "updated": "2020-06-02T07:47:12.205889873Z",
+        "object_id": "5ed603712c356a0001a7386d",
+        "object_type": "sg_users",
+        "object_name": "MyUserName",
+        "status": "pending",
+        "status_detail": "",
+        "last_error": "",
+        "user_id": "5ec626c0f038943eb46b0af1",
+        "job_tasks": null
+      }
+    ]
+  }
+}
+....
+
+
+==== Mapper toutes les clés S3 à un utilisateur du stockage objet
+
+Utilisez la méthode indiquée dans le tableau ci-dessous pour mapper toutes les clés S3 à un utilisateur de stockage objet.
+
+|===
+| Méthode HTTP | Chemin | Description | Paramètres 
+
+
+| `GET' | `/v2.1/objectiam/users/{user_id}/s3keys` | Créez une clé S3 pour un utilisateur du stockage objet. | `user_ID (chaîne)`: L'identifiant utilisateur de stockage objet. 
+|===
+Attributs de corps de demande requis: `aucun'
+
+*Exemple corps de la demande :*
+
+....
+none
+....
+*Exemple de corps de réponse :*
+
+....
+{
+  "status": {
+    "user_message": "Okay. Returned 1 record.",
+    "verbose_message": "",
+    "code": 200
+  },
+  "result": {
+    "returned_records": 1,
+    "records": [
+      {
+        "id": "5e66de2509a74c0001b895e7",
+        "display_name": "****************HNDE",
+        "subtenant_id": "5e57a465896bd80001dd4961",
+        "subtenant": "BProject",
+        "objectiam_user_id": "5e66c77809a74c0001b89598",
+        "objectiam_user": "MyNewObjectStorageUser",
+        "objectiam_user_urn": "urn:sgws:identity::09936502886898621050:user/mynewobjectstorageuser",
+        "expires": "2020-04-07T10:40:52Z"
+      }
+    ]
+....
+
+
+==== Créez une clé S3 pour un utilisateur du stockage objet
+
+Utilisez la méthode indiquée ci-dessous pour créer une clé S3 pour un utilisateur du stockage objet.
+
+|===
+| Méthode HTTP | Chemin | Description | Paramètres 
+
+
+| «POST» | `/v2.1/objectiam/users/{user_id}/s3keys` | Créez une clé S3 pour un utilisateur du stockage objet. | `user_ID (chaîne)`: L'identifiant utilisateur de stockage objet. 
+|===
+Attributs de corps de demande requis : `expire' (chaîne)
+
+
+NOTE: La date/heure d'expiration de la clé est définie dans UTC ; elle doit être définie ultérieurement.
+
+*Exemple corps de la demande :*
+
+....
+{
+  "expires": "2020-04-07T10:40:52Z"
+}
+....
+*Exemple de corps de réponse :*
+
+....
+  "status": {
+    "user_message": "Okay. Returned 1 record.",
+    "verbose_message": "",
+    "code": 200
+  },
+  "result": {
+    "total_records": 1,
+    "records": [
+      {
+        "id": "5e66de2509a74c0001b895e7",
+        "display_name": "****************HNDE",
+        "subtenant_id": "5e57a465896bd80001dd4961",
+        "subtenant": "BProject",
+        "objectiam_user_id": "5e66c77809a74c0001b89598",
+        "objectiam_user": "MyNewObjectStorageUser",
+        "objectiam_user_urn": "urn:sgws:identity::09936502886898621050:user/mynewobjectstorageuser",
+        "expires": "2020-04-07T10:40:52Z",
+        "access_key": "PL86KPEBN6XT4T7UHNDE",
+        "secret_key": "FlD/YWAM7JMr9gG8pumU8dzvcTLMzLYtUe2lNzcA"
+      }
+    ]
+  }
+}
+....
+
+
+==== Obtenir les clés S3 pour un utilisateur du stockage objet par ID de clé
+
+Utilisez la méthode indiquée dans le tableau ci-dessous pour obtenir les clés S3 pour un utilisateur de stockage objet par ID de clé.
+
+|===
+| Méthode HTTP | Chemin | Description | Paramètres 
+
+
+| `GET' | `/v2.1/objectiam/users/{user_id}/s3keys/{key_id}` | Obtenir les clés S3 par ID de clé.  a| 
+* `user_ID (chaîne)` : ID utilisateur du stockage objet. Par exemple : 5e66c77809a74c0001b89598
+* `key_ID (chaîne)`: Clé S3 par exemple : 5e66de2509a74c0001b895e7
+
+
+|===
+Attributs de corps de demande requis: `aucun'
+
+*Exemple corps de la demande :*
+
+....
+none
+....
+*Exemple de corps de réponse :*
+
+....
+{
+  "status": {
+    "user_message": "Okay. Returned 1 record.",
+    "verbose_message": "",
+    "code": 200
+  },
+  "result": {
+    "returned_records": 1,
+    "records": [
+      {
+        "id": "5ecc7bb9b5d2730001f798fb",
+        "display_name": "****************XCXD",
+        "subtenant_id": "5e7c3af8aab46c00014ce878",
+        "subtenant": "MySubtenant",
+        "objectiam_user_id": "5eb2212d1cbe3b000134762e",
+        "objectiam_user": "MyUser",
+        "objectiam_user_urn": "urn:sgws:identity::96465636379595351967:user/myuser",
+        "expires": "2020-05-27T00:00:00Z"
+      }
+    ]
+  }
+}
+....
+
+
+==== Supprimez une clé S3 par ID de clé
+
+Utilisez la méthode indiquée dans le tableau suivant pour supprimer une clé S3 par ID de clé.
+
+|===
+| Méthode HTTP | Chemin | Description | Paramètres 
+
+
+| `supprimer' | `/v2.1/objectiam/users/{user_id}/s3keys/{key_id}` | Supprimez la clé S3 par ID de clé.  a| 
+* `user_ID (chaîne)` : ID utilisateur du stockage objet. Par exemple : 5e66c77809a74c0001b89598
+* `key_ID (chaîne)`: Clé S3 par exemple : 5e66de2509a74c0001b895e7
+
+
+|===
+Attributs de corps de demande requis: `aucun'
+
+*Exemple corps de la demande :*
+
+....
+none
+....
+*Exemple de corps de réponse :*
+
+....
+No content to return for succesful execution
+....
+
+
+=== Comptes de stockage objet
+
+Utilisez les méthodes répertoriées dans le tableau suivant pour effectuer les tâches suivantes :
+
+* Récupérer, activer ou modifier les comptes de stockage objet
+* Création de compartiments S3.
+
+
+|===
+| Méthode HTTP | Chemin | Description 
+
+
+| `GET' | `/v2.1/objectstorage/accounts` | Récupérer les comptes de stockage objet. 
+
+
+| `GET' | `/v2.1/objectstorage/accounts/{id}' | Récupère un compte de stockage objet par ID. 
+
+
+| «POST» | `/v2.1/objectstorage/accounts` | Créez un compte de stockage objet. 
+
+
+| `METTRE' | `/v2.1/objectstorage/accounts/{id}' | Modifiez un compte de stockage objet identifié par ID. 
+
+
+| `SUPPRIMER' | `/v2.1/objectstorage/accounts/{id}' | Modifiez un compte de stockage objet identifié par ID. 
+
+
+| `GET' | `/v2.1/objectstorage/seaux` | Utiliser des compartiments S3. 
+
+
+| «POST» | `/v2.1/objectstorage/seaux` | Création de compartiments S3. 
+|===
+
+
+==== Attributs des comptes de stockage objet
+
+Le tableau ci-dessous répertorie les attributs des comptes de stockage objet.
+
+|===
+| Attribut | Type | Description 
+
+
+| `id' | Chaîne | L'identifiant unique de l'utilisateur du stockage objet. 
+
+
+| `subtenant_id' | Chaîne | Identifiant de l'instance d'un objet de sous-locataire. 
+
+
+| `quota_go' | Entier | Taille du partage ou du disque. 
+|===
+
+
+=== Récupère tous les comptes de stockage objet
+
+Utilisez la méthode indiquée dans le tableau ci-dessous pour extraire tous les comptes de stockage objet ou un sous-ensemble de comptes de stockage objet.
+
+|===
+| Méthode HTTP | Chemin | Description | Paramètres 
+
+
+| `GET' | `/v2.1/objectstorage/accounts` | Récupérer tous les utilisateurs de stockage objet | «offset» et «limite»– . voir link:seapiref_netapp_service_engine_rest_apis.html#pagination>["Pagination commune"] 
+|===
+Attributs de corps de demande requis: `aucun'
+
+*Exemple corps de la demande :*
+
+....
+none
+....
+*Exemple de corps de réponse*
+
+....
+{
+  "status": {
+    "user_message": "Okay. Returned 1 record.",
+    "verbose_message": "",
+    "code": 200
+  },
+  "result": {
+    "returned_records": 1,
+    "total_records": 19,
+    "sort_by": "created",
+    "order_by": "desc",
+    "offset": 3,
+    "limit": 1,
+    "records": [
+      {
+        "id": "5ec6119e6344d000014cdc41",
+        "name": "MyTenant - MySubtenant",
+        "subtenant": " MySubtenant",
+        "subtenant_id": "5ea8c5e083a9f80001b9d705",
+        "tenant": "E- MyTenant",
+        "tenant_id": "5d914499869caefed0f39eee",
+        "sg_account_id": "29420999312809208626",
+        "quota_gb": 100,
+        "sg_instance_name": "NSE StorageGRID Dev1",
+        "sg_instance_id": "5e3ba2840271823644cb8ab6"
+      }
+    ]
+  }
+}
+....
+
+
+==== Récupère un compte de stockage objet par ID
+
+Utilisez la méthode indiquée dans le tableau ci-dessous pour récupérer un compte de stockage objet par ID.
+
+|===
+| Méthode HTTP | Chemin | Description | Paramètres 
+
+
+| `GET' | `/v2.1/objectstorage/accounts/{id}' | Récupère un compte de stockage objet par ID. | `ID`: L'ID du compte de stockage objet. 
+|===
+Attributs de corps de demande requis: `aucun'
+
+*Exemple corps de la demande :*
+
+....
+none
+....
+*Exemple de corps de réponse :*
+
+....
+{
+  "status": {
+    "user_message": "Okay. Returned 1 record.",
+    "verbose_message": "",
+    "code": 200
+  },
+  "result": {
+    "returned_records": 1,
+    "records": [
+      {
+        "id": "5ec6119e6344d000014cdc41",
+        "name": "MyTenant - MySubtennant",
+        "subtenant": " MySubtennant",
+        "subtenant_id": "5ea8c5e083a9f80001b9d705",
+        "tenant": " MyTenant",
+        "tenant_id": "5d914499869caefed0f39eee",
+        "sg_account_id": "29420999312809208626",
+        "quota_gb": 100,
+        "sg_instance_name": "NSE StorageGRID Dev1",
+        "sg_instance_id": "5e3ba2840271823644cb8ab6"
+      }
+    ]
+  }
+....
+
+
+==== Activez un compte de stockage objet
+
+Utilisez la méthode indiquée dans le tableau ci-dessous pour activer un compte de stockage objet.
+
+|===
+| Méthode HTTP | Chemin | Description | Paramètres 
+
+
+| «POST» | `/v2.1/objectstorage/accounts` | Activer un service de stockage objet | Aucune 
+|===
+Attributs de corps de demande requis : `subtenant_ID, quota_gb`
+
+*Exemple corps de la demande :*
+
+....
+{
+  "subtenant_id": "5ecefbbef418b40001f20bd6",
+  "quota_gb": 20
+}
+....
+*Exemple de corps de réponse :*
+
+....
+{
+  "status": {
+    "user_message": "Okay. Accepted for processing.",
+    "verbose_message": "",
+    "code": 202
+  },
+  "result": {
+    "returned_records": 1,
+    "records": [
+      {
+        "id": "5ed608542c356a0001a73893",
+        "action": "create",
+        "job_summary": "Activate request for Sub Tenant MyNewSubtenant is successfully submitted",
+        "created": "2020-06-02T08:05:40.017362022Z",
+        "updated": "2020-06-02T08:05:40.017362022Z",
+        "object_id": "5ed608542c356a0001a73894",
+        "object_type": "sg_accounts",
+        "object_name": "MyTenant - MyNewSubtenant",
+        "status": "pending",
+        "status_detail": "",
+        "last_error": "",
+        "user_id": "5ec626c0f038943eb46b0af1",
+        "job_tasks": null
+      }
+    ]
+  }
+}
+....
+
+
+==== Modifier un compte de stockage objet
+
+Utilisez la méthode indiquée dans le tableau ci-dessous pour modifier un compte de stockage objet.
+
+|===
+| Méthode HTTP | Chemin | Description | Paramètres 
+
+
+| `METTRE' | `/v2.1/objectstorage/accounts/{id}' | Modifier un service de stockage objet (par exemple, modifier le quota). | `ID (chaîne)`: ID du compte de stockage objet. 
+|===
+Attributs de corps de demande requis: `name`, `subtenant_ID', `quota_gb'
+
+*Exemple corps de la demande :*
+
+....
+{
+  "name": "MyTenant - MyNewSubtenant",
+  "subtenant_id": "5ecefbbef418b40001f20bd6",
+  "quota_gb": 30
+}
+....
+*Exemple de corps de réponse :*
+
+....
+{
+  "status": {
+    "user_message": "Okay. Accepted for processing.",
+    "verbose_message": "",
+    "code": 202
+  },
+  "result": {
+    "returned_records": 1,
+    "records": [
+      {
+        "id": "5ed609162c356a0001a73899",
+        "action": "update",
+        "job_summary": "Update request is successfully submitted",
+        "created": "2020-06-02T08:08:54.841652098Z",
+        "updated": "2020-06-02T08:08:54.841652098Z",
+        "object_id": "5ed608542c356a0001a73894",
+        "object_type": "sg_accounts",
+        "object_name": "MyTenant - MyNewSubtenant",
+        "status": "pending",
+        "status_detail": "",
+        "last_error": "",
+        "user_id": "5ec626c0f038943eb46b0af1",
+        "job_tasks": null
+      }
+    ]
+  }
+}
+....
+
+
+==== Supprime un compte de stockage objet
+
+Avant de pouvoir supprimer un compte de stockage objet, vous devez d'abord supprimer tous les groupes, utilisateurs et compartiments associés. Utilisez la méthode indiquée dans le tableau ci-dessous pour supprimer un compte de stockage objet.
+
+
+NOTE: Utilisez l'utilitaire compatible S3 pour supprimer des compartiments. Il n'est pas possible de supprimer des compartiments depuis le moteur de service NetApp.
+
+|===
+| Méthode HTTP | Chemin | Description | Paramètres 
+
+
+| `supprimer' | `/v2.1/objectstorage/accounts/{id}' | Supprime un compte de stockage objet. | `ID (chaîne)`: ID du compte de stockage objet. 
+|===
+Attributs de corps de demande requis: `aucun'
+
+*Exemple corps de la demande :*
+
+....
+{
+  "name": "MyTenant - MyNewSubtenant",
+  "subtenant_id": "5ecefbbef418b40001f20bd6",
+  "quota_gb": 30
+}
+....
+*Exemple de corps de réponse :*
+
+....
+{
+  "status": {
+    "user_message": "string",
+    "verbose_message": "string",
+    "code": "string"
+  },
+  "result": {
+    "returned_records": 1,
+    "records": [
+      {
+        "id": "5d2fb0fb4f47df00015274e3",
+        "action": "string",
+        "object_id": "5d2fb0fb4f47df00015274e3",
+        "object_type": "string",
+        "status": "string",
+        "status_detail": "string",
+        "last_error": "string",
+        "user_id": "5d2fb0fb4f47df00015274e3",
+        "link": "string"
+      }
+    ]
+  }
+}
+....
+
+
+=== Compartiments de stockage objet
+
+Utilisez les API du tableau suivant pour créer et récupérer des compartiments de stockage objet.
+
+|===
+| Méthode HTTP | Chemin | Description 
+
+
+| `GET' | `/v2.1/objectstorage/seaux` | Récupère les compartiments de stockage objet. 
+
+
+| «POST» | `/v2.1/objectstorage/seaux` | Créer un compartiment de stockage objet. 
+|===
+
+
+==== Les attributs des compartiments de stockage objet
+
+Le tableau suivant répertorie les attributs de compartiment de stockage objet.
+
+|===
+| Attribut | Type | Description 
+
+
+| `id' | Chaîne | Identificateur unique de l'utilisateur de stockage objet. 
+
+
+| `Nom' | Chaîne | Nom du compartiment. 
+
+
+| `subtenant_id' | Chaîne | Identifiant du sous-locataire auquel appartient le compartiment. 
+|===
+
+
+==== Récupérer les compartiments S3
+
+Utilisez la méthode indiquée dans le tableau suivant pour récupérer les compartiments S3.
+
+|===
+| Méthode HTTP | Chemin | Description | Paramètres 
+
+
+| `GET' | `/v2.1/objectstorage/seaux` | Récupérer les compartiments S3. | `subtenant_ID`: Le sous-locataire qui possède le compartiment. 
+|===
+Attributs de corps de demande requis: `aucun'
+
+*Exemple corps de la demande :*
+
+....
+none
+....
+*Exemple de corps de réponse :*
+
+....
+{
+  "status": {
+    "user_message": "Okay. Returned 1 record.",
+    "verbose_message": "",
+    "code": 200
+  },
+  "result": {
+    "returned_records": 1,
+    "records": [
+      {
+        "creationTime": "2020-06-02T08:13:25.695Z",
+        "name": "mybucket"
+      }
+    ]
+  }
+}
+....
+
+
+==== Création de compartiments S3
+
+Utiliser la méthode indiquée dans le tableau suivant pour créer un compartiment S3.
+
+
+NOTE: Avant de pouvoir créer un compartiment, un compte de stockage objet pour le sous-tenant doit exister.
+
+|===
+| Méthode HTTP | Chemin | Description | Paramètres 
+
+
+| «POST» | `/v2.1/objectstorage/seaux` | Créez un compartiment S3. | Aucune 
+|===
+Attributs de corps de la demande requise :
+
+* `name` (chaîne de caractères) : nom du compartiment S3 (caractères minuscules ou numériques uniquement)
+* `subtenant_ID` (chaîne) : ID du sous-locataire auquel appartient le compartiment S3
+
+
+*Exemple corps de la demande :*
+
+....
+{
+  "name": "mybucket",
+  "subtenant_id": "5ecefbbef418b40001f20bd6"
+}
+....
+*Exemple de corps de réponse :*
+
+....
+{
+  "status": {
+    "user_message": "Okay. Accepted for processing.",
+    "verbose_message": "",
+    "code": 202
+  },
+  "result": {
+    "returned_records": 1,
+    "records": [
+      {
+        "id": "5ed60a232c356a0001a7389e",
+        "action": "create",
+        "job_summary": "Create request is successfully submitted",
+        "created": "2020-06-02T08:13:23.105015108Z",
+        "updated": "2020-06-02T08:13:23.105015108Z",
+        "object_id": "5ed60a232c356a0001a7389f",
+        "object_type": "sg_buckets",
+        "object_name": "mybucket",
+        "status": "pending",
+        "status_detail": "",
+        "last_error": "",
+        "user_id": "5ec626c0f038943eb46b0af1",
+        "job_tasks": null
+      }
+    ]
+  }
+}
+....

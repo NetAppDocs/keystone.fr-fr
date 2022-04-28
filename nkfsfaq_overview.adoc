@@ -1,0 +1,83 @@
+---
+sidebar: sidebar 
+permalink: nkfsfaq_overview.html 
+keywords: netapp, keystone, overview, 
+summary: Présentation de NetApp Keystone 
+---
+= FAQ NetApp Keystone
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Les questions suivantes donnent des réponses à vos questions fréquentes sur NetApp Keystone.
+
+
+
+=== Qu'est-ce que NetApp Keystone ?
+
+NetApp Keystone propose un portefeuille d'alternatives de dépenses d'investissement (CapEx) sur site qui comprennent NetApp Keystone Flex Pay (Flex Pay) et NetApp Keystone Flex Subscription (Flex Subscription).
+
+* *Flex Pay:* Un portefeuille de solutions de paiement incluant le financement traditionnel, le crédit-bail et les options fixes/variables pour répondre aux besoins de trésorerie de votre client.
+* *Abonnement Flex :* service basé sur un abonnement avec paiement à l'utilisation qui offre une expérience similaire à celle du cloud sur site, avec une option de service basée sur les résultats (exploitée par NetApp). Pour plus d'informations, voir link:https://docs.netapp.com/us-en/keystone/index.html["ici"].
+
+
+
+
+=== Quels sont les avantages de NetApp Keystone pour mes clients ?
+
+NetApp Keystone est le pont qui connecte les piliers de notre stratégie de cloud hybride et de dépenses d'investissement : l'agilité, la flexibilité financière et la réduction des risques financiers aident les clients à répondre à leur trésorerie et à leurs besoins.
+
+La marque NetApp Keystone offre un portefeuille de solutions de paiement flexibles incluant des options traditionnelles de financement, de leasing et fixes/variables pour les clients soucieux de leur compte avec l'abonnement Flex.
+
+* *Flex Pay (flexibilité financière, solutions de paiement):*
++
+** Préférez posséder le titre de l'actif, mais avoir besoin de paiement/souplesse financière (modèle de location, location, prêt, versements)
+** Des exigences de sécurité strictes sans options de connectivité des données externes pour activer l'abonnement
+** Les charges de travail présentent une croissance prévisible de la capacité et un budget CapEx
+** Infrastructure bien gérée avec une utilisation élevée des ressources
+** Préfèrent fournir du stockage de capacité brute et conserver les avantages d'efficacité
+
+
+* *Abonnement Flex (OPEX, expérience de type cloud) :*
++
+** Préférez les dépenses d'exploitation de 100 % pour que les ressources ne finissent pas par se trouver sur le bilan de votre client
+** Prestataires de services internes/externes cherchant à aligner les coûts sur l'utilisation et le chiffre d'affaires
+** Les charges de travail ne présentant pas de croissance imprévisible de la capacité
+** Réattribution des ressources INFORMATIQUES à partir des tâches de stockage types (migrations, mises à jour technologiques, mises à niveau, etc.)
+** Solution à court terme avant de migrer les workloads vers le cloud
+** Rapatriement des workloads depuis le cloud vers l'environnement sur site
+
+
+
+
+
+
+=== Qu'est-ce que l'abonnement Flex ?
+
+Flex Subscription est un nouveau modèle d'approvisionnement flexible basé sur un abonnement sur site. Il permet aux clients d'accélérer le retour sur investissement en éliminant les obstacles liés à la gestion des ressources et en passant par le long cycle d'approvisionnement. L'abonnement Flex permet aux clients d'aligner les aspects économiques sur leurs priorités commerciales. Pour plus d'informations, voir link:https://docs.netapp.com/us-en/keystone/index.html#netapp-keystone-flex-subscription["ici"].
+
+
+
+=== Qu'entend-on par sur site ?
+
+Ce site est défini comme un data Center détenu par le client ou un espace détenu par le client sur le site de colocation. Le client doit occuper l'espace, l'alimentation et le refroidissement.
+
+
+
+=== Quels sont les avantages des services Flex Subscription ?
+
+Voici quelques avantages des services Flex Subscription :
+
+* Libérez vos équipes IT des tâches complexes liées au stockage et peuvent ainsi se concentrer sur la gestion des applications
+* Réduit l'investissement initial
+* Permet aux clients de répondre aux besoins sans surprovisionnement
+* Alignement des coûts du stockage de données avec les besoins/activités de l'entreprise
+* Simplifie le provisionnement de l'infrastructure en contournant les procédures d'approvisionnement complexes
+* Sécurise les données sur site
+* Permet un contrôle approprié de la conformité, des performances et de la sécurité pour plus d'informations, voir link:https://docs.netapp.com/us-en/keystone/index.html#benefits-of-flex-subscription["ici"].
+

@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_managing_subscribed_services_overview.html 
+keywords: netapp, keystone, managing, cloud, services, overview, 
+summary: Présentation de la gestion des services cloud par Keystone 
+---
+= Présentation
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Une fois enregistré avec NetApp Service Engine, vous pouvez gérer vos services Cloud volumes (CVS) par le biais du portail Web NetApp Service Engine. Les points suivants sont notamment :
+
+* Azure NetApp Files (ANF)
+* (À venir) Amazon Web Services (AWS)
+* (À venir) Google Cloud Platform (GCP)
++
+Vous pouvez uniquement enregistrer des abonnements CVS existants avec NetApp Service Engine. Pour créer un nouvel abonnement, créer l'abonnement CVS de façon normale et l'enregistrer auprès du moteur de services NetApp à l'aide de vos identifiants d'abonnement.
+
++
+Cette section explique comment gérer les services clouds
+
+
+
+
+NOTE: La gestion des services cloud requiert un accès d'administrateur client.
+
+Vous pouvez :
+
+* Afficher la liste des services clouds
+* Ajouter un service cloud
+* Modifier les détails des services cloud
+* Supprimez un service cloud
+

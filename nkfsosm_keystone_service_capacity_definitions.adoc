@@ -1,0 +1,79 @@
+---
+sidebar: sidebar 
+permalink: nkfsosm_keystone_service_capacity_definitions.html 
+keywords: netapp, keystone, service, capacity, definitions, burst, committed capacity, consumed capacity, billed capacity 
+summary: Définitions de capacité des services Keystone 
+---
+= Définitions de la capacité du service Flex Subscription
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Les capacités du service NetApp Keystone Flex Subscription (Flex Subscription) comprennent :
+
+
+
+== Capacité logique
+
+Il s'agit des données placées dans l'infrastructure Flex Subscription par un client. Toutes les capacités d'abonnement Flex font référence à une capacité logique. Par exemple, si un fichier de 1 To est stocké sur l'infrastructure Flex Subscription, vous devez acheter au moins 1 Tio de capacité.
+
+
+
+== De la capacité
+
+La capacité logique minimale facturée chaque mois pendant la durée de la période :
+
+* La capacité s'engage à chaque niveau de performances.
+* La capacité engagée ne peut pas être réduite pendant la période de validité.
+* Il est possible d'ajouter de la capacité dédiée et des niveaux de performances supplémentaires pendant la période de validité.
+
+
+
+
+=== Modifications de la capacité engagée
+
+Pendant la durée d'un abonnement, vous pouvez modifier les capacités engagées. Toutefois, il existe certaines conditions préalables :
+
+* La capacité engagée ne peut pas être réduite
+* La capacité engagée ne peut pas être augmentée 90 jours avant l'expiration de votre abonnement, à moins que l'abonnement ne soit renouvelé pour une durée supplémentaire de 12 mois.
+* Vous pouvez demander des modifications de la capacité engagée à l'aide de l'interface du moteur de services NetApp ou de Keystone Success Manager. Pour plus d'informations sur la demande de modifications, reportez-vous à la section link:sewebiug_raise_a_service_request.html["Demander un service"].
+
+
+
+
+== Capacité en rafale
+
+Il s'agit de la capacité logique qui a dépassé la capacité engagée. Notez les points suivants :
+
+* Le service d'abonnement Flex offre une capacité supérieure de 20 % à la capacité engagée.
+* En effet, la capacité en rafale peut être consommée selon une base élastique et elle est facturée sur la base quotidienne de la moyenne consommée.
+* La capacité en rafale peut atteindre 20 % à la même vitesse que la capacité engagée.
+* La capacité en rafale supérieure à 20 % de la demande est facturée à un tarif élevé. Contactez l'assistance pour toute autre demande de rafale supérieure à 20 %.
+
+
+
+
+== Capacité consommée/provisionnée
+
+La capacité consommée fait référence à la capacité en Tio de stockage actuellement consommée sur le service. Le service Flex Subscription prend en compte la somme des tailles provisionnées (et non la capacité logique ou physique utilisée) de tous les volumes d'un niveau de service Performance donné afin d'être considérée comme la capacité consommée pour ce niveau de service Performance. Les points suivants sont notamment :
+
+* Capacité provisionnée via la création, la modification, la suppression ou la croissance automatique potentielle des volumes.
+* Copies et clones Snapshot
++
+
+NOTE: La quantité de données stockées dans la capacité provisionnée, ou le volume de données réellement écrites sur le disque n'est pas pris en compte.
+
+
+
+
+
+== Capacité facturée
+
+Facture mensuelle = (capacité de production [Tio] * taux d'engagement [$/Tio]) + (capacité moyenne approvisionnée par jour [Tio] * taux de bursting [$/Tio]). La facture mensuelle contient un montant minimal en fonction de la capacité engagée.
+
+La facture mensuelle varie au-delà de la charge minimale, en fonction de la consommation moyenne quotidienne de capacité en rafale. Pour plus d'informations sur la facturation, voir link:nkfsosm_kfs_billing.html["Facturation de l'abonnement Flex"].

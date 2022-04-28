@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_modify_an_object_storage_user.html 
+keywords: netapp, keystone, modify, object, storage, user, 
+summary: Keystone modifie un utilisateur de stockage objet 
+---
+= Modifier un utilisateur de stockage objet
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Utilisez cette méthode pour modifier les détails d'un utilisateur de stockage objet, par exemple le nom d'utilisateur et le groupe auquel il est affecté.
+
+.Étapes
+. Afficher le link:sewebiug_view_a_list_of_users.html#view-a-list-of-users["Liste des utilisateurs"].
+. Assurez-vous que le sous-locataire correct est sélectionné et que l'affichage indique les utilisateurs (et non les groupes).
+. Localisez l'utilisateur dans la liste et cliquez sur l'icône Modifier pour ce groupe.
++
+Pour plus d'informations sur l'utilisation des éléments dans les listes, reportez-vous à la section link:sewebiug_netapp_service_engine_web_interface_overview.html#list-view["Actions de vue de liste"].
+
+. Dans la boîte de dialogue Modifier l'utilisateur :
++
+.. Entrez le nom d'utilisateur.
+.. Sélectionnez le groupe de stockage d'objets auquel appartient l'utilisateur.
+
+
+. Cliquez sur *mettre à jour*. Cela crée un travail pour créer l'utilisateur avec les paramètres spécifiés.
+

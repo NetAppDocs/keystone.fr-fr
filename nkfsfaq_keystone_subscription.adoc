@@ -1,0 +1,141 @@
+---
+sidebar: sidebar 
+permalink: nkfsfaq_keystone_subscription.html 
+keywords: netapp, keystone, subscription, subscriptions, 
+summary: Abonnement NetApp Keystone 
+---
+= FAQ relative à l'abonnement NetApp Keystone Flex
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Les questions suivantes donnent des réponses à vos questions fréquentes sur les services d'abonnement NetApp Keystone Flex.
+
+
+
+=== Qu'est-ce qui est proposé dans le cadre de l'abonnement NetApp Keystone Flex ?
+
+NetApp Keystone Flex Subscription (Flex Subscription) est une offre de service basée sur un abonnement pour les services de bloc, de fichier et de données d'objet qui peuvent être déployés sur site et qui peuvent être utilisés par NetApp, un partenaire ou un client.
+
+
+
+=== Quelles offres de services de stockage sont proposées dans le cadre de l'abonnement Flex ?
+
+Pour plus d'informations, reportez-vous à la section link:nkfsosm_performance.html["Niveaux de services de performances"]
+
+
+
+=== Quels sont les services d'extension pris en charge ?
+
+La protection avancée des données (sauvegarde et reprise après incident) et le Tiering dans le cloud hybride avec FabricPool sont des services complémentaires qu'il est possible de choisir à un coût supplémentaire.
+
+
+
+=== Quels niveaux de service NetApp garantit-il avec ce service ?
+
+Dans un scénario piloté par NetApp, NetApp Keystone garantit des IOPS/Tio pour le stockage provisionné et la latence pour chaque niveau de service.
+
+
+
+=== À quoi correspond l'abonnement Flex ?
+
+L'abonnement Flex correspond à un seul site ou à un seul data Center et peut comprendre différents niveaux de service de performance.
+
+
+
+=== Quels sont les avantages liés à l'extrême hiérarchisation et à la performance du Tiering Premium ?
+
+Le Tiering s'accompagne de niveaux de performance extrêmes et de Tiering Premium, qui vous permettent de réduire l'empreinte du stockage ainsi que les coûts associés. NetApp suppose que 25 % de vos données sont sollicitées, tandis que les 75 % restants sont moins fréquemment utilisés ou inactives, et les déplacent vers un stockage à froid. Vous pouvez également consulter les rapports d'utilisation pour connaître la fréquence d'accès aux données et activer le service de Tiering basé sur les informations.
+
+
+
+=== Les partenaires peuvent-ils vendre plus de capacité qu'ils n'ont acheté de NetApp à leurs clients ?
+
+Les abonnements aux locataires ne sont pas limités par la capacité que le partenaire a achetée. Les partenaires peuvent vendre plus de capacité qu'ils n'ont acheté auprès de NetApp à leurs clients. La capacité excédentaire de la capacité achetée est appelée sursouscription
+
+
+
+=== Des API sont-elles fournies pour l'intégration aux outils du client ?
+
+Oui, des API RESTful sont disponibles pour l'intégration dans vos propres applications. Accédez à *SUPPORT> Documentation API* pour consulter la documentation API relative aux services Flex Subscription. Pour plus d'informations, reportez-vous à la section link:https://docs.netapp.com/us-en/keystone/seapiref_overview_of_netapp_service_engine_apis.html["Guide de l'API d'abonnement Keystone Flex"].
+
+
+
+=== Qu'est-ce que la capacité en rafale ?
+
+Vous pouvez augmenter ou diminuer l'utilisation jusqu'à 20 % au-dessus de la capacité engagée. L'utilisation de la capacité en rafale est mesurée quotidiennement et facturée uniquement en cas d'utilisation. Par exemple, si la capacité de stockage engagée est de 100 Tio, vous pouvez augmenter jusqu'à 120 Tio.
+
+
+
+=== L'utilisation du mode rafale est-elle payante ?
+
+La consommation de la capacité d'accueil (jusqu'à 20 %) est facturée au même rythme que la capacité engagée. En outre, la consommation au-delà de 20 % de la capacité engagée est facturée à un tarif Premium de 50 %.
+
+
+
+=== Quel est l'avantage de la capacité en rafale ?
+
+La capacité en rafale offre la flexibilité nécessaire pour consommer du stockage à la demande par rapport à d'investir sur le long terme.
+
+
+
+=== Comment la capacité en rafale est-elle allouée aux locataires ?
+
+La capacité en rafale est allouée aux partenaires, qui peuvent ainsi être allouées à leurs clients en fonction des besoins.
+
+
+
+=== Où puis-je consulter l'utilisation de la capacité engagée et en rafale ?
+
+NetApp Service Engine dispose de tableaux de bord intégrés qui permettent de signaler la capacité consommée par rapport à la capacité dédiée.
+
+
+
+=== Y aura-t-il des notifications si j'aurai accès à un certain pourcentage d'utilisation de la capacité engagée ?
+
+Oui, les outils de gestion fournissent des notifications sur l'utilisation de la capacité via le tableau de bord de NetApp Service Engine.
+
+
+
+=== Comment consulter l'utilisation de l'abonnement Flex ?
+
+NetApp Service Engine fournit un tableau de bord, avec des informations sur tous les services auxquels vous êtes abonné et sur la quantité de consommation. Pour plus d'informations sur le moteur de service NetApp, reportez-vous à link:https://docs.netapp.com/us-en/keystone/sewebiug_overview.html["ici"].
+
+
+
+=== Comment signaler un problème au niveau du service ?
+
+Le support NetApp Keystone est accessible via les différents canaux suivants :
+
+* E-mail de l'assistance : mailto:keystone.services@netapp.com[keystone.services@netapp.com^]
+* Courriel de remontée : mailto:keystone.escalations@netapp.com[keystone.escalations@netapp.com^]
+
+
+
+
+=== Puis-je commander un nouveau service de stockage ?
+
+Oui, il est possible de demander un nouveau service de stockage ou une extension au service de stockage à partir du portail NetApp Service Engine. La demande est traitée par l'équipe NetApp Keystone chargée des opérations avant de la mettre à disposition des clients.
+
+
+
+=== La hausse des engagements de stockage est-elle disponible immédiatement ?
+
+En fonction de la capacité requise, on détermine si la capacité est déjà déployée ou si un équipement supplémentaire doit être expédié et installé.
+
+
+
+=== Les charges de travail peuvent-elles être déplacées entre les niveaux ?
+
+Oui, les charges de travail peuvent être déplacées entre les niveaux, si l'utilisateur a souscrit au niveau vers qui est migré la charge de travail. Toutefois, nous ne recommandons pas de passer d'un niveau supérieur à un niveau inférieur, car cela peut entraîner une dégradation des performances. Pour ce faire, il suffit de modifier le partage de fichiers et de modifier le paramètre de niveau de service.
+
+
+
+=== Quelle version du logiciel (par exemple, ONTAP) est installée par défaut ?
+
+En fonction du niveau de service souscrit (par exemple, ONTAP avec services de fichiers et de blocs, SANtricity pour Bloc et StorageGRID pour objet), l'équipe de support installe la dernière version stable sans aucun problème de sécurité ou de fonctionnalité.

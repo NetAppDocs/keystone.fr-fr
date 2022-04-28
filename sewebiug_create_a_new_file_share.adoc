@@ -1,0 +1,127 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_create_a_new_file_share.html 
+keywords: netapp, keystone, create, new, file, share, 
+summary: Keystone crée un nouveau partage de fichiers 
+---
+= Créez un partage de fichiers
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cette section décrit comment créer un nouveau partage en spécifiant directement les détails du partage. Pour créer un nouveau partage basé sur un instantané d'un partage existant, reportez-vous à la section link:sewebiug_create_adhoc_snapshot_of_a_file_share.html#create-adhoc-snapshot-of-a-file-share["Créer un partage à partir d'un instantané"].
+
+.Avant de commencer
+* Un partage est créé sur un serveur de fichiers. Le serveur de fichiers doit exister et être à l'état opérationnel avant de pouvoir créer un nouveau partage de fichiers.
+* Pour créer un partage de fichiers CIFS ou NFS, le serveur doit être activé pour le service respectif. Pour les partages de fichiers multiprotocoles, le serveur doit prendre en charge à la fois les services CIFS et NFS.
+* Pour activer les options de reprise après sinistre asynchrone pour le partage, vous devez créer le partage sur un serveur sur lequel la reprise après sinistre asynchrone est activée. Pour plus d'informations, voir link:sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html#disaster-recovery["Reprise après incident"].
+* Pour activer la reprise après incident synchrone pour un partage, créez le partage dans une zone compatible avec MetroCluster.
+* Vous pouvez définir une stratégie de sauvegarde pour capturer les sauvegardes du partage de fichiers sur une base planifiée. Pour plus d'informations, voir link:sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html#backups["Sauvegardes"].
+* Vous pouvez définir une règle Snapshot pour capturer les snapshots du partage de fichiers sur une base planifiée. Pour plus d'informations, voir link:sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html#snapshots["Snapshots"].
+
+
+.Étapes
+. Accédez à *SERVICES DE FICHIERS > partages*.
+. Cliquez sur *Créer un partage*.
+. Dans la boîte de dialogue Créer un partage, sélectionnez Créer un nouveau partage.
++
+image:sewebiug_image22.png["Erreur : image graphique manquante"]
+
++
+La page Créer un partage s'affiche.
+
+. Sélectionnez le type de partage : NFS, CIFS ou multiprotocole. Les options sont activées en fonction des services pris en charge par votre serveur.
+. Renseignez les champs suivants :
++
+|===
+| Champ | Description 
+
+
+| Nom | Entrez le nom du partage. 
+
+
+| Chemin du partage | Entrez le chemin du partage de fichiers. Pour les partages CIFS, l'ajout d'un caractère $ à la fin du chemin de partage en fera un partage caché (par exemple pathtomyhiddenshare$). 
+
+
+| Région | Sélectionnez la région dans laquelle réside le partage. 
+
+
+| Zone | Sélectionnez la zone du partage. 
+
+
+| Serveur de fichiers | Sélectionnez le serveur de fichiers pour héberger le partage. La liste du serveur de fichiers dépend de la région, de la zone et du type de partage sélectionnés. 
+
+
+| Style de sécurité | Sélectionnez le style de sécurité applicable au partage de fichiers. Cette liste est automatiquement renseignée en fonction du type de partage sélectionné. 
+|===
+. Sélectionnez un niveau de service de performances. Les limites en IOPS et en débit sont affichées, en fonction du niveau de service sélectionné.
++
+
+NOTE: Sélectionnez une option pour afficher les informations de performances correspondant à ce niveau (pic/débit attendu/IOPS). Sélectionnez le niveau de service qui correspond le mieux à vos besoins.
+
+. Spécifiez la capacité du partage de fichiers.
++
+
+NOTE: Le moteur de services NetApp affiche un avertissement et la barre de capacité change de couleur si la capacité spécifiée met en rafale (ou même davantage en rafale si elle est déjà en rafale). Le contrôle de la capacité est effectué par rapport à la capacité totale de tous les abonnements de la location.
+
+. Si la reprise après incident asynchrone est activée sur le serveur de fichiers sous-jacent, la réplication asynchrone de reprise après incident est automatiquement activée pour le nouveau partage. Si vous souhaitez exclure le partage de la réplication asynchrone de reprise après sinistre, activez le bouton Asynchronous Disaster Recovery pour qu'il soit désactivé.
+. Si le partage est en cours de création dans une zone activée par MetroCluster, le bouton reprise après incident synchrone est automatiquement activé et ne peut pas être désactivé. Le partage sera répliqué dans la zone affichée dans le panneau sous le commutateur de reprise après sinistre synchrone.
+. Si des snapshots sont requis pour ce partage de fichiers :
++
+.. Activez l'option pour activer la règle Snapshot et afficher les champs de la règle Snapshot.
+.. Spécifier quand créer les snapshots :
++
+*** *Horaire.* spécifiez la minute (de l'heure) à prendre un instantané et le nombre d'instantanés horaires à conserver.
+*** *Quotidien.* spécifiez quand (heure et minute) pour prendre l'instantané le nombre d'instantanés quotidiens à conserver. Si vous souhaitez spécifier plusieurs heures lorsque l'instantané doit être pris quotidiennement, vous pouvez ajouter les valeurs des heures dans une liste séparée par des virgules, par exemple 5, 10, 15, et ainsi de suite.
+*** *Hebdomadaire.* spécifiez quand (jour de la semaine, heure et minute) prendre un instantané et le nombre d'instantanés hebdomadaires à conserver.
+*** *Mensuel.* spécifiez quand (jour du mois, heure et minute) prendre un instantané et le nombre d'instantanés mensuels à conserver.
+
+
+
+
+. Pour activer les sauvegardes de ce partage de fichiers :
++
+.. Activez les champs Stratégie de sauvegarde et politique de sauvegarde.
+.. Spécifiez la zone de sauvegarde.
+.. Spécifiez le nombre de chaque type de sauvegarde à conserver : quotidienne, hebdomadaire et/ou mensuelle.
+
+
+. Pour les partages NFS ou multiprotocoles, spécifiez les règles d'exportation. Vous pouvez appliquer plusieurs règles d'exportation sur un partage. Cette section n'est disponible que pour les partages NFS et multiprotocoles.
++
+.. Ajoutez l'adresse IPv4 (avec un masque de sous-réseau exprimé en nombre de bits) du client auquel la règle s'applique.
+.. Spécifiez l'accès en lecture et en écriture, et si le client dispose d'un accès racine (superutilisateur).
+
+
+. Dans le cas de partages CIFS (SMB) ou multiprotocoles, spécifiez la liste de contrôle d'accès (ACL) pour limiter l'accès des utilisateurs. Cette section n'est disponible que pour les partages CIFS et multiprotocoles.
++
+.. Spécifiez l'utilisateur ou le groupe Windows en fonction des paramètres Active Directory (AD) à ajouter à la liste de contrôle d'accès. Si vous spécifiez le nom d'utilisateur, incluez le domaine de l'utilisateur au format `<domaine>\<nom d'utilisateur>'. La valeur par défaut est `tout le monde'.
+.. Spécifiez l'autorisation Windows. La valeur par défaut est `contrôle total'. Si un utilisateur fait partie de deux groupes, les autorisations du groupe avec des privilèges plus élevés sont appliquées à l'accès de l'utilisateur.
++
+
+NOTE: Le nom de l'utilisateur ou du groupe doit suivre le format AD standard. Si l'utilisateur ou le groupe saisi ne correspond pas à l'utilisateur ou au groupe d'utilisateurs configuré sur ONTAP, la validation de la liste de contrôle d'accès échoue lors d'une opération CIFS, même lorsque le partage de fichiers est opérationnel.
+
+
+
+. Si vous souhaitez ajouter des balises (paires clé-valeur) au partage de fichiers, spécifiez-les dans la section balises.
+. Cliquez sur *Créer*. Cela crée un travail pour créer le partage.
+
+
+.Une fois que vous avez terminé
+* Pour les partages de type CIFS uniquement : pour rendre les partages disponibles par nom d'hôte, votre administrateur de domaine doit mettre à jour les enregistrements DNS avec le nom du serveur CIFS et l'adresse IP. Dans le cas contraire, le partage n'est accessible que via l'adresse IP. Par exemple :
++
+** Lorsque les enregistrements DNS sont mis à jour, utilisez le nom d'hôte ou l'adresse IP pour accéder au partage, par exemple file://hostname/share["\\hostname\share"^] ou file://IP/share["\\IP\share"^]
+** En l'absence d'enregistrement DNS mis à jour, vous devez utiliser l'adresse IP pour accéder au partage, c'est-à-dire file://IP/share["\\IP\share"^]
+
+
+* Créer un partage est exécuté comme une tâche asynchrone. Vous pouvez :
++
+** Vérifiez l'état du travail dans la liste des travaux.
+** Une fois le travail terminé, vérifiez le statut du partage dans la liste partages.
+
+
+

@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_getting_started_overview.html 
+keywords: netapp, keystone, getting, started, overview, 
+summary: Présentation de la mise en route de Keystone 
+---
+= Présentation
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cette section décrit comment utiliser le portail Service Engine de NetApp. Elle inclut :
+
+* Connectez-vous à l'interface web du moteur de service NetApp :
++
+** Connectez-vous avec un nom d'utilisateur et un mot de passe
+** Connectez-vous avec NetApp SSO
+** Déconnectez-vous de l'interface Web du moteur de services NetApp
+
+
+* Sélectionnez le locataire
+* Présentation de l'interface Web du moteur de service NetApp
+

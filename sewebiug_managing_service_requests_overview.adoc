@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_managing_service_requests_overview.html 
+keywords: netapp, keystone, managing, service, requests, overview, 
+summary: Présentation de la gestion des demandes de service par Keystone 
+---
+= Présentation
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Faire une demande de service pour :
+
+* La restauration des sauvegardes
+* Basculement de reprise d'activité
+* Problème technique avec le moteur de service NetApp
+* Tout autre problème qui ne figure pas dans cette liste décrit la section suivante :
+* Comment demander un service
+* Comment suivre une demande de service
+* Le processus de demande de service
+

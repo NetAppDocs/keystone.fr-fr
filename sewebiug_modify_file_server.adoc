@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_modify_file_server.html 
+keywords: netapp, keystone, modify, file, server, 
+summary: Modifier le serveur de fichiers 
+---
+= Modifier le serveur de fichiers
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez apporter les modifications suivantes à un serveur existant :
+
+. Modifiez le nom du serveur
+. Rendre le serveur compatible CIFS, et spécifier le nom d'utilisateur et le mot de passe Active Directory, le domaine Active Directory, le serveur DNS, le nom du serveur et éventuellement l'unité organisationnelle Active Directory. Les informations d'identification Active Directory doivent être pour un utilisateur disposant du privilège de rejoindre un ordinateur au domaine Active Directory.
+. Activez le DP de reprise après incident asynchrone en spécifiant une région ou une zone dans laquelle répliquer le serveur.
+
+
+
+NOTE: Si la reprise sur incident asynchrone est déjà activée, elle ne peut pas être désactivée. Pour plus d'informations, voir link:sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html#disaster-recovery["Reprise après incident"].
+
+.Étapes
+. Afficher le link:sewebiug_view_servers.html#view-servers["Liste serveurs de fichiers"].
+. Localisez le serveur dans la liste et cliquez sur l'icône Modifier pour ce serveur. (Pour plus de détails sur l'utilisation des éléments dans les listes, voir link:sewebiug_netapp_service_engine_web_interface_overview.html#list-view["Actions de vue de liste"]).
+. Apportez les modifications nécessaires ; reportez-vous à la section link:sewebiug_create_a_file_server.html["Créez un serveur de fichiers"] pour une description des champs.
+. Cliquez sur *Done*. Cela crée un travail pour modifier le serveur.
+
+
+Le serveur de modification est exécuté comme une tâche asynchrone. Vous pouvez :
+
+* Vérifiez l'état du travail dans la liste des travaux. Pour plus d'informations sur le suivi des travaux, reportez-vous à la section link:https://docs.netapp.com/us-en/keystone/sewebiug_netapp_service_engine_web_interface_overview.html#jobs-and-job-status-indicator["ici"].
+* Une fois le travail terminé, vérifiez l'état du serveur dans la liste serveurs.
+

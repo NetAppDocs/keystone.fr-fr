@@ -1,0 +1,271 @@
+---
+sidebar: sidebar 
+permalink: seapiref_@consumer@_administration_apis.html 
+keywords: netapp, keystone, consumer, administration, apis, 
+summary: 'Les API d"administration Keystone (grand public' 
+---
+= (Grand public) les API d'administration
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Les API d'administration (grand public) comprennent des méthodes qui vous permettent d'effectuer les tâches suivantes :
+
+* Connectez-vous, définissez un mot de passe et actualisez un jeton d'authentification.
+* Récupérer les travaux et afficher les détails du travail.
++
+Voir link:seapiref_jobs.html#retrieve-jobs["Récupérer les travaux"] et link:seapiref_jobs.html#retrieve-a-job-by-job-id["Récupérer un ID travail par travail"].
+
+* Extraire les régions.
++
+Voir link:seapiref_regions.html#retrieve-regions["Extraire les régions"] et link:seapiref_regions.html#retrieve-a-region-by-name["Récupérer une région par son nom"].
+
+* Récupérer les niveaux de service
++
+Voir link:seapiref_service_levels.html#retrieve-service-levels["Récupérer les niveaux de service"] et link:seapiref_service_levels.html#retrieve-service-levels-by-name["Récupérer les niveaux de service par nom"].
+
+* Travailler avec les sous-locataires.
++
+Voir :
+
++
+** link:seapiref_subtenants.html#retrieve-all-subtenants["Récupérer tous les sous-locataires"]
+** link:seapiref_subtenants.html#retrieve-a-subtenant-by-id["Récupérer un sous-locataire par ID"]
+** link:seapiref_subtenants.html#modify-a-subtenant-by-id["Modifier un sous-locataire"]
+** link:seapiref_subtenants.html#delete-a-subtenant-by-id["Supprimer un sous-locataire par ID"]
+
+
+* Travailler avec les sous-locataires.
++
+Voir :
+
++
+** link:seapiref_tenants.html#retrieve-all-tenants["Récupérer tous les locataires"]
+** link:seapiref_tenants.html#retrieve-a-tenant-by-id["Récupérer un locataire par ID"]
+** link:seapiref_tenants.html#create-a-tenant["Créez un locataire"]
+** link:seapiref_tenants.html#modify-the-tenant["Modifiez le locataire"]
+** link:seapiref_tenants.html#delete-the-tenant["Supprimez le locataire"]
+
+
+* Récupérer les utilisateurs.
++
+link:seapiref_users.html#retrieve-all-users["Récupérer tous les utilisateurs"], link:seapiref_users.html#retrieve-a-user-by-id["Récupérer un utilisateur par ID"], et link:seapiref_users.html#retrieve-a-user-by-user-name["Récupérer un utilisateur par nom d'utilisateur"].
+
+* Récupérer les zones.
++
+Voir link:seapiref_zones.html#retrieve-all-zones["Récupérer toutes les zones"] et link:seapiref_zones.html#retrieve-a-zone-by-name["Récupérer une zone par nom"]
+
+
+
+Le tableau suivant répertorie les API grand public documentées dans cette section.
+
+|===
+| Méthode HTTP | Chemin | Description 
+
+
+| «POST» | `/v2.1/auth/password` | Définissez le mot de passe d'un utilisateur. 
+
+
+| «POST» | `/v2.1/auth/password` | Actualiser l'authentification JWT. 
+
+
+| «POST» | `/v2.1/auth/signin` | Connectez-vous. 
+
+
+| `GET' | `/v2.1/auth/régions` | Extraire les régions. 
+
+
+| `GET' | `/v2.1/auth/rerégions/{name}' | Extraire les régions par nom. 
+
+
+| `GET' | `/v2.1/auth/zones` | Récupérer les zones. 
+
+
+| `GET' | `/v2.1/auth/zones/{name}' | Récupérer les zones par nom. 
+
+
+| `GET' | `/v2.1/jobs/` | Récupérer les travaux. 
+
+
+| `GET' | `/v2.1/jobs/{id}' | Récupérer les travaux par ID. 
+|===
+
+
+=== Réinitialiser le mot de passe utilisateur
+
+Utilisez la méthode indiquée dans le tableau suivant pour réinitialiser le mot de passe utilisateur.
+
+|===
+| Méthode HTTP | Chemin | Description | Paramètres 
+
+
+| «POST» | `/v2.1/auth/password` | Réinitialisez le mot de passe. | Aucune 
+|===
+Attributs de corps de la demande requis : `username` (chaîne), `New_passwords' (chaîne)
+
+*Exemple corps de la demande :*
+
+....
+{
+  "username": "MyName",
+  "old_password": "oldPassword",
+  "new_password": "newPassword"
+}
+....
+*Exemple de corps de réponse :*
+
+....
+{
+  "status": {
+    "user_message": "Okay. Returned 1 record.",
+    "verbose_message": "",
+    "code": 200
+  },
+  "result": {
+    "total_records": 1,
+    "records": [
+      {
+        "user": {
+          "id": "5e61aa814559c20001df1a5f",
+          "username": "MyName",
+          "firstName": "MyFirstName",
+          "lastName": "MySurname",
+          "displayName": "CallMeMYF",
+          "email": "user@example.com",
+          "tenancies": [
+            {
+              "id": "5e5f1c4f253c820001877839",
+              "name": "MyTenant",
+              "code": "testtenantmh",
+              "role": "user"
+            }
+          ]
+        },
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik15TmFtZSIsImV4cCI6MTU4MzgxNjg3MX0.ZuRXjDPVtc2pH-e9wqgmszVKCBYS2PLqux2YwQ5uoAM"
+      }
+    ]
+  }
+}
+....
+
+
+=== Actualiser le jeton d'authentification
+
+Utilisez la méthode indiquée dans le tableau suivant pour actualiser le jeton d'authentification.
+
+|===
+| Méthode HTTP | Chemin | Description | Paramètres 
+
+
+| «POST» | `/v2.1/auth/refresh` | Actualiser le jeton d'authentification. | Aucune 
+|===
+Attributs de corps de demande requis: `aucun'
+
+*Exemple corps de la demande :*
+
+....
+none
+....
+*Exemple de corps de réponse :*
+
+....
+{
+  "status": {
+    "user_message": "Okay. Returned 1 record.",
+    "verbose_message": "",
+    "code": 200
+  },
+  "result": {
+    "total_records": 1,
+    "records": [
+      {
+        "user": {
+          "id": "5d914547869caefed0f3a00c",
+          "username": "myusername",
+          "firstName": "myfirstname",
+          "lastName": "",
+          "displayName": "Myfirstname Mysurname",
+          "email": "",
+          "tenancies": [
+            {
+              "id": "5d914499869caefed0f39eee",
+              "name": "MyOrg",
+              "code": "myorg",
+              "role": "admin"
+            },
+            {
+              "id": "5d9417aa869caefed0f7b4f9",
+              "name": "ABCsafe",
+              "code": "abcsafe",
+              "role": "admin"
+            }
+          ]
+        },
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVsbGlvdCIsImV4cCI6MTU4MzgxNzA2N30.FdKD3QhPoNdWdbMfZ0bzCMTHluIt6HNP311F482K9AY"
+      }
+    ]
+  }
+}
+....
+
+
+=== Connectez-vous
+
+Utilisez la méthode indiquée dans le tableau suivant pour vous connecter.
+
+|===
+| Méthode HTTP | Chemin | Description | Paramètres 
+
+
+| «POST» | `/v2.1/auth/signin` | Connectez-vous en tant qu'utilisateur. | Aucune 
+|===
+Attributs de corps de la demande requis : `username` (chaîne), `New_passwords' (chaîne)
+
+*Exemple corps de la demande :*
+
+....
+{
+  "username": "MyName",
+  "password": "newPassword"
+}
+....
+*Exemple de corps de réponse :*
+
+....
+{
+  "status": {
+    "user_message": "Authentication succeeeded.",
+    "verbose_message": "",
+    "code": 200
+  },
+  "result": {
+    "total_records": 1,
+    "records": [
+      {
+        "user": {
+          "id": "5e61aa814559c20001df1a5f",
+          "username": "MyName",
+          "firstName": "MyFirstName",
+          "lastName": "MySurname",
+          "displayName": "CallMeMYF",
+          "email": "user@example.com",
+          "tenancies": [
+            {
+              "id": "5e5f1c4f253c820001877839",
+              "name": "MyTenant",
+              "code": "testtenantmh",
+              "role": "user"
+            }
+          ]
+        },
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik15TmFtZSIsImV4cCI6MTU4MzgxNzQwMH0._u_UyYrzg_RewF-9ClIGoKQhfZYWrixZYBrsj1kh1hI"
+      }
+    ]
+  }
+}
+....

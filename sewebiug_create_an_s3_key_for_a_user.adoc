@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_create_an_s3_key_for_a_user.html 
+keywords: netapp, keystone, create, S3, key, user, 
+summary: Keystone crée une clé S3 pour un utilisateur 
+---
+= Créez une clé S3 pour un utilisateur
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Utilisez cette méthode pour créer une clé S3 pour un utilisateur.
+
+Assurez-vous de capturer la clé immédiatement après sa création. Il n'existe aucun moyen de récupérer les détails de la clé après sa création.
+
+.Étapes
+. Afficher le link:sewebiug_view_a_list_of_users.html#view-a-list-of-users["Liste des utilisateurs"].
+. Assurez-vous que le sous-locataire correct est sélectionné et que l'affichage indique les utilisateurs (et non les groupes).
+. Localisez l'utilisateur dans la liste et cliquez sur l'icône clé de ce groupe.
++
+Pour plus d'informations sur l'utilisation des éléments dans les listes, reportez-vous à la section link:sewebiug_netapp_service_engine_web_interface_overview.html#list-view["Actions de vue de liste"].
+
+. La boîte de dialogue gérer les clés S3 s'affiche et affiche la liste des clés pour l'utilisateur.
+. S'il n'y a pas de clés existantes pour l'utilisateur, cliquez sur *Créer clé S3* pour afficher les champs permettant de créer une clé.
+. Si vous souhaitez que la clé expire, spécifiez la date d'expiration et l'heure d'expiration dans UTC. Sinon, conservez les valeurs par défaut de ces champs.
+. Pour créer la clé, cliquez sur la coche. La boîte de dialogue Détails de la clé S3 s'affiche et affiche la clé d'accès et la clé secrète.
+. Copiez la clé d'accès et la clé secrète en vue de conseiller l'utilisateur des détails.
++
+Veillez à bien saisir les détails clés avant de fermer la boîte de dialogue Détails de la clé S3. Après la fermeture, les détails de la clé seront masqués et vous ne pourrez pas les récupérer.
+
+. Cliquez sur *Fermer*.
+. Cliquez de nouveau sur *Fermer* pour fermer la boîte de dialogue gestion des clés S3.
+

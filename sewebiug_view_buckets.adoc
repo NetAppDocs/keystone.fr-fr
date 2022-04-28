@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_view_buckets.html 
+keywords: netapp, keystone, view, buckets, 
+summary: Compartiments de vue Keystone 
+---
+= Compartiments de vue
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+La liste des rubriques affiche les rubriques existantes pour un sous-locataire sélectionné.
+
+. Pour afficher la liste, sélectionnez stockage objet > compartiments dans le menu.
+. Utilisez le menu déroulant sous-locataire pour sélectionner un autre sous-locataire, si nécessaire.
++
+Les informations simples pour chaque compartiment s'affichent, telles que :
+
++
+** Nom
+** Date de création
+** Du stockage
++
+Pour plus d'informations sur l'utilisation des fonctions d'une liste, voir link:sewebiug_netapp_service_engine_web_interface_overview.html#list-view["Vue liste"].
+
+
+
+

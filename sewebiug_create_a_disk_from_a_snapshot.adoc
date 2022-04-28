@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_create_a_disk_from_a_snapshot.html 
+keywords: netapp, keystone, create, disk, Snapshot 
+summary: 'Créer un disque à partir d"un snapshot' 
+---
+= Créer un disque à partir d'un snapshot
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez créer un nouveau disque à partir d'un snapshot existant. Le nouveau disque, cloné à partir de la copie Snapshot, a les mêmes propriétés que le disque à partir duquel la copie Snapshot est créée.
+
+.Étapes
+. Sélectionnez *BLOCK STORAGE* dans le volet de navigation de gauche et sélectionnez *Disks*.
+. Cliquez sur *Créer disque* et sélectionnez *Cloner à partir de snapshot*. L'écran *Select Disk* s'affiche avec tous les disques du tenant. Vous pouvez filtrer les disques par région, zone et sous-locataire. Vous pouvez sélectionner n'importe quel disque qui est à l'état opérationnel.
+. Cochez la case en regard du disque souhaité et cliquez sur *Suivant*. L'écran *Sélectionner instantané* s'affiche avec tous les instantanés du disque.
++
+
+NOTE: Pour le disque sélectionné, si certains snapshots sont créés dans votre environnement SnapCenter à l'extérieur du moteur de service NetApp, vous pouvez les importer et les lister pour votre sélection. Vous pouvez sélectionner ces snapshots importés et cloner les nouveaux disques.
+
++
+Vous pouvez rechercher un snapshot particulier ou sélectionner le type de planification pour filtrer les snapshots.
+
+. Cochez la case en regard du snapshot à partir lequel vous souhaitez cloner et cliquez sur *Suivant*. Le nouveau disque hérite des propriétés du snapshot sélectionné.
+. Ajoutez *Nom* et *chemin de disque*. Mettez à jour les autres paramètres, tels que l'attribution d'un *niveau de service*, puis cliquez sur *Créer*.
+
+
+*Create Disk* est exécuté en tant que travail asynchrone. Vous pouvez :
+
+* Vérifiez l'état du travail dans la liste des travaux. Pour plus d'informations sur le suivi des travaux, reportez-vous à la section link:https://docs.netapp.com/us-en/keystone/sewebiug_netapp_service_engine_web_interface_overview.html#jobs-and-job-status-indicator["ici"].
+* Une fois le travail terminé, vérifiez l'état du disque dans la liste *disques*.
+
