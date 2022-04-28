@@ -1,0 +1,1821 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head class="at-element-marker">
+  <title>Emplois</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Emplois" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/fr-fr/keystone/seapiref_jobs.html" />
+	<meta property="og:description" content="API des travaux Keystone" />
+  <meta property="og:image" content="https://docs.netapp.com/fr-fr/keystone/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="API des travaux Keystone">
+  <meta name="keywords" content=" netapp, keystone, jobs,"><!-- Icons -->
+  <link rel="icon" href="/fr-fr/keystone/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+  <!-- Elastic Search -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
+
+  <!-- Controls AsciiDoctor Admonition Blocks -->
+  <link rel="stylesheet" type="text/css" href="/fr-fr/keystone/css/font-awesome.min.css">
+
+  <!-- Controls the shadow effect for search dropdown menu -->
+  <link rel="stylesheet" href="/fr-fr/keystone/css/boxshadowproperties.css">
+
+  <!-- NetApp CSS controls the technical content -->
+  <link rel="stylesheet" type="text/css" href="/fr-fr/keystone/css/netapp.css">
+
+  <!-- WWW CSS Content -->
+  <link rel="stylesheet" type="text/css" href="/fr-fr/keystone/css/www-luci-dotcom.min.css">
+  <link rel="stylesheet" type="text/css" href="/fr-fr/keystone/css/www-netapp-dotcom.css">
+  <link rel="stylesheet" href="/fr-fr/keystone/css/www-netapp-library-critical.min.css" media="all" >
+  <link rel="stylesheet" href="/fr-fr/keystone/css/www-netapp-library-non-critical.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="/fr-fr/keystone/css/www-netapp-library-global-header-footer.min.css">
+
+  <!-- NetApp IE Customizations -->
+  <link rel="stylesheet" href='/fr-fr/keystone/css/na-utility.css' type='text/css'>
+  <link rel="stylesheet" href='/fr-fr/keystone/css/na-sidebar.css' type='text/css'>
+  <link rel='stylesheet' href='/fr-fr/keystone/css/clouddocs.css' type='text/css'>
+  <link rel='stylesheet' href='/fr-fr/keystone/css/custom-dropdown.css' type='text/css'>
+  <link rel='stylesheet' href='/fr-fr/keystone/css/na-pagenav.css' type='text/css'>
+
+  
+  <link rel="stylesheet" href="/fr-fr/keystone/css/landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/fr-fr/keystone/css/tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
+  <link rel='stylesheet' href='/fr-fr/keystone/css/na-feature.css' type='text/css'><!-- Top level site integrations --><script>
+    if (document.location.hostname === "docs.netapp.com") {
+      var head = document.getElementsByTagName('head')[0];
+      var onetrustConsent = document.createElement("script");
+      onetrustConsent.type = "text/javascript";
+      onetrustConsent.src = "https://cdn.cookielaw.org/consent/72570c5c-fe30-465f-b0e0-b77f7fb4ae34/OtAutoBlock.js";
+      head.appendChild(onetrustConsent);
+
+      var onetrustScript = document.createElement("script");
+      onetrustScript.type = "text/javascript";
+      onetrustScript.src = "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js";
+      onetrustScript.charset = "UTF-8";
+      onetrustScript.dataset.documentLanguage = "true";
+      onetrustScript.dataset.domainScript = "72570c5c-fe30-465f-b0e0-b77f7fb4ae34";
+      head.appendChild(onetrustScript);
+    }
+
+    function OptanonWrapper() { }
+
+    if (document.location.hostname === "docs.netapp.com") {
+      var adobe = document.createElement("script");
+      adobe.type = "text/plain";
+      adobe.className = "optanon-category-C0002";
+      adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js";
+      head.appendChild(adobe);
+
+      var google = document.createElement("script");
+      google.type = "text/plain";
+      google.className = "optanon-category-C0002";
+      google.src = "https://www.googletagmanager.com/gtag/js?id=UA-81697994-3";
+      head.appendChild(google);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-81697994-3');
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/fr-fr/keystone/js/na-search.js'></script><script src='/fr-fr/keystone/js/na-pagenav.js'></script><link rel='stylesheet' href='/fr-fr/keystone/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/fr-fr/keystone/css/prism-netapp.css' type='text/css'>
+
+
+  <script src='/fr-fr/keystone/js/na-utility.js'></script>
+  <script src='/fr-fr/keystone/js/clouddocs.js'></script>
+  <script src='/fr-fr/keystone/js/jquery.navgoco.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src='/fr-fr/keystone/js/toc.js'></script>
+  <script src='/fr-fr/keystone/js/customscripts.js'></script><script>
+      $(document).ready(function() {
+          
+          var collapseOnInit = true;
+          
+
+          var navSettings = {
+              "caretHtml": '',
+              "accordion": collapseOnInit,
+              "openClass": 'active', // open
+              "save": false, // leave false or nav highlighting doesn't work right
+              "cookie": {
+                  "name": 'navgoco',
+                  "expires": false,
+                  "path": '/'
+              },
+              "slide": {
+                  "duration": 400,
+                  "easing": 'swing'
+              }
+          };
+
+          // Initialize navgoco with default options
+          $("#mysidebar").navgoco(navSettings);
+          
+
+          $("#collapseAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', false);
+          });
+
+          $("#expandAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', true);
+          });
+
+      });
+
+  </script>
+  <script>
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+  </script>
+  <script src='/fr-fr/keystone/js/custom-dropdown.js'></script>
+  <script src='/fr-fr/keystone/js/FileSaver.min.js'></script>
+  <script src='/fr-fr/keystone/js/jszip-utils.min.js'></script>
+  <script src='/fr-fr/keystone/js/jszip.min.js'></script>
+  <script src='/fr-fr/keystone/js/pdf-ux.js'></script>
+</head>
+
+
+  <body class role="document" data-flavor="">
+    <div id="page" class="n-off-canvas-menu">
+      <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
+      <div class="n-off-canvas-menu__content-wrap">
+        <header class="site-header" id="banner">
+  
+  <!-- Start Page Toolbar -->
+  
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/keystone/issues/new?body=Page%3A%20[Emplois](https://docs.netapp.com/fr-fr/keystone/seapiref_jobs.html)" class="page-nav-contribute-link" role="button"><img src="/fr-fr/keystone/images/discuss-sm.svg" class="github-icon" />Demander de modifier un document</a><a target="_blank" href="https://github.com/NetAppDocs/keystone/blob/main/seapiref_jobs.adoc" class="page-nav-contribute-link" role="button"><img src="/fr-fr/keystone/images/edit-sm.svg" class="github-icon" />Modifier sur GitHub</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/fr-fr/keystone/images/article-sm.svg" class="github-icon" />Guide des contributeurs</a></div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">SUR CETTE PAGE</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  
+  <!-- Start top_hat -->
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/products-a-z/" class="n-top-hat__link">Produits et solutions</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/support-and-training/netapp-university/" class="n-top-hat__link">Support et formation</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://cloud.netapp.com" class="n-top-hat__link">Cloud Central</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://community.netapp.com/" class="n-top-hat__link">Communauté</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://blog.netapp.com/" class="n-top-hat__link">Blog</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://customers.netapp.com/en/" class="n-top-hat__link">Témoignages clients</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="n-top-hat__utils">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End top_hat -->
+
+  <!-- Start property bar -->
+  <style>
+    .n-property-navigation-bar__menus--desktop-experience .n-menu--mega__default-content__heading span {
+    color: #34B0FF;
+    }
+  </style>
+  <div class="n-property-bar " data-ntap-ui="sticky-nav">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link">
+          <span class="n-property-bar__menu-toggle-text">Menu</span>
+          <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+            <title>bars</title>
+            <use xlink:href="/fr-fr/keystone/common/svg/sprite.svg#bars"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="n-property-bar__property-mark ">
+        <a href="https://www.netapp.com" class="n-property-bar__property-link">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="/fr-fr/keystone/common/svg/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
+              <title>netapp-logo</title>
+              <use xlink:href="/fr-fr/keystone/common/svg/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" 
+          data-search-html="/fr-fr/keystone/search.html"
+          data-type="widget" 
+          data-placeholder="Rechercher une documentation" 
+          data-no-results-found="Aucun résultat n'a été trouvé pour {query}" 
+          data-did-you-mean="Rechercher {suggestion}." 
+          data-no-results-found-did-you-mean="Aucun résultat n’a été trouvé pour {query}. Voulez-vous dire {suggestion} ?" 
+          data-results-found="{hitCount} résultats trouvés"  
+          data-sk-es-pf-indexes=""
+          data-flavor=""></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/fr-fr/keystone/common/svg/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="n-property-bar__toolbar">
+    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
+      <div id="ie-i18n-menu">
+      <span class="ie-i18n-lang">Français</span>
+        <button class="ie-i18n-icon-container" type="button">
+          <svg class="n-globe__icon" aria-labelledby="title">
+            <title>globe</title>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/fr-fr/keystone/common/svg/sprite.svg#globe"></use>
+          </svg>
+        </button>
+      </div>
+      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
+        <div class="n-language-selector-menu">
+          <ul class="n-menu__list">
+            <li class="n-menu__list-column">
+              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/us-en/keystone/seapiref_jobs.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/ja-jp/keystone/seapiref_jobs.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/ko-kr/keystone/seapiref_jobs.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/zh-cn/keystone/seapiref_jobs.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/de-de/keystone/seapiref_jobs.html" class="n-menu__header-text"><span translate="no" class="notranslate">Deutsch</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/fr-fr/keystone/seapiref_jobs.html" class="n-menu__header-text"><span translate="no" class="notranslate">Français</span></a>
+                </li></ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- End Language Selector -->
+
+    <div class="n-property-bar__cta"></div>
+  </div>
+  <script>
+    $(function(){
+        var currentLocalization = $('html').attr('lang');
+
+        var localizationsDictionary = {
+            "en-CA" : "https://www.netapp.com/search/index.aspx?for_cr=canada&",
+            "en-IN" : "https://www.netapp.com/search/index.aspx?for_cr=india&",
+            "nl-NL" : "https://www.netapp.com/search/index.aspx?for_cr=netherlands&",
+            "ru-RU" : "https://www.netapp.com/search/index.aspx?for_cr=russia&",
+            "sv-SE" : "https://www.netapp.com/search/index.aspx?for_cr=sweden&",
+            "it-IT" : "https://www.netapp.com/search/index.aspx?for_cr=italy&",
+            "he-IL" : "https://www.netapp.com/search/index.aspx?for_cr=israel&",
+            "ko-KR" : "https://www.netapp.com/search/index.aspx?for_cr=korea&",
+            "zh-TW" : "https://www.netapp.com/search/index.aspx?for_cr=taiwan&",
+            "en-GB" : "https://www.netapp.com/search/index.aspx?for_cr=unitedkingdom&",
+            "en-SG" : "https://www.netapp.com/search/index.aspx?for_cr=asean&",
+            "en-AU" : "https://www.netapp.com/search/index.aspx?for_cr=australia&",
+            "pt-BR" : "https://www.netapp.com/search/index.aspx?for_cr=brasil&",
+            "de-CH" : "https://www.netapp.com/search/index.aspx?for_cr=switzerland&",
+            "es-MX" : "https://www.netapp.com/search/index.aspx?for_cr=mexico&"
+        };
+
+        if($('html').hasClass('ntap-whitelisted') && localizationsDictionary.hasOwnProperty(currentLocalization)) {
+            $('.n-property-bar__property-link').attr('href', '/');
+        }
+    });
+  </script>
+  <!-- End property bar -->
+</header>
+
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+  <!-- Sidebar Column -->
+  
+  <div class="col-md-3" id="sidebar-height">
+      <div class="n-pdf-header">
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+    <img src="/fr-fr/keystone/images/pdf.png" width="16" height="16"/>PDFs disponibles<span>
+    </span>
+  </a>
+</div>
+<div class="n-pdf-body-container">
+  <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+        
+        
+        
+        <a target="_blank" href="/fr-fr/keystone/pdfs/fullsite-sidebar/Documentation_pour_l_abonnement_NetApp_Keystone_Flex.pdf" >
+          <img src="/fr-fr/keystone/images/pdf.png" width="16" height="16"/>PDF de ce site de documentation</a>
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/fr-fr/keystone/pdfs/sidebar/Abonnement_NetApp_Keystone_Flex.pdf" 
+            
+          >
+            <img src="/fr-fr/keystone/images/pdf.png" width="16" height="16"/>
+            Abonnement NetApp Keystone Flex
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/fr-fr/keystone/pdfs/sidebar/Termes_et_description_du_service.pdf" 
+            
+          >
+            <img src="/fr-fr/keystone/images/pdf.png" width="16" height="16"/>
+            Termes et description du service
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/fr-fr/keystone/pdfs/sidebar/Notes_de_version.pdf" 
+            
+          >
+            <img src="/fr-fr/keystone/images/pdf.png" width="16" height="16"/>
+            Notes de version
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/fr-fr/keystone/pdfs/sidebar/FAQ_sur_l_abonnement_Flex.pdf" 
+            
+          >
+            <img src="/fr-fr/keystone/images/pdf.png" width="16" height="16"/>
+            FAQ sur l'abonnement Flex
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/fr-fr/keystone/pdfs/sidebar/Interface_Web_du_moteur_de_services_NetApp.pdf" 
+            
+          >
+            <img src="/fr-fr/keystone/images/pdf.png" width="16" height="16"/>
+            Interface Web du moteur de services NetApp
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/fr-fr/keystone/pdfs/sidebar/Commencez.pdf" 
+            
+          >
+            <img src="/fr-fr/keystone/images/pdf.png" width="16" height="16"/>
+            Commencez
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/fr-fr/keystone/pdfs/sidebar/Utilisation_des_services_de_fichiers.pdf" 
+            
+          >
+            <img src="/fr-fr/keystone/images/pdf.png" width="16" height="16"/>
+            Utilisation des services de fichiers
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/fr-fr/keystone/pdfs/sidebar/Utilisation_du_stockage_en_mode_bloc.pdf" 
+            
+          >
+            <img src="/fr-fr/keystone/images/pdf.png" width="16" height="16"/>
+            Utilisation du stockage en mode bloc
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/fr-fr/keystone/pdfs/sidebar/Utilisation_du_stockage_objet.pdf" 
+            
+          >
+            <img src="/fr-fr/keystone/images/pdf.png" width="16" height="16"/>
+            Utilisation du stockage objet
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/fr-fr/keystone/pdfs/sidebar/Gestion_des_services_cloud.pdf" 
+            
+          >
+            <img src="/fr-fr/keystone/images/pdf.png" width="16" height="16"/>
+            Gestion des services cloud
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/fr-fr/keystone/pdfs/sidebar/Gestion_des_services_cloud.pdf" 
+            
+          >
+            <img src="/fr-fr/keystone/images/pdf.png" width="16" height="16"/>
+            Gestion des services cloud
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/fr-fr/keystone/pdfs/sidebar/Gestion_d_Azure_NetApp_Files.pdf" 
+            
+          >
+            <img src="/fr-fr/keystone/images/pdf.png" width="16" height="16"/>
+            Gestion d'Azure NetApp Files
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/fr-fr/keystone/pdfs/sidebar/Gérer_les_demandes_de_service.pdf" 
+            
+          >
+            <img src="/fr-fr/keystone/images/pdf.png" width="16" height="16"/>
+            Gérer les demandes de service
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/fr-fr/keystone/pdfs/sidebar/Effectuer_des_tâches_administratives.pdf" 
+            
+          >
+            <img src="/fr-fr/keystone/images/pdf.png" width="16" height="16"/>
+            Effectuer des tâches administratives
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/fr-fr/keystone/pdfs/sidebar/Gérer_les_utilisateurs.pdf" 
+            
+          >
+            <img src="/fr-fr/keystone/images/pdf.png" width="16" height="16"/>
+            Gérer les utilisateurs
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/fr-fr/keystone/pdfs/sidebar/Référence_de_l_API_du_moteur_de_service_NetApp.pdf" 
+            
+          >
+            <img src="/fr-fr/keystone/images/pdf.png" width="16" height="16"/>
+            Référence de l'API du moteur de service NetApp
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/fr-fr/keystone/pdfs/sidebar/API_grand_public.pdf" 
+            
+          >
+            <img src="/fr-fr/keystone/images/pdf.png" width="16" height="16"/>
+            API grand public
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/fr-fr/keystone/pdfs/sidebar/API_d_administration.pdf" 
+            
+          >
+            <img src="/fr-fr/keystone/images/pdf.png" width="16" height="16"/>
+            API d'administration
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
+  <a target="_blank" href="/fr-fr/keystone/pdfs/pages/seapiref_jobs.pdf" >
+    <img src="/fr-fr/keystone/images/pdf.png" width="16" height="16"/>
+    PDF of this page
+  </a>
+</li>
+
+</ul>
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+</li></ul>
+  <div class="zip-pdf-link-container" style="display: none;">   
+    <a href="#" id="zipPdf">
+      <img src="/fr-fr/keystone/images/pdf-zip.png" width="16" height="16"/>
+      <pre>Collection de documents PDF séparés<span class="zip-size"></span></pre>
+    </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+</div>
+<script>
+  $("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+  $("#toggleButtonPdf").click(function () {
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+  });
+</script><div class="sidebar-nav-container">
+  <ul id="mysidebar" class="nav"><li class="subfolders "><a href="/fr-fr/keystone/index.html">
+        <div class="na-navbar-padding"> Abonnement NetApp Keystone Flex</div>
+      </a>
+      <ul><li class="subfolders "><a href="/fr-fr/keystone/nkfsosm_service_terms_and_description_overview.html">
+        <div class="na-navbar-padding"> Termes et description du service</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/nkfsosm_keystone_service_capacity_definitions.html">
+        Définitions des capacités de service
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/nkfsosm_performance.html">
+        Niveau de service de performances
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/nkfsosm_service_level_metrics_and_definitions.html">
+        Définitions et metrics des niveaux de service
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/nkfsosm_kfs_billing.html">
+        Facturation
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/nkfsosm_data_protection.html">
+        Protection des données
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/nkfsosm_tiering.html">
+        Tiering
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/nkfsosm_nrd.html">
+        Disque non retournable
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/nkfsosm_uscs.html">
+        Aide des citoyens AUX ÉTATS-UNIS
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/nkfsosm_equinix.html">
+        Flex Subscription et Equinix
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/nkfsosm_overview.html">
+        Modèle opérationnel et responsabilités
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/nkfsosm_tenancy_overview.html">
+        Location et colocation
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/nkfsosm_keystone_service_delivery_architecture_overview.html">
+        Infrastructure d'abonnement Flex
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/nkfsosm_site_requirements.html">
+        Exigences du site
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/nkfsosm_netapp_global_services_and_support_center_@gssc@.html">
+        Exploitation
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/nkfsosm-keystone-and-aiq.html">
+        Abonnement Flex et Active IQ
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Notes de version</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/rn_whats_new.html">
+        Quoi de neuf
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/rn_fixed_issues.html">
+        Problèmes résolus
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/rn_known_issues.html">
+        Problèmes connus
+      </a></li></ul></li><li class="subfolders "><a href="/fr-fr/keystone/nkfsfaq_overview.html">
+        <div class="na-navbar-padding"> FAQ sur l'abonnement Flex</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/nkfsfaq_keystone_subscription.html">
+        Abonnement Flex
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/nkfsfaq_service_offer_details.html">
+        Détails de l'offre de service
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/nkfsfaq_operating_models.html">
+        Modèle d'exploitation
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/nkfsfaq_netapp_service_engine_self-service_access_portal.html">
+        Portail d'accès en libre-service/moteur de service NetApp
+      </a></li></ul></li><li class="subfolders "><a href="/fr-fr/keystone/sewebiug_overview.html">
+        <div class="na-navbar-padding"> Interface Web du moteur de services NetApp</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html">
+        Comptes de facturation, abonnements, services et performances
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Commencez</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_getting_started_overview.html">
+        Présentation
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_log_in_to_the_netapp_service_engine_web_interface.html">
+        Connectez-vous
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_partner_service_provider.html">
+        Rôles et opérations des fournisseurs de services et des clients
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_select_tenant.html">
+        Sélectionnez le locataire
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_netapp_service_engine_web_interface_overview.html">
+        Afficher l'interface Web du moteur de services NetApp
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_dashboard.html">
+        Afficher le tableau de bord des abonnements Flex
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_billing.html">
+        Afficher la facturation
+      </a></li><li class="subfolders "><a href="/fr-fr/keystone/sewebiug_working_with_file_services_overview.html">
+        <div class="na-navbar-padding"> Utilisation des services de fichiers</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_view_servers.html">
+        Afficher les serveurs
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_create_a_file_server.html">
+        Créez un serveur de fichiers
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_modify_file_server.html">
+        Modifier le serveur de fichiers
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_delete_file_server.html">
+        Supprimer le serveur de fichiers
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_view_shares.html">
+        Afficher les partages
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_create_a_new_file_share.html">
+        Créez un partage de fichiers
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_create_file_share_from_snapshot.html">
+        Créer un partage de fichiers à partir d'un instantané
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_modify_a_file_share.html">
+        Modifier un partage de fichiers
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_delete_a_file_share.html">
+        Supprimer un partage de fichiers
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_create_adhoc_snapshot_of_a_file_share.html">
+        Créer un instantané ad hoc d'un partage de fichiers
+      </a></li></ul></li><li class="subfolders "><a href="/fr-fr/keystone/sewebiug_working_with_block_storage_overview.html">
+        <div class="na-navbar-padding"> Utilisation du stockage en mode bloc</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_view_host_groups.html">
+        Travailler avec des groupes hôtes
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_view_disks.html">
+        Afficher les disques
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_create_a_new_disk.html">
+        Créer un disque
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_create_a_disk_from_a_snapshot.html">
+        Créer un disque à partir d'un snapshot
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_modify_a_disk.html">
+        Modifier un disque
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_delete_a_disk.html">
+        Supprimer un disque
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_create_an_adhoc_snapshot_of_a_disk.html">
+        Créer un snapshot ad hoc d'un disque
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Utilisation du stockage objet</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_working_with_object_storage_overview.html">
+        Présentation
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_view_buckets.html">
+        Compartiments de vue
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_initialize_object_storage.html">
+        Initialiser le stockage d'objets
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_create_buckets.html">
+        Créer des compartiments
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_view_the_object_storage_group_and_users.html">
+        Afficher les utilisateurs et les groupes de stockage objet
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_create_an_object_storage_group.html">
+        Créer un groupe de stockage objet
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_modify_an_object_storage_group.html">
+        Modifier un groupe de stockage d'objets
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_delete_an_object_storage_group.html">
+        Supprime un groupe de stockage objet
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_create_object_storage_user.html">
+        Créer un utilisateur de stockage objet
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_modify_an_object_storage_user.html">
+        Modifier un utilisateur de stockage objet
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_create_an_s3_key_for_a_user.html">
+        Créez une clé S3 pour un utilisateur
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_delete_an_s3_key_for_a_user.html">
+        Supprimez une clé S3 d'un utilisateur
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Gestion des services cloud</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Gestion des services cloud</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_managing_subscribed_services_overview.html">
+        Présentation
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_view_a_list_of_subscribed_services.html">
+        Afficher la liste des services auxquels vous êtes abonné
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_add_a_subscribed_service.html">
+        Ajouter un service abonné
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_modify_the_subscribed_service_details.html">
+        Modifier les détails du service souscrit
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_delete_a_subscribed_service.html">
+        Supprimer un service souscrit
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Gestion d'Azure NetApp Files</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_managing_azure_netapp_accounts.html">
+        Gestion des comptes Azure NetApp
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_managing_azure_capacity_pools.html">
+        Gestion des pools de capacité Azure
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_managing_azure_volumes.html">
+        Gestion des volumes Azure
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_managing_gcp_cvs.html">
+        Gestion de Cloud Volumes Service pour Google Cloud Platform
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_working_with_reports.html">
+        Afficher les rapports
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_back_up_file_shares_and_disks.html">
+        Utilisation de sauvegardes
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_managing_subscriptions.html">
+        Gérer vos abonnements
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Gérer les demandes de service</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_managing_service_requests_overview.html">
+        Présentation
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_raise_a_service_request.html">
+        Demander un service
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_track_a_service_request.html">
+        Suivre une demande de service
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_service_request_process.html">
+        Processus de demande de service
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Effectuer des tâches administratives</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Gérer les utilisateurs</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_view_a_list_of_users.html">
+        Afficher la liste des utilisateurs
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_add_a_user.html">
+        Ajouter un utilisateur
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_modify_user_details.html">
+        Modifier les détails de l'utilisateur
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_delete_a_user.html">
+        Supprimer un utilisateur
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_managing_tenants_and_subtenants.html">
+        Gestion des locataires et sous-locataires
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_alerts.html">
+        Afficher et gérer les alertes
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/sewebiug_define_network_configurations.html">
+        Gérer les réseaux
+      </a></li></ul></li><li class="subfolders "><a href="/fr-fr/keystone/seapiref_overview_of_netapp_service_engine_apis.html">
+        <div class="na-navbar-padding"> Référence de l'API du moteur de service NetApp</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/seapiref_authorization_and_authentication.html">
+        Autorisation et authentification
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/seapiref_netapp_service_engine_rest_apis.html">
+        API REST NetApp Service Engine
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> API grand public</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/seapiref_consumer_apis_overview.html">
+        Présentation
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/seapiref_cloud_orchestration_apis.html">
+        API d'orchestration cloud
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/seapiref_block_storage_apis.html">
+        Les API de stockage bloc
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/seapiref_file_services_apis.html">
+        Les API de services de fichiers
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/seapiref_object_storage_apis.html">
+        API de stockage objet
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/seapiref_backups_apis.html">
+        API de sauvegarde
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/seapiref_reporting_apis.html">
+        API de reporting
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/seapiref_subnets_apis.html">
+        Créez des sous-réseaux à l'aide d'API
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/seapiref_@consumer@_administration_apis.html">
+        (Grand public) les API d'administration
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> API d'administration</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/seapiref_administrator_apis_overview.html">
+        Présentation
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/seapiref_tenants.html">
+        Locataires
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/seapiref_subtenants.html">
+        Sous-locataires
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/seapiref_users.html">
+        Utilisateurs
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/seapiref_zones.html">
+        Zones
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/seapiref_regions.html">
+        Régions
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/seapiref_ontap_clusters.html">
+        Clusters ONTAP
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/seapiref_storagegrid_instances.html">
+        Instances StorageGRID
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/seapiref_service_levels.html">
+        Niveaux de services
+      </a></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/seapiref_service_requests.html">
+        Demandes de service
+      </a></li><li class="  active "><a class="na-navbar-padding" href="/fr-fr/keystone/seapiref_jobs.html">
+        Emplois
+      </a></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="/fr-fr/keystone/legal-notices.html">
+        Mentions légales
+      </a></li></ul>
+</div>
+<script>
+  window.onscroll = () => {
+    const value = -40 - (document.body.scrollHeight - (window.innerHeight + document.scrollingElement.scrollTop));
+    
+    document.getElementById("sidebar-height").style.bottom = Math.max(0,value) + "px";
+};
+</script>
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+
+  </div>
+  
+
+  <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content">
+      <div class="ie-utility">
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">docs.netapp.com</a>
+        </li>
+        
+
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/fr-fr/keystone/">Keystone</a>
+        </li>
+
+      </ul>
+    </div>
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
+      <div class="ie-nmt-disclaimer">
+  <span>
+    <div class="ie-nmt-disclaimer-container">
+      <div class="ie-nmt-disclaimer-icon">
+        <svg class="luci-icon" aria-hidden="true">
+          <use xlink:href="/fr-fr/keystone/common/svg/sprite.svg#circle-info">
+        </svg>
+      </div>
+      <div class="ie-nmt-disclaimer-content">
+        <span> La version française est une traduction automatique. La version anglaise prévaut sur la française en cas de divergence. </span>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+  </span>
+</div><div class="n-doc__component-detail-heading-wrap">
+  <h1 class="n-doc__component-detail-heading">Emplois</h1>
+</div>
+
+
+<p class="page-details">
+  
+    
+    <time datetime="2022-04-28 15:20:34 +0000">04/28/2022</time>
+    
+  
+
+
+</p>
+
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>Utilisez les API des travaux pour consulter les détails des travaux. Pour plus d&#8217;informations sur l&#8217;utilisation des travaux, reportez-vous à la section API des objets de travail et processus asynchrones.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="récupérer-les-travaux">Récupérer les travaux</h3>
+<div class="paragraph">
+<p>Utilisez la méthode indiquée dans le tableau suivant pour extraire tous les travaux ou un sous-ensemble des travaux. En spécifiant un `tenant_ID', seuls les travaux appartenant à ce tenant seront réaffichés.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Méthode HTTP</th>
+<th class="tableblock halign-left valign-top">Chemin</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Paramètres</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">`GET'</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/v2.1/jobs</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Récupérer les travaux.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tenant_ID</code>: (Facultatif) Retourne les magasins de blocs appartenant au locataire spécifié. «offset» et «limite»– voir <a href="seapiref_netapp_service_engine_rest_apis.html#pagination&gt;">"Pagination commune"</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Attributs de corps de demande requis: `aucun'</p>
+</div>
+<div class="paragraph">
+<p><strong>Exemple corps de la demande :</strong></p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>none</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Exemple de corps de réponse :</strong></p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>{
+  "status": {
+    "user_message": "Okay. Returned 1 record.",
+    "verbose_message": "",
+    "code": 200
+  },
+  "result": {
+    "returned_records": 1,
+    "total_records": 2625,
+    "sort_by": "created",
+    "order_by": "desc",
+    "offset": 0,
+    "limit": 1,
+    "records": [
+      {
+        "id": "5ed72c8c6342e90001439d54",
+        "action": "create",
+        "job_summary": "Create request is successfully submitted",
+        "created": "2020-06-03T04:52:28.478Z",
+        "updated": "2020-06-03T04:52:32.636Z",
+        "object_id": "5ed72c8c6342e90001439d55",
+        "object_type": "sg_buckets",
+        "object_name": "test1234",
+        "status": "successful",
+        "status_detail": "Creation of s3 bucket 'test1234' completed successfully.",
+        "last_error": "",
+        "user_id": "5e85225af038943eb4b74684",
+        "job_tasks": [
+          {
+            "id": "5ed72c8c6342e90001439d57",
+            "job_id": "5ed72c8c6342e90001439d54",
+            "action": "create",
+            "driver": "storagegrid_ansible",
+            "object_id": "5ed72c8c6342e90001439d55",
+            "object_type": "sg_buckets",
+            "resource_type": "sg_bucket",
+            "status": "successful",
+            "status_detail": "Worker completed task successfully.",
+            "last_error": "",
+            "user_id": "5e85225af038943eb4b74684",
+            "request_payload": {
+              "grid_account_id": "05336917559886003354",
+              "grid_admin_base_url": "https://sggmi-dev.dev.ausngs.netapp.au/api/v3",
+              "org_password": "netapp01",
+              "org_username": "root",
+              "s3_bucket_name": "test1234"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}</pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="récupérer-un-travail-par-id-de-travail">Récupérer un travail par ID de travail</h4>
+<div class="paragraph">
+<p>Utilisez la méthode indiquée dans le tableau suivant pour récupérer un travail par ID.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Méthode HTTP</th>
+<th class="tableblock halign-left valign-top">Chemin</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Paramètres</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">`GET'</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">`/v2.1/jobs/{id}'</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Récupérer un travail par ID.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ID (chaîne)</code>: L&#8217;identifiant unique du travail.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Attributs de corps de demande requis : `identificateur de travail'</p>
+</div>
+<div class="paragraph">
+<p><strong>Exemple corps de la demande :</strong></p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>none</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Exemple de corps de réponse :</strong></p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>{
+  "status": {
+    "user_message": "Okay. Returned 1 record.",
+    "verbose_message": "",
+    "code": 200
+  },
+  "result": {
+    "total_records": 1,
+    "records": [
+      {
+        "id": "5e66f18e09a74c0001b89640",
+        "action": "create",
+        "job_summary": "Create S3 bucket for Sub Tenant",
+        "created": "2020-03-10T01:46:54.097Z",
+        "updated": "2020-03-10T01:46:57.664Z",
+        "object_id": "5e66f18e09a74c0001b89641",
+        "object_type": "sg_buckets",
+        "status": "successful",
+        "status_detail": "Creation of s3 bucket 'mys3bucket' completed successfully.",
+        "last_error": "",
+        "user_id": "5bbee380a2df7a04d43acaee",
+        "job_tasks": [
+          {
+            "id": "5e66f18e09a74c0001b89642",
+            "job_id": "5e66f18e09a74c0001b89640",
+            "action": "create",
+            "driver": "storagegrid_ansible",
+            "object_id": "5e66f18e09a74c0001b89641",
+            "object_type": "sg_buckets",
+            "resource_type": "sg_bucket",
+            "status": "successful",
+            "status_detail": "Worker completed task successfully.",
+            "last_error": "",
+            "user_id": "5bbee380a2df7a04d43acaee",
+            "request_payload": {
+              "grid_account_id": "47490102387197219062",
+              "grid_admin_base_url": "https://sggmi-dev.dev.ausngs.netapp.au/api/v3",
+              "org_password": "netapp01",
+              "org_username": "root",
+              "s3_bucket_name": "mys3bucket"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="api-dobjets-de-travail-et-processus-asynchrones">API d&#8217;objets de travail et processus asynchrones</h3>
+<div class="paragraph">
+<p>Certains appels API, en particulier ceux utilisés pour ajouter ou modifier des ressources, peuvent prendre plus de temps que d&#8217;autres appels. Le moteur de service NetApp traite ces demandes longues de manière asynchrone.</p>
+</div>
+<div class="paragraph">
+<p>Après avoir effectué un appel API qui s&#8217;exécute de manière asynchrone, le code de réponse HTTP 202 indique que la demande a été validée et acceptée avec succès, mais pas encore terminée. La requête est traitée comme une tâche d&#8217;arrière-plan qui continue à s&#8217;exécuter après la réponse HTTP initiale au client. La réponse inclut l&#8217;objet de travail qui fixe la requête, y compris son identificateur unique.</p>
+</div>
+<div class="sect3">
+<h4 id="interrogation-de-lobjet-de-travail-associé-à-une-requête-dapi">Interrogation de l&#8217;objet de travail associé à une requête d&#8217;API</h4>
+<div class="paragraph">
+<p>L&#8217;objet travail renvoyé dans la réponse HTTP contient plusieurs propriétés. Vous pouvez interroger la propriété d&#8217;état pour déterminer si la demande a bien été effectuée. Un objet de travail peut se trouver dans l&#8217;un des États suivants :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>NORMALE</p>
+</li>
+<li>
+<p>AVERTISSEMENT</p>
+</li>
+<li>
+<p>PARTIEL_ÉCHECS</p>
+</li>
+<li>
+<p>ERREUR</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Il existe deux techniques que vous pouvez utiliser lors de l&#8217;interrogation d&#8217;un objet de travail pour détecter un état de terminal pour la tâche, succès ou échec :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Demande d&#8217;interrogation standard : l&#8217;état actuel du travail est renvoyé immédiatement.</p>
+</li>
+<li>
+<p>Demande d&#8217;interrogation longue : lorsque l&#8217;état du travail passe à NORMAL, ERREUR ou PARTIEL_ÉCHECS.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="étapes-dune-demande-asynchrone">Étapes d&#8217;une demande asynchrone</h4>
+<div class="paragraph">
+<p>Vous pouvez utiliser la procédure de haut niveau suivante pour effectuer un appel d&#8217;API asynchrone :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Lancez l&#8217;appel d&#8217;API asynchrone.</p>
+</li>
+<li>
+<p>Recevoir une réponse HTTP 202 indiquant que la demande a été acceptée avec succès.</p>
+</li>
+<li>
+<p>Extrayez l&#8217;identifiant de l&#8217;objet de travail du corps de réponse.</p>
+</li>
+<li>
+<p>Dans une boucle, attendez que l&#8217;objet de travail atteigne l&#8217;état de terminal NORMAL, ERREUR ou PARTIEL_ÉCHECS.</p>
+</li>
+<li>
+<p>Vérifiez l&#8217;état du terminal du travail et récupérez le résultat du travail.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+      <div class="n-footer__bottom-left">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2022 NetApp, Inc.</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">Conditions générales</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">Privacy Policy</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">Cookie Policy</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">Paramètres de cookies</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="n-footer__bottom-right">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <span class="n-footer__fine-print">Vous avez des commentaires sur notre site Web ?</span>
+              <a target="_self" href="javascript:netapp_mailto()">Contactez-nous</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://docs.netapp.com/fr-fr/announcements/">Annonces</a>
+            </li>
+          </ul>
+        </div>
+        <div class="n-footer__social-links">
+          <ul class="n-footer__social-link-list">
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com"
+                target="_blank" title="blog" alt="blog">
+                <span class="n-footer__social-link-text">blog</span>
+                <svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+                  <title>blog@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/fr-fr/keystone/common/svg/sprite.svg#blog"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/"
+                target="_blank" title="community" alt="community">
+                <span class="n-footer__social-link-text">community</span>
+                <svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+                  <title>community@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/fr-fr/keystone/common/svg/sprite.svg#comments"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp"
+                target="_blank" title="twitter" alt="twitter">
+                <span class="n-footer__social-link-text">twitter</span>
+                <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+                  <title>twitter@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/fr-fr/keystone/common/svg/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp"
+                target="_blank" title="facebook" alt="facebook">
+                <span class="n-footer__social-link-text">facebook</span>
+                <svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+                  <title>facebook@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/fr-fr/keystone/common/svg/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-linkedin"
+                href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+                <span class="n-footer__social-link-text">linkedin</span>
+                <svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+                  <title>linkedin@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/fr-fr/keystone/common/svg/sprite.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-youtube"
+                href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+                <span class="n-footer__social-link-text">youtube</span>
+                <svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+                  <title>youtube@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/fr-fr/keystone/common/svg/sprite.svg#youtube"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-slideshare"
+                href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+                <span class="n-footer__social-link-text">slideshare</span>
+                <svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+                  <title>slideshare@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/fr-fr/keystone/common/svg/sprite.svg#slideshare"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/fr-fr/keystone/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/fr-fr/keystone/js/prism.js'></script>
+      <script type="text/javascript" src='/fr-fr/keystone/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/fr-fr/keystone/js/www-ntap.js'></script>
+    <script src='/fr-fr/keystone/js/tabbed-blocks.js'></script>
+  </body></html>
