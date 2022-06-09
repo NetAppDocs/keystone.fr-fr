@@ -277,39 +277,31 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">Français</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">Français</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/fr-fr/keystone/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/keystone/nkfsfaq_service_offer_details.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/keystone/nkfsfaq_service_offer_details.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/keystone/nkfsfaq_service_offer_details.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/keystone/nkfsfaq_service_offer_details.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/keystone/nkfsfaq_service_offer_details.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/de-de/keystone/nkfsfaq_service_offer_details.html" class="n-menu__header-text"><span translate="no" class="notranslate">Deutsch</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/fr-fr/keystone/nkfsfaq_service_offer_details.html" class="n-menu__header-text"><span translate="no" class="notranslate">Français</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/fr-fr/keystone/nkfsfaq_service_offer_details.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/keystone/nkfsfaq_service_offer_details.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/keystone/nkfsfaq_service_offer_details.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/keystone/nkfsfaq_service_offer_details.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/keystone/nkfsfaq_service_offer_details.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/keystone/nkfsfaq_service_offer_details.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/de-de/keystone/nkfsfaq_service_offer_details.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -1069,7 +1061,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class="subfolders "><a href="/fr-fr/keystone/index.html">
         <div class="na-navbar-padding"> Abonnement NetApp Keystone Flex</div>
       </a>
@@ -1395,76 +1387,73 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-28 15:20:34 +0000">04/28/2022</time>
+    <time datetime="2022-06-09 10:24:56 +0000">06/09/2022</time>
     
   
 
 
 </p>
 
-<div id="preamble">
-<div class="sectionbody">
 <div class="paragraph lead">
 <p>Les questions suivantes donnent des réponses à vos questions fréquentes sur l&#8217;offre de service de maintenance NetApp Keystone Flex.</p>
 </div>
+<div class="paragraph">
+<p><strong>Quelle est la capacité minimale engagée?</strong></p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="quelle-est-la-capacité-minimale-engagée">Quelle est la capacité minimale engagée ?</h3>
 <div class="paragraph">
 <p>La capacité minimale engagée pour un abonnement NetApp Keystone Flex (Flex Subscription) est de 100 Tio, par site sur un ou plusieurs niveaux de service.</p>
 </div>
+<div class="paragraph">
+<p><strong>Quelle est la durée type d&#8217;un contrat d&#8217;abonnement Flex?</strong></p>
 </div>
-<div class="sect2">
-<h3 id="quelle-est-la-durée-type-dun-contrat-dabonnement-flex">Quelle est la durée type d&#8217;un contrat d&#8217;abonnement Flex ?</h3>
 <div class="paragraph">
 <p>L&#8217;abonnement Flex offre des périodes de 12, 24 et 36 mois.</p>
 </div>
+<div class="paragraph">
+<p><strong>Comment puis-je accéder au stockage?</strong></p>
 </div>
-<div class="sect2">
-<h3 id="comment-accéder-au-stockage">Comment accéder au stockage ?</h3>
 <div class="paragraph">
 <p>Dans le modèle NetApp (standard), les contrôleurs de stockage (ONTAP System Manager ou l&#8217;accès administratif aux systèmes) sont détenus et gérés par NetApp. Vous ne pouvez contrôler et gérer votre stockage que via l&#8217;interface utilisateur et les API du moteur de service NetApp. Dans un déploiement géré par le client (ou Lite), où l&#8217;interface utilisateur et les API du moteur de service NetApp sont utilisées principalement pour les fonctions de facturation, vous pouvez accéder aux contrôleurs de stockage, tels que Active IQ Unified Manager et ONTAP System Manager, et accéder directement aux clusters ONTAP.</p>
 </div>
+<div class="paragraph">
+<p><strong>Comment puis-je gérer le service?</strong></p>
 </div>
-<div class="sect2">
-<h3 id="comment-gérer-le-service">Comment gérer le service ?</h3>
 <div class="paragraph">
 <p>NetApp Service Engine est l&#8217;outil de gestion et d&#8217;orchestration qui vous permet de provisionner le stockage et d&#8217;obtenir des rapports sur l&#8217;utilisation des services.</p>
 </div>
+<div class="paragraph">
+<p><strong>Comment puis-je augmenter la capacité engagée dans un abonnement?</strong></p>
 </div>
-<div class="sect2">
-<h3 id="comment-puis-je-augmenter-la-capacité-dédiée-dans-un-abonnement">Comment puis-je augmenter la capacité dédiée dans un abonnement ?</h3>
 <div class="paragraph">
 <p>Vous pouvez envoyer une demande d&#8217;ajout de capacité par le biais de l&#8217;outil de gestion des moteurs de services NetApp ou via leur responsable NetApp Keystone Success Manager.</p>
 </div>
+<div class="paragraph">
+<p><strong>L&#8217;augmentation de la capacité prolonge-t-elle le terme?</strong></p>
 </div>
-<div class="sect2">
-<h3 id="laugmentation-de-la-capacité-augmente-t-elle-le-terme">L&#8217;augmentation de la capacité augmente-t-elle le terme ?</h3>
 <div class="paragraph">
 <p>Tous les ajouts sont à terme pour la période de validité existante, sauf si la demande est faite dans les 90 derniers jours de l&#8217;abonnement, auquel cas la durée doit être d&#8217;au moins 12 mois.</p>
 </div>
+<div class="paragraph">
+<p><strong>Un nouvel abonnement a-t-il la flexibilité d&#8217;être accompagné d&#8217;une nouvelle période annuelle?</strong></p>
 </div>
-<div class="sect2">
-<h3 id="un-nouvel-abonnement-a-t-il-la-possibilité-de-sajouter-à-une-nouvelle-période-annuelle">Un nouvel abonnement a-t-il la possibilité de s&#8217;ajouter à une nouvelle période annuelle ?</h3>
 <div class="paragraph">
 <p>Oui, les nouveaux abonnements peuvent avoir de nouvelles conditions distinctes de tous les abonnements existants.</p>
 </div>
+<div class="paragraph">
+<p><strong>Les conditions d&#8217;abonnement du locataire peuvent-elles s&#8217;étendre au-delà de la durée d&#8217;abonnement du partenaire?</strong></p>
 </div>
-<div class="sect2">
-<h3 id="les-conditions-de-labonnement-aux-locataires-peuvent-elles-sétendre-au-delà-des-conditions-dabonnement-du-partenaire">Les conditions de l&#8217;abonnement aux locataires peuvent-elles s&#8217;étendre au-delà des conditions d&#8217;abonnement du partenaire ?</h3>
 <div class="paragraph">
 <p>Les abonnements aux locataires peuvent s&#8217;étendre au-delà des conditions d&#8217;abonnement Flex actuelles du partenaire. Un avertissement s&#8217;affiche lors de la création des abonnements ainsi que dans les rapports d&#8217;utilisation.</p>
 </div>
+<div class="paragraph">
+<p><strong>Puis-je combiner plusieurs abonnements sur le même cluster ONTAP ?</strong></p>
 </div>
-<div class="sect2">
-<h3 id="est-il-possible-de-combiner-plusieurs-abonnements-sur-un-même-cluster-ontap">Est-il possible de combiner plusieurs abonnements sur un même cluster ONTAP ?</h3>
 <div class="paragraph">
 <p>Non, chaque cluster est attribué à un abonnement particulier.</p>
 </div>
+<div class="paragraph">
+<p><strong>Qui est le suivi et les opérations?</strong></p>
 </div>
-<div class="sect2">
-<h3 id="qui-est-responsable-de-la-surveillance-et-des-opérations">Qui est responsable de la surveillance et des opérations ?</h3>
 <div class="paragraph">
 <p>Concernant le service opéré par NetApp, NetApp se charge de surveiller l&#8217;infrastructure à distance afin que le service se déroule selon les attentes convenues.</p>
 </div>
@@ -1474,30 +1463,26 @@
 <div class="paragraph">
 <p>Pour le service opéré par le client, le client se charge du contrôle de l&#8217;infrastructure et de la résolution des problèmes à NetApp.</p>
 </div>
+<div class="paragraph">
+<p><strong>Que se passe-t-il si je termine le service tôt?</strong></p>
 </div>
-<div class="sect2">
-<h3 id="que-se-passe-t-il-si-je-termine-le-service-tôt">Que se passe-t-il si je termine le service tôt ?</h3>
 <div class="paragraph">
 <p>L&#8217;engagement de service minimum est de 12 mois. Si vous annulez le service tôt, la valeur résiduelle doit être payée à l&#8217;avance.</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="y-a-t-il-une-opportunité-de-convertir-le-produit-en-achat-une-fois-le-terme-initial-terminé">Y a-t-il une opportunité de convertir le produit en achat une fois le terme initial terminé ?</h3>
 <div class="paragraph">
-<p>Non L&#8217;offre n&#8217;inclut pas une option permettant de convertir le produit en achat. En outre, les produits NetApp achetés précédemment ne font pas partie du cadre de ce programme.</p>
+<p><strong>Y a-t-il une occasion de convertir en achat après la fin de la période initiale?</strong> non L&#8217;offre n&#8217;inclut pas une option permettant de convertir le produit en achat. En outre, les produits NetApp achetés précédemment ne font pas partie du cadre de ce programme.</p>
 </div>
+<div class="paragraph">
+<p><strong>Puis-je demander une version de logiciel particulière?</strong></p>
 </div>
-<div class="sect2">
-<h3 id="puis-je-demander-une-version-logicielle-spécifique">Puis-je demander une version logicielle spécifique ?</h3>
 <div class="paragraph">
 <p>Non NetApp Keystone a standardisé la version logicielle sur l&#8217;ensemble de sa base client.</p>
 </div>
+<div class="paragraph">
+<p><strong>Vais-je être informé des mises à niveau logicielles?</strong></p>
 </div>
-<div class="sect2">
-<h3 id="pourrai-je-être-informé-sur-les-mises-à-niveau-logicielles">Pourrai-je être informé sur les mises à niveau logicielles ?</h3>
 <div class="paragraph">
 <p>Oui. Toutes les activités de maintenance et de mise à niveau sont communiquées au NetApp Keystone client et planifiées à une heure convenue mutuellement entre le client.</p>
-</div>
 </div>
 
     </article>
@@ -1645,4 +1630,5 @@
     </script>
     <script src='/fr-fr/keystone/js/www-ntap.js'></script>
     <script src='/fr-fr/keystone/js/tabbed-blocks.js'></script>
+    <script src='/fr-fr/keystone/js/sidebar.js'></script>
   </body></html>

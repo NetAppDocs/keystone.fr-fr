@@ -277,39 +277,31 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">Français</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">Français</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/fr-fr/keystone/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/keystone/sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/keystone/sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/keystone/sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/keystone/sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/keystone/sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/de-de/keystone/sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html" class="n-menu__header-text"><span translate="no" class="notranslate">Deutsch</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/fr-fr/keystone/sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html" class="n-menu__header-text"><span translate="no" class="notranslate">Français</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/fr-fr/keystone/sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/keystone/sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/keystone/sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/keystone/sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/keystone/sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/keystone/sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/de-de/keystone/sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -1069,7 +1061,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class="subfolders "><a href="/fr-fr/keystone/index.html">
         <div class="na-navbar-padding"> Abonnement NetApp Keystone Flex</div>
       </a>
@@ -1395,7 +1387,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-28 15:20:34 +0000">04/28/2022</time>
+    <time datetime="2022-06-09 10:24:56 +0000">06/09/2022</time>
     
   
 
@@ -1449,8 +1441,9 @@ Si le stockage est requis dans plusieurs data centers, un abonnement distinct es
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="consommation-capacité-en-rafale-et-utilisation-excessive">Consommation, capacité en rafale et utilisation excessive</h3>
+<div class="sect1">
+<h2 id="consommation-capacité-en-rafale-et-utilisation-excessive">Consommation, capacité en rafale et utilisation excessive</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>La capacité consommée est la capacité allouée (mais pas nécessairement utilisée). La capacité engagée est la capacité à laquelle s&#8217;engage un abonnement. L&#8217;abonné est facturé à taux fixe pour la capacité engagée, indépendamment de la quantité utilisée.</p>
 </div>
@@ -1475,7 +1468,6 @@ Outre le stockage primaire, des fonctionnalités telles que les snapshots, la sa
 </tr>
 </table>
 </div>
-</div>
 <div class="sect2">
 <h3 id="notifications-dutilisation-en-rafale">Notifications d&#8217;utilisation en rafale</h3>
 <div class="paragraph">
@@ -1494,8 +1486,9 @@ Outre le stockage primaire, des fonctionnalités telles que les snapshots, la sa
 </li>
 </ul>
 </div>
-<div class="sect3">
-<h4 id="notification-lorsquune-modification-proposée-entraîne-une-utilisation-de-la-capacité-en-rafale">Notification lorsqu&#8217;une modification proposée entraîne une utilisation de la capacité en rafale</h4>
+</div>
+<div class="sect2">
+<h3 id="notification-lorsquune-modification-proposée-entraîne-une-utilisation-de-la-capacité-en-rafale">Notification lorsqu&#8217;une modification proposée entraîne une utilisation de la capacité en rafale</h3>
 <div class="paragraph">
 <p>Cette figure présente un exemple de notification qui s&#8217;affiche lorsqu&#8217;une modification de provisionnement proposée provoque l&#8217;éclatement d&#8217;un abonnement. Vous pouvez choisir de continuer à savoir qu&#8217;il mettra l&#8217;abonnement en rafale ou de ne pas poursuivre l&#8217;action.</p>
 </div>
@@ -1575,8 +1568,8 @@ Outre le stockage primaire, des fonctionnalités telles que les snapshots, la sa
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="notification-lorsque-labonnement-est-en-rafale">Notification lorsque l&#8217;abonnement est en rafale</h4>
+<div class="sect2">
+<h3 id="notification-lorsque-labonnement-est-en-rafale">Notification lorsque l&#8217;abonnement est en rafale</h3>
 <div class="paragraph">
 <p>La bannière de notification suivante s&#8217;affiche lorsqu&#8217;un abonnement est en rafale. La notification s&#8217;affiche à l&#8217;administrateur du client pour la location et s&#8217;affiche jusqu&#8217;à ce que la notification soit acquittée.</p>
 </div>
@@ -1585,8 +1578,10 @@ Outre le stockage primaire, des fonctionnalités telles que les snapshots, la sa
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="protection-des-données">Protection des données</h3>
+</div>
+<div class="sect1">
+<h2 id="protection-des-données">Protection des données</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>DP désigne les méthodes permettant de sauvegarder des données et de les restaurer si nécessaire.</p>
 </div>
@@ -1606,8 +1601,8 @@ Outre le stockage primaire, des fonctionnalités telles que les snapshots, la sa
 </li>
 </ul>
 </div>
-<div class="sect3">
-<h4 id="snapshots">Snapshots</h4>
+<div class="sect2">
+<h3 id="snapshots">Snapshots</h3>
 <div class="paragraph">
 <p>Les snapshots sont des copies de données à un point dans le temps. Les snapshots peuvent être clonés pour former un nouveau disque ou partagés avec des fonctionnalités identiques ou similaires.</p>
 </div>
@@ -1627,8 +1622,8 @@ Les snapshots contribuent à la capacité consommée d&#8217;un service.
 </table>
 </div>
 </div>
-<div class="sect3">
-<h4 id="sauvegardes">Sauvegardes</h4>
+<div class="sect2">
+<h3 id="sauvegardes">Sauvegardes</h3>
 <div class="paragraph">
 <p>La sauvegarde consiste à créer une copie d&#8217;un élément, à le répliquer et à stocker la copie dans une zone autre que la zone d&#8217;origine, où le protocole respectif est activé (en cas de stockage en mode bloc uniquement) et non MetroCluster est activé. NetApp Service Engine propose des sauvegardes sur le stockage bloc et fichier (un service DP est requis dans l&#8217;abonnement). Les sauvegardes des partages/disques sont stockées dans la zone de sauvegarde sur le niveau de performance le plus économique (standard) à l&#8217;abonnement.</p>
 </div>
@@ -1681,8 +1676,10 @@ Les snapshots contribuent à la capacité consommée d&#8217;un service.
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="reprise-après-incident">Reprise après incident</h3>
+</div>
+<div class="sect1">
+<h2 id="reprise-après-incident">Reprise après incident</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>La reprise après incident consiste à restaurer la normale des opérations en cas d&#8217;incident.</p>
 </div>
@@ -1701,8 +1698,8 @@ La prise en charge de la reprise après incident dépend de l&#8217;infrastructu
 </tr>
 </table>
 </div>
-<div class="sect3">
-<h4 id="reprise-après-incidentasynchrone">Reprise après incident—asynchrone</h4>
+<div class="sect2">
+<h3 id="reprise-après-incidentasynchrone">Reprise après incident—asynchrone</h3>
 <div class="paragraph">
 <p>NetApp Service Engine prend en charge la reprise après incident asynchrone en vous permettant d&#8217;atteindre les objectifs suivants :</p>
 </div>
@@ -1735,14 +1732,9 @@ La prise en charge de la reprise après incident dépend de l&#8217;infrastructu
 </li>
 </ul>
 </div>
-<div class="sect4">
-<h5 id="configurez-un-serveur-de-fichiers-ou-un-magasin-en-blocs-pour-prendre-en-charge-la-reprise-après-incident-asynchrone">Configurez un serveur de fichiers ou un magasin en blocs pour prendre en charge la reprise après incident asynchrone</h5>
 <div class="paragraph">
 <p>Activez la reprise après incident asynchrone sur un serveur de fichiers ou un magasin bloc au moment de la création ou ultérieurement. Une fois activée, la reprise après incident ne peut pas être désactivée et la zone de reprise après incident ne peut pas être modifiée. La planification de la reprise sur incident spécifie la fréquence à laquelle les données sont répliquées vers le site de reprise sur incident (toutes les heures, toutes les heures ou tous les jours).</p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="reprise-après-incident-asynchrone-sur-le-partage-de-fichiers-ou-le-disque">Reprise après incident asynchrone sur le partage de fichiers ou le disque</h5>
 <div class="paragraph">
 <p>Un partage de fichiers ou un disque ne peut être configuré que pour la réplication asynchrone de reprise après incident si le serveur de fichiers parent ou le magasin de blocs est d&#8217;abord configuré pour la reprise après incident asynchrone. Par défaut, si la réplication est activée dans le parent, la réplication est activée dans les partages de fichiers ou les disques que le parent héberge. Vous pouvez exclure la réplication d&#8217;un partage ou d&#8217;un disque particulier en désactivant la reprise après sinistre sur ce partage/disque. Il est possible de basculer entre l&#8217;activation et la désactivation de la réplication sur ces partages/disques.</p>
 </div>
@@ -1763,9 +1755,8 @@ La prise en charge de la reprise après incident dépend de l&#8217;infrastructu
 </ul>
 </div>
 </div>
-</div>
-<div class="sect3">
-<h4 id="reprise-après-incident-synchrone">Reprise après incident synchrone</h4>
+<div class="sect2">
+<h3 id="reprise-après-incident-synchrone">Reprise après incident synchrone</h3>
 <div class="paragraph">
 <p>MetroCluster est une fonctionnalité DP qui réplique de manière synchrone les données et la configuration entre deux zones distinctes qui résident dans des emplacements distincts ou dans des domaines de défaillance. En cas d&#8217;incident sur un site, un administrateur peut permettre l&#8217;accès aux données à partir du site survivant.</p>
 </div>
@@ -1794,15 +1785,15 @@ La prise en charge de la reprise après incident dépend de l&#8217;infrastructu
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="la-protection-des-données-la-capacité-consommée-et-les-frais">La protection des données, la capacité consommée et les frais</h3>
+</div>
+<div class="sect1">
+<h2 id="la-protection-des-données-la-capacité-consommée-et-les-frais">La protection des données, la capacité consommée et les frais</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Les chiffres de cette section décrivent le calcul des frais DP.</p>
 </div>
-<div class="sect3">
-<h4 id="reprise-après-incident-2">Reprise après incident</h4>
-<div class="sect4">
-<h5 id="reprise-après-incident-asynchrone">Reprise après incident asynchrone</h5>
+<div class="sect2">
+<h3 id="reprise-après-incident-asynchrone">Reprise après incident asynchrone</h3>
 <div class="paragraph">
 <p>Dans le cas de la reprise après incident asynchrone, l&#8217;utilisation et le coût sont constitués des frais suivants :</p>
 </div>
@@ -1823,8 +1814,8 @@ La prise en charge de la reprise après incident dépend de l&#8217;infrastructu
 <p><span class="image"><img src="./media/sewebiug_image4.png" alt="Erreur : image graphique manquante"></span></p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="reprise-sur-incident-synchrone">Reprise sur incident synchrone</h5>
+<div class="sect2">
+<h3 id="reprise-sur-incident-synchrone">Reprise sur incident synchrone</h3>
 <div class="paragraph">
 <p>Dans le cas de la reprise après incident synchrone, l&#8217;utilisation et le coût sont constitués des frais suivants :</p>
 </div>
@@ -1832,9 +1823,8 @@ La prise en charge de la reprise après incident dépend de l&#8217;infrastructu
 <p><span class="image"><img src="./media/sewebiug_image5.png" alt="Erreur : image graphique manquante"></span></p>
 </div>
 </div>
-</div>
-<div class="sect3">
-<h4 id="sauvegarde">Sauvegarde</h4>
+<div class="sect2">
+<h3 id="sauvegarde">Sauvegarde</h3>
 <div class="paragraph">
 <p>En sauvegarde, l&#8217;utilisation et le coût sont constitués des frais suivants :</p>
 </div>
@@ -1853,6 +1843,7 @@ La prise en charge de la reprise après incident dépend de l&#8217;infrastructu
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="./media/sewebiug_image6.png" alt="Erreur : image graphique manquante"></span></p>
+</div>
 </div>
 </div>
 </div>
@@ -2002,4 +1993,5 @@ La prise en charge de la reprise après incident dépend de l&#8217;infrastructu
     </script>
     <script src='/fr-fr/keystone/js/www-ntap.js'></script>
     <script src='/fr-fr/keystone/js/tabbed-blocks.js'></script>
+    <script src='/fr-fr/keystone/js/sidebar.js'></script>
   </body></html>

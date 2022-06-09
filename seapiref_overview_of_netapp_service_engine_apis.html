@@ -277,39 +277,31 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">Français</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">Français</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/fr-fr/keystone/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/keystone/seapiref_overview_of_netapp_service_engine_apis.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/keystone/seapiref_overview_of_netapp_service_engine_apis.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/keystone/seapiref_overview_of_netapp_service_engine_apis.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/keystone/seapiref_overview_of_netapp_service_engine_apis.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/keystone/seapiref_overview_of_netapp_service_engine_apis.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/de-de/keystone/seapiref_overview_of_netapp_service_engine_apis.html" class="n-menu__header-text"><span translate="no" class="notranslate">Deutsch</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/fr-fr/keystone/seapiref_overview_of_netapp_service_engine_apis.html" class="n-menu__header-text"><span translate="no" class="notranslate">Français</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/fr-fr/keystone/seapiref_overview_of_netapp_service_engine_apis.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/keystone/seapiref_overview_of_netapp_service_engine_apis.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/keystone/seapiref_overview_of_netapp_service_engine_apis.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/keystone/seapiref_overview_of_netapp_service_engine_apis.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/keystone/seapiref_overview_of_netapp_service_engine_apis.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/keystone/seapiref_overview_of_netapp_service_engine_apis.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/de-de/keystone/seapiref_overview_of_netapp_service_engine_apis.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -1069,7 +1061,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class="subfolders "><a href="/fr-fr/keystone/index.html">
         <div class="na-navbar-padding"> Abonnement NetApp Keystone Flex</div>
       </a>
@@ -1395,7 +1387,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-28 15:20:34 +0000">04/28/2022</time>
+    <time datetime="2022-06-09 10:24:56 +0000">06/09/2022</time>
     
   
 
@@ -1412,8 +1404,9 @@
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="public-visé">Public visé</h3>
+<div class="sect1">
+<h2 id="public-visé">Public visé</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Ce guide est destiné aux développeurs créant des applications qui communiquent avec le logiciel NetApp Service Engine via des API REST.</p>
 </div>
@@ -1421,16 +1414,18 @@
 <p>Vous devez utiliser ce guide pour gérer votre stockage et les API d&#8217;administration du fournisseur de stockage, de cluster NetApp ONTAP et de gestion.</p>
 </div>
 </div>
+</div>
+<div class="sect1">
+<h2 id="accès-à-lapi-du-moteur-de-services-netapp-et-catégories">Accès à l&#8217;API du moteur de services NetApp et catégories</h2>
+<div class="sectionbody">
 <div class="sect2">
-<h3 id="accès-à-lapi-du-moteur-de-services-netapp-et-catégories">Accès à l&#8217;API du moteur de services NetApp et catégories</h3>
-<div class="sect3">
-<h4 id="construire-une-url-pour-accéder-directement-aux-api-rest">Construire une URL pour accéder directement aux API REST</h4>
+<h3 id="construire-une-url-pour-accéder-directement-aux-api-rest">Construire une URL pour accéder directement aux API REST</h3>
 <div class="paragraph">
 <p>Vous pouvez accéder directement aux API REST via un langage de programmation comme Python, C#, C++, JavaScript, et ainsi de suite. Pour accéder aux API REST au format `https:/&lt;hostname&gt; /api', entrez le nom d&#8217;hôte ou l&#8217;adresse IP et l&#8217;URL.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="api-grand-public-et-dadministrateur">API grand public et d&#8217;administrateur</h4>
+<div class="sect2">
+<h3 id="api-grand-public-et-dadministrateur">API grand public et d&#8217;administrateur</h3>
 <div class="paragraph">
 <p>Ce document divise les descriptions de l&#8217;API en deux sections :</p>
 </div>
@@ -1446,8 +1441,10 @@
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="concepts-clés-du-moteur-de-service-netapp">Concepts clés du moteur de service NetApp</h3>
+</div>
+<div class="sect1">
+<h2 id="concepts-clés-du-moteur-de-service-netapp">Concepts clés du moteur de service NetApp</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>NetApp Service Engine prend en charge les concepts de régions et de zones, comme le montre la figure ci-dessous. Une région représente un data Center ou un site, alors qu&#8217;une zone représente une sous-unité de stockage au sein de la région (techniquement, un cluster au sein d&#8217;un data Center/site). Prendre en charge les fonctionnalités de disponibilité et de protection des données (DP) de plusieurs zones.</p>
 </div>
@@ -1481,6 +1478,7 @@
 <p>Stockage objet en compartiments</p>
 </li>
 </ul>
+</div>
 </div>
 </div>
 
@@ -1629,4 +1627,5 @@
     </script>
     <script src='/fr-fr/keystone/js/www-ntap.js'></script>
     <script src='/fr-fr/keystone/js/tabbed-blocks.js'></script>
+    <script src='/fr-fr/keystone/js/sidebar.js'></script>
   </body></html>

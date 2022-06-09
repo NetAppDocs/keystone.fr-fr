@@ -277,39 +277,31 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">Français</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">Français</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/fr-fr/keystone/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/keystone/sewebiug_managing_azure_volumes.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/keystone/sewebiug_managing_azure_volumes.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/keystone/sewebiug_managing_azure_volumes.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/keystone/sewebiug_managing_azure_volumes.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/keystone/sewebiug_managing_azure_volumes.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/de-de/keystone/sewebiug_managing_azure_volumes.html" class="n-menu__header-text"><span translate="no" class="notranslate">Deutsch</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/fr-fr/keystone/sewebiug_managing_azure_volumes.html" class="n-menu__header-text"><span translate="no" class="notranslate">Français</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/fr-fr/keystone/sewebiug_managing_azure_volumes.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/keystone/sewebiug_managing_azure_volumes.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/keystone/sewebiug_managing_azure_volumes.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/keystone/sewebiug_managing_azure_volumes.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/keystone/sewebiug_managing_azure_volumes.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/keystone/sewebiug_managing_azure_volumes.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/de-de/keystone/sewebiug_managing_azure_volumes.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -1069,7 +1061,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class="subfolders "><a href="/fr-fr/keystone/index.html">
         <div class="na-navbar-padding"> Abonnement NetApp Keystone Flex</div>
       </a>
@@ -1395,7 +1387,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-28 15:20:34 +0000">04/28/2022</time>
+    <time datetime="2022-06-09 10:24:56 +0000">06/09/2022</time>
     
   
 
@@ -1440,8 +1432,9 @@ La gestion des volumes Azure requiert un accès administrateur client.
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="afficher-la-liste-des-volumes-azure">Afficher la liste des volumes Azure</h3>
+<div class="sect1">
+<h2 id="afficher-la-liste-des-volumes-azure">Afficher la liste des volumes Azure</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>La liste volumes Azure affiche la liste des pools de volumes Azure pour un sous-locataire et un emplacement spécifiés. Pour afficher la liste, sélectionnez <strong>SERVICES DE FICHIERS &gt; Azure volumes</strong> dans le menu.</p>
 </div>
@@ -1449,8 +1442,10 @@ La gestion des volumes Azure requiert un accès administrateur client.
 <p>La liste affiche des informations simples sur chaque volume Azure. Les icônes d&#8217;action en regard de chaque volume Azure vous permettent de modifier ou de supprimer le volume Azure.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="ajouter-un-volume-azure">Ajouter un volume Azure</h3>
+</div>
+<div class="sect1">
+<h2 id="ajouter-un-volume-azure">Ajouter un volume Azure</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Cette section décrit l&#8217;ajout d&#8217;un volume Azure.</p>
 </div>
@@ -1503,8 +1498,10 @@ La gestion des volumes Azure requiert un accès administrateur client.
 </ol>
 </div>
 </div>
-<div class="sect2">
-<h3 id="modifier-les-détails-des-volumes-azure">Modifier les détails des volumes Azure</h3>
+</div>
+<div class="sect1">
+<h2 id="modifier-les-détails-des-volumes-azure">Modifier les détails des volumes Azure</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Utilisez cette méthode pour modifier les détails d&#8217;un volume Azure. Vous pouvez modifier le chemin d&#8217;accès et le quota de fichiers, et ajouter ou supprimer des balises.</p>
 </div>
@@ -1526,8 +1523,10 @@ La gestion des volumes Azure requiert un accès administrateur client.
 </ol>
 </div>
 </div>
-<div class="sect2">
-<h3 id="supprimez-un-volume-azure">Supprimez un volume Azure</h3>
+</div>
+<div class="sect1">
+<h2 id="supprimez-un-volume-azure">Supprimez un volume Azure</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Utilisez cette méthode pour supprimer un volume Azure.</p>
 </div>
@@ -1547,6 +1546,7 @@ La gestion des volumes Azure requiert un accès administrateur client.
 <p>Cliquez sur <strong>confirmer</strong>.</p>
 </li>
 </ol>
+</div>
 </div>
 </div>
 
@@ -1695,4 +1695,5 @@ La gestion des volumes Azure requiert un accès administrateur client.
     </script>
     <script src='/fr-fr/keystone/js/www-ntap.js'></script>
     <script src='/fr-fr/keystone/js/tabbed-blocks.js'></script>
+    <script src='/fr-fr/keystone/js/sidebar.js'></script>
   </body></html>

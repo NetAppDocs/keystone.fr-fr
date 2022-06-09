@@ -277,39 +277,31 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">Français</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">Français</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/fr-fr/keystone/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/keystone/seapiref_object_storage_apis.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/keystone/seapiref_object_storage_apis.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/keystone/seapiref_object_storage_apis.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/keystone/seapiref_object_storage_apis.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/keystone/seapiref_object_storage_apis.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/de-de/keystone/seapiref_object_storage_apis.html" class="n-menu__header-text"><span translate="no" class="notranslate">Deutsch</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/fr-fr/keystone/seapiref_object_storage_apis.html" class="n-menu__header-text"><span translate="no" class="notranslate">Français</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/fr-fr/keystone/seapiref_object_storage_apis.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/keystone/seapiref_object_storage_apis.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/keystone/seapiref_object_storage_apis.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/keystone/seapiref_object_storage_apis.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/keystone/seapiref_object_storage_apis.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/keystone/seapiref_object_storage_apis.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/de-de/keystone/seapiref_object_storage_apis.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -1069,7 +1061,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class="subfolders "><a href="/fr-fr/keystone/index.html">
         <div class="na-navbar-padding"> Abonnement NetApp Keystone Flex</div>
       </a>
@@ -1395,7 +1387,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-28 15:20:34 +0000">04/28/2022</time>
+    <time datetime="2022-06-09 10:24:56 +0000">06/09/2022</time>
     
   
 
@@ -1428,8 +1420,9 @@
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="groupes-de-stockage-dobjets">Groupes de stockage d&#8217;objets</h3>
+<div class="sect1">
+<h2 id="groupes-de-stockage-dobjets">Groupes de stockage d&#8217;objets</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Utilisez les méthodes répertoriées dans le tableau ci-dessous pour extraire, créer ou modifier des groupes de stockage d&#8217;objets.</p>
 </div>
@@ -1474,8 +1467,8 @@
 </tr>
 </tbody>
 </table>
-<div class="sect3">
-<h4 id="attributs-du-groupe-de-stockage-objet">Attributs du groupe de stockage objet</h4>
+<div class="sect2">
+<h3 id="attributs-du-groupe-de-stockage-objet">Attributs du groupe de stockage objet</h3>
 <div class="paragraph">
 <p>Le tableau ci-dessous répertorie les attributs de stockage objet.</p>
 </div>
@@ -1545,7 +1538,6 @@
 </tr>
 </tbody>
 </table>
-</div>
 </div>
 <div class="sect2">
 <h3 id="récupérer-les-groupes-de-stockage-dobjets">Récupérer les groupes de stockage d&#8217;objets</h3>
@@ -1628,8 +1620,9 @@
     ]</pre>
 </div>
 </div>
-<div class="sect3">
-<h4 id="récupère-un-groupe-de-stockage-objet-par-id">Récupère un groupe de stockage objet par ID</h4>
+</div>
+<div class="sect2">
+<h3 id="récupère-un-groupe-de-stockage-objet-par-id">Récupère un groupe de stockage objet par ID</h3>
 <div class="paragraph">
 <p>Utilisez la méthode indiquée dans le tableau ci-dessous pour récupérer un groupe de stockage objet par ID.</p>
 </div>
@@ -1706,8 +1699,8 @@
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="créer-un-groupe-de-stockage-objet">Créer un groupe de stockage objet</h4>
+<div class="sect2">
+<h3 id="créer-un-groupe-de-stockage-objet">Créer un groupe de stockage objet</h3>
 <div class="paragraph">
 <p>Utilisez la méthode indiquée ci-dessous pour créer un groupe de stockage objet.</p>
 </div>
@@ -1793,8 +1786,8 @@
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="modifier-un-groupe-de-stockage-dobjets">Modifier un groupe de stockage d&#8217;objets</h4>
+<div class="sect2">
+<h3 id="modifier-un-groupe-de-stockage-dobjets">Modifier un groupe de stockage d&#8217;objets</h3>
 <div class="paragraph">
 <p>Utilisez la méthode indiquée dans le tableau ci-dessous pour modifier un groupe de stockage objet.</p>
 </div>
@@ -1886,8 +1879,8 @@
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="supprime-un-groupe-de-stockage-objet-par-id">Supprime un groupe de stockage objet par ID</h4>
+<div class="sect2">
+<h3 id="supprime-un-groupe-de-stockage-objet-par-id">Supprime un groupe de stockage objet par ID</h3>
 <div class="paragraph">
 <p>Utilisez la méthode indiquée dans le tableau ci-dessous pour supprimer un groupe de stockage objet par ID.</p>
 </div>
@@ -1965,8 +1958,10 @@
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="utilisateurs-du-stockage-objet">Utilisateurs du stockage objet</h3>
+</div>
+<div class="sect1">
+<h2 id="utilisateurs-du-stockage-objet">Utilisateurs du stockage objet</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Utilisez les méthodes répertoriées dans le tableau suivant pour effectuer les tâches suivantes :</p>
 </div>
@@ -2041,8 +2036,8 @@
 </tr>
 </tbody>
 </table>
-<div class="sect3">
-<h4 id="attributs-utilisateur-du-stockage-objet">Attributs utilisateur du stockage objet</h4>
+<div class="sect2">
+<h3 id="attributs-utilisateur-du-stockage-objet">Attributs utilisateur du stockage objet</h3>
 <div class="paragraph">
 <p>Le tableau ci-dessous répertorie les attributs utilisateur du stockage objet.</p>
 </div>
@@ -2102,7 +2097,6 @@
 </tr>
 </tbody>
 </table>
-</div>
 </div>
 <div class="sect2">
 <h3 id="récupérer-les-utilisateurs-de-stockage-objet">Récupérer les utilisateurs de stockage objet</h3>
@@ -2180,8 +2174,9 @@
 }</pre>
 </div>
 </div>
-<div class="sect3">
-<h4 id="récupère-un-utilisateur-de-stockage-objet-par-id">Récupère un utilisateur de stockage objet par ID</h4>
+</div>
+<div class="sect2">
+<h3 id="récupère-un-utilisateur-de-stockage-objet-par-id">Récupère un utilisateur de stockage objet par ID</h3>
 <div class="paragraph">
 <p>Utilisez la méthode indiquée dans le tableau ci-dessous pour récupérer un ID de stockage objet utilisé.</p>
 </div>
@@ -2252,8 +2247,8 @@
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="créez-un-utilisateur-de-stockage-objet">Créez un utilisateur de stockage objet</h4>
+<div class="sect2">
+<h3 id="créez-un-utilisateur-de-stockage-objet">Créez un utilisateur de stockage objet</h3>
 <div class="paragraph">
 <p>Utilisez la méthode indiquée dans le tableau ci-dessous pour créer un utilisateur de stockage objet.</p>
 </div>
@@ -2333,8 +2328,8 @@
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="modifier-un-utilisateur-de-stockage-objet">Modifier un utilisateur de stockage objet</h4>
+<div class="sect2">
+<h3 id="modifier-un-utilisateur-de-stockage-objet">Modifier un utilisateur de stockage objet</h3>
 <div class="paragraph">
 <p>Utilisez la méthode indiquée dans le tableau ci-dessous pour modifier un utilisateur de stockage objet.</p>
 </div>
@@ -2414,8 +2409,8 @@
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="mapper-toutes-les-clés-s3-à-un-utilisateur-du-stockage-objet">Mapper toutes les clés S3 à un utilisateur du stockage objet</h4>
+<div class="sect2">
+<h3 id="mapper-toutes-les-clés-s3-à-un-utilisateur-du-stockage-objet">Mapper toutes les clés S3 à un utilisateur du stockage objet</h3>
 <div class="paragraph">
 <p>Utilisez la méthode indiquée dans le tableau ci-dessous pour mapper toutes les clés S3 à un utilisateur de stockage objet.</p>
 </div>
@@ -2482,8 +2477,8 @@
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="créez-une-clé-s3-pour-un-utilisateur-du-stockage-objet">Créez une clé S3 pour un utilisateur du stockage objet</h4>
+<div class="sect2">
+<h3 id="créez-une-clé-s3-pour-un-utilisateur-du-stockage-objet">Créez une clé S3 pour un utilisateur du stockage objet</h3>
 <div class="paragraph">
 <p>Utilisez la méthode indiquée ci-dessous pour créer une clé S3 pour un utilisateur du stockage objet.</p>
 </div>
@@ -2567,8 +2562,8 @@ La date/heure d&#8217;expiration de la clé est définie dans UTC ; elle doit ê
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="obtenir-les-clés-s3-pour-un-utilisateur-du-stockage-objet-par-id-de-clé">Obtenir les clés S3 pour un utilisateur du stockage objet par ID de clé</h4>
+<div class="sect2">
+<h3 id="obtenir-les-clés-s3-pour-un-utilisateur-du-stockage-objet-par-id-de-clé">Obtenir les clés S3 pour un utilisateur du stockage objet par ID de clé</h3>
 <div class="paragraph">
 <p>Utilisez la méthode indiquée dans le tableau ci-dessous pour obtenir les clés S3 pour un utilisateur de stockage objet par ID de clé.</p>
 </div>
@@ -2646,8 +2641,8 @@ La date/heure d&#8217;expiration de la clé est définie dans UTC ; elle doit ê
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="supprimez-une-clé-s3-par-id-de-clé">Supprimez une clé S3 par ID de clé</h4>
+<div class="sect2">
+<h3 id="supprimez-une-clé-s3-par-id-de-clé">Supprimez une clé S3 par ID de clé</h3>
 <div class="paragraph">
 <p>Utilisez la méthode indiquée dans le tableau suivant pour supprimer une clé S3 par ID de clé.</p>
 </div>
@@ -2705,8 +2700,10 @@ La date/heure d&#8217;expiration de la clé est définie dans UTC ; elle doit ê
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="comptes-de-stockage-objet">Comptes de stockage objet</h3>
+</div>
+<div class="sect1">
+<h2 id="comptes-de-stockage-objet">Comptes de stockage objet</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Utilisez les méthodes répertoriées dans le tableau suivant pour effectuer les tâches suivantes :</p>
 </div>
@@ -2771,8 +2768,8 @@ La date/heure d&#8217;expiration de la clé est définie dans UTC ; elle doit ê
 </tr>
 </tbody>
 </table>
-<div class="sect3">
-<h4 id="attributs-des-comptes-de-stockage-objet">Attributs des comptes de stockage objet</h4>
+<div class="sect2">
+<h3 id="attributs-des-comptes-de-stockage-objet">Attributs des comptes de stockage objet</h3>
 <div class="paragraph">
 <p>Le tableau ci-dessous répertorie les attributs des comptes de stockage objet.</p>
 </div>
@@ -2807,7 +2804,6 @@ La date/heure d&#8217;expiration de la clé est définie dans UTC ; elle doit ê
 </tr>
 </tbody>
 </table>
-</div>
 </div>
 <div class="sect2">
 <h3 id="récupère-tous-les-comptes-de-stockage-objet">Récupère tous les comptes de stockage objet</h3>
@@ -2885,8 +2881,9 @@ La date/heure d&#8217;expiration de la clé est définie dans UTC ; elle doit ê
 }</pre>
 </div>
 </div>
-<div class="sect3">
-<h4 id="récupère-un-compte-de-stockage-objet-par-id">Récupère un compte de stockage objet par ID</h4>
+</div>
+<div class="sect2">
+<h3 id="récupère-un-compte-de-stockage-objet-par-id">Récupère un compte de stockage objet par ID</h3>
 <div class="paragraph">
 <p>Utilisez la méthode indiquée dans le tableau ci-dessous pour récupérer un compte de stockage objet par ID.</p>
 </div>
@@ -2956,8 +2953,8 @@ La date/heure d&#8217;expiration de la clé est définie dans UTC ; elle doit ê
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="activez-un-compte-de-stockage-objet">Activez un compte de stockage objet</h4>
+<div class="sect2">
+<h3 id="activez-un-compte-de-stockage-objet">Activez un compte de stockage objet</h3>
 <div class="paragraph">
 <p>Utilisez la méthode indiquée dans le tableau ci-dessous pour activer un compte de stockage objet.</p>
 </div>
@@ -3034,8 +3031,8 @@ La date/heure d&#8217;expiration de la clé est définie dans UTC ; elle doit ê
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="modifier-un-compte-de-stockage-objet">Modifier un compte de stockage objet</h4>
+<div class="sect2">
+<h3 id="modifier-un-compte-de-stockage-objet">Modifier un compte de stockage objet</h3>
 <div class="paragraph">
 <p>Utilisez la méthode indiquée dans le tableau ci-dessous pour modifier un compte de stockage objet.</p>
 </div>
@@ -3113,8 +3110,8 @@ La date/heure d&#8217;expiration de la clé est définie dans UTC ; elle doit ê
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="supprime-un-compte-de-stockage-objet">Supprime un compte de stockage objet</h4>
+<div class="sect2">
+<h3 id="supprime-un-compte-de-stockage-objet">Supprime un compte de stockage objet</h3>
 <div class="paragraph">
 <p>Avant de pouvoir supprimer un compte de stockage objet, vous devez d&#8217;abord supprimer tous les groupes, utilisateurs et compartiments associés. Utilisez la méthode indiquée dans le tableau ci-dessous pour supprimer un compte de stockage objet.</p>
 </div>
@@ -3201,8 +3198,10 @@ Utilisez l&#8217;utilitaire compatible S3 pour supprimer des compartiments. Il n
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="compartiments-de-stockage-objet">Compartiments de stockage objet</h3>
+</div>
+<div class="sect1">
+<h2 id="compartiments-de-stockage-objet">Compartiments de stockage objet</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Utilisez les API du tableau suivant pour créer et récupérer des compartiments de stockage objet.</p>
 </div>
@@ -3232,8 +3231,8 @@ Utilisez l&#8217;utilitaire compatible S3 pour supprimer des compartiments. Il n
 </tr>
 </tbody>
 </table>
-<div class="sect3">
-<h4 id="les-attributs-des-compartiments-de-stockage-objet">Les attributs des compartiments de stockage objet</h4>
+<div class="sect2">
+<h3 id="les-attributs-des-compartiments-de-stockage-objet">Les attributs des compartiments de stockage objet</h3>
 <div class="paragraph">
 <p>Le tableau suivant répertorie les attributs de compartiment de stockage objet.</p>
 </div>
@@ -3269,8 +3268,8 @@ Utilisez l&#8217;utilitaire compatible S3 pour supprimer des compartiments. Il n
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="récupérer-les-compartiments-s3">Récupérer les compartiments S3</h4>
+<div class="sect2">
+<h3 id="récupérer-les-compartiments-s3">Récupérer les compartiments S3</h3>
 <div class="paragraph">
 <p>Utilisez la méthode indiquée dans le tableau suivant pour récupérer les compartiments S3.</p>
 </div>
@@ -3333,8 +3332,8 @@ Utilisez l&#8217;utilitaire compatible S3 pour supprimer des compartiments. Il n
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="création-de-compartiments-s3">Création de compartiments S3</h4>
+<div class="sect2">
+<h3 id="création-de-compartiments-s3">Création de compartiments S3</h3>
 <div class="paragraph">
 <p>Utiliser la méthode indiquée dans le tableau suivant pour créer un compartiment S3.</p>
 </div>
@@ -3430,6 +3429,7 @@ Avant de pouvoir créer un compartiment, un compte de stockage objet pour le sou
     ]
   }
 }</pre>
+</div>
 </div>
 </div>
 </div>
@@ -3580,4 +3580,5 @@ Avant de pouvoir créer un compartiment, un compte de stockage objet pour le sou
     </script>
     <script src='/fr-fr/keystone/js/www-ntap.js'></script>
     <script src='/fr-fr/keystone/js/tabbed-blocks.js'></script>
+    <script src='/fr-fr/keystone/js/sidebar.js'></script>
   </body></html>

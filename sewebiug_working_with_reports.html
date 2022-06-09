@@ -277,39 +277,31 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">Français</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">Français</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/fr-fr/keystone/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/keystone/sewebiug_working_with_reports.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/keystone/sewebiug_working_with_reports.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/keystone/sewebiug_working_with_reports.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/keystone/sewebiug_working_with_reports.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/keystone/sewebiug_working_with_reports.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/de-de/keystone/sewebiug_working_with_reports.html" class="n-menu__header-text"><span translate="no" class="notranslate">Deutsch</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/fr-fr/keystone/sewebiug_working_with_reports.html" class="n-menu__header-text"><span translate="no" class="notranslate">Français</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/fr-fr/keystone/sewebiug_working_with_reports.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/keystone/sewebiug_working_with_reports.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/keystone/sewebiug_working_with_reports.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/keystone/sewebiug_working_with_reports.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/keystone/sewebiug_working_with_reports.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/keystone/sewebiug_working_with_reports.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/de-de/keystone/sewebiug_working_with_reports.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -1069,7 +1061,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class="subfolders "><a href="/fr-fr/keystone/index.html">
         <div class="na-navbar-padding"> Abonnement NetApp Keystone Flex</div>
       </a>
@@ -1395,7 +1387,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-28 15:20:34 +0000">04/28/2022</time>
+    <time datetime="2022-06-09 10:24:56 +0000">06/09/2022</time>
     
   
 
@@ -1409,8 +1401,9 @@
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="rapport-sur-lutilisation-de-la-capacité-par-abonnement-keystone">Rapport sur l&#8217;utilisation de la capacité par abonnement Keystone</h3>
+<div class="sect1">
+<h2 id="rapport-sur-lutilisation-de-la-capacité-par-abonnement-keystone">Rapport sur l&#8217;utilisation de la capacité par abonnement Keystone</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>La page utilisation de la capacité des abonnements Keystone affiche l&#8217;utilisation de la capacité pour chaque service de stockage dans un abonnement sur la durée. En tant qu&#8217;administrateur NetApp, vous pouvez consulter le rapport d&#8217;utilisation de la capacité pour tous les locataires et partenaires par abonnement. En tant qu&#8217;administrateur partenaire, vous pouvez consulter le rapport de capacité de votre abonnement Flex. Utilisez les rapports graphiques sur cette page pour afficher les tendances d&#8217;utilisation de tous les services de stockage et des services complémentaires de protection des données dans des onglets séparés. Lorsqu&#8217;un service est en rafale, une bannière affiche la capacité de rafale utilisée dans le cycle de facturation actuel.</p>
 </div>
@@ -1438,8 +1431,10 @@
 </ol>
 </div>
 </div>
-<div class="sect2">
-<h3 id="rapport-sur-lutilisation-de-la-capacité-par-abonnement-aux-locataires">Rapport sur l&#8217;utilisation de la capacité par abonnement aux locataires</h3>
+</div>
+<div class="sect1">
+<h2 id="rapport-sur-lutilisation-de-la-capacité-par-abonnement-aux-locataires">Rapport sur l&#8217;utilisation de la capacité par abonnement aux locataires</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>La page utilisation de la capacité pour les abonnements aux locataires affiche l&#8217;utilisation de la capacité pour chaque locataire pour les services de stockage souscrits dans le logiciel Flex Subscription. Cette page est accessible aux administrateurs NetApp, partenaires et locataires ou clients pour consulter les rapports d&#8217;utilisation de la capacité pour un locataire spécifique.</p>
 </div>
@@ -1479,8 +1474,10 @@ Pour l&#8217;administrateur tenant, la page apparaît sous la forme « utilisati
 </ol>
 </div>
 </div>
-<div class="sect2">
-<h3 id="rapport-sur-les-performances">Rapport sur les performances</h3>
+</div>
+<div class="sect1">
+<h2 id="rapport-sur-les-performances">Rapport sur les performances</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>La page Performance (illustrée sur l&#8217;image ci-dessous) affiche des informations sur les performances de disques ou de partages individuels. Elle affiche des informations sur trois mesures de performances :</p>
 </div>
@@ -1537,6 +1534,7 @@ Pour l&#8217;administrateur tenant, la page apparaît sous la forme « utilisati
 <p>Positionnez le curseur de votre souris sur un point du graphique pour afficher plus d&#8217;informations sur ce point.</p>
 </li>
 </ul>
+</div>
 </div>
 </div>
 
@@ -1685,4 +1683,5 @@ Pour l&#8217;administrateur tenant, la page apparaît sous la forme « utilisati
     </script>
     <script src='/fr-fr/keystone/js/www-ntap.js'></script>
     <script src='/fr-fr/keystone/js/tabbed-blocks.js'></script>
+    <script src='/fr-fr/keystone/js/sidebar.js'></script>
   </body></html>

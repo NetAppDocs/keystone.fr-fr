@@ -277,39 +277,31 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">Français</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">Français</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/fr-fr/keystone/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/keystone/seapiref_zones.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/keystone/seapiref_zones.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/keystone/seapiref_zones.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/keystone/seapiref_zones.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/keystone/seapiref_zones.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/de-de/keystone/seapiref_zones.html" class="n-menu__header-text"><span translate="no" class="notranslate">Deutsch</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/fr-fr/keystone/seapiref_zones.html" class="n-menu__header-text"><span translate="no" class="notranslate">Français</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/fr-fr/keystone/seapiref_zones.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/keystone/seapiref_zones.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/keystone/seapiref_zones.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/keystone/seapiref_zones.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/keystone/seapiref_zones.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/keystone/seapiref_zones.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/de-de/keystone/seapiref_zones.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -1069,7 +1061,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class="subfolders "><a href="/fr-fr/keystone/index.html">
         <div class="na-navbar-padding"> Abonnement NetApp Keystone Flex</div>
       </a>
@@ -1395,7 +1387,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-28 15:20:34 +0000">04/28/2022</time>
+    <time datetime="2022-06-09 10:24:56 +0000">06/09/2022</time>
     
   
 
@@ -1440,8 +1432,9 @@
 </table>
 </div>
 </div>
-<div class="sect2">
-<h3 id="attributs-de-zone">Attributs de zone</h3>
+<div class="sect1">
+<h2 id="attributs-de-zone">Attributs de zone</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Le tableau suivant répertorie les attributs de zone.</p>
 </div>
@@ -1482,8 +1475,10 @@
 </tbody>
 </table>
 </div>
-<div class="sect2">
-<h3 id="récupérer-toutes-les-zones">Récupérer toutes les zones</h3>
+</div>
+<div class="sect1">
+<h2 id="récupérer-toutes-les-zones">Récupérer toutes les zones</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Utilisez la méthode indiquée dans le tableau suivant pour extraire toutes les zones ou un sous-ensemble de zones. Si vous spécifiez une région, seuls les magasins de blocs appartenant à ce locataire seront renverra.</p>
 </div>
@@ -1552,8 +1547,10 @@
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="récupérer-une-zone-par-nom">Récupérer une zone par nom</h3>
+</div>
+<div class="sect1">
+<h2 id="récupérer-une-zone-par-nom">Récupérer une zone par nom</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Utilisez la méthode indiquée dans le tableau suivant pour récupérer une zone par le nom de la zone.</p>
 </div>
@@ -1618,8 +1615,10 @@
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="créer-une-zone">Créer une zone</h3>
+</div>
+<div class="sect1">
+<h2 id="créer-une-zone">Créer une zone</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Utilisez la méthode indiquée dans le tableau suivant pour créer une zone.</p>
 </div>
@@ -1688,8 +1687,10 @@
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="modifier-une-zone">Modifier une zone</h3>
+</div>
+<div class="sect1">
+<h2 id="modifier-une-zone">Modifier une zone</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Utilisez la méthode indiquée dans le tableau suivant pour modifier une zone.</p>
 </div>
@@ -1757,8 +1758,10 @@
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="supprimer-une-zone">Supprimer une zone</h3>
+</div>
+<div class="sect1">
+<h2 id="supprimer-une-zone">Supprimer une zone</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Utilisez la méthode indiquée dans le tableau suivant pour supprimer une zone.</p>
 </div>
@@ -1802,6 +1805,7 @@
 </div>
 <div class="paragraph">
 <p>Aucun contenu à retourner lors d&#8217;une suppression réussie.</p>
+</div>
 </div>
 </div>
 
@@ -1950,4 +1954,5 @@
     </script>
     <script src='/fr-fr/keystone/js/www-ntap.js'></script>
     <script src='/fr-fr/keystone/js/tabbed-blocks.js'></script>
+    <script src='/fr-fr/keystone/js/sidebar.js'></script>
   </body></html>

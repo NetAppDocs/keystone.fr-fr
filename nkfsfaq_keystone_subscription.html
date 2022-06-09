@@ -277,39 +277,31 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">Français</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">Français</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/fr-fr/keystone/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/keystone/nkfsfaq_keystone_subscription.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/keystone/nkfsfaq_keystone_subscription.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/keystone/nkfsfaq_keystone_subscription.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/keystone/nkfsfaq_keystone_subscription.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/keystone/nkfsfaq_keystone_subscription.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/de-de/keystone/nkfsfaq_keystone_subscription.html" class="n-menu__header-text"><span translate="no" class="notranslate">Deutsch</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/fr-fr/keystone/nkfsfaq_keystone_subscription.html" class="n-menu__header-text"><span translate="no" class="notranslate">Français</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/fr-fr/keystone/nkfsfaq_keystone_subscription.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/keystone/nkfsfaq_keystone_subscription.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/keystone/nkfsfaq_keystone_subscription.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/keystone/nkfsfaq_keystone_subscription.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/keystone/nkfsfaq_keystone_subscription.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/keystone/nkfsfaq_keystone_subscription.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/de-de/keystone/nkfsfaq_keystone_subscription.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -1069,7 +1061,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class="subfolders "><a href="/fr-fr/keystone/index.html">
         <div class="na-navbar-padding"> Abonnement NetApp Keystone Flex</div>
       </a>
@@ -1395,114 +1387,63 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-28 15:20:34 +0000">04/28/2022</time>
+    <time datetime="2022-06-09 10:24:56 +0000">06/09/2022</time>
     
   
 
 
 </p>
 
-<div id="preamble">
-<div class="sectionbody">
 <div class="paragraph lead">
 <p>Les questions suivantes donnent des réponses à vos questions fréquentes sur les services d&#8217;abonnement NetApp Keystone Flex.</p>
 </div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="quest-ce-qui-est-proposé-dans-le-cadre-de-labonnement-netapp-keystone-flex">Qu&#8217;est-ce qui est proposé dans le cadre de l&#8217;abonnement NetApp Keystone Flex ?</h3>
 <div class="paragraph">
-<p>NetApp Keystone Flex Subscription (Flex Subscription) est une offre de service basée sur un abonnement pour les services de bloc, de fichier et de données d&#8217;objet qui peuvent être déployés sur site et qui peuvent être utilisés par NetApp, un partenaire ou un client.</p>
+<p><strong>Ce qu&#8217;offre NetApp Keystone Flex dans le cadre de l&#8217;abonnement</strong> NetApp Keystone Flex Subscription (Flex Subscription) est une offre de service basée sur un abonnement pour les services de données de bloc, de fichier et d&#8217;objet qui peuvent être déployés sur site et peuvent être exploités par NetApp, un partenaire ou un client.</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="quelles-offres-de-services-de-stockage-sont-proposées-dans-le-cadre-de-labonnement-flex">Quelles offres de services de stockage sont proposées dans le cadre de l&#8217;abonnement Flex ?</h3>
 <div class="paragraph">
-<p>Pour plus d&#8217;informations, reportez-vous à la section <a href="nkfsosm_performance.html">"Niveaux de services de performances"</a></p>
+<p><strong>Quelles offres de service de stockage sont fournies dans le cadre de l&#8217;abonnement Flex?</strong> pour plus d&#8217;informations, reportez-vous à la section <a href="nkfsosm_performance.html">"Niveaux de services de performances"</a></p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="quels-sont-les-services-dextension-pris-en-charge">Quels sont les services d&#8217;extension pris en charge ?</h3>
 <div class="paragraph">
-<p>La protection avancée des données (sauvegarde et reprise après incident) et le Tiering dans le cloud hybride avec FabricPool sont des services complémentaires qu&#8217;il est possible de choisir à un coût supplémentaire.</p>
+<p><strong>Quels sont les services d&#8217;extension pris en charge ?</strong> la protection avancée des données (sauvegarde et reprise après incident) et le Tiering dans le cloud hybride avec FabricPool sont des services complémentaires que vous pouvez choisir à un coût supplémentaire.</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="quels-niveaux-de-service-netapp-garantit-il-avec-ce-service">Quels niveaux de service NetApp garantit-il avec ce service ?</h3>
 <div class="paragraph">
-<p>Dans un scénario piloté par NetApp, NetApp Keystone garantit des IOPS/Tio pour le stockage provisionné et la latence pour chaque niveau de service.</p>
+<p><strong>Quels niveaux de service NetApp garantit-il avec ce service ?</strong> dans un scénario piloté par NetApp, NetApp Keystone garantit-il les IOPS/Tio pour le stockage provisionné et la latence pour chaque niveau de service.</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="à-quoi-correspond-labonnement-flex">À quoi correspond l&#8217;abonnement Flex ?</h3>
 <div class="paragraph">
-<p>L&#8217;abonnement Flex correspond à un seul site ou à un seul data Center et peut comprendre différents niveaux de service de performance.</p>
+<p><strong>À quoi correspond l&#8217;abonnement Flex ?</strong> l&#8217;abonnement Flex correspond-il à un seul site ou à un seul centre de données et peut comporter différents niveaux de service de performance.</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="quels-sont-les-avantages-liés-à-lextrême-hiérarchisation-et-à-la-performance-du-tiering-premium">Quels sont les avantages liés à l&#8217;extrême hiérarchisation et à la performance du Tiering Premium ?</h3>
 <div class="paragraph">
-<p>Le Tiering s&#8217;accompagne de niveaux de performance extrêmes et de Tiering Premium, qui vous permettent de réduire l&#8217;empreinte du stockage ainsi que les coûts associés. NetApp suppose que 25 % de vos données sont sollicitées, tandis que les 75 % restants sont moins fréquemment utilisés ou inactives, et les déplacent vers un stockage à froid. Vous pouvez également consulter les rapports d&#8217;utilisation pour connaître la fréquence d&#8217;accès aux données et activer le service de Tiering basé sur les informations.</p>
+<p><strong>Quels sont les avantages de niveaux de performance de hiérarchisation extrême et de hiérarchisation premium ?</strong> le Tiering est activé en niveaux de hiérarchisation extrême et de performance de hiérarchisation premium, ce qui vous permet de réduire l&#8217;empreinte de votre stockage et les coûts associés. NetApp suppose que 25 % de vos données sont sollicitées, tandis que les 75 % restants sont moins fréquemment utilisés ou inactives, et les déplacent vers un stockage à froid. Vous pouvez également consulter les rapports d&#8217;utilisation pour connaître la fréquence d&#8217;accès aux données et activer le service de Tiering basé sur les informations.</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="les-partenaires-peuvent-ils-vendre-plus-de-capacité-quils-nont-acheté-de-netapp-à-leurs-clients">Les partenaires peuvent-ils vendre plus de capacité qu&#8217;ils n&#8217;ont acheté de NetApp à leurs clients ?</h3>
 <div class="paragraph">
-<p>Les abonnements aux locataires ne sont pas limités par la capacité que le partenaire a achetée. Les partenaires peuvent vendre plus de capacité qu&#8217;ils n&#8217;ont acheté auprès de NetApp à leurs clients. La capacité excédentaire de la capacité achetée est appelée sursouscription</p>
+<p><strong>Les partenaires peuvent-ils vendre plus de capacités qu&#8217;ils ont achetées auprès de NetApp à leurs clients ?</strong> les abonnements aux locataires ne sont pas limités par la capacité que le partenaire a achetée. Les partenaires peuvent vendre plus de capacité qu&#8217;ils n&#8217;ont acheté auprès de NetApp à leurs clients. La capacité excédentaire de la capacité achetée est appelée sursouscription</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="des-api-sont-elles-fournies-pour-lintégration-aux-outils-du-client">Des API sont-elles fournies pour l&#8217;intégration aux outils du client ?</h3>
 <div class="paragraph">
-<p>Oui, des API RESTful sont disponibles pour l&#8217;intégration dans vos propres applications. Accédez à <strong>SUPPORT&gt; Documentation API</strong> pour consulter la documentation API relative aux services Flex Subscription. Pour plus d&#8217;informations, reportez-vous à la section <a href="https://docs.netapp.com/us-en/keystone/seapiref_overview_of_netapp_service_engine_apis.html">"Guide de l&#8217;API d&#8217;abonnement Keystone Flex"</a>.</p>
+<p><strong>Des API sont-elles fournies pour s&#8217;intégrer aux outils du client?</strong> Oui, des API RESTful sont disponibles pour s&#8217;intégrer à vos propres applications. Accédez à <strong>SUPPORT&gt; Documentation API</strong> pour consulter la documentation API relative aux services Flex Subscription. Pour plus d&#8217;informations, reportez-vous à la section <a href="https://docs.netapp.com/us-en/keystone/seapiref_overview_of_netapp_service_engine_apis.html">"Guide de l&#8217;API d&#8217;abonnement Keystone Flex"</a>.</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="quest-ce-que-la-capacité-en-rafale">Qu&#8217;est-ce que la capacité en rafale ?</h3>
 <div class="paragraph">
-<p>Vous pouvez augmenter ou diminuer l&#8217;utilisation jusqu&#8217;à 20 % au-dessus de la capacité engagée. L&#8217;utilisation de la capacité en rafale est mesurée quotidiennement et facturée uniquement en cas d&#8217;utilisation. Par exemple, si la capacité de stockage engagée est de 100 Tio, vous pouvez augmenter jusqu&#8217;à 120 Tio.</p>
+<p><strong>Qu&#8217;est-ce que la capacité en rafale?</strong> vous pouvez augmenter et diminuer l&#8217;utilisation jusqu&#8217;à 20% au-dessus de la capacité engagée. L&#8217;utilisation de la capacité en rafale est mesurée quotidiennement et facturée uniquement en cas d&#8217;utilisation. Par exemple, si la capacité de stockage engagée est de 100 Tio, vous pouvez augmenter jusqu&#8217;à 120 Tio.</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="lutilisation-du-mode-rafale-est-elle-payante">L&#8217;utilisation du mode rafale est-elle payante ?</h3>
 <div class="paragraph">
-<p>La consommation de la capacité d&#8217;accueil (jusqu&#8217;à 20 %) est facturée au même rythme que la capacité engagée. En outre, la consommation au-delà de 20 % de la capacité engagée est facturée à un tarif Premium de 50 %.</p>
+<p><strong>Y a-t-il des frais supplémentaires pour l&#8217;utilisation de la rafale?</strong> la capacité de rafale jusqu&#8217;à 20 % de la capacité engagée est facturée au même taux que la capacité engagée, toute utilisation supérieure à 20 % de la capacité engagée est facturée à 50 % de la prime.</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="quel-est-lavantage-de-la-capacité-en-rafale">Quel est l&#8217;avantage de la capacité en rafale ?</h3>
 <div class="paragraph">
-<p>La capacité en rafale offre la flexibilité nécessaire pour consommer du stockage à la demande par rapport à d&#8217;investir sur le long terme.</p>
+<p><strong>Quel est l&#8217;avantage de la capacité en rafale?</strong> la capacité en rafale vous offre la flexibilité de consommer du stockage à la demande plutôt que d&#8217;investir sur le long terme.</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="comment-la-capacité-en-rafale-est-elle-allouée-aux-locataires">Comment la capacité en rafale est-elle allouée aux locataires ?</h3>
 <div class="paragraph">
-<p>La capacité en rafale est allouée aux partenaires, qui peuvent ainsi être allouées à leurs clients en fonction des besoins.</p>
+<p><strong>Comment la capacité en rafale est-elle allouée aux locataires?</strong> la capacité en rafale est-elle allouée aux partenaires, qui l&#8217;attribuent davantage à leurs clients en fonction des besoins.</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="où-puis-je-consulter-lutilisation-de-la-capacité-engagée-et-en-rafale">Où puis-je consulter l&#8217;utilisation de la capacité engagée et en rafale ?</h3>
 <div class="paragraph">
-<p>NetApp Service Engine dispose de tableaux de bord intégrés qui permettent de signaler la capacité consommée par rapport à la capacité dédiée.</p>
+<p><strong>Où puis-je voir l&#8217;utilisation de la capacité engagée et en rafale ?</strong> le moteur de services NetApp dispose de tableaux de bord intégrés pour signaler la capacité consommée par rapport à la capacité occupée.</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="y-aura-t-il-des-notifications-si-jaurai-accès-à-un-certain-pourcentage-dutilisation-de-la-capacité-engagée">Y aura-t-il des notifications si j&#8217;aurai accès à un certain pourcentage d&#8217;utilisation de la capacité engagée ?</h3>
 <div class="paragraph">
-<p>Oui, les outils de gestion fournissent des notifications sur l&#8217;utilisation de la capacité via le tableau de bord de NetApp Service Engine.</p>
+<p><strong>Y aura-t-il des notifications si j&#8217;aurai accès à un certain pourcentage d&#8217;utilisation de la capacité engagée ?</strong> Oui, les outils de gestion fournissent des notifications sur l&#8217;utilisation de la capacité via le tableau de bord des moteurs de services NetApp.</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="comment-consulter-lutilisation-de-labonnement-flex">Comment consulter l&#8217;utilisation de l&#8217;abonnement Flex ?</h3>
 <div class="paragraph">
-<p>NetApp Service Engine fournit un tableau de bord, avec des informations sur tous les services auxquels vous êtes abonné et sur la quantité de consommation. Pour plus d&#8217;informations sur le moteur de service NetApp, reportez-vous à <a href="https://docs.netapp.com/us-en/keystone/sewebiug_overview.html">"ici"</a>.</p>
+<p><strong>Comment puis-je consulter l&#8217;utilisation de l&#8217;abonnement Flex ?</strong> le moteur de services NetApp fournit un tableau de bord avec des informations sur tous les services auxquels vous êtes abonné et sur la quantité consommée ? Pour plus d&#8217;informations sur le moteur de service NetApp, reportez-vous à <a href="https://docs.netapp.com/us-en/keystone/sewebiug_overview.html">"ici"</a>.</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="comment-signaler-un-problème-au-niveau-du-service">Comment signaler un problème au niveau du service ?</h3>
 <div class="paragraph">
-<p>Le support NetApp Keystone est accessible via les différents canaux suivants :</p>
+<p><strong>Comment puis-je signaler des problèmes avec le service?</strong> le support NetApp Keystone peut être accessible par l&#8217;intermédiaire de ces différents canaux :</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1514,30 +1455,17 @@
 </li>
 </ul>
 </div>
-</div>
-<div class="sect2">
-<h3 id="puis-je-commander-un-nouveau-service-de-stockage">Puis-je commander un nouveau service de stockage ?</h3>
 <div class="paragraph">
-<p>Oui, il est possible de demander un nouveau service de stockage ou une extension au service de stockage à partir du portail NetApp Service Engine. La demande est traitée par l&#8217;équipe NetApp Keystone chargée des opérations avant de la mettre à disposition des clients.</p>
+<p><strong>Puis-je commander un nouveau service de stockage ?</strong> Oui, il est possible de demander un nouveau service de stockage ou une extension au service de stockage sur le portail NetApp Service Engine. La demande est traitée par l&#8217;équipe NetApp Keystone chargée des opérations avant de la mettre à disposition des clients.</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="la-hausse-des-engagements-de-stockage-est-elle-disponible-immédiatement">La hausse des engagements de stockage est-elle disponible immédiatement ?</h3>
 <div class="paragraph">
-<p>En fonction de la capacité requise, on détermine si la capacité est déjà déployée ou si un équipement supplémentaire doit être expédié et installé.</p>
+<p><strong>Les augmentations des engagements en matière de stockage sont-elles disponibles immédiatement?</strong> en fonction du montant de la capacité demandée, on détermine si la capacité est déjà déployée ou si un équipement supplémentaire doit être expédié et installé.</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="les-charges-de-travail-peuvent-elles-être-déplacées-entre-les-niveaux">Les charges de travail peuvent-elles être déplacées entre les niveaux ?</h3>
 <div class="paragraph">
-<p>Oui, les charges de travail peuvent être déplacées entre les niveaux, si l&#8217;utilisateur a souscrit au niveau vers qui est migré la charge de travail. Toutefois, nous ne recommandons pas de passer d&#8217;un niveau supérieur à un niveau inférieur, car cela peut entraîner une dégradation des performances. Pour ce faire, il suffit de modifier le partage de fichiers et de modifier le paramètre de niveau de service.</p>
+<p><strong>Les charges de travail peuvent-elles être déplacées entre les niveaux ?</strong> Oui, les charges de travail peuvent être déplacées entre les niveaux, à condition que l&#8217;utilisateur ait souscrit au niveau vers qui la charge de travail est déplacée. Toutefois, nous ne recommandons pas de passer d&#8217;un niveau supérieur à un niveau inférieur, car cela peut entraîner une dégradation des performances. Pour ce faire, il suffit de modifier le partage de fichiers et de modifier le paramètre de niveau de service.</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="quelle-version-du-logiciel-par-exemple-ontap-est-installée-par-défaut">Quelle version du logiciel (par exemple, ONTAP) est installée par défaut ?</h3>
 <div class="paragraph">
-<p>En fonction du niveau de service souscrit (par exemple, ONTAP avec services de fichiers et de blocs, SANtricity pour Bloc et StorageGRID pour objet), l&#8217;équipe de support installe la dernière version stable sans aucun problème de sécurité ou de fonctionnalité.</p>
-</div>
+<p><strong>Quelle version du logiciel (par exemple, ONTAP) est installée par défaut?</strong> en fonction du niveau de service souscrit (par exemple, ONTAP avec services de fichiers et de blocs, SANtricity pour Bloc et StorageGRID pour objet) l&#8217;équipe de support installe la dernière version stable sans problèmes de sécurité ou de fonctionnalité.</p>
 </div>
 
     </article>
@@ -1685,4 +1613,5 @@
     </script>
     <script src='/fr-fr/keystone/js/www-ntap.js'></script>
     <script src='/fr-fr/keystone/js/tabbed-blocks.js'></script>
+    <script src='/fr-fr/keystone/js/sidebar.js'></script>
   </body></html>

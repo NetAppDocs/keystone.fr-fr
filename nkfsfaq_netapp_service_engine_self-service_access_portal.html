@@ -277,39 +277,31 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">Français</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">Français</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/fr-fr/keystone/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/keystone/nkfsfaq_netapp_service_engine_self-service_access_portal.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/keystone/nkfsfaq_netapp_service_engine_self-service_access_portal.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/keystone/nkfsfaq_netapp_service_engine_self-service_access_portal.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/keystone/nkfsfaq_netapp_service_engine_self-service_access_portal.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/keystone/nkfsfaq_netapp_service_engine_self-service_access_portal.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/de-de/keystone/nkfsfaq_netapp_service_engine_self-service_access_portal.html" class="n-menu__header-text"><span translate="no" class="notranslate">Deutsch</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/fr-fr/keystone/nkfsfaq_netapp_service_engine_self-service_access_portal.html" class="n-menu__header-text"><span translate="no" class="notranslate">Français</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/fr-fr/keystone/nkfsfaq_netapp_service_engine_self-service_access_portal.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/keystone/nkfsfaq_netapp_service_engine_self-service_access_portal.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/keystone/nkfsfaq_netapp_service_engine_self-service_access_portal.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/keystone/nkfsfaq_netapp_service_engine_self-service_access_portal.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/keystone/nkfsfaq_netapp_service_engine_self-service_access_portal.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/keystone/nkfsfaq_netapp_service_engine_self-service_access_portal.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/de-de/keystone/nkfsfaq_netapp_service_engine_self-service_access_portal.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -1069,7 +1061,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class="subfolders "><a href="/fr-fr/keystone/index.html">
         <div class="na-navbar-padding"> Abonnement NetApp Keystone Flex</div>
       </a>
@@ -1395,52 +1387,49 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-28 15:20:34 +0000">04/28/2022</time>
+    <time datetime="2022-06-09 10:24:56 +0000">06/09/2022</time>
     
   
 
 
 </p>
 
-<div id="preamble">
-<div class="sectionbody">
 <div class="paragraph lead">
 <p>La FAQ suivante s&#8217;applique au moteur de service NetApp.</p>
 </div>
+<div class="paragraph">
+<p><strong>Qu&#8217;est-ce que le moteur de service NetApp ?</strong></p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="quest-ce-que-le-moteur-de-service-netapp">Qu&#8217;est-ce que le moteur de service NetApp ?</h3>
 <div class="paragraph">
 <p>Le moteur de services NetApp est un portail en libre-service disponible sur le modèle géré par NetApp. Vous pouvez vous connecter et provisionner du stockage basé sur votre service NetApp Keystone Flex Subscription. Il fournit également des rapports sur les niveaux de consommation par rapport à leur abonnement et effectue toutes les demandes de service ou les modifications d&#8217;abonnement.</p>
 </div>
+<div class="paragraph">
+<p><strong>Moteur de service NetApp requis dans le modèle exploité par le client?</strong></p>
 </div>
-<div class="sect2">
-<h3 id="moteur-de-service-netapp-requis-dans-le-modèle-géré-par-le-client">Moteur de service NetApp requis dans le modèle géré par le client ?</h3>
 <div class="paragraph">
 <p>Sur le modèle opéré par le client, le moteur de service NetApp est requis. Il fournit des rapports de base sur les détails de consommation et est nécessaire de recueillir et de signaler les informations de facturation.</p>
 </div>
+<div class="paragraph">
+<p><strong>Où est installé le moteur de service NetApp?</strong></p>
 </div>
-<div class="sect2">
-<h3 id="où-est-installé-le-moteur-de-service-netapp">Où est installé le moteur de service NetApp ?</h3>
 <div class="paragraph">
 <p>Dans un modèle opéré par NetApp, le moteur de services NetApp est installé localement sur les ressources de calcul fournies par NetApp. Dans un modèle exploité par le client, NetApp Service Engine est installé sur les ressources de calcul fournies par le client.</p>
 </div>
+<div class="paragraph">
+<p><strong>Qui peut se connecter au moteur de service NetApp?</strong></p>
 </div>
-<div class="sect2">
-<h3 id="qui-peut-se-connecter-au-moteur-de-service-netapp">Qui peut se connecter au moteur de service NetApp ?</h3>
 <div class="paragraph">
 <p>Les utilisateurs peuvent s&#8217;authentifier auprès de NetApp SSO ou des utilisateurs locaux configurés dans le moteur de service NetApp.</p>
 </div>
+<div class="paragraph">
+<p><strong>Comment l&#8217;accès est-il contrôlé?</strong></p>
 </div>
-<div class="sect2">
-<h3 id="comment-laccès-est-il-contrôlé">Comment l&#8217;accès est-il contrôlé ?</h3>
 <div class="paragraph">
 <p>NetApp Service Engine assure un contrôle d&#8217;accès basé sur des rôles (RBAC) et chaque utilisateur peut être associé à un rôle qui définit les actions qu&#8217;il peut effectuer. Le client utilise le moteur de service NetApp pour l&#8217;affectation du RBAC.</p>
 </div>
+<div class="paragraph">
+<p><strong>Quels sont les contrôles d&#8217;accès disponibles?</strong></p>
 </div>
-<div class="sect2">
-<h3 id="quels-sont-les-contrôles-daccès-disponibles">Quels sont les contrôles d&#8217;accès disponibles ?</h3>
 <div class="paragraph">
 <p>Les contrôles d&#8217;accès suivants sont disponibles :</p>
 </div>
@@ -1460,12 +1449,11 @@
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p><strong>Où puis-je voir la facturation par rapport à mon utilisation?</strong></p>
 </div>
-<div class="sect2">
-<h3 id="où-puis-je-consulter-la-facturation-en-fonction-de-mon-utilisation">Où puis-je consulter la facturation en fonction de mon utilisation ?</h3>
 <div class="paragraph">
 <p>Vous pouvez afficher les frais mensuels agrégés pour vos abonnements pour les trois derniers mois dans le widget <strong>frais mensuels</strong> du tableau de bord. Vous pouvez afficher des informations détaillées sur la facturation en cliquant sur le widget ou en accédant à <strong>ADMINISTRATION</strong> &gt; <strong>facturation</strong>.</p>
-</div>
 </div>
 
     </article>
@@ -1613,4 +1601,5 @@
     </script>
     <script src='/fr-fr/keystone/js/www-ntap.js'></script>
     <script src='/fr-fr/keystone/js/tabbed-blocks.js'></script>
+    <script src='/fr-fr/keystone/js/sidebar.js'></script>
   </body></html>
