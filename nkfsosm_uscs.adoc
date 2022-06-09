@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: nkfsosm_uscs.html 
-keywords: netapp, keystone, US citizen support, USCS 
-summary: 'Performances de l"abonnement Keystone Flex' 
+keywords: netapp, keystone, US citizen support, USCS GSSC, Keystone Success Manager, USCS support 
+summary: 'Support US Citizen (USCS)' 
 ---
-= Support US Citizen (USCS)
+= ÉTATS-UNIS Soutien à citoyens (USCS)
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,6 +14,30 @@ summary: 'Performances de l"abonnement Keystone Flex'
 
 
 [role="lead"]
-NetApp Keystone Flex Subscription (Flex Subscription) offre un contrôle et un support continus au service USCS (États-Unis) via le centre GSSC (Global Services and support Center) de NetApp.
+Le service d'assistance aux citoyens américains (USCS) est un module complémentaire pour les abonnements NetApp Keystone. Elle vous donne le droit de recevoir les prestations et le support des services Keystone en cours de la part des États-Unis Citoyens américains américain.
 
-GSSC est une équipe géographiquement distribuée qui dessert de nombreux clients NetApp. L'offre USCS pour l'abonnement Flex garantit que la surveillance et l'assistance du service Flex Subscription sont assurées par des citoyens américains situés aux États-Unis. Le support et la résolution de problèmes sur site, si nécessaire à la maintenance des systèmes, sont également inclus.
+Lisez les sections suivantes pour comprendre quels éléments de vos abonnements sont liés par ce service complémentaire et sont fournis conformément aux termes de l'Accord de NetApp Keystone.Note de bas de page:disréclamation 1[les services et offres décrits ici sont soumis, et sont limités et régis par un Contrat de Keystone pleinement exécuté.]
+
+
+
+== La surveillance du centre de support NetApp Global Services
+
+Le centre de support et de services NetApp Global Services (GSSC) surveille l'état de vos produits et services abonnés, fournit un support à distance et collabore avec votre responsable de la réussite Keystone. Toutes les personnes qui surveillent les produits associés aux bons d'abonnement Keystone appartiennent aux États-Unis au américain.
+
+
+
+== Gestionnaire de réussite de Keystone
+
+Le responsable réussite de Keystone est une Vivant sur le sol américain. Leurs responsabilités sont précisées dans votre contrat NetApp Keystone.
+
+
+
+== Activités de déploiement
+
+Le cas échéant, les activités de déploiement et d'installation sur site et à distance sont menées par les États-Unis Citoyens américains américain. Note de bas de page :Disclaimer[disponibilité du personnel compétent pour les activités sur site dépend de l'emplacement géographique où les systèmes Keystone sont déployés.]
+
+
+
+== Assistance
+
+Le cas échéant, les activités de support et de dépannage sur site sont menées par les États-Unis Citoyens américains américain. note de bas de page:disclaimer[]

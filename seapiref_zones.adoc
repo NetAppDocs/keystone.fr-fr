@@ -30,7 +30,7 @@ Utilisez les méthodes répertoriées dans le tableau suivant pour créer, modif
 |===
 
 
-=== Attributs de zone
+== Attributs de zone
 
 Le tableau suivant répertorie les attributs de zone.
 
@@ -51,7 +51,7 @@ Le tableau suivant répertorie les attributs de zone.
 |===
 
 
-=== Récupérer toutes les zones
+== Récupérer toutes les zones
 
 Utilisez la méthode indiquée dans le tableau suivant pour extraire toutes les zones ou un sous-ensemble de zones. Si vous spécifiez une région, seuls les magasins de blocs appartenant à ce locataire seront renverra.
 
@@ -96,7 +96,7 @@ none
 ....
 
 
-=== Récupérer une zone par nom
+== Récupérer une zone par nom
 
 Utilisez la méthode indiquée dans le tableau suivant pour récupérer une zone par le nom de la zone.
 
@@ -137,7 +137,7 @@ none
 ....
 
 
-=== Créer une zone
+== Créer une zone
 
 Utilisez la méthode indiquée dans le tableau suivant pour créer une zone.
 
@@ -182,7 +182,7 @@ Attributs de corps de la demande requis : `name', `desodescription', `region_nam
 ....
 
 
-=== Modifier une zone
+== Modifier une zone
 
 Utilisez la méthode indiquée dans le tableau suivant pour modifier une zone.
 
@@ -226,7 +226,7 @@ Attributs de corps de demande requis: `aucun'
 ....
 
 
-=== Supprimer une zone
+== Supprimer une zone
 
 Utilisez la méthode indiquée dans le tableau suivant pour supprimer une zone.
 

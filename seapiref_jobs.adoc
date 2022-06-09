@@ -18,7 +18,7 @@ Utilisez les API des travaux pour consulter les détails des travaux. Pour plus 
 
 
 
-=== Récupérer les travaux
+== Récupérer les travaux
 
 Utilisez la méthode indiquée dans le tableau suivant pour extraire tous les travaux ou un sous-ensemble des travaux. En spécifiant un `tenant_ID', seuls les travaux appartenant à ce tenant seront réaffichés.
 
@@ -94,7 +94,7 @@ none
 ....
 
 
-==== Récupérer un travail par ID de travail
+=== Récupérer un travail par ID de travail
 
 Utilisez la méthode indiquée dans le tableau suivant pour récupérer un travail par ID.
 
@@ -164,7 +164,7 @@ none
 ....
 
 
-=== API d'objets de travail et processus asynchrones
+== API d'objets de travail et processus asynchrones
 
 Certains appels API, en particulier ceux utilisés pour ajouter ou modifier des ressources, peuvent prendre plus de temps que d'autres appels. Le moteur de service NetApp traite ces demandes longues de manière asynchrone.
 
@@ -172,7 +172,7 @@ Après avoir effectué un appel API qui s'exécute de manière asynchrone, le co
 
 
 
-==== Interrogation de l'objet de travail associé à une requête d'API
+=== Interrogation de l'objet de travail associé à une requête d'API
 
 L'objet travail renvoyé dans la réponse HTTP contient plusieurs propriétés. Vous pouvez interroger la propriété d'état pour déterminer si la demande a bien été effectuée. Un objet de travail peut se trouver dans l'un des États suivants :
 
@@ -190,7 +190,7 @@ Il existe deux techniques que vous pouvez utiliser lors de l'interrogation d'un 
 
 
 
-==== Étapes d'une demande asynchrone
+=== Étapes d'une demande asynchrone
 
 Vous pouvez utiliser la procédure de haut niveau suivante pour effectuer un appel d'API asynchrone :
 

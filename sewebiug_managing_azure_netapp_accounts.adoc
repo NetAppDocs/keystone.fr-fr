@@ -29,7 +29,7 @@ Dans cette section :
 
 
 
-=== Consultez la liste des comptes Azure NetApp
+== Consultez la liste des comptes Azure NetApp
 
 La liste pour les comptes Azure NetApp affiche la liste de tous les comptes Azure NetApp pour les locations auxquelles l'utilisateur connecté a accès. Pour afficher la liste, sélectionnez *ADMINISTRATION > comptes Azure NetApp* dans le menu.
 
@@ -37,7 +37,7 @@ La liste affiche des informations simples sur chaque compte Azure NetApp. Les ic
 
 
 
-=== Ajoutez un compte Azure NetApp
+== Ajoutez un compte Azure NetApp
 
 Cette section explique comment ajouter un compte Azure NetApp.
 
@@ -60,7 +60,7 @@ Vous aurez besoin des éléments suivants :
 
 
 
-=== Modifiez les balises de compte Azure NetApp
+== Modifiez les balises de compte Azure NetApp
 
 Utilisez cette méthode pour modifier les balises associées à un compte Azure NetApp.
 
@@ -73,7 +73,7 @@ Utilisez cette méthode pour modifier les balises associées à un compte Azure 
 
 
 
-=== Supprimez un compte Azure NetApp
+== Supprimez un compte Azure NetApp
 
 Utilisez cette méthode pour supprimer un compte Azure NetApp.
 

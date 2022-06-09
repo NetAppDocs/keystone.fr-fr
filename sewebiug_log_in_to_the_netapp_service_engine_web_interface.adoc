@@ -27,7 +27,7 @@ Confirmez l'option de connexion utilisée avec votre instance NetApp Service Eng
 
 
 
-=== Accès basé sur des rôles
+== Accès basé sur des rôles
 
 Le tableau suivant répertorie les descriptions d'accès basées sur les rôles.
 

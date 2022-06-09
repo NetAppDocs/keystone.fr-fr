@@ -64,4 +64,4 @@ Vous pouvez gérer les volumes d'un sous-locataire sur GCP à partir de *SERVICE
 
 Regardez la vidéo suivante pour découvrir comment créer un volume sur GCP via Cloud Volumes Service et le moteur de services NetApp :
 
-video::Crq5a1zi1Vg[youtube, width=750,height=400]
+video::Crq5a1zi1Vg[youtube,width=750,height=400]

@@ -39,7 +39,7 @@ Utilisez les méthodes répertoriées dans le tableau suivant pour extraire, cr�
 |===
 
 
-=== Attributs utilisateur
+== Attributs utilisateur
 
 Le tableau suivant répertorie les attributs utilisateur.
 
@@ -99,7 +99,7 @@ Informations sur le fournisseur d'authentification, comprenant :
 |===
 
 
-=== Récupérer tous les utilisateurs
+== Récupérer tous les utilisateurs
 
 Utilisez la méthode indiquée dans le tableau suivant pour récupérer tous les utilisateurs.
 
@@ -150,7 +150,7 @@ none
 ....
 
 
-=== Récupérer un utilisateur par ID
+== Récupérer un utilisateur par ID
 
 Utilisez la méthode indiquée dans le tableau suivant pour récupérer un utilisateur par ID.
 
@@ -201,7 +201,7 @@ none
 ....
 
 
-=== Récupérer un utilisateur par nom d'utilisateur
+== Récupérer un utilisateur par nom d'utilisateur
 
 Utilisez la méthode indiquée dans le tableau suivant pour récupérer un utilisateur par son nom d'utilisateur.
 
@@ -252,7 +252,7 @@ none
 ....
 
 
-=== Créer un utilisateur
+== Créer un utilisateur
 
 Utilisez la méthode indiquée dans le tableau suivant pour créer un utilisateur.
 
@@ -324,7 +324,7 @@ Attributs de corps de demande requis: `username', `tenant_ID', `tenlocations, fo
 ....
 
 
-=== Modifier un utilisateur par ID
+== Modifier un utilisateur par ID
 
 Utilisez la méthode indiquée dans le tableau suivant pour modifier un utilisateur par ID utilisateur.
 
@@ -390,7 +390,7 @@ Attributs de corps de demande requis: `aucun'
 ....
 
 
-=== Supprimer un utilisateur par ID
+== Supprimer un utilisateur par ID
 
 Utilisez la méthode indiquée dans le tableau suivant pour supprimer un utilisateur par ID.
 

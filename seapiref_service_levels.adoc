@@ -36,7 +36,7 @@ Utilisez les méthodes répertoriées dans le tableau suivant pour récupérer, 
 |===
 
 
-=== Attributs de niveau de service
+== Attributs de niveau de service
 
 Le tableau suivant répertorie les attributs de niveau de service.
 
@@ -126,7 +126,7 @@ La liste des agrégats ONTAP. Un agrégat ONTAP se compose des éléments suivan
 |===
 
 
-=== Récupérer les niveaux de service
+== Récupérer les niveaux de service
 
 Utilisez la méthode indiquée dans le tableau suivant pour récupérer tous les niveaux de service.
 
@@ -209,7 +209,7 @@ none
 ....
 
 
-=== Récupère les niveaux de service par nom
+== Récupère les niveaux de service par nom
 
 Utilisez la méthode indiquée dans le tableau suivant pour récupérer les niveaux de service par nom.
 
@@ -260,7 +260,7 @@ none
 ....
 
 
-=== Créer un niveau de service
+== Créer un niveau de service
 
 Utilisez la méthode indiquée dans le tableau suivant pour créer un niveau de service.
 
@@ -339,7 +339,7 @@ Attributs de corps de demande requis: `name', `policy_name'
 ....
 
 
-=== Modifier un niveau de service
+== Modifier un niveau de service
 
 Utilisez la méthode indiquée dans le tableau suivant pour modifier un niveau de service.
 
@@ -391,7 +391,7 @@ TBA
 ....
 
 
-=== Supprimer le niveau de service par ID
+== Supprimer le niveau de service par ID
 
 Utilisez la méthode indiquée dans le tableau suivant pour supprimer un niveau de service par ID.
 

@@ -41,7 +41,7 @@ Le tableau de bord affiche des informations sur vos abonnements au stockage NetA
 
 
 
-== Vue liste
+=== Vue liste
 
 Une vue liste est utilisée pour afficher une liste d'objets. Par exemple, la liste des serveurs qui prennent en charge les partages de fichiers dans un abonnement s'affiche dans une vue liste, comme indiqué dans la capture d'écran ci-dessous.
 

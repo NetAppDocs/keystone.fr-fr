@@ -36,7 +36,7 @@ Utilisez les méthodes répertoriées dans le tableau suivant pour créer, modif
 |===
 
 
-=== Attributs de région
+== Attributs de région
 
 Le tableau suivant répertorie les attributs de région.
 
@@ -54,7 +54,7 @@ Le tableau suivant répertorie les attributs de région.
 |===
 
 
-=== Extraire les régions
+== Extraire les régions
 
 Utilisez la méthode indiquée dans le tableau suivant pour extraire toutes les régions ou un sous-ensemble de régions.
 
@@ -100,7 +100,7 @@ none
 ....
 
 
-=== Récupérer une région par son nom
+== Récupérer une région par son nom
 
 Utilisez la méthode indiquée dans le tableau suivant pour récupérer une région par nom.
 
@@ -143,7 +143,7 @@ none
 ....
 
 
-=== Créer une région
+== Créer une région
 
 Utilisez la méthode indiquée dans le tableau suivant pour créer une région.
 
@@ -189,7 +189,7 @@ Attributs de corps de demande requis : `nom'
 ....
 
 
-=== Modifier une région
+== Modifier une région
 
 Utilisez la méthode indiquée dans le tableau suivant pour modifier une région.
 
@@ -233,7 +233,7 @@ Attributs de corps de demande requis: `aucun'
 ....
 
 
-=== Supprimer une région
+== Supprimer une région
 
 Utilisez la méthode indiquée dans le tableau suivant pour supprimer une région.
 

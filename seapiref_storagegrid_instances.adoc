@@ -33,7 +33,7 @@ Utilisez les méthodes répertoriées dans le tableau suivant pour configurer et
 |===
 
 
-=== Attributs des instances StorageGRID
+== Attributs des instances StorageGRID
 
 Le tableau suivant répertorie les attributs de l'instance StorageGRID.
 
@@ -69,7 +69,7 @@ Le tableau suivant répertorie les attributs de l'instance StorageGRID.
 |===
 
 
-=== Récupère les instances StorageGRID
+== Récupère les instances StorageGRID
 
 Utilisez la méthode indiquée dans le tableau suivant pour récupérer les instances StorageGRID.
 
@@ -114,7 +114,7 @@ none
 ....
 
 
-=== Récupère les instances StorageGRID par ID
+== Récupère les instances StorageGRID par ID
 
 Utilisez la méthode indiquée dans le tableau suivant pour récupérer les instances StorageGRID par ID.
 
@@ -159,7 +159,7 @@ none
 ....
 
 
-=== Créez une instance StorageGRID par ID
+== Créez une instance StorageGRID par ID
 
 Utilisez la méthode indiquée dans le tableau suivant pour créer une instance StorageGRID par ID.
 
@@ -217,7 +217,7 @@ Attributs de corps de demande requis: `aucun'
 ....
 
 
-=== Modifiez une instance StorageGRID par ID
+== Modifiez une instance StorageGRID par ID
 
 Utilisez la méthode indiquée dans le tableau suivant pour modifier l'ID d'une instance StorageGRID.
 

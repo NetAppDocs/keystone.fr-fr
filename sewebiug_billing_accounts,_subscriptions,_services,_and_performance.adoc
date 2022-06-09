@@ -36,7 +36,7 @@ L'utilisation en rafale est autorisée sur les services jusqu'à un certain poin
 
 
 
-=== Consommation, capacité en rafale et utilisation excessive
+== Consommation, capacité en rafale et utilisation excessive
 
 La capacité consommée est la capacité allouée (mais pas nécessairement utilisée). La capacité engagée est la capacité à laquelle s'engage un abonnement. L'abonné est facturé à taux fixe pour la capacité engagée, indépendamment de la quantité utilisée.
 
@@ -62,7 +62,7 @@ NOTE: Outre le stockage primaire, des fonctionnalités telles que les snapshots,
 
 
 
-==== Notification lorsqu'une modification proposée entraîne une utilisation de la capacité en rafale
+=== Notification lorsqu'une modification proposée entraîne une utilisation de la capacité en rafale
 
 Cette figure présente un exemple de notification qui s'affiche lorsqu'une modification de provisionnement proposée provoque l'éclatement d'un abonnement. Vous pouvez choisir de continuer à savoir qu'il mettra l'abonnement en rafale ou de ne pas poursuivre l'action.
 
@@ -104,7 +104,7 @@ Le tableau suivant répertorie les cas où de telles notifications de rafale son
 |===
 
 
-==== Notification lorsque l'abonnement est en rafale
+=== Notification lorsque l'abonnement est en rafale
 
 La bannière de notification suivante s'affiche lorsqu'un abonnement est en rafale. La notification s'affiche à l'administrateur du client pour la location et s'affiche jusqu'à ce que la notification soit acquittée.
 
@@ -112,7 +112,7 @@ image:sewebiug_image3.png["Erreur : image graphique manquante"]
 
 
 
-=== Protection des données
+== Protection des données
 
 DP désigne les méthodes permettant de sauvegarder des données et de les restaurer si nécessaire.
 
@@ -125,7 +125,7 @@ Les fonctionnalités de NetApp Service Engine DP comprennent :
 
 
 
-==== Snapshots
+=== Snapshots
 
 Les snapshots sont des copies de données à un point dans le temps. Les snapshots peuvent être clonés pour former un nouveau disque ou partagés avec des fonctionnalités identiques ou similaires.
 
@@ -136,7 +136,7 @@ NOTE: Les snapshots contribuent à la capacité consommée d'un service.
 
 
 
-==== Sauvegardes
+=== Sauvegardes
 
 La sauvegarde consiste à créer une copie d'un élément, à le répliquer et à stocker la copie dans une zone autre que la zone d'origine, où le protocole respectif est activé (en cas de stockage en mode bloc uniquement) et non MetroCluster est activé. NetApp Service Engine propose des sauvegardes sur le stockage bloc et fichier (un service DP est requis dans l'abonnement). Les sauvegardes des partages/disques sont stockées dans la zone de sauvegarde sur le niveau de performance le plus économique (standard) à l'abonnement.
 
@@ -164,7 +164,7 @@ Les sauvegardes planifiées sont régulièrement effectuées et ne peuvent pas �
 
 
 
-=== Reprise après incident
+== Reprise après incident
 
 La reprise après incident consiste à restaurer la normale des opérations en cas d'incident.
 
@@ -175,7 +175,7 @@ NOTE: La prise en charge de la reprise après incident dépend de l'infrastructu
 
 
 
-==== Reprise après incident—asynchrone
+=== Reprise après incident—asynchrone
 
 NetApp Service Engine prend en charge la reprise après incident asynchrone en vous permettant d'atteindre les objectifs suivants :
 
@@ -193,15 +193,7 @@ L'activation de la réplication asynchrone de reprise après incident pour un vo
 * Activation ou désactivation de la réplication de reprise après incident du partage de fichiers ou du disque. Par défaut, les partages et les disques sont activés pour la réplication de reprise après incident, si la reprise après incident est configurée.
 
 
-
-
-===== Configurez un serveur de fichiers ou un magasin en blocs pour prendre en charge la reprise après incident asynchrone
-
 Activez la reprise après incident asynchrone sur un serveur de fichiers ou un magasin bloc au moment de la création ou ultérieurement. Une fois activée, la reprise après incident ne peut pas être désactivée et la zone de reprise après incident ne peut pas être modifiée. La planification de la reprise sur incident spécifie la fréquence à laquelle les données sont répliquées vers le site de reprise sur incident (toutes les heures, toutes les heures ou tous les jours).
-
-
-
-===== Reprise après incident asynchrone sur le partage de fichiers ou le disque
 
 Un partage de fichiers ou un disque ne peut être configuré que pour la réplication asynchrone de reprise après incident si le serveur de fichiers parent ou le magasin de blocs est d'abord configuré pour la reprise après incident asynchrone. Par défaut, si la réplication est activée dans le parent, la réplication est activée dans les partages de fichiers ou les disques que le parent héberge. Vous pouvez exclure la réplication d'un partage ou d'un disque particulier en désactivant la reprise après sinistre sur ce partage/disque. Il est possible de basculer entre l'activation et la désactivation de la réplication sur ces partages/disques.
 
@@ -214,7 +206,7 @@ Un partage de fichiers ou un disque ne peut être configuré que pour la réplic
 
 
 
-==== Reprise après incident synchrone
+=== Reprise après incident synchrone
 
 MetroCluster est une fonctionnalité DP qui réplique de manière synchrone les données et la configuration entre deux zones distinctes qui résident dans des emplacements distincts ou dans des domaines de défaillance. En cas d'incident sur un site, un administrateur peut permettre l'accès aux données à partir du site survivant.
 
@@ -231,17 +223,13 @@ Les sites gérés par le moteur de services NetApp configurés avec MetroCluster
 
 
 
-=== La protection des données, la capacité consommée et les frais
+== La protection des données, la capacité consommée et les frais
 
 Les chiffres de cette section décrivent le calcul des frais DP.
 
 
 
-==== Reprise après incident
-
-
-
-===== Reprise après incident asynchrone
+=== Reprise après incident asynchrone
 
 Dans le cas de la reprise après incident asynchrone, l'utilisation et le coût sont constitués des frais suivants :
 
@@ -254,7 +242,7 @@ image:sewebiug_image4.png["Erreur : image graphique manquante"]
 
 
 
-===== Reprise sur incident synchrone
+=== Reprise sur incident synchrone
 
 Dans le cas de la reprise après incident synchrone, l'utilisation et le coût sont constitués des frais suivants :
 
@@ -262,7 +250,7 @@ image:sewebiug_image5.png["Erreur : image graphique manquante"]
 
 
 
-==== Sauvegarde
+=== Sauvegarde
 
 En sauvegarde, l'utilisation et le coût sont constitués des frais suivants :
 

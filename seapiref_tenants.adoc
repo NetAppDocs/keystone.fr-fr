@@ -36,7 +36,7 @@ Utilisez les méthodes répertoriées dans le tableau suivant pour récupérer, 
 |===
 
 
-=== Attributs des locataires
+== Attributs des locataires
 
 Le tableau suivant répertorie les attributs du locataire.
 
@@ -66,7 +66,7 @@ Le tableau suivant répertorie les attributs du locataire.
 |===
 
 
-=== Récupérer tous les locataires
+== Récupérer tous les locataires
 
 Utilisez la méthode indiquée dans le tableau suivant pour récupérer tous les locataires ou un sous-ensemble de tous les locataires.
 
@@ -170,7 +170,7 @@ none
 ....
 
 
-=== Récupérer un locataire par ID
+== Récupérer un locataire par ID
 
 Utilisez la méthode indiquée dans le tableau suivant pour récupérer un locataire par ID.
 
@@ -263,7 +263,7 @@ none
 ....
 
 
-=== Créez un locataire
+== Créez un locataire
 
 Utilisez la méthode indiquée dans le tableau suivant pour créer un locataire.
 
@@ -313,7 +313,7 @@ Attributs de corps de demande requis: `code', `nom', `zuora_account_name', `zuor
 ....
 
 
-=== Modifiez le locataire
+== Modifiez le locataire
 
 Utilisez la méthode indiquée dans le tableau suivant pour modifier le locataire.
 
@@ -363,7 +363,7 @@ Attributs corps de la demande requis: `code'
 ....
 
 
-=== Supprimez le locataire
+== Supprimez le locataire
 
 Utilisez la méthode indiquée dans le tableau suivant pour supprimer le locataire.
 

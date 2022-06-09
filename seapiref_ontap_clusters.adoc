@@ -36,7 +36,7 @@ Utilisez les méthodes indiquées dans le tableau ci-dessous pour extraire, cré
 |===
 
 
-=== Attributs des clusters ONTAP
+== Attributs des clusters ONTAP
 
 Le tableau ci-dessous répertorie les attributs du cluster ONTAP.
 
@@ -157,7 +157,7 @@ Liste des nœuds et des ports des clusters ONTAP compatibles avec FCP. Par exemp
 |===
 
 
-=== Récupérer tous les clusters ONTAP
+== Récupérer tous les clusters ONTAP
 
 Utiliser la méthode indiquée ci-dessous pour extraire tous les clusters ONTAP ou un sous-ensemble de clusters ONTAP.
 
@@ -302,7 +302,7 @@ none
 ....
 
 
-=== Récupérez les clusters ONTAP par ID
+== Récupérez les clusters ONTAP par ID
 
 Utiliser la méthode indiquée ci-dessous pour récupérer les clusters ONTAP par ID.
 
@@ -376,7 +376,7 @@ none
 ....
 
 
-=== Création d'un cluster ONTAP
+== Création d'un cluster ONTAP
 
 Utilisez l'API du tableau suivant pour créer un cluster ONTAP.
 
@@ -493,7 +493,7 @@ Si `is_mcc' est vrai, le `mcc_Partner_cluster' est requis.
 ....
 
 
-=== Modifier le cluster ONTAP
+== Modifier le cluster ONTAP
 
 Utiliser la méthode indiquée ci-dessous pour modifier le cluster ONTAP.
 
@@ -603,7 +603,7 @@ Attributs de corps de demande requis: `aucun'
 ....
 
 
-=== Supprime un cluster ONTAP
+== Supprime un cluster ONTAP
 
 Utilisez la méthode indiquée dans le tableau suivant pour supprimer un cluster ONTAP.
 

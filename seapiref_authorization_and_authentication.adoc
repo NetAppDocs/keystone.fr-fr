@@ -18,7 +18,7 @@ L'API REST NetApp Service Engine est accessible depuis n'importe quel navigateur
 
 
 
-=== Codes d'état HTTP
+== Codes d'état HTTP
 
 Lors de l'exécution des API ou de la résolution de problèmes, vous devez connaître les divers codes d'état HTTP et codes d'erreur utilisés par les API des moteurs de services NetApp.
 
@@ -59,7 +59,7 @@ Le tableau suivant répertorie les codes d'erreur liés à l'authentification.
 |===
 
 
-=== Recommandations pour l'utilisation des API
+== Recommandations pour l'utilisation des API
 
 Lors de l'utilisation d'API, vous devez respecter certaines pratiques recommandées :
 

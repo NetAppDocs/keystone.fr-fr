@@ -29,7 +29,7 @@ Cette section décrit comment effectuer les tâches suivantes :
 
 
 
-=== Afficher la liste des volumes Azure
+== Afficher la liste des volumes Azure
 
 La liste volumes Azure affiche la liste des pools de volumes Azure pour un sous-locataire et un emplacement spécifiés. Pour afficher la liste, sélectionnez *SERVICES DE FICHIERS > Azure volumes* dans le menu.
 
@@ -37,7 +37,7 @@ La liste affiche des informations simples sur chaque volume Azure. Les icônes d
 
 
 
-=== Ajouter un volume Azure
+== Ajouter un volume Azure
 
 Cette section décrit l'ajout d'un volume Azure.
 
@@ -62,7 +62,7 @@ Vous aurez besoin des éléments suivants :
 
 
 
-=== Modifier les détails des volumes Azure
+== Modifier les détails des volumes Azure
 
 Utilisez cette méthode pour modifier les détails d'un volume Azure. Vous pouvez modifier le chemin d'accès et le quota de fichiers, et ajouter ou supprimer des balises.
 
@@ -75,7 +75,7 @@ Utilisez cette méthode pour modifier les détails d'un volume Azure. Vous pouve
 
 
 
-=== Supprimez un volume Azure
+== Supprimez un volume Azure
 
 Utilisez cette méthode pour supprimer un volume Azure.
 

@@ -29,7 +29,7 @@ Cette section décrit comment effectuer les tâches suivantes :
 
 
 
-=== Afficher la liste des pools de capacité Azure
+== Afficher la liste des pools de capacité Azure
 
 La liste pools de capacité Azure affiche une liste de pools de capacité pour un sous-locataire et un emplacement spécifiés. Pour afficher la liste, sélectionnez *SERVICES DE FICHIERS > Azure Capacity pools* dans le menu.
 
@@ -37,7 +37,7 @@ La liste affiche des informations simples sur chaque pool de capacité Azure. Le
 
 
 
-=== Ajoutez un pool de capacité Azure
+== Ajoutez un pool de capacité Azure
 
 Cette section décrit l'ajout d'un pool de capacité Azure.
 
@@ -60,7 +60,7 @@ Vous aurez besoin des éléments suivants :
 
 
 
-=== Modifier les détails du pool de capacité Azure
+== Modifier les détails du pool de capacité Azure
 
 Utilisez cette méthode pour modifier les détails d'un pool de capacité Azure. Vous pouvez modifier le niveau de service de la taille du pool et ajouter ou supprimer des balises.
 
@@ -73,7 +73,7 @@ Utilisez cette méthode pour modifier les détails d'un pool de capacité Azure.
 
 
 
-=== Supprimez un pool de capacité Azure
+== Supprimez un pool de capacité Azure
 
 Utilisez cette méthode pour supprimer un pool de capacité Azure.
 

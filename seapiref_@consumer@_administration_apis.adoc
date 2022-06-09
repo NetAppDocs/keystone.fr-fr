@@ -96,7 +96,7 @@ Le tableau suivant répertorie les API grand public documentées dans cette sect
 |===
 
 
-=== Réinitialiser le mot de passe utilisateur
+== Réinitialiser le mot de passe utilisateur
 
 Utilisez la méthode indiquée dans le tableau suivant pour réinitialiser le mot de passe utilisateur.
 
@@ -154,7 +154,7 @@ Attributs de corps de la demande requis : `username` (chaîne), `New_passwords' 
 ....
 
 
-=== Actualiser le jeton d'authentification
+== Actualiser le jeton d'authentification
 
 Utilisez la méthode indiquée dans le tableau suivant pour actualiser le jeton d'authentification.
 
@@ -214,7 +214,7 @@ none
 ....
 
 
-=== Connectez-vous
+== Connectez-vous
 
 Utilisez la méthode indiquée dans le tableau suivant pour vous connecter.
 

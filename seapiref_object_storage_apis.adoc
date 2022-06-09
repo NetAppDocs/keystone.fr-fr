@@ -26,7 +26,7 @@ Ce workflow de stockage objet inclut les tâches suivantes :
 
 
 
-=== Groupes de stockage d'objets
+== Groupes de stockage d'objets
 
 Utilisez les méthodes répertoriées dans le tableau ci-dessous pour extraire, créer ou modifier des groupes de stockage d'objets.
 
@@ -50,7 +50,7 @@ Utilisez les méthodes répertoriées dans le tableau ci-dessous pour extraire, 
 |===
 
 
-==== Attributs du groupe de stockage objet
+=== Attributs du groupe de stockage objet
 
 Le tableau ci-dessous répertorie les attributs de stockage objet.
 
@@ -152,7 +152,7 @@ none
 ....
 
 
-==== Récupère un groupe de stockage objet par ID
+=== Récupère un groupe de stockage objet par ID
 
 Utilisez la méthode indiquée dans le tableau ci-dessous pour récupérer un groupe de stockage objet par ID.
 
@@ -205,7 +205,7 @@ none
 ....
 
 
-==== Créer un groupe de stockage objet
+=== Créer un groupe de stockage objet
 
 Utilisez la méthode indiquée ci-dessous pour créer un groupe de stockage objet.
 
@@ -267,7 +267,7 @@ Attributs de corps de demande requis: `name`, `subtenant_ID`, `s3Policy`
 ....
 
 
-==== Modifier un groupe de stockage d'objets
+=== Modifier un groupe de stockage d'objets
 
 Utilisez la méthode indiquée dans le tableau ci-dessous pour modifier un groupe de stockage objet.
 
@@ -335,7 +335,7 @@ Attributs de corps de demande requis: `name`, `subtenant_ID`, `s3Policy`
 ....
 
 
-==== Supprime un groupe de stockage objet par ID
+=== Supprime un groupe de stockage objet par ID
 
 Utilisez la méthode indiquée dans le tableau ci-dessous pour supprimer un groupe de stockage objet par ID.
 
@@ -388,7 +388,7 @@ none
 ....
 
 
-=== Utilisateurs du stockage objet
+== Utilisateurs du stockage objet
 
 Utilisez les méthodes répertoriées dans le tableau suivant pour effectuer les tâches suivantes :
 
@@ -428,7 +428,7 @@ Utilisez les méthodes répertoriées dans le tableau suivant pour effectuer les
 |===
 
 
-==== Attributs utilisateur du stockage objet
+=== Attributs utilisateur du stockage objet
 
 Le tableau ci-dessous répertorie les attributs utilisateur du stockage objet.
 
@@ -513,7 +513,7 @@ none
 ....
 
 
-==== Récupère un utilisateur de stockage objet par ID
+=== Récupère un utilisateur de stockage objet par ID
 
 Utilisez la méthode indiquée dans le tableau ci-dessous pour récupérer un ID de stockage objet utilisé.
 
@@ -560,7 +560,7 @@ none
 ....
 
 
-==== Créez un utilisateur de stockage objet
+=== Créez un utilisateur de stockage objet
 
 Utilisez la méthode indiquée dans le tableau ci-dessous pour créer un utilisateur de stockage objet.
 
@@ -616,7 +616,7 @@ Attributs de corps de requête requis : `display_name`, `subtenant_ID`, `sg_grou
 ....
 
 
-==== Modifier un utilisateur de stockage objet
+=== Modifier un utilisateur de stockage objet
 
 Utilisez la méthode indiquée dans le tableau ci-dessous pour modifier un utilisateur de stockage objet.
 
@@ -672,7 +672,7 @@ Attributs de corps de requête requis : `display_name`, `subtenant_ID`, `sg_grou
 ....
 
 
-==== Mapper toutes les clés S3 à un utilisateur du stockage objet
+=== Mapper toutes les clés S3 à un utilisateur du stockage objet
 
 Utilisez la méthode indiquée dans le tableau ci-dessous pour mapper toutes les clés S3 à un utilisateur de stockage objet.
 
@@ -715,7 +715,7 @@ none
 ....
 
 
-==== Créez une clé S3 pour un utilisateur du stockage objet
+=== Créez une clé S3 pour un utilisateur du stockage objet
 
 Utilisez la méthode indiquée ci-dessous pour créer une clé S3 pour un utilisateur du stockage objet.
 
@@ -766,7 +766,7 @@ NOTE: La date/heure d'expiration de la clé est définie dans UTC ; elle doit ê
 ....
 
 
-==== Obtenir les clés S3 pour un utilisateur du stockage objet par ID de clé
+=== Obtenir les clés S3 pour un utilisateur du stockage objet par ID de clé
 
 Utilisez la méthode indiquée dans le tableau ci-dessous pour obtenir les clés S3 pour un utilisateur de stockage objet par ID de clé.
 
@@ -815,7 +815,7 @@ none
 ....
 
 
-==== Supprimez une clé S3 par ID de clé
+=== Supprimez une clé S3 par ID de clé
 
 Utilisez la méthode indiquée dans le tableau suivant pour supprimer une clé S3 par ID de clé.
 
@@ -843,7 +843,7 @@ No content to return for succesful execution
 ....
 
 
-=== Comptes de stockage objet
+== Comptes de stockage objet
 
 Utilisez les méthodes répertoriées dans le tableau suivant pour effectuer les tâches suivantes :
 
@@ -877,7 +877,7 @@ Utilisez les méthodes répertoriées dans le tableau suivant pour effectuer les
 |===
 
 
-==== Attributs des comptes de stockage objet
+=== Attributs des comptes de stockage objet
 
 Le tableau ci-dessous répertorie les attributs des comptes de stockage objet.
 
@@ -947,7 +947,7 @@ none
 ....
 
 
-==== Récupère un compte de stockage objet par ID
+=== Récupère un compte de stockage objet par ID
 
 Utilisez la méthode indiquée dans le tableau ci-dessous pour récupérer un compte de stockage objet par ID.
 
@@ -993,7 +993,7 @@ none
 ....
 
 
-==== Activez un compte de stockage objet
+=== Activez un compte de stockage objet
 
 Utilisez la méthode indiquée dans le tableau ci-dessous pour activer un compte de stockage objet.
 
@@ -1046,7 +1046,7 @@ Attributs de corps de demande requis : `subtenant_ID, quota_gb`
 ....
 
 
-==== Modifier un compte de stockage objet
+=== Modifier un compte de stockage objet
 
 Utilisez la méthode indiquée dans le tableau ci-dessous pour modifier un compte de stockage objet.
 
@@ -1100,7 +1100,7 @@ Attributs de corps de demande requis: `name`, `subtenant_ID', `quota_gb'
 ....
 
 
-==== Supprime un compte de stockage objet
+=== Supprime un compte de stockage objet
 
 Avant de pouvoir supprimer un compte de stockage objet, vous devez d'abord supprimer tous les groupes, utilisateurs et compartiments associés. Utilisez la méthode indiquée dans le tableau ci-dessous pour supprimer un compte de stockage objet.
 
@@ -1153,7 +1153,7 @@ Attributs de corps de demande requis: `aucun'
 ....
 
 
-=== Compartiments de stockage objet
+== Compartiments de stockage objet
 
 Utilisez les API du tableau suivant pour créer et récupérer des compartiments de stockage objet.
 
@@ -1168,7 +1168,7 @@ Utilisez les API du tableau suivant pour créer et récupérer des compartiments
 |===
 
 
-==== Les attributs des compartiments de stockage objet
+=== Les attributs des compartiments de stockage objet
 
 Le tableau suivant répertorie les attributs de compartiment de stockage objet.
 
@@ -1186,7 +1186,7 @@ Le tableau suivant répertorie les attributs de compartiment de stockage objet.
 |===
 
 
-==== Récupérer les compartiments S3
+=== Récupérer les compartiments S3
 
 Utilisez la méthode indiquée dans le tableau suivant pour récupérer les compartiments S3.
 
@@ -1225,7 +1225,7 @@ none
 ....
 
 
-==== Création de compartiments S3
+=== Création de compartiments S3
 
 Utiliser la méthode indiquée dans le tableau suivant pour créer un compartiment S3.
 
