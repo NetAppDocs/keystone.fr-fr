@@ -14,7 +14,7 @@ summary: API de sauvegarde Keystone
 
 
 [role="lead"]
-Vous pouvez utiliser les API de sauvegarde pour afficher et gérer les snapshots (sauvegardes ou points de restauration) des volumes (partages de fichiers et disques) dans votre environnement.
+Vous pouvez utiliser l'API de sauvegarde pour afficher et gérer les sauvegardes ou points de restauration des volumes (partages de fichiers et disques) de votre environnement.
 
 [cols="1,1,3,2"]
 |===

@@ -19,19 +19,19 @@ Utilisez cette méthode pour créer une clé S3 pour un utilisateur.
 Assurez-vous de capturer la clé immédiatement après sa création. Il n'existe aucun moyen de récupérer les détails de la clé après sa création.
 
 .Étapes
-. Afficher le link:sewebiug_view_a_list_of_users.html#view-a-list-of-users["Liste des utilisateurs"].
-. Assurez-vous que le sous-locataire correct est sélectionné et que l'affichage indique les utilisateurs (et non les groupes).
-. Localisez l'utilisateur dans la liste et cliquez sur l'icône clé de ce groupe.
+. Afficher l'utilisateur de stockage objet link:sewebiug_view_the_object_storage_group_and_users.html["Afficher les utilisateurs et les groupes de stockage objet"].
+. Assurez-vous que le sous-locataire correct est sélectionné et que vous avez cliqué sur l'onglet *utilisateurs*.
+. Localisez l'utilisateur dans la liste et cliquez sur l'icône de clé de ce groupe.
 +
-Pour plus d'informations sur l'utilisation des éléments dans les listes, reportez-vous à la section link:sewebiug_netapp_service_engine_web_interface_overview.html#list-view["Actions de vue de liste"].
+Pour plus d'informations sur l'utilisation des éléments dans les listes, reportez-vous à la section link:sewebiug_netapp_service_engine_web_interface_overview.html#list-view-actions["Actions de vue de liste"].
 
-. La boîte de dialogue gérer les clés S3 s'affiche et affiche la liste des clés pour l'utilisateur.
+. La boîte de dialogue *gérer les clés S3* affiche la liste des clés pour l'utilisateur. Pour plus d'informations sur les touches, reportez-vous à la section https://docs.netapp.com/us-en/storagegrid-116/s3/bucket-and-group-access-policies.html#specify-permissions-in-a-policy["Spécifiez les autorisations dans une stratégie"].
 . S'il n'y a pas de clés existantes pour l'utilisateur, cliquez sur *Créer clé S3* pour afficher les champs permettant de créer une clé.
-. Si vous souhaitez que la clé expire, spécifiez la date d'expiration et l'heure d'expiration dans UTC. Sinon, conservez les valeurs par défaut de ces champs.
-. Pour créer la clé, cliquez sur la coche. La boîte de dialogue Détails de la clé S3 s'affiche et affiche la clé d'accès et la clé secrète.
-. Copiez la clé d'accès et la clé secrète en vue de conseiller l'utilisateur des détails.
+. Si vous souhaitez que la clé expire, spécifiez la date d'expiration et l'heure d'expiration dans UTC. Sinon, conservez les valeurs par défaut dans ces champs.
+. Pour créer la clé, cliquez sur la coche. La boîte de dialogue *S3 Key Details* s'affiche et affiche la clé d'accès et la clé secrète.
+. Copiez à la fois les clés d'accès et les clés secrètes en vue d'informer l'utilisateur des détails.
 +
-Veillez à bien saisir les détails clés avant de fermer la boîte de dialogue Détails de la clé S3. Après la fermeture, les détails de la clé seront masqués et vous ne pourrez pas les récupérer.
+Assurez-vous de saisir les détails clés avant de fermer la boîte de dialogue *Détails clés S3*. Après la fermeture, les détails de la clé seront masqués et vous ne pourrez pas les récupérer.
 
 . Cliquez sur *Fermer*.
 . Cliquez de nouveau sur *Fermer* pour fermer la boîte de dialogue gestion des clés S3.

@@ -17,8 +17,8 @@ summary: Keystone supprime un groupe de stockage objet
 Utilisez cette méthode pour supprimer un groupe de stockage d'objets.
 
 .Étapes
-. Afficher link:sewebiug_view_host_groups.html#view-host-groups["La liste des groupes"].
-. Assurez-vous que le sous-locataire correct est sélectionné et que l'affichage indique des groupes (et non des utilisateurs).
+. Afficher le Storage Group d'objets link:sewebiug_view_the_object_storage_group_and_users.html["Afficher les utilisateurs et les groupes de stockage objet"].
+. Assurez-vous que le sous-locataire correct est sélectionné et que vous avez cliqué sur l'onglet *groupes*.
 . Recherchez le groupe dans la liste et cliquez sur l'icône Supprimer pour ce groupe.
 . Pour confirmer l'action de suppression, cliquez sur *confirmer*. Le groupe de stockage d'objets est supprimé de la liste.
 

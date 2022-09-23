@@ -40,6 +40,14 @@ Vous pouvez envoyer une demande d'ajout de capacité par le biais de l'outil de 
 
 Tous les ajouts sont à terme pour la période de validité existante, sauf si la demande est faite dans les 90 derniers jours de l'abonnement, auquel cas la durée doit être d'au moins 12 mois.
 
+*Les abonnements peuvent-ils être co-définis entre eux?*
+
+Non, les conditions d'abonnement sont indépendantes les unes des autres.
+
+*Puis-je ajouter du stockage de sauvegarde à un abonnement existant?*
+
+Dans le cas d'une sauvegarde, vous pouvez ajouter de la capacité à un abonnement existant pour un niveau de service existant ou nouveau, y compris les niveaux de service Standard ou Value. Cela ne modifie pas la durée de l'abonnement existant. Cependant, si vous souhaitez ajouter de la capacité au cours des 90 derniers jours de la période d'abonnement (c'est-à-dire les 90 derniers jours avant la fin de votre abonnement), vous devez également renouveler l'abonnement pendant au moins un an.
+
 *Un nouvel abonnement a-t-il la flexibilité d'être accompagné d'une nouvelle période annuelle?*
 
 Oui, les nouveaux abonnements peuvent avoir de nouvelles conditions distinctes de tous les abonnements existants.

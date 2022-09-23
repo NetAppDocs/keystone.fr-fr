@@ -18,6 +18,10 @@ Vous pouvez consulter les frais mensuels de tous les services souscrits sur votr
 
 Vous pouvez consulter les détails de facturation de tous vos services souscrits pour l'abonnement Flex pour les mois précédents. La facturation en fonction de la capacité en rafale est mise en évidence pour chaque mois.
 
+image:billing.png[""]
+
+En tant qu'administrateur partenaire, vous pouvez voir l'interruption mensuelle de la facturation d'un sous-locataire sélectionné.
+
 
 NOTE: Si l'un de vos abonnements est facturé annuellement, la facture reflète le montant calculé au prorata au lieu du montant mensuel réel de la facture.
 
@@ -27,8 +31,10 @@ Vous pouvez trier les données du tableau par mois et afficher la liste de tous 
 . Sélectionnez *ADMINISTRATION* > *facturation* dans le menu.
 +
 
-NOTE: Vous pouvez également cliquer sur la flèche dans le coin supérieur droit du widget *charges mensuelles* du tableau de bord ou sur toute barre représentant un mois dans le widget pour afficher la page facturation. Tous vos abonnements pour le mois sélectionné s'affichent.
+NOTE: Vous pouvez également cliquer sur la flèche dans le coin supérieur droit du widget *coûts à date* du tableau de bord ou sur toute barre représentant un mois dans le widget pour afficher la page facturation. Tous vos abonnements pour le mois sélectionné s'affichent.
 
-. Vous pouvez également passer le curseur sur la barre représentant un mois pour afficher des informations supplémentaires.
+. Vous pouvez également passer le curseur sur le graphique à barres représentant un mois pour afficher des informations supplémentaires.
 . Sélectionnez un mois dans le tableau. Tous vos abonnements pour le mois, ainsi que la facturation associée, sont affichés dans le tableau. Les frais sont répartis en fonction de la capacité engagée et de l'utilisation en rafale.
 
+
+Pour plus d'informations sur la facturation, voir link:nkfsosm_kfs_billing.html["Facturation de l'abonnement Flex"]

@@ -16,6 +16,8 @@ summary: Autorisation et authentification Keystone
 [role="lead"]
 L'API REST NetApp Service Engine est accessible depuis n'importe quel navigateur web ou plateforme de programmation pouvant émettre des requêtes HTTP. NetApp Service Engine prend en charge un mécanisme d'authentification HTTP de base ainsi que l'authentification Java Web Token (JWT) Bearder. Avant d'appeler une API, vous devez authentifier un utilisateur.
 
+Pour les API de référence, vous pouvez vous connecter à l'interface Web NetApp Service Engine et afficher l'interface swagger à partir du *volet de navigation gauche > support > Documentation API*.
+
 
 
 == Codes d'état HTTP

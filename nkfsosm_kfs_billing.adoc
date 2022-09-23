@@ -44,7 +44,7 @@ Dans le cadre du déploiement de service Flex Subscription, NetApp contrôle et 
 
 == Facturation en fonction de la consommation en rafale
 
-Lorsque la capacité consommée est supérieure à la capacité requise pour un niveau de services de performance donné, la consommation en rafale est enregistrée et des frais sont appliqués en conséquence. Ce processus se produit pour chaque enregistrement de consommation généré. La consommation en rafale reflète donc à la fois le montant et la durée de vos capacités surconsommées en plus de vos capacités engagées.
+Lorsque la capacité consommée est supérieure à la capacité requise pour un niveau de services donné, la consommation en rafale est enregistrée et des frais sont appliqués en conséquence. Ce processus se produit pour chaque enregistrement de consommation généré. La consommation en rafale reflète donc à la fois le montant et la durée de vos capacités surconsommées en plus de vos capacités engagées.
 
 
 
@@ -55,6 +55,8 @@ Les services d'abonnement Flex sont facturés tous les mois et tous les ans.
 Les factures sont envoyées chaque mois. Pour le mois au cours duquel les services sont disponibles, une facture est envoyée le mois suivant. Par exemple, la facture des services que vous avez utilisés en janvier est livrée au début de février. Cette facture comprend les frais liés à la capacité engagée et, le cas échéant, à l'utilisation en rafale.
 
 Une facture est générée au début de chaque année d'abonnement pour le paiement minimum de la capacité engagée. Il est généré à la date de début de l'abonnement. Une autre facture est envoyée à la fin d'un trimestre d'abonnement, qui comprend les frais applicables relatifs à toute utilisation en rafale accumulée au cours de ce trimestre. Si la capacité engagée est modifiée au cours d'un abonnement, une facture est envoyée le même jour que la modification de la capacité engagée, pour les paiements minimums au prorata pour le reste de l'année d'abonnement.
+
+Pendant les 60 premiers jours de l'activation d'un abonnement, toute consommation en rafale que vous cumulez est enregistrée, mais n'est pas facturée sur votre facture d'abonnement Flex. Ce délai de grâce vous permet de configurer votre stockage avec les paramètres AQoS (Adaptive Quality of Service) appropriés afin qu'il puisse être correctement contrôlé et facturé. Si vous configurez correctement votre système de stockage, vous pouvez éviter les frais de rafale inattendus. Toute utilisation en rafale accumulée après la période de grâce initiale de 60 jours sera facturée sur votre prochaine facture. Ce délai de grâce n'affecte aucune modification ou renouvellement de vos abonnements existants.
 
 
 
@@ -71,7 +73,7 @@ Si les volumes sont clonés dans ONTAP et que vous les utilisez pour la sauvegar
 Notez ce qui suit :
 
 * La consommation des volumes clonés n'est pas prise en compte au cours des 24 premières heures de la création des clones. Aucun frais n'est engagé au cours de cette période.
-* Les volumes clonés avec les niveaux de service Standard et Value Performance ne sont pas pris en compte pour la consommation, si de nouvelles données ne sont pas écrites sur le volume. Par exemple, dans le cas d'une sauvegarde ou d'une restauration, la sauvegarde ou la restauration des données à partir d'un volume cloné ne modifie pas les données du volume cloné lui-même et n'est pas considérée comme une consommation.
+* Les volumes clonés avec les niveaux de service Standard et Value ne sont pas pris en compte pour la consommation, si de nouvelles données ne sont pas écrites sur le volume. Par exemple, dans le cas d'une sauvegarde ou d'une restauration, la sauvegarde ou la restauration des données à partir d'un volume cloné ne modifie pas les données du volume cloné lui-même et n'est pas considérée comme une consommation.
 
 
 
@@ -92,13 +94,13 @@ Il arrive que des volumes temporaires soient créés par ONTAP lors du déplacem
 
 === Facturation et règles de QoS adaptatives
 
-L'abonnement Flex mesure la consommation en fonction des niveaux de service de performance. Chaque niveau de service de performance est associé à une règle de qualité de service (QoS) adaptative spécifique. Au cours du déploiement, vous serez informé des détails de chaque politique de QoS pour vos services de souscription Flex souscrits. Lors des opérations de gestion du stockage, assurez-vous que vos volumes disposent des règles de QoS appropriées attribuées aux niveaux de service de performance que vous avez souscrits pour éviter la facturation inattendue. Pour plus d'informations sur les règles de QoS dans ONTAP, reportez-vous à link:https://docs.netapp.com/us-en/ontap/performance-admin/guarantee-throughput-qos-task.html["Débit garanti avec les QoS"].
+L'abonnement Flex mesure la consommation en fonction des niveaux de service. Chaque niveau de service est associé à une règle de qualité de service (QoS) adaptative spécifique. Au cours du déploiement, vous serez informé des détails de chaque politique de QoS pour vos services de souscription Flex souscrits. Lors des opérations de gestion du stockage, assurez-vous que vos volumes disposent des règles de QoS appropriées attribuées selon les niveaux de service que vous avez souscrits, afin d'éviter toute facturation inattendue. Pour plus d'informations sur les règles de QoS dans ONTAP, reportez-vous à link:https://docs.netapp.com/us-en/ontap/performance-admin/guarantee-throughput-qos-task.html["Débit garanti avec les QoS"].
 
 
 
 === Facturation des destinations SnapMirror
 
-Le prix du volume de destination SnapMirror est régi par la règle de QoS du niveau de service (Performance Service Level) attribué à la source. Toutefois, si la source n'a pas de règle de QoS associée, la destination est facturée en fonction du niveau de service le plus bas disponible.
+Le prix du volume de destination SnapMirror est régi par la règle de QoS appliquée au niveau de service affecté à la source. Toutefois, si la source n'a pas de règle de QoS associée, la destination est facturée en fonction du niveau de service le plus bas disponible.
 
 
 
@@ -118,6 +120,16 @@ Pour les LUN, il s'agit généralement du même modèle de facturation que pour 
 
 
 
-=== Volumes racine et système
+=== Facturation de l'utilisation de FabricPool
+
+Si les données sont hiérarchisées d'un système Keystone vers le stockage objet ONTAP simple Storage Service (S3) ou NetApp StorageGRID, la capacité consommée sur le Tier de stockage actif (système Keystone) est réduite par la quantité de données à hiérarchiser, ce qui a un impact sur la facturation. Indépendamment du fait que le stockage ONTAP S3 ou le système StorageGRID sont couverts par l'abonnement Keystone.
+
+Pour Tiering de vos données dans un stockage objet tiers, contactez votre responsable de réussite Keystone.
+
+Pour en savoir plus sur l'utilisation de la technologie FabricPool pour vos abonnements Keystone, reportez-vous à la section link:nkfsosm_tiering.html["Tiering"].
+
+
+
+=== Facturation des volumes système et racine
 
 Les volumes système et racine sont contrôlés dans le cadre de la surveillance globale du service Flex Subscription, mais ne sont ni comptabilisés ni facturés. La consommation sur ces volumes est exemptée de la facturation.

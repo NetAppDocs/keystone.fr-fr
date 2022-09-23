@@ -14,15 +14,20 @@ summary: Présentation de la mise en route de Keystone
 
 
 [role="lead"]
-Cette section décrit comment utiliser le portail Service Engine de NetApp. Elle inclut :
+Cette section décrit comment utiliser le portail Service Engine de NetApp.
 
-* Connectez-vous à l'interface web du moteur de service NetApp :
+
+NOTE: Lorsque vous naviguez sur le portail NetApp Service Engine, vous pouvez constater que certaines informations, telles que votre région et votre zone, sont automatiquement renseignées en fonction de la configuration de votre abonnement configurée par l'équipe du support.
+
+Pour commencer vos activités sur ce portail :
+
+* Connectez-vous à l'interface Web du moteur de services NetApp.
 +
 ** Connectez-vous avec un nom d'utilisateur et un mot de passe
-** Connectez-vous avec NetApp SSO
-** Déconnectez-vous de l'interface Web du moteur de services NetApp
+** Pour plus d'informations, connectez-vous avec NetApp SSO. Consultez link:sewebiug_log_in_to_the_netapp_service_engine_web_interface.html["Connectez-vous à l'interface Web du moteur de services NetApp"]
 
 
-* Sélectionnez le locataire
-* Présentation de l'interface Web du moteur de service NetApp
+* Sélectionnez le locataire. Le tableau de bord s'affiche. Pour plus d'informations, reportez-vous à la section link:sewebiug_dashboard.html["Afficher le tableau de bord des abonnements Flex"]
 
+
+Pour en savoir plus sur l'interface Web du moteur de service NetApp, consultez la section link:sewebiug_netapp_service_engine_web_interface_overview.html["Présentation de l'interface Web du moteur de service NetApp"]

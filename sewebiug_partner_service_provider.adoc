@@ -27,7 +27,8 @@ En tant qu'administrateur de fournisseurs de services dans un environnement mutu
 
 NOTE: À titre de prestation de services, vous pouvez vendre plus de capacité à vos clients qu'à l'achat de services de NetApp (sursouscription). Les abonnements aux locataires peuvent s'étendre au-delà de la période d'abonnement Flex actuelle, mais un avertissement s'affiche au moment de la création de l'abonnement et dans les tableaux de bord/rapports.
 
-* Créer, afficher, modifier et supprimer des zones, des régions, locataires, sous-locataires et utilisateurs.
+* Créer, afficher, modifier et supprimer des locataires, sous-locataires, et aux utilisateurs.
+* Afficher les zones et les régions de vos abonnements.
 * Gérez et hébergez plusieurs locataires dans le service Flex Subscription : créez et gérez les abonnements des locataires et consultez vos propres détails d'abonnement Flex.
 +
 
@@ -48,11 +49,12 @@ NOTE: Les abonnements locataires peuvent être créés en fonction des zones cor
 En tant qu'administrateur de tenant, vous pouvez afficher les détails de l'abonnement de votre propre location et exécuter des tâches administratives pour vos sous-locataires. Vous pouvez effectuer les opérations suivantes :
 
 * Affichez le stockage souscrit et provisionné dans le cadre de votre service d'abonnement aux locataires.
-* Gérez et hébergez plusieurs sous-locataires et utilisateurs au sein du service d'abonnement aux locataires.
-* Affichez vos zones, régions, location et sous-réseaux.
-* Affichez les serveurs de fichiers et créez des partages de fichiers, des disques et des compartiments.
-* Créez des rapports destinés aux locataires et aux sous-locataires afin d'afficher les données de consommation uniquement pour l'espace de stockage auquel vous êtes abonné ou provisionné pour votre location et vos sous-locataires.
-* Relevez et mettez à jour les demandes de service dans l'outil de demande de service du fournisseur de services.
+* Gérez et modifiez les sous-locataires de votre location.
+* Affichez vos zones, régions, sous-locataires et sous-réseaux.
+* Afficher les serveurs de fichiers créés par les fournisseurs de services.
+* Créer des partages de fichiers, des disques et des compartiments, et leur attribuer des niveaux de service.
+* Affichez les rapports des locataires et sous-locataires à partir de *Rapports > utilisation de la capacité* pour afficher les données de consommation uniquement pour le stockage auquel vous êtes abonné ou provisionné pour votre location et vos sous-locataires.
+* Consultez les rapports des locataires et du sous-locataire de *Rapports > performances* pour afficher les performances et la conformité des services de votre location pour chaque service souscrit et services complémentaires (protection des données et protection avancée).
 +
 
 NOTE: Pour les abonnements supplémentaires, vous pouvez utiliser votre outil de demande de service.

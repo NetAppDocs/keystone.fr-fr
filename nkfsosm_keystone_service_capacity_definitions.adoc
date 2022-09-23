@@ -28,9 +28,9 @@ Il s'agit des données placées dans l'infrastructure Flex Subscription par un c
 
 La capacité logique minimale facturée chaque mois pendant la durée de la période :
 
-* La capacité s'engage à chaque niveau de performances.
+* La capacité s'engage à chaque niveau de service.
 * La capacité engagée ne peut pas être réduite pendant la période de validité.
-* Il est possible d'ajouter de la capacité dédiée et des niveaux de performances supplémentaires pendant la période de validité.
+* Il est possible d'ajouter de la capacité dédiée et des niveaux de service supplémentaires pendant la période de validité.
 
 
 
@@ -60,7 +60,7 @@ Il s'agit de la capacité logique qui a dépassé la capacité engagée. Notez l
 
 == Capacité consommée/provisionnée
 
-La capacité consommée fait référence à la capacité en Tio de stockage actuellement consommée sur le service. Le service Flex Subscription prend en compte la somme des tailles provisionnées (et non la capacité logique ou physique utilisée) de tous les volumes d'un niveau de service Performance donné afin d'être considérée comme la capacité consommée pour ce niveau de service Performance. Les points suivants sont notamment :
+La capacité consommée fait référence à la capacité en Tio de stockage actuellement consommée sur le service. Le service Flex Subscription prend en compte la somme des tailles provisionnées (et non la capacité logique ou physique utilisée) de tous les volumes d'un niveau de service particulier à considérer comme la capacité consommée pour ce niveau de service. Les points suivants sont notamment :
 
 * Capacité provisionnée via la création, la modification, la suppression ou la croissance automatique potentielle des volumes.
 * Copies et clones Snapshot

@@ -17,7 +17,7 @@ summary: Serveur de fichiers supprimé Keystone
 *Attention:* la suppression d'un serveur de fichiers supprimera également les éléments suivants:
 
 * Toutes les sauvegardes associées au serveur de fichiers
-* Toutes les copies répliquées de reprise après sinistre associées au serveur de fichiers ne peuvent pas annuler la suppression d'un serveur.
+* Toutes les copies de reprise après incident sont répliquées associées au serveur de fichiers. Vous ne pouvez pas annuler la suppression d'un serveur.
 
 
 Pour supprimer un serveur de fichiers, vous devez d'abord supprimer tous les partages qui existent sur le serveur.
@@ -36,7 +36,7 @@ image:sewebiug_image21.png["Erreur : image graphique manquante"]
 * Lors de la suppression de serveurs de fichiers compatibles CIFS, l'objet ordinateur Active Directory reste actif. Demandez à votre administrateur Active Directory de supprimer manuellement l'objet ordinateur du serveur de fichiers supprimé d'Active Directory.
 * Le serveur de suppression est exécuté comme une tâche asynchrone. Vous pouvez :
 +
-** Vérifiez l'état du travail dans la liste des travaux. Pour plus d'informations sur le suivi des travaux, reportez-vous à la section link:https://docs.netapp.com/us-en/keystone/sewebiug_netapp_service_engine_web_interface_overview.html#jobs-and-job-status-indicator["ici"].
+** Vérifiez l'état du travail dans la liste des travaux. Pour plus d'informations sur le suivi des travaux, reportez-vous à la section link:sewebiug_netapp_service_engine_web_interface_overview.html#jobs-and-job-status-indicator["ici"].
 ** Une fois le travail terminé, vérifiez que le serveur a été supprimé de la liste serveurs.
 
 

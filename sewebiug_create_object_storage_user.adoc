@@ -16,8 +16,8 @@ summary: Keystone crée un utilisateur de stockage objet
 Comme un utilisateur de stockage objet appartient à un groupe de stockage objet, le groupe de stockage objet doit exister avant de pouvoir créer l'utilisateur.
 
 .Étapes
-. Afficher le link:sewebiug_view_a_list_of_users.html#view-a-list-of-users["Liste des utilisateurs"].
-. Assurez-vous que le sous-locataire correct est sélectionné et que l'affichage indique les utilisateurs (et non les groupes).
+. Accédez à *STOCKAGE D'OBJETS > gestion des utilisateurs > utilisateurs*.
+. Assurez-vous que le sous-locataire correct est sélectionné et que vous avez cliqué sur l'onglet *utilisateurs*.
 . Cliquez sur *Créer un utilisateur*.
 . Dans la boîte de dialogue Créer un utilisateur :
 +
@@ -30,6 +30,6 @@ Comme un utilisateur de stockage objet appartient à un groupe de stockage objet
 
 Créer un utilisateur est exécuté comme une tâche asynchrone. Vous pouvez :
 
-* Vérifiez l'état du travail dans la liste des travaux.
+* Vérifiez l'état du travail dans la liste des travaux. Pour plus d'informations, reportez-vous à la section link:sewebiug_netapp_service_engine_web_interface_overview.html#jobs-and-job-status-indicator["Tâches et indicateur d'état du travail"].
 * Une fois le travail terminé, vérifiez l'état du partage dans la liste des utilisateurs.
 

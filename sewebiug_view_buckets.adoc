@@ -16,18 +16,18 @@ summary: Compartiments de vue Keystone
 [role="lead"]
 La liste des rubriques affiche les rubriques existantes pour un sous-locataire sélectionné.
 
-. Pour afficher la liste, sélectionnez stockage objet > compartiments dans le menu.
+. Pour afficher la liste, sélectionnez *stockage objet > compartiments* dans le menu.
 . Utilisez le menu déroulant sous-locataire pour sélectionner un autre sous-locataire, si nécessaire.
 +
 Les informations simples pour chaque compartiment s'affichent, telles que :
 
 +
 ** Nom
+** Région
+** Taille
 ** Date de création
-** Du stockage
-+
-Pour plus d'informations sur l'utilisation des fonctions d'une liste, voir link:sewebiug_netapp_service_engine_web_interface_overview.html#list-view["Vue liste"].
-
+** Objets
+** Action (suppression de compartiment, par exemple)
 
 
 

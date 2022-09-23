@@ -35,10 +35,10 @@ Le tableau suivant répertorie les descriptions d'accès basées sur les rôles.
 | Rôle | L'accès 
 
 
-| Administrateur partenaire/responsable de compte | Peut effectuer toutes les tâches de gestion des locataires et de leurs abonnements. Pour plus d'informations, voir link:https://docs.netapp.com/us-en/keystone/sewebiug_partner_service_provider.html["ce lien"]. 
+| Administrateur partenaire/responsable de compte | Peut effectuer toutes les tâches de gestion des locataires et de leurs abonnements. Pour plus d'informations, voir link:https://docs.netapp.com/us-en/keystone/sewebiug_partner_service_provider.html#activities-that-you-can-perform-as-a-service-provider-administrator["ce lien"]. 
 
 
-| Administrateur du client/locataire | L'administrateur du client ou du locataire peut effectuer toutes les actions liées à la gestion des sous-locataires. Pour plus d'informations, voir link:https://docs.netapp.com/us-en/keystone/sewebiug_partner_service_provider.html["ce lien"]. 
+| Administrateur du client/locataire | L'administrateur du client ou du locataire peut effectuer toutes les actions liées à la gestion des sous-locataires. Pour plus d'informations, voir link:https://docs.netapp.com/us-en/keystone/sewebiug_partner_service_provider.html#activities-that-you-can-perform-as-a-customertenant-administrator["ce lien"]. 
 
 
 | Administrateur NetApp (lecture) | Accès en lecture seule pour tous les composants. 
@@ -60,7 +60,7 @@ Pour vous connecter avec un nom d'utilisateur et un mot de passe, vous devez dis
 .Étapes
 . Dans votre navigateur Web, rendez-vous sur l'URL du portail NetApp Service Engine. La page de connexion s'affiche.
 . Sélectionnez *connexion utilisateur locale*.
-. Sur la page connexion à NetApp Keystone, entrez votre nom d'utilisateur et votre mot de passe, puis cliquez sur *connexion*.
+. Sur la page connexion au moteur de services NetApp, entrez votre nom d'utilisateur et votre mot de passe, puis cliquez sur *connexion*.
 . Une fois la connexion établie, l'interface Web du moteur de services NetApp se charge, ouverte sur le tableau de bord. Pour une vue d'ensemble de l'interface graphique, voir link:sewebiug_netapp_service_engine_web_interface_overview.html#netapp-service-engine-web-interface-overview["Présentation de l'interface Web du moteur de service NetApp"].
 
 

@@ -14,9 +14,18 @@ summary: Créer, modifier et supprimer des sauvegardes ou des restaurations à p
 
 
 [role="lead"]
-Vous pouvez consulter et gérer les snapshots (sauvegardes ou points de récupération) des volumes (partages de fichiers et disques) créés dans votre environnement afin de conserver plusieurs copies de partages de fichiers primaires et de disques à distance.
+Vous pouvez définir des stratégies de sauvegarde pour créer des sauvegardes des volumes (partages de fichiers et disques) de votre environnement et conserver à distance plusieurs copies des volumes primaires.
 
-Les partages de fichiers répliqués et les disques de différentes zones sont stockés sur une VM de stockage de sauvegarde dédiée (SVM, également appelée Storage Virtual machine) sur chaque cluster. Les sauvegardes peuvent être réalisées entre deux clusters ONTAP distincts dans des zones différentes. Les règles de sauvegarde standard prises en charge par le moteur de service NetApp sont les suivantes :
+
+NOTE: Les sauvegardes sont automatiquement créées sur votre système lorsque vous créez ou modifiez une stratégie de sauvegarde pour un volume. Vous ne pouvez pas créer de sauvegarde à partir de l'interface du moteur de services NetApp. Vous pouvez utiliser l'API backups pour créer et gérer des sauvegardes pour vos volumes.
+
+Pour plus d'informations, reportez-vous à la section link:seapiref_backups_apis.html["API de sauvegarde"]
+
+La sauvegarde de vos volumes source est activée via la technologie NetApp SnapMirror activée dans votre abonnement Flex. Pour plus d'informations, reportez-vous à la section link:index.html#flex-subscription["ici"].
+
+Lorsque vous créez ou modifiez un volume, vous définissez sa planification de sauvegarde. La sauvegarde est effectuée aux intervalles prévus et stockée sur un système de destination. Pour que les sauvegardes fonctionnent, la relation SnapMirror doit être établie avec l'environnement de destination. Les partages de fichiers répliqués et les disques de différentes zones sont stockés sur une VM de stockage de sauvegarde dédiée (SVM, également appelée Storage Virtual machine) sur chaque cluster. Les sauvegardes peuvent être réalisées entre deux clusters ONTAP distincts dans des zones différentes.
+
+Les règles de sauvegarde standard prises en charge par le moteur de service NetApp sont les suivantes :
 
 * Ad hoc
 * Tous les jours
@@ -24,18 +33,17 @@ Les partages de fichiers répliqués et les disques de différentes zones sont s
 * Tous les mois
 
 
-Si votre volume ne respecte pas les règles de sauvegarde standard prises en charge par le moteur de services NetApp, vous pouvez link:https://docs.netapp.com/us-en/keystone/sewebiug_raise_a_service_request.html["demander un service"] De la catégorie *Volume non standard* pour résoudre le problème.
+Pour les sauvegardes créées en back-end, vos volumes doivent être à l'état « opérationnel ». Pour plus d'informations sur l'état d'un objet, reportez-vous à la section opérationnel (pour l'objet source d'une sauvegarde). link:sewebiug_netapp_service_engine_web_interface_overview.html#object-states["ici"].
+
+Si votre volume ne respecte pas les règles de sauvegarde standard prises en charge par le moteur de services NetApp, vous pouvez link:sewebiug_raise_a_service_request.html["demander un service"] De la catégorie *Volume non standard* pour résoudre le problème.
+
+Vous pouvez afficher la liste des sauvegardes créées pour vos partages de fichiers et disques sur la page *backups*. Les sauvegardes s'affichent en fonction du locataire sélectionné.
 
 
-NOTE: Une sauvegarde ad hoc (non planifiée) peut être effectuée à tout moment, manuellement via l'interface graphique ou à l'aide d'API.
 
-Vous pouvez afficher la liste des instantanés créés pour vos partages de fichiers et disques sur la page *backups*. Les sauvegardes s'affichent en fonction du locataire sélectionné.
+== Modifier une stratégie ou un planning de sauvegarde
 
-
-
-== Créez un objet de sauvegarde
-
-Vous pouvez créer des snapshots pour vos volumes en définissant la stratégie de sauvegarde lorsque vous link:https://docs.netapp.com/us-en/keystone/sewebiug_create_a_new_file_share.html["créez un partage de fichiers"] ou link:https://docs.netapp.com/us-en/keystone/sewebiug_create_a_new_disk.html["créer un disque"].
+Lorsque vous créez ou modifiez des partages de fichiers et des disques, vous pouvez définir leurs stratégies de sauvegarde. Les sauvegardes sont effectuées en back-end, en fonction des règles spécifiées par vous. Pour plus d'informations, voir : link:sewebiug_create_a_new_file_share.html["créez un partage de fichiers"] ou link:sewebiug_create_a_new_disk.html["créer un disque"].
 
 .Étapes
 . Activer *Stratégie de sauvegarde*.
@@ -44,43 +52,29 @@ Vous pouvez créer des snapshots pour vos volumes en définissant la stratégie 
 
 
 
-NOTE: Vous pouvez également créer ou planifier des sauvegardes en modifiant la stratégie de sauvegarde d'un partage de fichiers ou d'un disque existant.
+NOTE: Vous pouvez également planifier des sauvegardes en modifiant la stratégie de sauvegarde d'un partage de fichiers ou d'un disque existant.
 
 
 
-== Modifier un objet de sauvegarde
+== Modifier ou déconnecter la source d'une sauvegarde
 
 Pour un objet de sauvegarde sélectionné d'un partage de fichiers ou d'un disque, vous pouvez désactiver la sauvegarde ou détacher l'objet de sauvegarde de sa source et en faire une sauvegarde orpheline. Cette opération interrompt la relation SnapMirror avec la source. Vous pouvez également modifier le nombre de sauvegardes à effectuer de façon ponctuelle, quotidienne, hebdomadaire et/ou mensuelle.
 
 .Étapes
-. Recherchez la sauvegarde dans la liste et cliquez sur l'icône d'édition, à la fin de la ligne, pour cet objet.
-. Modifiez la source de sauvegarde et le nombre de chaque type de sauvegarde, le cas échéant. Pour interrompre la relation SnapMirror avec le volume source, définissez la source de sauvegarde sur *aucun (orphelin)*. Les sauvegardes sont conservées en tant que sauvegardes orphelines pour la restauration, même lorsque les volumes source sont supprimés. L'état de l'objet de sauvegarde est modifié, et l'état du volume source (orphelin ou supprimé) est ajouté au nom du volume source dans la même liste. Pour plus d'informations sur l'état d'un objet, reportez-vous à la section link:https://docs.netapp.com/us-en/keystone/sewebiug_netapp_service_engine_web_interface_overview.html#Object-states["ici"]
+. Dans le volet de navigation de gauche, cliquez sur *BACKUPS*. Vous pouvez afficher la liste des sauvegardes créées pour tous les objets de votre environnement.
+. Localisez la sauvegarde dans la liste (en effectuant une recherche par le nom du volume) et cliquez sur l'icône de modification, à la fin de la ligne.
+. Modifiez la source de sauvegarde et le nombre de chaque type de sauvegarde, le cas échéant. Pour interrompre la relation SnapMirror avec le volume source, définissez la source de sauvegarde sur *aucun (orphelin)*. Les sauvegardes sont conservées en tant que sauvegardes orphelines pour la restauration, même lorsque les volumes source sont supprimés. L'état de l'objet de sauvegarde est modifié, et l'état du volume source (orphelin ou supprimé) est ajouté au nom du volume source dans la même liste. Pour plus d'informations sur l'état d'un objet, reportez-vous à la section link:sewebiug_netapp_service_engine_web_interface_overview.html#Object-states["ici"]
 . Cliquez sur *Done*. Le snapshot est modifié. Si vous avez rompu la relation SnapMirror avec la source, c'est-à-dire, orphelin l'objet de sauvegarde, le nom de la source dans l'onglet *backups* apparaît comme `deted`.
 
 
 
-NOTE: Vous pouvez également interrompre la relation SnapMirror avec le volume source en désactivant *Backup Policy* pour le volume.
+NOTE: Vous pouvez également rompre la relation SnapMirror avec le volume source en désactivant *Backup Policy* pour le volume dans les écrans Créer un partage/Modifier le partage et Créer un disque/Modifier le disque.
 
 
 
-== Supprime un objet de sauvegarde
+== Demandez de l'aide pour la sauvegarde et la restauration
 
-Supprimez un volume de sauvegarde inutilisé pour augmenter l'espace de stockage.
-
-.Étapes
-. Localisez la sauvegarde dans la liste et cliquez sur l'icône de suppression, à la fin de la ligne, pour cet objet.
-. Dans la boîte de dialogue *confirmer la suppression*, entrez le nom de la sauvegarde (nom du volume source) pour confirmer que vous souhaitez supprimer l'objet de sauvegarde.
-. Cliquez sur *confirmer*.
-
-
-
-NOTE: Lorsqu'une sauvegarde est supprimée, tous les points de restauration de la sauvegarde sont supprimés. De même, même si vous supprimez un partage de fichiers ou un disque primaire, la sauvegarde est conservée comme sauvegarde orpheline, avec tous les points de restauration à restaurer. Pour supprimer le volume de sauvegarde et les points de restauration de la source supprimée, vous devez supprimer explicitement l'objet de sauvegarde de l'onglet *backups*.
-
-
-
-== Sauvegarde Restauration
-
-C'est possible link:https://docs.netapp.com/us-en/keystone/sewebiug_raise_a_service_request.html["demander un service"] pour restaurer un partage de fichiers ou un disque à partir d'un point de restauration spécifique.
+C'est possible link:sewebiug_raise_a_service_request.html["demander un service"] pour restaurer un partage de fichiers ou un disque à partir d'un point de restauration spécifique.
 
 .Étapes
 . Sélectionnez *SUPPORT* dans le volet de navigation de gauche et sélectionnez *demandes de service*.
@@ -88,3 +82,12 @@ C'est possible link:https://docs.netapp.com/us-en/keystone/sewebiug_raise_a_serv
 . Sélectionnez *Backup Restore* comme catégorie pour la demande de service.
 . Spécifiez d'autres détails et continuez.
 
+
+
+
+== Supprime un objet de sauvegarde
+
+La suppression d'un volume de sauvegarde inutilisé permet d'augmenter l'espace de stockage. Pour supprimer un volume de sauvegarde et des points de récupération de la source supprimée, vous devez utiliser l'API backups.
+
+
+NOTE: Lorsqu'une sauvegarde est supprimée, tous les points de restauration de la sauvegarde sont supprimés. De même, même si vous supprimez un partage de fichiers ou un disque primaire, la sauvegarde est conservée comme sauvegarde orpheline, avec tous les points de restauration à restaurer.

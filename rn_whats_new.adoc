@@ -16,24 +16,7 @@ summary: Nouvelles fonctionnalités du moteur de service NetApp
 [role="lead"]
 Les notes de mise à jour vous informent des nouvelles fonctionnalités et améliorations introduites dans les services NetApp Keystone Flex Subscription (Flex Subscription), ainsi que des limitations et correctifs connus.
 
-
-
-== Consulter votre taux d'utilisation et la facturation de Cloud Volumes ONTAP (05 décembre 2021)
-
-Si vous êtes un client NetApp Keystone Flex Subscription (Flex Subscription) et que vous êtes abonné à Cloud Volumes ONTAP, vous pouvez utiliser Flex Subscription pour facturer votre utilisation de Cloud Volumes ONTAP et consulter vos informations de facturation et de consommation. Cloud Manager peut désormais découvrir vos comptes d'abonnement Flex et afficher les détails de l'interface Cloud Manager. En cliquant sur l'onglet *tous les services > Portefeuille numérique > abonnement Keystone Flex*, vous pouvez effectuer les opérations suivantes :
-
-* Affichez un écran d'accueil à partir duquel vous pouvez demander à votre administrateur Flex Subscription d'associer votre ID utilisateur Cloud Manager à votre ID utilisateur Flex Subscription et ainsi accéder à l'onglet *Keystone Flex Subscription*.
-* Consultez les données de consommation des capacités validées et consommées des services souscrits sur vos systèmes sur site et sur Cloud Volumes ONTAP.
-* Consultez les détails de l'abonnement Flex associé à votre compte Cloud Manager. Les détails, tels que la capacité engagée, consommée et en rafale, sont affichés.
-* Associez votre compte Cloud Volumes ONTAP à vos identifiants d'abonnement Flex pour associer le compte aux rapports de facturation et d'utilisation de la capacité.
-* Demande d'augmentation ou de diminution de la capacité engagée pour les services Flex Subscription souscrits.
-* Affichez et utilisez l'ID d'abonnement Flex lié comme méthode de facturation pour la facturation de la consommation Cloud Volumes ONTAP (uniquement les ID liés).
-
-
-Pour en savoir plus, consultez les liens suivants dans les documents Cloud Manager :link:https://docs.netapp.com/us-en/occm/concept_licensing.html#keystone-flex-subscription["Abonnement Keystone Flex"]
-link:https://docs.netapp.com/us-en/occm/task_managing_licenses.html#manage-keystone-flex-subscriptions["Gérez les abonnements Keystone Flex"]
-
-{Sp} + {sp} + {sp} les fonctionnalités suivantes ont été introduites dans différentes versions du moteur de services NetApp pour prendre en charge les fonctionnalités améliorées offertes par l'abonnement NetApp Keystone Flex (Flex Subscription) :
+Les fonctionnalités suivantes ont été introduites dans différentes versions du moteur de services NetApp pour prendre en charge les fonctionnalités améliorées offertes par l'abonnement NetApp Keystone Flex (Flex Subscription) :
 
 
 
@@ -112,7 +95,7 @@ Pour plus d'informations sur cette fonction, consultez les liens suivants :
 
 === Tiering
 
-Le service d'abonnement NetApp Keystone Flex inclut désormais une fonctionnalité de hiérarchisation qui tire parti de la technologie FabricPool de NetApp. Il identifie les données les moins utilisées et les transfère vers un stockage à froid qui est détenu, déployé et géré par NetApp sur site. Vous pouvez opter pour la hiérarchisation en vous abonnant aux niveaux de performance de Tiering extrême ou Premium.
+Le service d'abonnement NetApp Keystone Flex inclut désormais une fonctionnalité de hiérarchisation qui tire parti de la technologie FabricPool de NetApp. Il identifie les données les moins utilisées et les transfère vers un stockage à froid qui est détenu, déployé et géré par NetApp sur site. Vous pouvez opter pour la hiérarchisation en vous abonnant aux niveaux de service de Tiering extrême ou Premium.
 
 Les API suivantes ont été modifiées pour inclure de nouvelles valeurs d'attribut pour les nouveaux niveaux de service de Tiering :
 
@@ -123,7 +106,7 @@ Les API suivantes ont été modifiées pour inclure de nouvelles valeurs d'attri
 Pour plus d'informations, consultez les liens suivants :
 
 * link:nkfsosm_tiering.html["Tiering"]
-* link:nkfsosm_performance.html["Niveaux de services de performances"]
+* link:nkfsosm_performance.html["niveaux de services"]
 
 
 {sp} + {sp} + {sp}

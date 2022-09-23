@@ -15,10 +15,10 @@ summary: Présentation des termes et description du service Keystone
 
 * L'abonnement NetApp Keystone Flex (abonnement Flex) est disponible pendant au moins un an et jusqu'à trois ans. Après la période initiale, le service est renouvelable sur une base annuelle. La capacité peut être augmentée par incréments de 1 Tio.
 * La capacité minimale est de 100 Tio par site et chaque site peut disposer d'un ou de plusieurs clusters pour répondre aux besoins de capacité minimale. Dans le cas d'un modèle opéré par les partenaires, les abonnements aux ressources minimales flexibles sont créés pour un client, par site et selon les niveaux de service.
-* La capacité de 100 Tio peut être un niveau de performance unique ou une combinaison de niveaux.
+* La capacité de 100 Tio peut être un seul niveau de service ou une combinaison de niveaux.
 * Les abonnements aux locataires sont limités aux niveaux de service auxquels les partenaires sont abonnés.
 * 20 % de la capacité en rafale est disponible sur chaque site. toute utilisation en rafale est facturée uniquement pour la période de facturation en question. Si vous avez besoin d'augmenter la capacité de rafale de plus de 20 %, contactez le service de support.
-* Les niveaux de capacité ou de performance engagés ne peuvent pas être modifiés pendant une durée contractuelle.
-* Il est interdit d'augmenter la capacité ou de passer à un niveau de performance plus élevé dans le cadre de ce terme. Toutefois, le passage d'un niveau de performance plus élevé à un niveau inférieur n'est pas autorisé.
+* Les capacités ou les niveaux de service engagés ne peuvent pas être modifiés pendant une durée contractuelle.
+* Il est permis d'augmenter la capacité ou de passer à un niveau de service supérieur pendant la durée du contrat ; toutefois, il est interdit de passer d'un niveau de service supérieur à un niveau inférieur.
 * Toute demande de changement au cours des 90 derniers jours de la période nécessite que le client renouvelle le service pour un an minimum.
 

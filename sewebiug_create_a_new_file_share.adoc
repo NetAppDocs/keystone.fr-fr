@@ -22,7 +22,7 @@ Cette section décrit comment créer un nouveau partage en spécifiant directeme
 * Pour activer les options de reprise après sinistre asynchrone pour le partage, vous devez créer le partage sur un serveur sur lequel la reprise après sinistre asynchrone est activée. Pour plus d'informations, voir link:sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html#disaster-recovery["Reprise après incident"].
 * Pour activer la reprise après incident synchrone pour un partage, créez le partage dans une zone compatible avec MetroCluster.
 * Vous pouvez définir une stratégie de sauvegarde pour capturer les sauvegardes du partage de fichiers sur une base planifiée. Pour plus d'informations, voir link:sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html#backups["Sauvegardes"].
-* Vous pouvez définir une règle Snapshot pour capturer les snapshots du partage de fichiers sur une base planifiée. Pour plus d'informations, voir link:sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html#snapshots["Snapshots"].
+* Vous pouvez définir une stratégie d'instantané pour capturer des instantanés du partage de fichiers sur une base planifiée. Pour plus d'informations, voir link:sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html#snapshots["Snapshots"].
 
 
 .Étapes
@@ -59,10 +59,10 @@ La page Créer un partage s'affiche.
 
 | Style de sécurité | Sélectionnez le style de sécurité applicable au partage de fichiers. Cette liste est automatiquement renseignée en fonction du type de partage sélectionné. 
 |===
-. Sélectionnez un niveau de service de performances. Les limites en IOPS et en débit sont affichées, en fonction du niveau de service sélectionné.
+. Sélectionnez un niveau de service. Les limites en IOPS et en débit sont affichées, en fonction du niveau de service sélectionné.
 +
 
-NOTE: Sélectionnez une option pour afficher les informations de performances correspondant à ce niveau (pic/débit attendu/IOPS). Sélectionnez le niveau de service qui correspond le mieux à vos besoins.
+NOTE: Sélectionnez une option pour afficher les informations de performances associées à ce niveau de service (pic/IOPS attendu/débit). Sélectionnez le niveau de service qui correspond le mieux à vos besoins.
 
 . Spécifiez la capacité du partage de fichiers.
 +
@@ -71,15 +71,15 @@ NOTE: Le moteur de services NetApp affiche un avertissement et la barre de capac
 
 . Si la reprise après incident asynchrone est activée sur le serveur de fichiers sous-jacent, la réplication asynchrone de reprise après incident est automatiquement activée pour le nouveau partage. Si vous souhaitez exclure le partage de la réplication asynchrone de reprise après sinistre, activez le bouton Asynchronous Disaster Recovery pour qu'il soit désactivé.
 . Si le partage est en cours de création dans une zone activée par MetroCluster, le bouton reprise après incident synchrone est automatiquement activé et ne peut pas être désactivé. Le partage sera répliqué dans la zone affichée dans le panneau sous le commutateur de reprise après sinistre synchrone.
-. Si des snapshots sont requis pour ce partage de fichiers :
+. Si des instantanés sont requis pour ce partage de fichiers :
 +
 .. Activez l'option pour activer la règle Snapshot et afficher les champs de la règle Snapshot.
-.. Spécifier quand créer les snapshots :
+.. Spécifier le moment de création des snapshots :
 +
 *** *Horaire.* spécifiez la minute (de l'heure) à prendre un instantané et le nombre d'instantanés horaires à conserver.
 *** *Quotidien.* spécifiez quand (heure et minute) pour prendre l'instantané le nombre d'instantanés quotidiens à conserver. Si vous souhaitez spécifier plusieurs heures lorsque l'instantané doit être pris quotidiennement, vous pouvez ajouter les valeurs des heures dans une liste séparée par des virgules, par exemple 5, 10, 15, et ainsi de suite.
 *** *Hebdomadaire.* spécifiez quand (jour de la semaine, heure et minute) prendre un instantané et le nombre d'instantanés hebdomadaires à conserver.
-*** *Mensuel.* spécifiez quand (jour du mois, heure et minute) prendre un instantané et le nombre d'instantanés mensuels à conserver.
+*** *Mensuel.* spécifiez quand (jour du mois, heure et minute) prendre un instantané et le nombre de snapshots mensuels à conserver.
 
 
 
@@ -88,7 +88,7 @@ NOTE: Le moteur de services NetApp affiche un avertissement et la barre de capac
 +
 .. Activez les champs Stratégie de sauvegarde et politique de sauvegarde.
 .. Spécifiez la zone de sauvegarde.
-.. Spécifiez le nombre de chaque type de sauvegarde à conserver : quotidienne, hebdomadaire et/ou mensuelle.
+.. Spécifiez le nombre de chaque type de sauvegarde à conserver : quotidienne, hebdomadaire et/ou mensuelle. Pour plus d'informations, voir link:sewebiug_back_up_file_shares_and_disks.html["Sauvegarder les partages de fichiers et les disques"].
 
 
 . Pour les partages NFS ou multiprotocoles, spécifiez les règles d'exportation. Vous pouvez appliquer plusieurs règles d'exportation sur un partage. Cette section n'est disponible que pour les partages NFS et multiprotocoles.
@@ -120,7 +120,7 @@ NOTE: Le nom de l'utilisateur ou du groupe doit suivre le format AD standard. Si
 
 * Créer un partage est exécuté comme une tâche asynchrone. Vous pouvez :
 +
-** Vérifiez l'état du travail dans la liste des travaux.
+** Vérifiez l'état du travail dans la liste des travaux. Pour plus d'informations sur le suivi des travaux, reportez-vous à la section link:sewebiug_netapp_service_engine_web_interface_overview.html#jobs-and-job-status-indicator["ici"].
 ** Une fois le travail terminé, vérifiez le statut du partage dans la liste partages.
 
 

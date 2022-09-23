@@ -16,7 +16,7 @@ summary: Keystone fonctionne avec une présentation du stockage en mode bloc
 [role="lead"]
 Dans les systèmes de stockage en mode bloc, le stockage des données est divisé en éléments individuels dotés chacun d'un identifiant unique. Le moteur de service NetApp désigne le stockage de données en mode bloc comme un magasin de blocs et les éléments individuels comme des disques.
 
-Les magasins de blocs appartiennent à un sous-locataire et sont spécifiés dans une zone (un magasin de blocs par zone par sous-locataire). Un magasin de blocs possède des attributs de mise en réseau (par exemple, une adresse IP et un ID VLAN) qui sont utilisés pour accéder aux disques via le protocole iSCSI ou FC. La reprise après incident DP peut être activée sur un magasin en mode bloc. Pour plus d'informations, voir link:sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html#disaster-recovery.html["Reprise après incident"].
+Les magasins de blocs appartiennent à un sous-locataire et sont spécifiés dans une zone (un magasin de blocs par zone par sous-locataire). Un magasin de blocs possède des attributs de mise en réseau (par exemple, une adresse IP et un ID VLAN) qui sont utilisés pour accéder aux disques via le protocole iSCSI ou FC. La reprise après incident DP peut être activée sur un magasin en mode bloc. Pour plus d'informations, voir link:sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html#disaster-recovery["Reprise après incident"].
 
 Les magasins de blocs doivent être initialisés avant de pouvoir être utilisés. Lorsque le stockage en bloc est disponible et qu'il n'a pas été initialisé, il peut être initialisé avant de créer le premier disque sur le magasin en bloc dans le cadre du processus de création de disque.
 
@@ -34,8 +34,11 @@ Groupes hôtes :
 
 * Se compose de paires alias/initiateur. Un alias permet d'identifier facilement l'initiateur. Par exemple, `esxserver1'.
 * Peuvent être créées sans aucun initiateur. Les groupes d'hôtes vides peuvent être mappés sur des disques en tant qu'espaces réservés, mais doivent être entièrement définis pour permettre l'accès au disque. L'utilisation de groupes d'hôtes permet :
-* Mappage de plusieurs disques sur le même ensemble d'initiateurs
-* Mise à jour de l'ensemble des initiateurs sur plusieurs disques.
++
+** Mappage de plusieurs disques sur le même ensemble d'initiateurs
+** Mise à jour de l'ensemble des initiateurs sur plusieurs disques.
+
+
 
 
 Cette section contient des informations sur :

@@ -17,13 +17,13 @@ summary: Keystone permet de modifier un groupe de stockage objet
 Utilisez cette méthode pour modifier les détails d'un groupe de stockage objet, comme le nom du groupe et la règle S3.
 
 .Étapes
-. Afficher le link:sewebiug_view_host_groups.html#view-host-groups["Liste des groupes"].
-. Assurez-vous que le sous-locataire correct est sélectionné et que l'affichage indique des groupes (et non des utilisateurs).
-. Recherchez le groupe dans la liste et cliquez sur l'icône Modifier pour ce groupe.
+. Afficher le Storage Group d'objets link:sewebiug_view_the_object_storage_group_and_users.html["Afficher les utilisateurs et les groupes de stockage objet"].
+. Assurez-vous que le sous-locataire correct est sélectionné et que vous avez cliqué sur l'onglet *groupes*.
+. Recherchez le groupe dans la liste et cliquez sur l'icône de modification correspondant à ce groupe.
 +
-Pour plus d'informations sur l'utilisation des éléments dans les listes, reportez-vous à la section link:sewebiug_netapp_service_engine_web_interface_overview.html#list-view["Actions de vue de liste"].
+Pour plus d'informations sur l'utilisation des éléments dans les listes, reportez-vous à la section link:sewebiug_netapp_service_engine_web_interface_overview.html#list-view-actions["Actions de vue de liste"].
 
-. Dans la boîte de dialogue Modifier le groupe, entrez le nom d'utilisateur.
-. Sélectionnez la règle S3 qui s'applique au groupe modifié.
-. Cliquez sur *Créer*. Cela crée un travail pour modifier le groupe avec les paramètres spécifiés.
+. Dans la boîte de dialogue *Modifier le groupe*, modifiez la stratégie S3 applicable au groupe. Pour plus d'informations sur les règles S3, reportez-vous à la section https://docs.netapp.com/us-en/storagegrid-116/s3/bucket-and-group-access-policies.html#specify-permissions-in-a-policy["Spécifiez les autorisations dans une stratégie"].
+. Vous pouvez ajouter des énoncés de police supplémentaires si nécessaire.
+. Cliquez sur *mettre à jour*. Cela crée un travail pour modifier le groupe avec les paramètres spécifiés. Pour plus d'informations sur le suivi des travaux, reportez-vous à la section link:sewebiug_netapp_service_engine_web_interface_overview.html#jobs-and-job-status-indicator["ici"].
 

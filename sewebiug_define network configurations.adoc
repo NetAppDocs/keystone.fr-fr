@@ -18,7 +18,7 @@ Un fournisseur de services ou un administrateur partenaire peut définir des con
 
 Un réseau de locataires préconfiguré est requis la création du sous-réseau. Un sous-réseau est requis lorsqu'un sous-locataire ou un client final provisionne des serveurs de fichiers ou des magasins de blocs. Les machines virtuelles de stockage de fichiers et de blocs sont la propriété des sous-locataires du moteur de services NetApp, tandis qu'elles sont la propriété des IPspaces dans ONTAP. Lorsque vous définissez la limite réseau au niveau du sous-locataire, le sous-locataire du moteur de services NetApp est mappé à un seul IPspace ONTAP pour cette zone. Cela élimine les risques et garantit que deux sous-locataires distincts ne sélectionnent pas le même ID VLAN et se terminent dans le même IPspace.
 
-* Il peut y avoir plusieurs sous-réseaux créés dans chaque zone. Pour chaque zone sous une location, une liste de VLAN est allouée. Pour tous les VLAN disponibles, les sous-réseaux correspondants peuvent être créés. Il existe un mappage 1:1 entre un sous-réseau et un VLAN. Alors qu'il y a un mappage à plusieurs entre une zone et des sous-réseaux.
+* Il peut y avoir plusieurs sous-réseaux créés dans chaque zone. Pour chaque zone sous une location, une liste de VLAN est allouée. Pour tous les VLAN disponibles, les sous-réseaux correspondants peuvent être créés. Il existe un mappage 1:1 entre un sous-réseau et un VLAN. Alors qu'il y a un mappage à plusieurs entre les sous-réseaux et la zone.
 * Un locataire peut avoir plusieurs sous-réseaux, un pour chaque VLAN disponible sous une zone. Elles sont affichées sous une configuration réseau unique pour chaque zone.
 * Il ne peut y avoir qu'un seul VLAN pour chaque sous-réseau réseau réseau. Chaque configuration réseau affiche la liste des VLAN disponibles.
 * Un seul sous-réseau peut être créé pour une combinaison zone et VLAN pour un sous-tenant.
@@ -35,16 +35,16 @@ En tant qu'administrateur partenaire, vous pouvez créer des configurations rés
 
 .Avant de commencer
 * Assurez-vous que les locataires ont été créés
-* Vous devez connaître la configuration de substitution de zone, VLAN et port
+* Vous devez connaître la configuration de la zone, des réseaux locaux virtuels, du sous-réseau CIDR et du port override
 
 
 .Étapes
 . Dans *ADMINISTRATION* > *tenants*, sélectionnez le locataire requis.
 . Cliquez sur l'icône réseau. L'écran réseaux s'affiche avec la liste des configurations réseau pour le locataire.
-. Cliquez sur *Créer réseau*. Spécifiez la zone, le VLAN et le remplacement du port, le cas échéant.
+. Cliquez sur *Créer réseau*. Spécifiez la zone, le VLAN et le remplacement du port, le cas échéant. Si le remplacement du port est défini, sélectionnez le port affecté dans la liste déroulante. Pour toutes les connexions réseau de ce tenant, ce port est utilisé, et non le port par défaut.
 +
 
-NOTE: La neutralisation du port est configurée par l'équipe de support lors de la configuration de la zone. Si une neutralisation de port n'est pas spécifiée, le réseau utilise le port par défaut et crée un nouveau VLAN dans l'IPspace pour ce locataire.
+NOTE: La neutralisation du port est configurée par l'équipe de support lors de la configuration de la zone. Si aucune substitution de port n'est spécifiée, le réseau utilise le port par défaut et crée un nouveau VLAN pour ce tenant.
 
 . Cliquez sur *Créer*. La nouvelle configuration réseau est indiquée pour le locataire sur l'écran réseaux.
 

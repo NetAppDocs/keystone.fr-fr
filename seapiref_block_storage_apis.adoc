@@ -121,7 +121,7 @@ Vous pouvez utiliser les API disques pour récupérer et gérer vos disques.
  a| 
 `/v2.1/disks`
 | Vous pouvez créer un disque. Ajoutez les valeurs dans le corps de la demande pour créer un disque avec les paramètres spécifiés, tels que l'ID de sous-tenant, la zone, le nom, le chemin du disque, la stratégie de snapshot, stratégie de sauvegarde, et balises.  a| 
-`subtenant_ID`: L'ID du sous-locataire. «Zone»: Le nom de la zone. `name`: Le nom du disque. `disque_path`: Le chemin du disque. `protocole`: Protocole de stockage utilisé pour l'accès aux périphériques en mode bloc. `os_type`: Le type du système d'exploitation hôte. `hostgroup_mappings' : mappages de groupes d'hôtes. `niveau_service`: Le nom du niveau de service s'applique: Standard, Premium, Premium-Tiering, Extreme ou Extreme-Tiering. `mettre_gb`: La taille du disque en GB.
+`subtenant_ID`: L'ID du sous-locataire. «Zone»: Le nom de la zone. `name`: Le nom du disque. `disque_path`: Le chemin du disque. `protocole`: Protocole de stockage utilisé pour l'accès aux périphériques en mode bloc. `os_type`: Le type du système d'exploitation hôte. `hostgroup_mappings' : mappages de groupes d'hôtes. `niveau_service`: Le nom du niveau de service s'applique: Standard, Premium, Premium-Tiering, Extreme ou Extreme-Tiering. `Sisez_gb`: La taille du disque en gips.
 
 
 

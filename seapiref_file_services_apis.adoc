@@ -125,7 +125,7 @@ Vous pouvez utiliser les API de partages de fichiers pour afficher et gérer vos
  a| 
 `/v2.1/fileshres`
 | Vous pouvez créer un partage de fichiers. Ajoutez les valeurs dans le corps de la demande pour créer un partage de fichiers avec les paramètres spécifiés, tels que ID, nom, stratégie d'instantané, protocoles, Adresse IP du serveur de fichiers et balises.  a| 
-`name`: Le nom du partage de fichiers. `slièvre_path`: Le chemin du partage de fichiers. `filerver_ID` : ID du serveur de fichiers. `mettre_gb`: La taille du partage de fichiers en GBs. `niveau_service`: Le nom du niveau de service s'applique: Standard, Premium, Premium-Tiering, Extreme ou Extreme-Tiering. `protocole`: Protocole utilisé pour accéder au partage de fichiers (NFS, CIFS ou multi-protocole). `Security_style`: Le style de sécurité (Unix ou NTFS). `export_policy': La politique d'exportation du partage de fichiers.
+`name`: Le nom du partage de fichiers. `slièvre_path`: Le chemin du partage de fichiers. `filerver_ID` : ID du serveur de fichiers. `Siser_gb`: La taille du partage de fichiers dans Gibs. `niveau_service`: Le nom du niveau de service s'applique: Standard, Premium, Premium-Tiering, Extreme ou Extreme-Tiering. `protocole`: Protocole utilisé pour accéder au partage de fichiers (NFS, CIFS ou multi-protocole). `Security_style`: Le style de sécurité (Unix ou NTFS). `export_policy': La politique d'exportation du partage de fichiers.
 
 
 
@@ -152,7 +152,7 @@ Vous pouvez utiliser les API de partages de fichiers pour afficher et gérer vos
  a| 
 `/v2.1/fileshres/{id}'
 | Vous pouvez modifier n'importe quel partage de fichiers en fonction de son ID. Ajoutez l'ID du serveur de fichiers et les valeurs que vous souhaitez modifier dans le corps de la demande, telles que le nom, le protocole, la stratégie d'instantané, la stratégie de sauvegarde et les balises.  a| 
-`ID`: L'ID du partage de fichiers. `name`: Le nom du partage de fichiers. `mettre_gb`: La taille du partage de fichiers en GBs. `niveau_service`: Le nom du niveau de service s'applique: Standard, Premium, Premium-Tiering, Extreme ou Extreme-Tiering. `protocole`: Protocole utilisé pour accéder au partage de fichiers (NFS, CIFS ou multi-protocole). `export_policy': La politique d'exportation du partage de fichiers.
+`ID`: L'ID du partage de fichiers. `name`: Le nom du partage de fichiers. `Siser_gb`: La taille du partage de fichiers dans Gibs. `niveau_service`: Le nom du niveau de service s'applique: Standard, Premium, Premium-Tiering, Extreme ou Extreme-Tiering. `protocole`: Protocole utilisé pour accéder au partage de fichiers (NFS, CIFS ou multi-protocole). `export_policy': La politique d'exportation du partage de fichiers.
 
 
 

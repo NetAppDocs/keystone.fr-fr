@@ -14,15 +14,15 @@ summary: Keystone crée un groupe de stockage objet
 
 
 [role="lead"]
-Utilisez cette méthode pour créer un nouveau groupe de stockage d'objets.
+Utilisez cette méthode pour créer un groupe de stockage d'objet.
 
 .Étapes
-. Afficher le link:sewebiug_view_a_list_of_users.html#view-a-list-of-users["Liste des utilisateurs"].
-. Assurez-vous que le sous-locataire correct est sélectionné et que l'affichage indique des groupes (et non des utilisateurs).
+. Afficher la liste des groupes de stockage d'objets à partir de *STOCKAGE D'OBJETS > gestion des utilisateurs > groupes*.
+. Assurez-vous que le sous-locataire correct est sélectionné et que vous avez cliqué sur l'onglet *groupes*.
 . Cliquez sur *Créer un groupe*.
 . Dans la boîte de dialogue Créer un groupe, entrez le nom du groupe.
-. Sélectionnez la règle S3 dans la liste.
+. Sélectionnez la règle S3 dans la liste. Pour plus d'informations sur les règles S3, reportez-vous à la section https://docs.netapp.com/us-en/storagegrid-116/s3/bucket-and-group-access-policies.html#specify-permissions-in-a-policy["Spécifiez les autorisations dans une stratégie"].
 . Cliquez sur *Créer*. Cela crée un travail pour créer le groupe avec les paramètres spécifiés.
 
 
-La création d'un groupe de stockage d'objets est exécutée en tant que tâche asynchrone. Vous pouvez vérifier l'état du travail dans la liste des travaux. Pour plus d'informations sur le suivi des travaux, reportez-vous à la section link:https://docs.netapp.com/us-en/keystone/sewebiug_netapp_service_engine_web_interface_overview.html#jobs-and-job-status-indicator["ici"].
+La création d'un groupe de stockage d'objets est exécutée en tant que tâche asynchrone. Vous pouvez vérifier l'état du travail dans la liste des travaux. Pour plus d'informations sur le suivi des travaux, reportez-vous à la section link:sewebiug_netapp_service_engine_web_interface_overview.html#jobs-and-job-status-indicator["ici"].

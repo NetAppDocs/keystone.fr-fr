@@ -30,3 +30,5 @@ Les fonctions suivantes sont activées :
 * Activer et désactiver les sauvegardes d'un volume au niveau du service de Tiering.
 * Activer et désactiver la reprise après incident pour un volume au niveau des services de Tiering.
 
+
+Pour plus d'informations sur la facturation, reportez-vous à la section link:nkfsosm_kfs_billing.html#billing-for-fabricpool-usage["Facturation de l'utilisation de FabricPool"].

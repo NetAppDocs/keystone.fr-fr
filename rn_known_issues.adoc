@@ -61,7 +61,7 @@ Vérifiez les graphiques de rapport au moins 15 minutes après la création de l
 
 
  a| 
-La modification des niveaux de services de performances ne déplace pas de volumes
+Les modifications de niveaux de services ne déplacent pas de volumes
  a| 
 Si deux agrégats différents du même cluster sont utilisés pour deux niveaux de service, le fait de changer le niveau de service d'un volume à l'autre ne déplace pas le volume vers l'autre agrégat. Seule la règle de QoS adaptative est appliquée.
  a| 

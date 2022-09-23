@@ -26,13 +26,25 @@ Un abonnement fait référence à un groupe de services de stockage auquel vous 
 
 NOTE: Si le stockage est requis dans plusieurs data centers, un abonnement distinct est requis pour chaque data Center, avec des engagements distincts.
 
-Un service de stockage est une capacité de stockage souscrite à l'engagement, avec un niveau de performances associé. NetApp Service Engine propose un stockage de fichiers et de blocs à des niveaux de service très élevés, Premium, Premium et de performance standard, ainsi qu'un stockage objet au niveau des services de performance des objets.
+Un service de stockage est une capacité de stockage souscrite à engagement avec un niveau de service associé. NetApp Service Engine propose un stockage de fichiers et de blocs à des niveaux de service extrêmement élevés, Premium, Premium et standard, ainsi qu'un stockage objet au niveau des services objets.
 
-Les niveaux extrêmes de Tiering et de performance du Tiering vous permettent de réduire l'empreinte du stockage et les coûts associés grâce à la surveillance et au Tiering des données inactives vers des tiers de stockage objet plus économiques. La règle de Tiering est définie sur automatique, où les données inactives pendant 31 jours sont hiérarchisées par défaut. Vous pouvez modifier cette période pour être un nombre de jours de 3 à 61 jours.
+Avec les niveaux de service de Tiering extrêmement élevés et le Tiering, vous réduisez l'empreinte du stockage et les coûts associés en surveillant et en Tiering les données inactives vers des tiers de stockage objet à faible coût. La règle de Tiering est définie sur automatique, où les données inactives pendant 31 jours sont hiérarchisées par défaut.
 
-Lors de leur création, les éléments de stockage de fichiers et de blocs sont associés à un niveau de performances. Le déplacement des charges de travail entre les niveaux de service de performances est possible en fonction de l'évolution des besoins. Les niveaux de performances standard, premium et haut de gamme offrent différents niveaux d'IOPS et de débit (Mbit/s) afin que le stockage puisse être adapté aux besoins de l'entreprise.
+Pour plus d'informations, voir link:https://docs.netapp.com/us-en/keystone/nkfsosm_performance.html["Niveaux de services"].
 
-L'utilisation en rafale est autorisée sur les services jusqu'à un certain point ; elle est contrôlée et facturée à des tarifs distincts (tels que définis dans l'abonnement). Pour plus d'informations sur la capacité et l'utilisation, voir link:sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html#committed,-consumed,-and-burst-capacity,-and-excess-usage["Consommation, capacité en rafale et utilisation excessive"]. Des services DP qui prennent en charge les sauvegardes et la reprise après incident sont également proposés.
+Lors de leur création, les éléments de stockage de fichiers et de blocs sont associés à un niveau de service. Le déplacement des charges de travail entre les niveaux de service est possible en fonction de l'évolution des besoins. Les niveaux de services standard, premium et haut de gamme offrent différents niveaux de performances d'E/S (IOPS) et de débit (Mbit/s) afin de répondre aux besoins de stockage.
+
+Pour plus d'informations sur les services de hiérarchisation, voir link:https://docs.netapp.com/us-en/keystone/nkfsosm_tiering.html["Tiering"].
+
+L'utilisation en rafale est autorisée sur les services jusqu'à un certain point ; elle est contrôlée et facturée à des tarifs distincts (tels que définis dans l'abonnement). Pour plus d'informations sur la capacité et l'utilisation, voir link:https://docs.netapp.com/us-en/keystone/sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html#committed-consumed-and-burst-capacity-and-excess-usage["Consommation, capacité en rafale et utilisation excessive"]. Des services de protection des données qui prennent en charge les sauvegardes et la reprise après incident sont également proposés.
+
+Pour plus d'informations, voir :
+
+* https://docs.netapp.com/us-en/keystone/sewebiug_working_with_block_storage_overview.html["Stockage basé sur des blocs"]
+* https://docs.netapp.com/us-en/keystone/sewebiug_working_with_file_services_overview.html["Services de fichiers"]
+* https://docs.netapp.com/us-en/keystone/sewebiug_working_with_object_storage_overview.html["Stockage objet"]
+* https://docs.netapp.com/us-en/ontap-metrocluster/index.html["Documentation MetroCluster"]
+
 
 
 
@@ -82,19 +94,19 @@ Le tableau suivant répertorie les cas où de telles notifications de rafale son
 
 | Créez ou redimensionnez un partage/disque sur un serveur de fichiers/magasin de blocs lorsque la reprise après incident est activée.  a| 
 * Dépasse l'engagement sur le niveau de service dans la zone
-* Dépasse l'engagement sur la DP dans la zone
+* Dépasse l'engagement sur le service de protection des données de la zone
 
 | Dépasse l'engagement sur le niveau de service dans la zone de destination par le partage/disque de destination créé automatiquement. 
 
 
 | Déplacez un partage/disque vers un nouveau niveau de service sur un serveur de fichiers/magasin de blocs lorsque la reprise après incident est activée.  a| 
 * Dépasse l'engagement sur le niveau de service dans la zone.
-* Dépasse l'engagement sur la DP dans la zone.
+* Dépasse l'engagement sur le service de protection des données de la zone.
 
 | Dépasse l'engagement sur le niveau de service dans la zone de destination par le partage/disque de destination déplacé. 
 
 
-| Activer les sauvegardes sur un partage/disque. | Dépasse l'engagement de la DP. | Dépasse l'engagement sur le niveau de service dans la zone de destination par le partage/disque de destination créé automatiquement. 
+| Activer les sauvegardes sur un partage/disque. | Dépasse l'engagement du service de protection des données. | Dépasse l'engagement sur le niveau de service dans la zone de destination par le partage/disque de destination créé automatiquement. 
 
 
 | Créer une nouvelle location de magasin d'objets. | L'engagement pour la capacité d'objet peut être dépassé. | s/o 
@@ -114,13 +126,13 @@ image:sewebiug_image3.png["Erreur : image graphique manquante"]
 
 == Protection des données
 
-DP désigne les méthodes permettant de sauvegarder des données et de les restaurer si nécessaire.
+Le service Data protection désigne des méthodes permettant de sauvegarder des données et de les restaurer, le cas échéant.
 
-Les fonctionnalités de NetApp Service Engine DP comprennent :
+Le service NetApp Service Engine Data protection inclut les fonctionnalités suivantes :
 
 * Snapshots de disques et partages
-* Sauvegardes de disques et partages (service DP requis dans le cadre de l'abonnement)
-* Reprise sur incident pour les disques et les partages (requiert le service DP ou DP Advanced dans le cadre de l'abonnement)
+* Sauvegardes de disques et partages (service de protection des données requis dans le cadre de l'abonnement)
+* Reprise sur incident pour disques et partages (requiert le service Data protection ou Data protection Advanced dans le cadre de l'abonnement)
 
 
 
@@ -138,7 +150,7 @@ NOTE: Les snapshots contribuent à la capacité consommée d'un service.
 
 === Sauvegardes
 
-La sauvegarde consiste à créer une copie d'un élément, à le répliquer et à stocker la copie dans une zone autre que la zone d'origine, où le protocole respectif est activé (en cas de stockage en mode bloc uniquement) et non MetroCluster est activé. NetApp Service Engine propose des sauvegardes sur le stockage bloc et fichier (un service DP est requis dans l'abonnement). Les sauvegardes des partages/disques sont stockées dans la zone de sauvegarde sur le niveau de performance le plus économique (standard) à l'abonnement.
+La sauvegarde consiste à créer une copie d'un élément, à le répliquer et à stocker la copie dans une zone autre que la zone d'origine, où le protocole respectif est activé (en cas de stockage en mode bloc uniquement) et non MetroCluster est activé. NetApp Service Engine propose des sauvegardes sur le stockage bloc et fichier (un service de protection des données est requis dans l'abonnement). Les sauvegardes des partages/disques sont stockées dans la zone de sauvegarde sur le niveau de performance le plus économique (standard) à l'abonnement.
 
 Les sauvegardes peuvent être configurées au moment de la création d'un nouveau partage/disque ou ultérieurement ajoutées à un partage/disque existant.
 
@@ -158,7 +170,7 @@ Les sauvegardes planifiées sont régulièrement effectuées et ne peuvent pas �
 * La réplication des sauvegardes est effectuée tous les jours.
 * Les sauvegardes de disques ou de partages ne peuvent pas être configurées dans une instance NetApp Service Engine qui ne contient qu'une seule zone.
 * La suppression d'un partage ou d'un disque principal supprimera toutes les sauvegardes associées.
-* Les sauvegardes contribuent à la capacité totale consommée. En outre, les sauvegardes peuvent être coûteuses au tarif de l'abonnement DP. Voir aussi link:sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html#data-protection,-consumed-capacity,-and-charges["Protection des données, capacité consommée et frais"].
+* Les sauvegardes contribuent à la capacité totale consommée. En outre, les sauvegardes peuvent être coûteuses au taux d'abonnement à la protection des données. Voir aussi link:sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html#data-protection-consumed-capacity-and-charges["Protection des données, capacité consommée et frais"].
 * Restaurer à partir de la sauvegarde : demande de service pour restaurer un partage ou un disque à partir de la sauvegarde.
 
 
@@ -183,7 +195,7 @@ NetApp Service Engine prend en charge la reprise après incident asynchrone en v
 * Basculement/retour arrière (disponible uniquement sur demande de service)
 
 
-La reprise après incident asynchrone est disponible pour le stockage de fichiers et blocs et requiert un service DP dans l'abonnement.
+La reprise après incident asynchrone est disponible dans le stockage de fichiers et blocs et requiert un service de protection des données dans l'abonnement.
 
 La zone de reprise sur incident doit être une zone au sein du moteur de services NetApp différente de la zone dans laquelle le volume primaire est créé et ne doit pas être un partenaire MetroCluster si la zone source est activée par MetroCluster. Les répliques de reprise après incident des partages/disques sont stockées dans la zone de reprise après incident au même niveau de performance que le partage/disque d'origine.
 
@@ -201,14 +213,14 @@ Un partage de fichiers ou un disque ne peut être configuré que pour la réplic
 
 * La suppression d'un serveur de fichiers principal ou d'un stockage en blocs entraîne la suppression de toutes les copies répliquées de reprise après incident.
 * Une seule zone de reprise après sinistre peut être configurée par serveur de fichiers ou magasin de blocs.
-* Les copies de reprise après incident contribuent à la capacité totale consommée. En outre, la reprise après incident coûte cher au tarif d'abonnement à la reprise après incident. Voir aussi link:sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html#data-protection,-consumed-capacity,-and-charges["Protection des données, capacité consommée et frais"].
+* Les copies de reprise après incident contribuent à la capacité totale consommée. En outre, la reprise après incident coûte cher au tarif d'abonnement à la reprise après incident. Voir aussi link:sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html#data-protection-consumed-capacity-and-charges["Protection des données, capacité consommée et frais"].
 
 
 
 
 === Reprise après incident synchrone
 
-MetroCluster est une fonctionnalité DP qui réplique de manière synchrone les données et la configuration entre deux zones distinctes qui résident dans des emplacements distincts ou dans des domaines de défaillance. En cas d'incident sur un site, un administrateur peut permettre l'accès aux données à partir du site survivant.
+MetroCluster est une fonctionnalité de protection des données qui réplique les données et la configuration de manière synchrone entre deux zones distinctes situées dans des emplacements distincts ou dans des domaines de défaillance. En cas d'incident sur un site, un administrateur peut permettre l'accès aux données à partir du site survivant.
 
 Les sites gérés par le moteur de services NetApp configurés avec MetroCluster peuvent prendre en charge la reprise après incident synchrone pour le stockage en mode bloc et fichier de la manière suivante.
 
@@ -218,14 +230,14 @@ Les sites gérés par le moteur de services NetApp configurés avec MetroCluster
 
 *Notes:*
 
-* La reprise d'activité synchrone génère des coûts à un taux d'abonnement à la reprise après incident synchrone. Voir aussi link:sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html#data-protection,-consumed-capacity,-and-charges["Protection des données, capacité consommée et frais"].
+* La reprise d'activité synchrone génère des coûts à un taux d'abonnement à la reprise après incident synchrone. Voir aussi link:sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html#data-protection-consumed-capacity-and-charges["Protection des données, capacité consommée et frais"].
 
 
 
 
 == La protection des données, la capacité consommée et les frais
 
-Les chiffres de cette section décrivent le calcul des frais DP.
+Les chiffres de cette section décrivent le calcul des frais de protection des données.
 
 
 
@@ -235,7 +247,7 @@ Dans le cas de la reprise après incident asynchrone, l'utilisation et le coût 
 
 * La capacité du volume d'origine est chargée sur le Tier de performance sur lequel elle réside.
 * Copie de reprise après incident chargée au même niveau de performances au niveau de la destination ou de la zone de reprise après incident (les copies de reprise après incident sont stockées au même niveau).
-* Frais de service DP (pour la capacité du volume d'origine).
+* Frais de service de protection des données (pour la capacité du volume d'origine).
 
 
 image:sewebiug_image4.png["Erreur : image graphique manquante"]
@@ -244,7 +256,12 @@ image:sewebiug_image4.png["Erreur : image graphique manquante"]
 
 === Reprise sur incident synchrone
 
-Dans le cas de la reprise après incident synchrone, l'utilisation et le coût sont constitués des frais suivants :
+Dans le cas de la reprise après incident synchrone, l'utilisation et le coût sont des éléments suivants :
+
+* La capacité du volume d'origine est chargée sur le Tier de performance sur lequel elle réside.
+* Copie répliquée facturée au même niveau de performance au niveau de destination (identique à la source).
+* Frais de service avancés de protection des données.
+
 
 image:sewebiug_image5.png["Erreur : image graphique manquante"]
 
@@ -256,7 +273,7 @@ En sauvegarde, l'utilisation et le coût sont constitués des frais suivants :
 
 * La capacité du volume d'origine est chargée sur le Tier de performance sur lequel elle réside.
 * Les volumes de sauvegarde sont facturés au niveau de performance le plus bas disponible (les copies de sauvegarde sont stockées dans le Tier le plus économique possible).
-* Frais de service DP (pour la capacité du volume d'origine).
+* Frais de service de protection des données (pour la capacité du volume d'origine).
 
 
 image:sewebiug_image6.png["Erreur : image graphique manquante"]

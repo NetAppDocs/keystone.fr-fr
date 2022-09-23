@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: sewebiug_create_file_share_from_snapshot.html 
-keywords: netapp, keystone, create, file share, Snapshot 
-summary: 'Créer un partage de fichiers à partir d"un instantané' 
+keywords: netapp, keystone, create, file share, snapshot 
+summary: 'Créez un partage de fichiers à partir d"un instantané' 
 ---
-= Créer un partage de fichiers à partir d'un instantané
+= Créez un partage de fichiers à partir d'un instantané
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,21 +14,21 @@ summary: 'Créer un partage de fichiers à partir d"un instantané'
 
 
 [role="lead"]
-Vous pouvez créer un nouveau partage de fichiers à partir d'un snapshot existant. Le nouveau partage de fichiers, cloné à partir de la copie Snapshot, a les mêmes propriétés que le partage de fichiers à partir duquel la copie Snapshot est créée.
+Vous pouvez créer un nouveau partage de fichiers à partir d'un snapshot existant. Le nouveau partage de fichiers, cloné à partir du snapshot, a les mêmes propriétés que le partage de fichiers à partir duquel le snapshot est créé.
 
 .Étapes
 . Sélectionnez *SERVICES DE FICHIERS* dans le volet de navigation de gauche et sélectionnez *partages*.
-. Cliquez sur *Créer un partage* et sélectionnez *Cloner à partir de snapshot*. L'écran *Select Share* s'affiche avec tous les partages de fichiers pour le locataire. Vous pouvez filtrer les partages de fichiers par région, zone et sous-locataire. Vous pouvez sélectionner n'importe quel partage de fichiers à l'état opérationnel.
-. Cochez la case en regard du partage de fichiers souhaité et cliquez sur *Suivant*. L'écran *Sélectionner instantané* s'affiche avec tous les instantanés du partage de fichiers.
+. Cliquez sur *Créer un partage* et sélectionnez *Cloner à partir de snapshot*. Si vous connaissez le partage dont vous souhaitez utiliser le clonage, vous pouvez également localiser le partage de fichiers et cliquer sur le bouton Copier en regard de celui-ci. Le partage doit être à l'état opérationnel. Pour plus d'informations sur l'état d'un objet, reportez-vous à la section link:sewebiug_netapp_service_engine_web_interface_overview.html#object-states["États de l'objet"]. L'écran *Créer un partage à partir de snapshot* s'affiche avec tous les partages de fichiers pour le locataire. Vous pouvez filtrer les partages de fichiers par région, zone et sous-locataire. Vous pouvez sélectionner n'importe quel partage de fichiers à l'état opérationnel.
+. Cochez la case en regard du partage de fichiers souhaité et cliquez sur *Suivant*. Les instantanés du partage de fichiers sont affichés.
 +
 
-NOTE: Pour le partage de fichiers sélectionné, si certains snapshots sont créés dans votre environnement SnapCenter à l'extérieur du moteur de service NetApp, vous pouvez les trouver importés et répertoriés dans le pour votre sélection. Vous pouvez sélectionner ces snapshots importés et cloner les nouveaux partages de fichiers à partir d'eux.
+NOTE: Pour le partage de fichiers sélectionné, si certains snapshots sont créés dans votre environnement SnapCenter hors du moteur de service NetApp, vous pouvez les trouver importés et répertoriés dans le pour votre sélection. Vous pouvez sélectionner ces snapshots importés et cloner les nouveaux partages de fichiers à partir d'eux.
 
 +
 Vous pouvez rechercher un snapshot particulier ou sélectionner le type de planification pour filtrer les snapshots.
 
-. Cochez la case en regard du snapshot à partir lequel vous souhaitez cloner et cliquez sur *Suivant*. Le nouveau partage de fichiers hérite des propriétés du snapshot sélectionné.
-. Ajouter *Nom* et *chemin de partage*. Mettez à jour les autres paramètres, tels que l'attribution d'un *niveau de service*, puis cliquez sur *Créer*.
+. Cochez la case située en regard du snapshot à cloner et cliquez sur *Suivant*. Le nouveau partage de fichiers hérite des propriétés du snapshot sélectionné.
+. Ajouter *Nom* et *chemin de partage*. Mettez à jour les autres paramètres, tels que l'attribution d'un *niveau de service*, puis cliquez sur *Créer*. Sélectionnez le niveau de service qui correspond le mieux à vos besoins.
 
 
 .Une fois que vous avez terminé
@@ -40,7 +40,7 @@ Vous pouvez rechercher un snapshot particulier ou sélectionner le type de plani
 
 * *Créer un partage* est exécuté en tant que travail asynchrone. Vous pouvez :
 +
-** Vérifiez l'état du travail dans la liste des travaux. Pour plus d'informations sur le suivi des travaux, reportez-vous à la section link:https://docs.netapp.com/us-en/keystone/sewebiug_netapp_service_engine_web_interface_overview.html#jobs-and-job-status-indicator["ici"].
+** Vérifiez l'état du travail dans la liste des travaux. Pour plus d'informations sur le suivi des travaux, reportez-vous à la section link:sewebiug_netapp_service_engine_web_interface_overview.html#jobs-and-job-status-indicator["ici"].
 ** Une fois le travail terminé, vérifiez l'état du partage dans la liste *partages*.
 
 

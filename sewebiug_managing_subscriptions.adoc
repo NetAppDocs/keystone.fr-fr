@@ -30,7 +30,7 @@ Si vous êtes un administrateur partenaire, vous pouvez afficher et gérer vos s
 
 Les demandes de service sont reçues et traitées par l'équipe d'assistance.
 
-Vous pouvez également afficher et gérer les services de protection des données et de protection avancée auxquels vous êtes abonné, dans des onglets séparés.
+Vous pouvez également afficher et gérer les services de protection des données et de protection avancée auxquels vous êtes abonné, dans des onglets séparés. Pour plus d'informations, reportez-vous à la section link:index.html#flex-subscription["Protection et protection des données avancées"].
 
 
 
@@ -42,7 +42,8 @@ Ainsi, vous pouvez augmenter la capacité dédiée aux niveaux de service souscr
 . Sélectionnez l'abonnement pour lequel vous souhaitez augmenter la capacité dans le menu déroulant.
 . Cliquez sur *augmenter la capacité* pour le niveau de service souhaité.
 . Spécifiez la capacité (en Tio) requise.
-. Cliquez sur *confirmer*.
+. Cliquez sur *confirmer*.vous revenez à la page gérer les abonnements Keystone.
+. Cliquez sur *soumettre les modifications*. Une demande de service est créée pour que GSSC augmente la capacité. Vous pouvez afficher et suivre la progression de la demande de service par le numéro de demande de service affiché dans un message. Pour plus d'informations sur le suivi, reportez-vous à la section link:sewebiug_track_a_service_request.html["Suivre une demande de service"].
 
 
 
@@ -51,17 +52,17 @@ Ainsi, vous pouvez augmenter la capacité dédiée aux niveaux de service souscr
 
 Vous pouvez ajouter un service à un abonnement. L'ajout d'un service inclut l'attribution d'un niveau de service à votre abonnement et la spécification de la capacité pour le même niveau de service.
 
-Un abonnement peut n'avoir qu'un seul de chaque niveau de performance, par exemple si votre abonnement contient déjà un service Extreme et Standard, vous pouvez ajouter un service Premium ou Block.
+Chaque abonnement peut avoir un de chaque niveau de service. Par exemple, si votre abonnement contient déjà un service Extreme et Standard, vous pouvez ajouter un service Premium ou Block.
 
 .Étapes
-. Sélectionnez l'abonnement pour lequel vous souhaitez augmenter la capacité dans le menu déroulant.
+. Sélectionnez le niveau de service que vous souhaitez ajouter à votre abonnement dans le menu déroulant.
 . Cliquez sur *Ajouter service*.
-. Sélectionnez le service d'abonnement que vous souhaitez ajouter dans le menu déroulant et ajoutez la capacité (en Tio) que vous souhaitez attribuer au niveau de service.
-. Cliquez sur *confirmer*.
+. Sélectionnez le niveau de service auquel vous souhaitez vous abonner dans le menu déroulant, par exemple `Extreme-Tiering', puis ajoutez la capacité (en Tio) à laquelle vous souhaitez vous engager au niveau de service.
+. Cliquez sur *confirmer*. Vous revenez à la page gérer les abonnements Keystone.
+. Cliquez sur *soumettre les modifications*. Une demande de service est créée pour GSSC. Attribuez le niveau de service à votre abonnement. Vous pouvez afficher et suivre la progression de la demande de service par le numéro de demande de service affiché dans un message.
 
 
-
-NOTE: Si vous êtes abonné à la hiérarchisation extrême ou à la hiérarchisation premium, vous pouvez modifier le niveau de performance de tout abonnement existant et choisir un niveau de performance Tiering. Vous pouvez également choisir de passer d'un niveau de performance avec Tiering à un niveau de performance sans Tiering.
+Pour plus d'informations sur le suivi, reportez-vous à la section link:sewebiug_track_a_service_request.html["Suivre une demande de service"].
 
 
 
@@ -71,7 +72,7 @@ Si vous êtes un administrateur partenaire, vous pouvez créer, afficher et mett
 
 
 
-=== Créez un abonnement de locataire
+=== Créez et modifiez un abonnement de locataire
 
 Vous pouvez créer de nouveaux abonnements pour vos locataires.
 
@@ -86,3 +87,22 @@ NOTE: Vous ne pouvez pas créer d'abonnements se chevauchant. La date de début 
 
 
 Vous ne pouvez supprimer aucun abonnement. Vous pouvez uniquement modifier les abonnements de tenant existants et ajouter de nouveaux niveaux de service, augmenter la capacité d'engagement pour un niveau de service et ajouter des balises aux abonnements.
+
+Si vous êtes administrateur partenaire, vous pouvez modifier les abonnements aux locataires. Vous pouvez ajouter de nouveaux niveaux de service à un abonnement et modifier les capacités des niveaux de service déjà ajoutés. Pour ajouter un nouveau niveau de service, procédez comme suit :
+
+.Étapes
+. Sélectionnez l'abonnement que vous souhaitez modifier en cliquant sur l'icône `+`.
+. Sur la page *Ajouter un nouveau niveau de service à l'abonnement*, sélectionnez le nouveau niveau de service et ajoutez la capacité requise. Si le niveau de service est déjà ajouté, vous ne pouvez pas l'ajouter ou le supprimer.
+. Cliquez sur *mettre à jour*.
+
+
+Vous pouvez également ajouter des balises en cliquant sur l'icône balises de l'abonnement.
+
+Pour modifier les capacités souscrites aux niveaux de service déjà affectés à l'abonnement, procédez comme suit :
+
+.Étapes
+. Cliquez sur l'icône `v` pour développer l'abonnement que vous souhaitez modifier. Les niveaux de service de cet abonnement sont affichés.
+. Sélectionnez le niveau de service que vous souhaitez modifier en cliquant sur l'icône correspondante.
+. Modifiez le plan tarifaire en augmentant ou en diminuant la capacité en Tbs.
+. Cliquez sur *mettre à jour*.
+

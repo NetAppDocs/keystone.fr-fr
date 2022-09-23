@@ -41,11 +41,7 @@ Le tableau suivant fournit une liste des États des demandes de service.
 |===
 Vous pouvez suivre l'état d'une demande de service en consultant le statut de NetApp Service Engine décrit ci-dessous. Vous pouvez également suivre le statut des e-mails automatisés envoyés lors de ce processus.
 
-. Dans le menu, sélectionnez support > demandes de service. La liste demandes de service s'affiche.
-+
-image:sewebiug_image44.png["Erreur : image graphique manquante"]
+. Dans le menu, sélectionnez *support > demandes de service*. La liste est filtrée en fonction de la priorité par défaut «urgent».
+. Sélectionnez la priorité et l'état requis pour afficher la liste des demandes de service.
+. Localisez la demande de service dans la liste et affichez son statut dans la colonne `Enregistrer`.
 
-. Recherchez la demande de service dans la liste et affichez l'état dans la colonne État.
-
-
-image:sewebiug_image42.png["Erreur : image graphique manquante"]

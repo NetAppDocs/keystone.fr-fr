@@ -83,15 +83,16 @@ image:sewebiug_image27.png["Erreur : image graphique manquante"]
 .. Pour mapper le groupe hôte nouvellement créé sur le disque, accédez au champ groupes d'hôtes et sélectionnez-le.
 
 
-. Sélectionnez un niveau de service de performances.
+. Sélectionnez un niveau de service.
 +
-Sélectionnez une option pour afficher les informations de performances correspondant à ce niveau (pic/débit attendu/IOPS). Sélectionnez le niveau de service qui correspond le mieux à vos besoins.
+
+NOTE: Sélectionnez une option pour afficher les informations de performances associées à ce niveau de service (pic/IOPS attendu/débit). Sélectionnez le niveau de service qui correspond le mieux à vos besoins.
 
 . Spécifiez la capacité du disque.
-. Si des snapshots sont requis pour ce disque :
+. Si des instantanés sont nécessaires pour ce disque :
 +
 .. Activez l'option pour activer la règle Snapshot afin d'afficher les champs de la règle Snapshot.
-.. Spécifier quand créer les snapshots :
+.. Spécifier le moment de création des snapshots :
 +
 *** *Horaire.* spécifiez la minute (de l'heure) à prendre un instantané (vérifier) et le nombre d'instantanés horaires à conserver.
 *** *Quotidien.* spécifiez quand (heure et minute) prendre l'instantané (vérification) et le nombre d'instantanés horaires à conserver. Si vous souhaitez spécifier plusieurs heures lorsque l'instantané doit être pris quotidiennement, vous pouvez ajouter les valeurs des heures dans une liste séparée par des virgules, par exemple 5, 10, 15, et ainsi de suite.

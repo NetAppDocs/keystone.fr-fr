@@ -50,6 +50,6 @@ NetApp peut fournir les spécifications relatives à la climatisation (BTU typiq
 
 == Mise en réseau
 
-Selon les besoins du client et les contrôleurs de stockage utilisés, NetApp offre une connectivité de 10 Go, 40 Go et 100 Go sur le site du client.
+Selon les besoins du client et les contrôleurs de stockage utilisés, NetApp peut fournir une connectivité 10 Gib, 40 Gib et 100 Gib sur le site du client.
 
 NetApp fournit les émetteurs-récepteurs nécessaires uniquement pour les dispositifs d'infrastructure à abonnement Flex fournis par NetApp. Vous devez fournir les émetteurs-récepteurs requis pour les périphériques du client et le câblage aux périphériques d'infrastructure Flex Subscription fournis par NetApp.

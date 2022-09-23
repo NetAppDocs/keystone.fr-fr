@@ -14,12 +14,12 @@ summary: Keystone modifie un partage de fichiers
 
 
 [role="lead"]
-Vous pouvez modifier le nom du partage, le type de partage (CIFS, NFS, multiprotocole), le niveau de service, la capacité, La policy Snapshot, l'export policy, la liste de contrôle d'accès (ACL) et les balises
+Vous pouvez modifier le nom du partage, le niveau de service, la capacité, la règle Snapshot, la règle d'exportation, Liste de contrôle d'accès (ACL) et balises dans un partage de fichiers.
 
 
-NOTE: Cette méthode vous permet de déplacer vos partages vers différents niveaux de performances, le cas échéant. Vous ne pouvez modifier le type de partage que si le serveur prend en charge les services respectifs.
+NOTE: Cette méthode vous permet de déplacer vos partages vers différents niveaux de service, le cas échéant. Vous ne pouvez modifier le type de partage que si le serveur prend en charge les services respectifs.
 
-Le partage de fichiers doit être à l'état opérationnel. Pour comprendre les États de volume et les étapes à suivre pour les rendre opérationnels, voir link:https://docs.netapp.com/us-en/keystone/sewebiug_view_shares.html["Afficher les disques"] et link:https://docs.netapp.com/us-en/keystone/sewebiug_netapp_service_engine_web_interface_overview.html#Object-states["États de l'objet"]
+Le partage de fichiers doit être à l'état opérationnel. Pour comprendre les États de volume et les étapes à suivre pour les rendre opérationnels, voir link:sewebiug_view_disks.html["Afficher les disques"] et link:sewebiug_netapp_service_engine_web_interface_overview.html#object-states["États de l'objet"]
 
 .Étapes
 . Afficher le link:sewebiug_view_shares.html#view-shares["Liste des partages"].
@@ -30,6 +30,6 @@ Le partage de fichiers doit être à l'état opérationnel. Pour comprendre les 
 
 Modifier le partage est exécuté comme une tâche asynchrone. Vous pouvez :
 
-* Vérifiez l'état du travail dans la liste des travaux. Pour plus d'informations sur le suivi des travaux, reportez-vous à la section link:https://docs.netapp.com/us-en/keystone/sewebiug_netapp_service_engine_web_interface_overview.html#jobs-and-job-status-indicator["ici"].
+* Vérifiez l'état du travail dans la liste des travaux. Pour plus d'informations sur le suivi des travaux, reportez-vous à la section link:sewebiug_netapp_service_engine_web_interface_overview.html#jobs-and-job-status-indicator["ici"].
 * Une fois le travail terminé, vérifiez le statut du partage dans la liste partages.
 

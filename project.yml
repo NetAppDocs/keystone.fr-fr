@@ -18,7 +18,7 @@ sidebar:
       entries:
       - title: Définitions des capacités de service
         url: "/nkfsosm_keystone_service_capacity_definitions.html"
-      - title: Niveau de service de performances
+      - title: De performances et de niveau de service
         url: "/nkfsosm_performance.html"
       - title: Définitions et metrics des niveaux de service
         url: "/nkfsosm_service_level_metrics_and_definitions.html"
@@ -166,19 +166,19 @@ sidebar:
           url: "/sewebiug_modify_the_subscribed_service_details.html"
         - title: Supprimer un service souscrit
           url: "/sewebiug_delete_a_subscribed_service.html"
-      - title: Gestion d'Azure NetApp Files
+      - title: Gérer Azure NetApp Files
         entries:
         - title: Gestion des comptes Azure NetApp
           url: "/sewebiug_managing_azure_netapp_accounts.html"
-        - title: Gestion des pools de capacité Azure
+        - title: Gérez les pools de capacité Azure
           url: "/sewebiug_managing_azure_capacity_pools.html"
         - title: Gestion des volumes Azure
           url: "/sewebiug_managing_azure_volumes.html"
-      - title: Gestion de Cloud Volumes Service pour Google Cloud Platform
+      - title: Gérez Cloud Volumes Service pour Google Cloud Platform
         url: "/sewebiug_managing_gcp_cvs.html"
     - title: Afficher les rapports
       url: "/sewebiug_working_with_reports.html"
-    - title: Utilisation de sauvegardes
+    - title: Sauvegarder vos volumes
       url: "/sewebiug_back_up_file_shares_and_disks.html"
     - title: Gérer vos abonnements
       url: "/sewebiug_managing_subscriptions.html"

@@ -14,7 +14,7 @@ summary: 'Vue des groupes d"hôtes Keystone'
 
 
 [role="lead"]
-Les groupes d'hôtes sont définis pour déterminer l'accès aux disques. En fonction des nœuds d'initiateur affectés à un groupe d'hôtes, l'accès à ce groupe est déterminé.
+Les groupes d'hôtes sont définis pour déterminer l'accès aux disques. En fonction des nœuds d'initiateur affectés à un groupe d'hôtes, l'accès à ce groupe est déterminé. Vous pouvez ajouter des initiateurs lors de la création du groupe hôte.
 
 
 
@@ -77,13 +77,15 @@ Une fois le groupe d'hôtes créé, il est disponible pour le mappage sur des di
 
 Vous pouvez modifier un groupe d'hôtes pour ajouter, supprimer ou modifier des initiateurs.
 
-La modification d'un groupe d'hôtes modifie l'accès pour chaque disque mappé au groupe d'hôtes.
+.Notez ces points :
+* Vous ne pouvez pas modifier le groupe d'hôtes si le groupe d'hôtes n'est pas opérationnel et si l'icône Modifier le stylet est désactivée pour ces groupes.
+* La modification d'un groupe d'hôtes modifie l'accès de chaque disque mappé au groupe d'hôtes.
+* Vous ne pouvez pas modifier l'alias d'un initiateur. Pour modifier l'alias, supprimez l'initiateur du groupe, puis recréez-le.
 
-Vous ne pouvez pas modifier l'alias d'un initiateur. Pour modifier l'alias, supprimez l'initiateur du groupe, puis recréez-le.
 
 .Étapes
 . Afficher le link:sewebiug_view_host_groups.html#view-host-groups["Groupes d'hôtes"] liste.
-. Recherchez le groupe d'hôtes dans la liste et cliquez sur l'icône Modifier pour ce groupe d'hôtes.
+. Recherchez le groupe d'hôtes dans la liste, faites défiler jusqu'à la fin de la ligne, puis cliquez sur l'icône Modifier (icône en forme de stylo) correspondant à ce groupe d'hôtes.
 +
 Pour modifier un initiateur existant, recherchez-le dans la liste, modifiez-le et cliquez sur *Update*.
 
@@ -99,7 +101,7 @@ Pour supprimer un initiateur du groupe hôte, recherchez-le dans la liste et cli
 
 
 
-. Cliquez sur *Done*.
+. Cliquez sur *Fermer*.
 
 
 

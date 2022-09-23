@@ -14,16 +14,21 @@ summary: Keystone demande de service
 
 
 [role="lead"]
-L'écran demandes de service vous permet de répondre à de nouvelles demandes de service qui sont traitées par votre propre équipe de support ou par le service GSSC de NetApp.
+L'écran demandes de service vous permet d'augmenter les nouvelles demandes de service en tant qu'administrateur partenaire pour les abonnements de votre ou de vos locataires et de les envoyer à votre propre équipe de support ou à NetApp GSSC.
 
-Vous pouvez afficher le résumé des demandes de service les plus récentes, triées par priorité et par heure de création, dans le widget *demandes de service* du tableau de bord. Vous pouvez également accéder à l'écran demandes de service pour rechercher et afficher les détails de toutes les demandes de service soulevées dans votre environnement.
+En tant qu'administrateur partenaire, vous pouvez afficher le résumé des demandes de service les plus récentes pour un locataire, triées par priorité et par heure de création, dans le widget *demandes de service* du tableau de bord. Vous pouvez également accéder à l'écran demandes de service pour rechercher et afficher les détails de toutes les demandes de service soulevées dans votre environnement.
 
 Pour créer une nouvelle demande de service, suivre cette procédure.
 
 .Étapes
 . Dans le menu, sélectionnez *SUPPORT > demandes de service* et cliquez sur *Nouvelle demande de service*.
-. Sur la page Nouvelle demande de service, sélectionnez la catégorie et la priorité de la demande, puis cliquez sur *Suivant*.
-. Les champs de l'écran Détails changent en fonction de la catégorie sélectionnée. Entrez les informations requises. Cliquez sur *Suivant*.
+. Sur la page Nouvelle demande de service, sélectionnez la catégorie et la priorité de la demande, puis cliquez sur *Suivant*. L'écran *Détails* s'affiche.
+
+
+
+NOTE: Les champs de l'écran Détails changent en fonction de la catégorie sélectionnée. Sur cet écran, vous devez entrer les détails pertinents pour la catégorie sélectionnée de la demande de service.
+
+. Entrez les informations requises. Cliquez sur *Suivant*.
 . Vérifiez les détails de la demande. Si vous souhaitez corriger quelque chose, utilisez le bouton Retour pour revenir à la page précédente et corriger les détails. Si tous les détails sont corrects, cliquez sur *Envoyer*.
 . La demande de service est créée et répertoriée sur l'écran demandes de service. Une nouvelle demande de service a le statut «Nouveau».
 

@@ -29,5 +29,5 @@ image:sewebiug_image31.png["Erreur : image graphique manquante"]
 +
 image:sewebiug_image32.png["Erreur : image graphique manquante"]
 
-. Vérifiez la liste des travaux pour vous assurer que le stockage d'objets a bien été initialisé.
+. Vérifiez la liste des travaux pour vous assurer que le stockage d'objets a bien été initialisé. Pour plus d'informations, reportez-vous à la section link:sewebiug_netapp_service_engine_web_interface_overview.html#jobs-and-job-status-indicator["Tâches et indicateur d'état du travail"].
 

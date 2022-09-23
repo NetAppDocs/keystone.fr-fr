@@ -22,7 +22,7 @@ Le service de protection des données NetApp Keystone Flex Subscription (Flex Su
 
 
 
-NOTE: Les services de sauvegarde et de reprise après incident sont disponibles en tant que services d'extension, tandis que Snapshot est disponible dans le service de stockage de base.
+NOTE: Les services de sauvegarde et de reprise après incident sont disponibles en tant que services d'extension, tandis que les snapshots sont disponibles dans le service de stockage de base.
 
 |===
 |  | Snapshots d'une seule région (disponibles dans le cadre du service de stockage de base) | Sauvegarde dans plusieurs régions (extension de protection des données) | Reprise après incident dans plusieurs régions (extension de protection des données) 
@@ -31,7 +31,7 @@ NOTE: Les services de sauvegarde et de reprise après incident sont disponibles 
 | Cas d'utilisation | Limitez les risques de suppression ou de corruption des données des utilisateurs ou des applications, et non de perte ou de défaillance de l'infrastructure | Limitez le risque de perte totale de données sur le volume primaire en raison de la perte ou de la défaillance de l'infrastructure | Limitez le risque de perte complète de données sur le volume principal due à une perte ou une défaillance de l'infrastructure avec un objectif de délai de restauration 
 
 
-| Politique | Toutes les heures, tous les jours, toutes les semaines et tous les mois | Nombre de sauvegardes à conserver selon les copies Snapshot toutes les heures, tous les jours, toutes les semaines et tous les mois | 1 heure, 4 heures et tous les jours 
+| Politique | Toutes les heures, tous les jours, toutes les semaines et tous les mois | Nombre de sauvegardes à conserver en fonction des snapshots toutes les heures, tous les jours, toutes les semaines et tous les mois | 1 heure, 4 heures et tous les jours 
 
 
 | Topologie | Source uniquement | Sauvegarde | Cible de réplication asynchrone 
