@@ -13,7 +13,10 @@ summary: API REST des moteurs de service NetApp
 :imagesdir: ./media/
 
 
-De nombreux appels API renvoient un grand nombre d'enregistrements. Il est possible de limiter le nombre d'enregistrements en spécifiant les valeurs «offset» et «limite»:
+[role="lead"]
+De nombreux appels API renvoient un grand nombre d'enregistrements. Il est possible de limiter le nombre d'enregistrements en spécifiant le `offset` et `limit` valeurs.
+
+Limiter ces valeurs :
 
 * *Limite.* le nombre d'enregistrements à retourner.
 * *Décaler.* le nombre d'enregistrements à ignorer avant de retourner le premier enregistrement. Par exemple, un décalage de l'un d'entre eux permet d'ignorer le premier enregistrement et de renvoyer les enregistrements commençant à deux.

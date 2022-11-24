@@ -13,6 +13,9 @@ summary: Keystone crée un utilisateur de stockage objet
 :imagesdir: ./media/
 
 
+[role="lead"]
+Vous pouvez créer des utilisateurs et les ajouter à des groupes spécifiques pour leur attribuer un accès au stockage objet.
+
 Comme un utilisateur de stockage objet appartient à un groupe de stockage objet, le groupe de stockage objet doit exister avant de pouvoir créer l'utilisateur.
 
 .Étapes

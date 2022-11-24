@@ -29,7 +29,7 @@ Vous devez vous assurer que :
 
 * Le sous-locataire est abonné au service Google Cloud.
 * Vous disposez du fichier JSON pour le compte de service de l'abonné et vous connaissez le numéro de projet GCP associé à l'instance Google Cloud.
-* Pour vous assurer que Cloud Volumes Service pour GCP est déjà configuré sur Cloud Manager par votre équipe de support. Pour plus d'informations, voir https://docs.netapp.com/us-en/occm/task_setup_cvs_gcp.html["Configuration de Cloud Volumes Service pour Google Cloud"].
+* Pour vous assurer que Cloud Volumes Service pour GCP est déjà configuré sur BlueXP par votre équipe de support. Pour plus d'informations, voir https://docs.netapp.com/us-en/occm/task_setup_cvs_gcp.html["Configuration de Cloud Volumes Service pour Google Cloud"].
 
 
 .Étapes

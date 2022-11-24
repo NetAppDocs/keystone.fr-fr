@@ -79,7 +79,7 @@ Le tableau suivant répertorie les attributs de l'instance Cloud Volumes Service
 | `nom' | Chaîne | Nom de l'instance Cloud Volumes Service. 
 
 
-| `cc_working_env` | Chaîne | Nom de l'environnement de travail dans Cloud Manager. 
+| `cc_working_env` | Chaîne | Nom de l'environnement de travail dans BlueXP. 
 
 
 | `cc_client_id' | Chaîne | ID service Auth0. 
@@ -97,7 +97,7 @@ Le tableau suivant répertorie les attributs de l'instance Cloud Volumes Service
 | `cc_credentials_id' | Chaîne | ID de l'environnement de travail Cloud Centra. 
 
 
-| `azure_client_id' | Chaîne | ID d'application (client). ID d'un directeur de service Active Directory que Cloud Manager peut utiliser pour l'authentification avec Azure Active Directory. 
+| `azure_client_id' | Chaîne | ID d'application (client). ID d'un service Active Directory principal que BlueXP peut utiliser pour s'authentifier auprès d'Azure Active Directory. 
 
 
 | `azure_client_secret' | Chaîne | La valeur du secret client pour l'application principale du service. 

@@ -303,7 +303,6 @@
   <block id="8c4191676661fab67275af3b28085da7" category="list-text">L'administrateur partenaire peut créer un autre abonnement lorsque l'abonnement existant a expiré ou pour une date ultérieure lorsque l'abonnement existant n'est plus valide. La date de début d'un nouvel abonnement doit être supérieure ou égale à la date de fin actuelle.</block>
   <block id="ff138ca03bebc3f223aa7473c49093cc" category="summary">API REST des moteurs de service NetApp</block>
   <block id="f85fe16835da940dc0eded602be1d88a" category="doc">API REST NetApp Service Engine</block>
-  <block id="4bb8f28d1ae5f4c793395a1ce16ebd50" category="paragraph">De nombreux appels API renvoient un grand nombre d'enregistrements. Il est possible de limiter le nombre d'enregistrements en spécifiant les valeurs «offset» et «limite»:</block>
   <block id="2c9821eb0bfa9053dd0b371fa82738f0" category="list-text">*Limite.* le nombre d'enregistrements à retourner.</block>
   <block id="75100d42069de12445ab076dab1a5044" category="list-text">*Décaler.* le nombre d'enregistrements à ignorer avant de retourner le premier enregistrement. Par exemple, un décalage de l'un d'entre eux permet d'ignorer le premier enregistrement et de renvoyer les enregistrements commençant à deux.</block>
   <block id="6e38eaf3c64cc8f5260081b7bb3a1eb2" category="paragraph">Vous pouvez également trier et trier les réponses :</block>
@@ -408,7 +407,6 @@
   <block id="93e36e4f88c3da99d57144e4f8a90d2b" category="list-text">Créez et gérez les utilisateurs du stockage objet, notamment la création de clés S3.</block>
   <block id="08adb405703760d625a89d2f8489e280" category="summary">Présentation des termes et description du service Keystone</block>
   <block id="4c81f84de3c6cf1b71adecb694feb770" category="doc">Les termes et descriptions du service de souscription Flex</block>
-  <block id="1cbddcf2fa8e22cb8595706c00cc4371" category="list-text">L'abonnement NetApp Keystone Flex (abonnement Flex) est disponible pendant au moins un an et jusqu'à trois ans. Après la période initiale, le service est renouvelable sur une base annuelle. La capacité peut être augmentée par incréments de 1 Tio.</block>
   <block id="9597eb938e2fba159aa254b3a95e6efb" category="list-text">La capacité minimale est de 100 Tio par site et chaque site peut disposer d'un ou de plusieurs clusters pour répondre aux besoins de capacité minimale. Dans le cas d'un modèle opéré par les partenaires, les abonnements aux ressources minimales flexibles sont créés pour un client, par site et selon les niveaux de service.</block>
   <block id="be9709b8de891bed2cb58977708e499e" category="list-text">Les abonnements aux locataires sont limités aux niveaux de service auxquels les partenaires sont abonnés.</block>
   <block id="87f73c8129d1f6a0026c085c19c37ee7" category="list-text">20 % de la capacité en rafale est disponible sur chaque site. toute utilisation en rafale est facturée uniquement pour la période de facturation en question. Si vous avez besoin d'augmenter la capacité de rafale de plus de 20 %, contactez le service de support.</block>
@@ -653,7 +651,6 @@
   <block id="9f06ecda84c1ae850f3ef9ef26ceb4f3" category="cell">Identifiant unique de l'instance Cloud Volumes Service.</block>
   <block id="8bc48e5f4724775e4f4601a4e4ed2687" category="cell">Nom de l'instance Cloud Volumes Service.</block>
   <block id="5df5e1234496b4f4567b25a4b7b26ba3" category="cell">`cc_working_env`</block>
-  <block id="2fa447a56e54e8572e7ecaf28e975e80" category="cell">Nom de l'environnement de travail dans Cloud Manager.</block>
   <block id="c67906f7bee9799974a4de606d2420e2" category="cell">`cc_client_id'</block>
   <block id="2e83a5722e857f87078cabdc3cda5f38" category="cell">ID service Auth0.</block>
   <block id="f00a35e02aec20c8d9cf536f9dd3bf33" category="cell">`cc_refresh_token`</block>
@@ -665,7 +662,6 @@
   <block id="fdfeff0c0589d5ab72dc570db74d59a7" category="cell">`cc_credentials_id'</block>
   <block id="05daf3080cc6bf51d9a7488838b0650f" category="cell">ID de l'environnement de travail Cloud Centra.</block>
   <block id="bca25748ae9ad08875b859cc2005f825" category="cell">`azure_client_id'</block>
-  <block id="8c39fc45872124f630a477f8a9db2747" category="cell">ID d'application (client). ID d'un directeur de service Active Directory que Cloud Manager peut utiliser pour l'authentification avec Azure Active Directory.</block>
   <block id="4e293b85fede02c268e93ef73f188710" category="cell">`azure_client_secret'</block>
   <block id="222fdbc61ee44a202596354abd406a32" category="cell">La valeur du secret client pour l'application principale du service.</block>
   <block id="476995152e4de0614e55d1be3004b494" category="cell">`azure_tenant_id'</block>
@@ -2543,7 +2539,6 @@
   <block id="6be9adc0bb5eb38197744a6ba6770654" category="list-text">Le sous-locataire est abonné au service Google Cloud.</block>
   <block id="b22f259a7845cf612bcf5a7d485a6137" category="list-text">Vous disposez du fichier JSON pour le compte de service de l'abonné et vous connaissez le numéro de projet GCP associé à l'instance Google Cloud.</block>
   <block id="b3ae8c33b08587c2b6be6031629d0de3" category="inline-link">Configuration de Cloud Volumes Service pour Google Cloud</block>
-  <block id="084cafb5240ee412a1336b10f1e95d54" category="list-text">Pour vous assurer que Cloud Volumes Service pour GCP est déjà configuré sur Cloud Manager par votre équipe de support. Pour plus d'informations, voir<block ref="1956ecad31d7ae695fe28eacaf067e5e" category="inline-link-rx"></block>.</block>
   <block id="d900b34f4ec7d4c5aedb24b1b84b6642" category="list-text">Sélectionnez *CLOUD SERVICES* dans le menu.</block>
   <block id="300a306a4df8277005591f8c37dca4ad" category="list-text">Cliquez sur *Créer*, puis sur *Google Cloud*.</block>
   <block id="b9ff3c79bce6a74407aef38bc921b4d6" category="list-text">Sur la page Créer un service cloud pour Google Cloud, sélectionnez le sous-locataire pour lequel vous souhaitez créer le service, puis ajoutez un nom et le numéro de projet GCP.</block>
@@ -2830,14 +2825,6 @@
   <block id="b387af4e718e4b5565ce87f74234f50f" category="paragraph">*Y a-t-il une occasion de convertir en achat après la fin de la période initiale?* non L'offre n'inclut pas une option permettant de convertir le produit en achat. En outre, les produits NetApp achetés précédemment ne font pas partie du cadre de ce programme.</block>
   <block id="a16dc1f5755db55741d2ae801d6aa73d" category="paragraph">*Puis-je demander une version de logiciel particulière?*</block>
   <block id="ee62bd671134498c82c2878422e9f59a" category="paragraph">*Vais-je être informé des mises à niveau logicielles?*</block>
-  <block id="4b27d8b1b37284b9da0b4213e4e6675d" category="paragraph">|= |méthode HTTP |chemin |Description |Paramètres</block>
-  <block id="9104a21e58f1a69b57c6b2ae89602908" category="paragraph">| « POST » | »/v2.1/tenants/{tenant_ID}/servicequêtes/categories » |Créer une demande de service. |'tenant_ID' : identifiant du locataire.</block>
-  <block id="58e00570185a83ad51f69b7079961f6b" category="paragraph">|Catégorie |obligatoire</block>
-  <block id="4ef290f7b3c58a4e717e6cc36148b17f" category="paragraph">|abonnement |par abonnement aux services |par abonnement aux services_objet_type` et `par `souscription` `par `souscription` et `par `stockage_objet_ID' |technique `par ``tenant_ID` et `par `service_type` si `par_service` correspond à des services de fichiers ou à un stockage en bloc, la zone est requise. |autre |zone</block>
-  <block id="0725399a92712a8b8a9b398144b43a68" category="cell">*Exemple de corps de demande:* .... { "Objet": "Chaîne", "commentaire": "Chaîne", "catégorie": "Abonnement", "priorité": "Normal", "abonnement": "A-S00003969", "engagement": { "service_level": "standard", "new_engagement": 10 }, "zone": "au-east1-a", "subtenant_id": "5d2fb0fb4f47df00015274e3", "storage_object_type": "filerver", "Storage_object_ID": "5d2fb0fb4f47df00015274e3", "service_type": "Services de fichiers" } .... *Exemple de corps de réponse:* .... { "Status": { "User_message": "String", "verbose_message": "String", "code": "String" }, "result": { "Rest_enreg": 1, "records": [ { "ID": "String", "Subject": "String", "description": "Normal", "New":": "Normal":": "New": "Priority" "CreatedDate": "2020-05-12T03:18:25+0000", "UpdateDate": "2020-05-12T03:18:25+0000" } ] } .... == récupérer les catégories de demande de service le tableau suivant répertorie les catégories de demande de service de récupération pour un locataire spécifié.</block>
-  <block id="b235a9ee30b02d07ff714bb1542b9b1d" category="paragraph">|méthode HTTP |chemin |Description |Paramètres</block>
-  <block id="3cfc9b45a25da8c56ea24ecc26ed6f54" category="paragraph">|« GET » | »/v2.1/tenants/{tenant_ID}/servicequêtes/categories » |récupérer les catégories de demandes de services. | «tenant_ID:» (facultatif) renvoyez les demandes de service pour un locataire spécifié.</block>
-  <block id="c31fc18f14b317fa271c222c8662ff0b" category="cell">Attributs de corps de demande requis: `aucun` *corps de demande exemple:* .... aucun .... *Exemple de corps de réponse:* .... { "Etat": { "User_message": "OK. A renvoyé 5 enregistrements.", "verse_message": "", "code": 200 }, "résultat": { "Rint_records": 5, "enregistrements": [ { "Key": "dr", "valeur": "Disaster Recovery Failover" }, { "key" }, "Technical" }, "Technical issue", "Technical key", "Other value": "Valeur", "Subscription":", "Other":", "valeur":" « Sauvegarde Restauration » } ] } } ....</block>
   <block id="8615a49d222eeb50c22f60e749d36d5e" category="paragraph">*Qu'est-ce que le moteur de service NetApp ?*</block>
   <block id="a5e1a7f3557344aca20fdd047ee9cace" category="paragraph">*Moteur de service NetApp requis dans le modèle exploité par le client?*</block>
   <block id="46eed4ec681c7ae2f6418744e02e8ba8" category="paragraph">*Où est installé le moteur de service NetApp?*</block>
@@ -3130,4 +3117,25 @@
   <block id="3367785c4c24c46720a1f71a3ba620db" category="sidebar">Gestion des volumes Azure</block>
   <block id="12c44922182533b1b7bb4417b61b95ec" category="sidebar">Gérez Cloud Volumes Service pour Google Cloud Platform</block>
   <block id="8f827fcb6054a7882181161868caf231" category="sidebar">Sauvegarder vos volumes</block>
+  <block id="a57f88e039b309218996266b80792e58" category="cell"><block ref="3854361464b9a2c3832c47bd39cddf54" prefix="" category="inline-code"></block>: L'identifiant du locataire.</block>
+  <block id="3adbdb3ac060038aa0e6e6c138ef9873" category="cell">Catégorie</block>
+  <block id="b651efdb98a5d6bd2b3935d0c3f4a5e2" category="cell">Obligatoire</block>
+  <block id="787ad0b7a17de4ad6b1711bbf8d79fcb" category="cell">Abonnement</block>
+  <block id="102da3147e28a4669677fece4454c61f" category="cell"><block ref="b48b13e73a6ac2a86dc54425dd24d9ff" prefix="" category="inline-code"></block> et<block ref="e4586172850ecb0954a632168fa0151a" prefix=" " category="inline-code"></block></block>
+  <block id="f92d949ea1f5479f6dd45574e5f59f28" category="cell"><block ref="2aae5dbec169c641bc991a21bba7ded3" prefix="" category="inline-code"></block>,<block ref="f5d285f3c30970bcfcb9cf6292e5948c" prefix=" " category="inline-code"></block>, et<block ref="d8ebad67e49e38d52183df8396039c53" prefix=" " category="inline-code"></block></block>
+  <block id="ad1ec60c9e1f10f6a9f5d9f2c5254bc6" category="cell">Technique</block>
+  <block id="1efcb45ce32fab1dd54282a048a8f6e3" category="cell"><block ref="f5d285f3c30970bcfcb9cf6292e5948c" prefix="" category="inline-code"></block> et<block ref="f43697a993f56955e3f9e353b3b1f210" prefix=" " category="inline-code"></block>Si<block ref="f43697a993f56955e3f9e353b3b1f210" prefix=" " category="inline-code"></block> services de fichiers ou stockage en mode bloc, zone requise</block>
+  <block id="6311ae17c1ee52b36e68aaf4ad066387" category="cell">Autre</block>
+  <block id="ac10508ad70f95b289ff520585169501" category="section-title">Récupérer les catégories de demande de service</block>
+  <block id="a6a3bee28fe66348826c742871e5920e" category="paragraph">Le tableau suivant répertorie les catégories de demande de service de récupération pour un locataire spécifié.</block>
+  <block id="ef64390758ed006361a142422376a39e" category="cell">Récupérer les catégories de demandes de service.</block>
+  <block id="ea56ca71a57b3800165f4d81ba320151" category="cell"><block ref="e1e0f0ad1318adbdd4cfa12016e5d06c" prefix="" category="inline-code"></block> (Facultatif) renvoyez les demandes de service pour un locataire spécifié.</block>
+  <block id="fecdea178a71ffb2ee93ddcad3d9e020" category="paragraph">De nombreux appels API renvoient un grand nombre d'enregistrements. Il est possible de limiter le nombre d'enregistrements en spécifiant le<block ref="7a86c157ee9713c34fbd7a1ee40f0c5a" prefix=" " category="inline-code"></block> et<block ref="aa9f73eea60a006820d0f8768bc8a3fc" prefix=" " category="inline-code"></block> valeurs.</block>
+  <block id="e50d94eefbc2c17580b0e1711fe9e9e7" category="paragraph">Limiter ces valeurs :</block>
+  <block id="d2860166293af0668ceaf6fdcb9f2694" category="paragraph">Vous pouvez créer des utilisateurs et les ajouter à des groupes spécifiques pour leur attribuer un accès au stockage objet.</block>
+  <block id="496e90ab3704e4ca4304b45b9f12bbd6" category="list-text">Pour vous assurer que Cloud Volumes Service pour GCP est déjà configuré sur BlueXP par votre équipe de support. Pour plus d'informations, voir<block ref="1956ecad31d7ae695fe28eacaf067e5e" category="inline-link-rx"></block>.</block>
+  <block id="2755dc789d3f5fb4106ccd91690ecf5a" category="cell">Nom de l'environnement de travail dans BlueXP.</block>
+  <block id="d717179901a081426cfa25f7009d2d04" category="cell">ID d'application (client). ID d'un service Active Directory principal que BlueXP peut utiliser pour s'authentifier auprès d'Azure Active Directory.</block>
+  <block id="a7aef034348bc38d9b7f16020d181733" category="paragraph">L'abonnement NetApp Keystone Flex (abonnement Flex) est guidé par les termes et descriptions des services suivants.</block>
+  <block id="0493ca6a55a3d28e65cc473a5710b470" category="list-text">L'abonnement Flex est disponible pendant au moins un an et jusqu'à trois ans. Après la période initiale, le service est renouvelable sur une base annuelle. La capacité peut être augmentée par incréments de 1 Tio.</block>
 </blocks>
