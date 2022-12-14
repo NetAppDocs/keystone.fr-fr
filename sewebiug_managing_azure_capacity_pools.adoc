@@ -41,6 +41,7 @@ La liste affiche des informations simples sur chaque pool de capacité Azure. Le
 
 Cette section décrit l'ajout d'un pool de capacité Azure.
 
+.Avant de commencer
 Vous aurez besoin des éléments suivants :
 
 * Sous-locataire auquel appartient la capacité

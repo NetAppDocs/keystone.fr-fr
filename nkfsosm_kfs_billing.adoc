@@ -38,6 +38,7 @@ Pour plus d'informations sur l'affichage des détails de facturation, reportez-v
 
 Les capacités engagées désignent les capacités des différents services dans un seul abonnement, convenues par les parties concernées (NetApp/partenaire et client). Cette capacité est indiquée sur chaque commande d'abonnement Flex et est facturée, quelle que soit la consommation réelle.
 
+.Mesure de la capacité consommée
 Dans le cadre du déploiement de service Flex Subscription, NetApp contrôle et mesure en permanence la consommation de ce service. Toutes les cinq minutes, un enregistrement de consommation est généré par le système, en détaillant la capacité actuelle consommée pour l'abonnement. Ces enregistrements sont agrégés au cours de la période de facturation afin de générer des factures et des rapports d'utilisation.
 
 
@@ -52,10 +53,13 @@ Lorsque la capacité consommée est supérieure à la capacité requise pour un 
 
 Les services d'abonnement Flex sont facturés tous les mois et tous les ans.
 
+.Facturation mensuelle
 Les factures sont envoyées chaque mois. Pour le mois au cours duquel les services sont disponibles, une facture est envoyée le mois suivant. Par exemple, la facture des services que vous avez utilisés en janvier est livrée au début de février. Cette facture comprend les frais liés à la capacité engagée et, le cas échéant, à l'utilisation en rafale.
 
+.Facturation annuelle
 Une facture est générée au début de chaque année d'abonnement pour le paiement minimum de la capacité engagée. Il est généré à la date de début de l'abonnement. Une autre facture est envoyée à la fin d'un trimestre d'abonnement, qui comprend les frais applicables relatifs à toute utilisation en rafale accumulée au cours de ce trimestre. Si la capacité engagée est modifiée au cours d'un abonnement, une facture est envoyée le même jour que la modification de la capacité engagée, pour les paiements minimums au prorata pour le reste de l'année d'abonnement.
 
+.Période de grâce pour la facturation en rafale
 Pendant les 60 premiers jours de l'activation d'un abonnement, toute consommation en rafale que vous cumulez est enregistrée, mais n'est pas facturée sur votre facture d'abonnement Flex. Ce délai de grâce vous permet de configurer votre stockage avec les paramètres AQoS (Adaptive Quality of Service) appropriés afin qu'il puisse être correctement contrôlé et facturé. Si vous configurez correctement votre système de stockage, vous pouvez éviter les frais de rafale inattendus. Toute utilisation en rafale accumulée après la période de grâce initiale de 60 jours sera facturée sur votre prochaine facture. Ce délai de grâce n'affecte aucune modification ou renouvellement de vos abonnements existants.
 
 

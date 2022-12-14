@@ -23,6 +23,7 @@ Les compartiments sont créés sous un sous-locataire.
 . Cliquez sur *Créer*. Cela crée un travail pour créer le compartiment.
 
 
+.Une fois que vous avez terminé
 La fonction de création de compartiment est exécutée sous la forme d'une tâche asynchrone. Vous pouvez :
 
 * Vérifiez l'état du travail dans la liste des travaux.

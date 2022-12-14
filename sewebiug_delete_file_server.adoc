@@ -20,6 +20,7 @@ summary: Serveur de fichiers supprimé Keystone
 * Toutes les copies de reprise après incident sont répliquées associées au serveur de fichiers. Vous ne pouvez pas annuler la suppression d'un serveur.
 
 
+.Avant de commencer
 Pour supprimer un serveur de fichiers, vous devez d'abord supprimer tous les partages qui existent sur le serveur.
 
 .Étapes

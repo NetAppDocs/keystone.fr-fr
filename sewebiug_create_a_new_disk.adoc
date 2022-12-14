@@ -115,6 +115,7 @@ NOTE: Sélectionnez une option pour afficher les informations de performances as
 . Cliquez sur *Créer*. Cela crée un travail pour créer le disque.
 
 
+.Une fois que vous avez terminé
 Créer un disque est exécuté comme une tâche asynchrone. Vous pouvez :
 
 * Vérifiez l'état du travail dans la liste des travaux.

@@ -21,6 +21,7 @@ Les serveurs de fichiers appartiennent à un sous-locataire et sont créés au s
 * Rendre compatible CIFS. Les services NFS sont activés par défaut.
 
 
+.Avant de commencer
 Assurez-vous que vous disposez des éléments suivants pour créer le serveur :
 
 * Sous-locataire qui hébergera le serveur.
@@ -89,6 +90,7 @@ NOTE: Si vous êtes abonné à la protection des données de reprise après inci
 
 NOTE: Si vous créez un serveur compatible CIFS, pour le nom de domaine entré (FQDN), vous devez entrer le nom d'utilisateur Active Directory et le mot de passe Active Directory, puis cliquer sur *confirmer*.
 
+.Une fois que vous avez terminé
 La création du serveur est exécutée en tant que tâche asynchrone. Vous pouvez :
 
 * Vérifiez l'état du travail dans la liste des travaux. Pour plus d'informations sur le suivi des travaux, reportez-vous à la section link:sewebiug_netapp_service_engine_web_interface_overview.html#jobs-and-job-status-indicator["ici"].

@@ -16,6 +16,7 @@ summary: Keystone ajoute un utilisateur
 [role="lead"]
 Cette section décrit comment ajouter un utilisateur.
 
+.Avant de commencer
 Éléments requis :
 
 * Les locataires auxquels l'utilisateur doit avoir accès.

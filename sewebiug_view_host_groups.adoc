@@ -39,6 +39,7 @@ Il est possible de créer un groupe d'hôtes vide et de le mapper sur un disque 
 
 
 
+.Avant de commencer
 Vous devez disposer des éléments suivants pour créer le groupe d'hôtes :
 
 * Le sous-locataire, la région et la zone dans lesquelles créer le groupe hôte.
@@ -69,6 +70,7 @@ NOTE: Si le magasin de blocs d'une combinaison de sous-tenant/zone n'a pas été
 . Cliquez sur *Créer*. Ceci crée le groupe hôte.
 
 
+.Une fois que vous avez terminé
 Une fois le groupe d'hôtes créé, il est disponible pour le mappage sur des disques.
 
 

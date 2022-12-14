@@ -25,6 +25,7 @@ NOTE: Les comptes Cloud Volumes Service des locataires et sous-locataires doiven
 
 Vous pouvez gérer vos services Cloud sur Google Cloud à partir du menu *SERVICES CLOUD* du volet de navigation de gauche. La page Services cloud affiche tous les services cloud pour tous les sous-locataires d'un locataire sélectionné. Vous pouvez afficher, modifier et supprimer les services Cloud de cette page. Vous pouvez également ajouter un nouveau service en suivant ces étapes.
 
+.Avant de commencer
 Vous devez vous assurer que :
 
 * Le sous-locataire est abonné au service Google Cloud.

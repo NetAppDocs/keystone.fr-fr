@@ -22,4 +22,5 @@ Cette section décrit comment créer un instantané ad hoc d'un disque.
 . Dans la boîte de dialogue Créer un instantané, entrez un nom pour votre instantané et cliquez sur *Créer*.
 
 
+.Une fois que vous avez terminé
 Cette copie peut prendre quelques minutes. Si disponible, vous pouvez créer un autre disque en clonant ce snapshot. Pour plus d'informations, reportez-vous à la section link:sewebiug_create_a_disk_from_a_snapshot.html["Créer un disque à partir d'un snapshot"].

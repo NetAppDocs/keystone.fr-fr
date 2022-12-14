@@ -41,6 +41,7 @@ La liste affiche des informations simples sur chaque compte Azure NetApp. Les ic
 
 Cette section explique comment ajouter un compte Azure NetApp.
 
+.Avant de commencer
 Vous aurez besoin des éléments suivants :
 
 * Sous-locataire auquel appartient le compte Azure NetApp

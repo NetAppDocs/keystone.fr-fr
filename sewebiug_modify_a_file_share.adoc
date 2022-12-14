@@ -19,6 +19,7 @@ Vous pouvez modifier le nom du partage, le niveau de service, la capacité, la r
 
 NOTE: Cette méthode vous permet de déplacer vos partages vers différents niveaux de service, le cas échéant. Vous ne pouvez modifier le type de partage que si le serveur prend en charge les services respectifs.
 
+.Avant de commencer
 Le partage de fichiers doit être à l'état opérationnel. Pour comprendre les États de volume et les étapes à suivre pour les rendre opérationnels, voir link:sewebiug_view_disks.html["Afficher les disques"] et link:sewebiug_netapp_service_engine_web_interface_overview.html#object-states["États de l'objet"]
 
 .Étapes
@@ -28,6 +29,7 @@ Le partage de fichiers doit être à l'état opérationnel. Pour comprendre les 
 . Cliquez sur *Done*. Cela crée un travail pour modifier le partage.
 
 
+.Une fois que vous avez terminé
 Modifier le partage est exécuté comme une tâche asynchrone. Vous pouvez :
 
 * Vérifiez l'état du travail dans la liste des travaux. Pour plus d'informations sur le suivi des travaux, reportez-vous à la section link:sewebiug_netapp_service_engine_web_interface_overview.html#jobs-and-job-status-indicator["ici"].

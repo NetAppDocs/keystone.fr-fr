@@ -18,6 +18,7 @@ Cette section explique comment ajouter un service cloud.
 
 Le moteur de service NetApp prend en charge Azure NetApp Files.
 
+.Avant de commencer
 Vous avez besoin des informations concernant les services cloud, notamment des identifiants pour vous connecter au service. Les informations varient en fonction du type de service cloud.
 
 .Étapes

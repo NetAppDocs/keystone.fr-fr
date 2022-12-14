@@ -41,6 +41,7 @@ La liste affiche des informations simples sur chaque volume Azure. Les icônes d
 
 Cette section décrit l'ajout d'un volume Azure.
 
+.Avant de commencer
 Vous aurez besoin des éléments suivants :
 
 * Sous-locataire auquel appartient le volume Azure

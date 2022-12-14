@@ -205,8 +205,10 @@ L'activation de la réplication asynchrone de reprise après incident pour un vo
 * Activation ou désactivation de la réplication de reprise après incident du partage de fichiers ou du disque. Par défaut, les partages et les disques sont activés pour la réplication de reprise après incident, si la reprise après incident est configurée.
 
 
+.Configurez un serveur de fichiers ou un magasin en blocs pour prendre en charge la reprise après incident asynchrone
 Activez la reprise après incident asynchrone sur un serveur de fichiers ou un magasin bloc au moment de la création ou ultérieurement. Une fois activée, la reprise après incident ne peut pas être désactivée et la zone de reprise après incident ne peut pas être modifiée. La planification de la reprise sur incident spécifie la fréquence à laquelle les données sont répliquées vers le site de reprise sur incident (toutes les heures, toutes les heures ou tous les jours).
 
+.Reprise après incident asynchrone sur le partage de fichiers ou le disque
 Un partage de fichiers ou un disque ne peut être configuré que pour la réplication asynchrone de reprise après incident si le serveur de fichiers parent ou le magasin de blocs est d'abord configuré pour la reprise après incident asynchrone. Par défaut, si la réplication est activée dans le parent, la réplication est activée dans les partages de fichiers ou les disques que le parent héberge. Vous pouvez exclure la réplication d'un partage ou d'un disque particulier en désactivant la reprise après sinistre sur ce partage/disque. Il est possible de basculer entre l'activation et la désactivation de la réplication sur ces partages/disques.
 
 *Notes:*

@@ -22,4 +22,5 @@ Cette section décrit comment créer un instantané ad hoc d'un partage de fichi
 . Dans la boîte de dialogue Créer un instantané, entrez un nom pour votre instantané et cliquez sur *Créer*.
 
 
+.Une fois que vous avez terminé
 Cette disponibilité peut prendre quelques minutes. Si disponible, vous pouvez créer un autre partage en clonant ce snapshot. Pour plus d'informations, reportez-vous à la section link:sewebiug_create_file_share_from_snapshot.html["Créez un partage de fichiers à partir d'un instantané"].

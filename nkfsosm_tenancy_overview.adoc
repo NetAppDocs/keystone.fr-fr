@@ -19,10 +19,12 @@ L'abonnement NetApp Keystone Flex (Flex Subscription) utilise les concepts de *t
 
 NOTE: Dans le cadre de Flex Subscription, une location unique est un modèle géré par NetApp, tandis que la colocation est un modèle géré par nos partenaires.
 
+.Locataires
 Un locataire est l'entité de facturation principale définie dans Flex Subscription. Chaque client qui est intégré dans l'abonnement Flex et qui détient un abonnement aux services existe en tant que locataire Flex Subscription. Le client fournit à NetApp un nom de client et/ou un identifiant à des fins d'intégration et de suivi des dates d'abonnement et des conditions d'engagement.
 
 Dans le cadre d'une colocation, le partenaire est un locataire/client de NetApp dans un environnement Flex Subscription. Le partenaire peut, à son tour, prendre en charge plusieurs locataires ou clients liés à des clients finaux/sous-locataires. Dans ce modèle, les locataires/sous-locataires sont les clients des fournisseurs de services et n'ont aucune relation de facturation avec NetApp.
 
+.Sous-locataires
 Les sous-locataires Flex Subscription existent entièrement au sein d'un locataire parent avec une relation plusieurs-à-un. Les sous-locataires fournissent une séparation des ressources logiques au sein d'une location et servent de base au reporting à la démonstration. Toutes les ressources de stockage (c'est-à-dire les services de fichiers, le stockage bloc et le stockage objet) appartiennent à un sous-locataire.
 
 image:nkfsosm_image10.png[""]

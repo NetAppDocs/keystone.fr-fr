@@ -3138,4 +3138,10 @@
   <block id="d717179901a081426cfa25f7009d2d04" category="cell">ID d'application (client). ID d'un service Active Directory principal que BlueXP peut utiliser pour s'authentifier auprès d'Azure Active Directory.</block>
   <block id="a7aef034348bc38d9b7f16020d181733" category="paragraph">L'abonnement NetApp Keystone Flex (abonnement Flex) est guidé par les termes et descriptions des services suivants.</block>
   <block id="0493ca6a55a3d28e65cc473a5710b470" category="list-text">L'abonnement Flex est disponible pendant au moins un an et jusqu'à trois ans. Après la période initiale, le service est renouvelable sur une base annuelle. La capacité peut être augmentée par incréments de 1 Tio.</block>
+  <block id="b1fb6edb6a9cd7a76214562e75ef8390" category="paragraph-title">Mesure de la capacité consommée</block>
+  <block id="7f5043ec0394d759e4ce437fc8c9cd52" category="paragraph-title">Facturation mensuelle</block>
+  <block id="51ebf10290dc90afa947ed3f3696db87" category="paragraph-title">Facturation annuelle</block>
+  <block id="6f79e617449041abacad9b220d0cdd03" category="paragraph-title">Période de grâce pour la facturation en rafale</block>
+  <block id="1a616d944b2a6237298adf4b4e0db510" category="paragraph-title">Configurez un serveur de fichiers ou un magasin en blocs pour prendre en charge la reprise après incident asynchrone</block>
+  <block id="1e53e767469d41ddc55c1ff94e72e9a6" category="paragraph-title">Reprise après incident asynchrone sur le partage de fichiers ou le disque</block>
 </blocks>
