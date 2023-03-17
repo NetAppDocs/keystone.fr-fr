@@ -91,7 +91,7 @@ Survient lorsqu'une modification est apportée à la ressource de stockage (serv
 * *Les objets importés* approvisionnés en dehors du moteur de services NetApp sont importés avec ce statut lorsqu'ils ne remplissent pas les critères de l'abonnement NetApp Keystone Flex (Flex Subscription).
 +
 
-NOTE: Ce statut indique généralement qu'aucune politique de QoS n'est appliquée à l'objet et ne peut donc pas être gérée par NetApp Service Engine dans le cadre de votre abonnement Flex. Vous pouvez modifier l'objet (à l'aide du stylet d'édition) et attribuer un niveau de service approprié. Le statut de cet objet est alors opérationnel.
+NOTE: Ce statut indique généralement qu'aucune politique de QoS n'est appliquée à l'objet et ne peut donc pas être gérée par NetApp Service Engine dans le cadre de votre abonnement Flex. Vous pouvez modifier l'objet (à l'aide de la plume d'édition) et attribuer un niveau de service approprié. Le statut de cet objet est alors opérationnel.
 
 * *Les objets non-standard* provisionnés en dehors du moteur de service NetApp sont importés avec ce statut lorsqu'ils ne remplissent pas les critères d'abonnement NetApp Keystone Flex (abonnement Flex).
 +

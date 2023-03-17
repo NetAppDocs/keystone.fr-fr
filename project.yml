@@ -17,9 +17,9 @@ sidebar:
       entries:
       - title: Définitions des capacités de service
         url: "/nkfsosm_keystone_service_capacity_definitions.html"
-      - title: De performances et de niveau de service
+      - title: Niveaux de service dans Flex Subscription
         url: "/nkfsosm_performance.html"
-      - title: Définitions et metrics des niveaux de service
+      - title: Metrics et définitions de niveaux de service
         url: "/nkfsosm_service_level_metrics_and_definitions.html"
       - title: Facturation
         url: "/nkfsosm_kfs_billing.html"
@@ -43,8 +43,12 @@ sidebar:
       url: "/nkfsosm_site_requirements.html"
     - title: Exploitation
       url: "/nkfsosm_netapp_global_services_and_support_center_@gssc@.html"
-    - title: Abonnement Flex et Active IQ
+    - title: Flex Subscription et Active IQ Digital Advisor
       url: "/nkfsosm-keystone-and-aiq.html"
+      entries:
+      - title: Affichez et générez des rapports à partir du conseiller digital Active
+          IQ
+        url: "/aiq-keystone-details.html"
   - title: Notes de version
     entries:
     - title: Quoi de neuf
