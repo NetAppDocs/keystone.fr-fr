@@ -959,7 +959,6 @@
   <block id="47b6bb2cce100732829dd417cfe27e9d" category="paragraph">Avant de créer des partages de fichiers, vous devez créer des serveurs de fichiers pour les héberger.</block>
   <block id="17782c2473a5c5a938084773440e31e4" category="section-title">API de serveurs de fichiers</block>
   <block id="b87703d88dc9a8880b9d61547ad69520" category="inline-link-macro">Créez un serveur de fichiers</block>
-  <block id="6a2dbafb5fdf4ebd41dc120352241e18" category="paragraph">Vous pouvez utiliser les API serveurs de fichiers pour afficher et gérer vos serveurs de fichiers. Pour plus d'informations sur les serveurs de fichiers, reportez-vous à la section <block ref="70b9819566ab0e06252a3ab0c6d653f0" category="inline-link-macro-rx"></block>.</block>
   <block id="2fb3d6cbcc854678a2cb28db02fe2686" category="paragraph">`/v2.1/serveurs de fichiers`</block>
   <block id="e8375dbbe88f10ddcdba084ff89f098b" category="cell">Vous pouvez récupérer les détails de tous vos serveurs de fichiers. Récupère les détails des serveurs de fichiers, tels que l'ID du serveur de fichiers, le nom, la région, la zone, le locataire, et balises.</block>
   <block id="fe3d02358ec201be64696b17fce634e0" category="paragraph">`/v2.1/serveurs de fichiers/{id}'</block>
@@ -3170,7 +3169,6 @@
   <block id="744f7cb6bd1aa9077ff244891a651e80" category="list-text">Ambre: 80% - 100%.</block>
   <block id="c3b2392317dad26eb62ae53f36697f5e" category="list-text">Rouge : utilisation en rafale (100 % de la capacité validée par rapport à la limite de rafale convenue)</block>
   <block id="7673426e4a1c3cc1b97d1f96f8bd076a" category="list-text">Violet : au-dessus de la limite d'éclatement ou<block ref="a9793d8430f5962bfc6384a1d9f6d19b" prefix=" " category="inline-code"></block>.</block>
-  <block id="4bd2482822c2e802c391dac7e891d9b1" category="list-text">Gris: _Usage provisoire_ - utilisation enregistrée lorsque les données exactes de la période ne sont pas disponibles et sont remplacées par les données disponibles au point de collecte de données précédent.</block>
   <block id="e87913116d2be6cac8be4e9b2fdf61e4" category="list-text">*Courant consommé* : indicateur de la capacité consommée (en Tio) définie pour le niveau de service. Ce champ utilise des couleurs spécifiques pour l'utilisation :</block>
   <block id="500993209cab49c52b98999c19742b12" category="list-text">Gris : aucun.</block>
   <block id="3cc6f4aa3b6f7beebb36ba03d0894c83" category="list-text">Vert : dans un délai de 80 % de la capacité allouée.</block>
@@ -3226,4 +3224,6 @@
   <block id="596c605317cc14ada22698b4c013fd32" category="sidebar">Niveaux de service dans Flex Subscription</block>
   <block id="8629d433b3c29320111a02fbc3cc079b" category="sidebar">Flex Subscription et Active IQ Digital Advisor</block>
   <block id="63d539af1a31e2f3e8acd3fdd788eac6" category="sidebar">Affichez et générez des rapports à partir du conseiller digital Active IQ</block>
+  <block id="fcdba6ace545174b3125451ecdd38a60" category="admonition">Lorsque vous placez le curseur de la souris sur un graphique à barres, vous pouvez afficher les données _usage provisoire_. Il s'agit de l'utilisation enregistrée lorsque les données exactes de la période ne sont pas disponibles et sont remplacées par les données disponibles au point de collecte des données précédent.</block>
+  <block id="bad6d4d49543b42a93697517b551920a" category="paragraph">Vous pouvez utiliser les API serveurs de fichiers pour afficher et gérer vos serveurs de fichiers. Pour plus d'informations sur les serveurs de fichiers, reportez-vous à la section <block ref="b7c7173b32246b86fba34bb5faef1e28" category="inline-link-macro-rx"></block>.</block>
 </blocks>

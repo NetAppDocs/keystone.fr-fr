@@ -22,7 +22,7 @@ Avant de créer des partages de fichiers, vous devez créer des serveurs de fich
 
 == API de serveurs de fichiers
 
-Vous pouvez utiliser les API serveurs de fichiers pour afficher et gérer vos serveurs de fichiers. Pour plus d'informations sur les serveurs de fichiers, reportez-vous à la section link:hsewebiug_create_a_file_server.html["Créez un serveur de fichiers"].
+Vous pouvez utiliser les API serveurs de fichiers pour afficher et gérer vos serveurs de fichiers. Pour plus d'informations sur les serveurs de fichiers, reportez-vous à la section link:sewebiug_create_a_file_server.html["Créez un serveur de fichiers"].
 
 [cols="1,1,3,2"]
 |===

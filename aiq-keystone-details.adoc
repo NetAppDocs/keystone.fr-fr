@@ -93,7 +93,10 @@ Les couleurs suivantes dans les graphiques à barres indiquent la capacité cons
 ** Ambre: 80% - 100%.
 ** Rouge : utilisation en rafale (100 % de la capacité validée par rapport à la limite de rafale convenue)
 ** Violet : au-dessus de la limite d'éclatement ou `Above Limit`.
-** Gris: _Usage provisoire_ - utilisation enregistrée lorsque les données exactes de la période ne sont pas disponibles et sont remplacées par les données disponibles au point de collecte de données précédent.
++
+
+NOTE: Lorsque vous placez le curseur de la souris sur un graphique à barres, vous pouvez afficher les données _usage provisoire_. Il s'agit de l'utilisation enregistrée lorsque les données exactes de la période ne sont pas disponibles et sont remplacées par les données disponibles au point de collecte des données précédent.
+
 
 
 * *Courant consommé* : indicateur de la capacité consommée (en Tio) définie pour le niveau de service. Ce champ utilise des couleurs spécifiques pour l'utilisation :
