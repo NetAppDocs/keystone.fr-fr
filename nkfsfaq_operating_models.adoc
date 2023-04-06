@@ -14,7 +14,7 @@ summary: Modèles opérationnels
 
 
 [role="lead"]
-Il existe trois modèles opérationnels dans les abonnements Flex. Ces FAQ sont liées à ces modèles opérationnels.
+Les services Keystone comportent trois modèles opérationnels. Ces FAQ sont liées à ces modèles opérationnels.
 
 *Quels sont les différents modèles opérationnels et qui est responsable des principales activités?*
 

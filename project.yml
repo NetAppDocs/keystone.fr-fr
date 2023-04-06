@@ -9,7 +9,7 @@ settings:
   langs: fr-fr,us-en,ja-jp,ko-kr,zh-cn,zh-tw,de-de,es-es
 sidebar:
   entries:
-  - title: Abonnement NetApp Keystone Flex
+  - title: Services NetApp Keystone
     url: "/index.html"
     entries:
     - title: Termes et description du service
@@ -17,7 +17,7 @@ sidebar:
       entries:
       - title: Définitions des capacités de service
         url: "/nkfsosm_keystone_service_capacity_definitions.html"
-      - title: Niveaux de service dans Flex Subscription
+      - title: Niveaux de service dans Keystone
         url: "/nkfsosm_performance.html"
       - title: Metrics et définitions de niveaux de service
         url: "/nkfsosm_service_level_metrics_and_definitions.html"
@@ -31,19 +31,19 @@ sidebar:
         url: "/nkfsosm_nrd.html"
       - title: Aide des citoyens AUX ÉTATS-UNIS
         url: "/nkfsosm_uscs.html"
-      - title: Flex Subscription et Equinix
+      - title: Keystone et Equinix
         url: "/nkfsosm_equinix.html"
     - title: Modèle opérationnel et responsabilités
       url: "/nkfsosm_overview.html"
     - title: Location et colocation
       url: "/nkfsosm_tenancy_overview.html"
-    - title: Infrastructure d'abonnement Flex
+    - title: Infrastructure Keystone
       url: "/nkfsosm_keystone_service_delivery_architecture_overview.html"
     - title: Exigences du site
       url: "/nkfsosm_site_requirements.html"
     - title: Exploitation
       url: "/nkfsosm_netapp_global_services_and_support_center_@gssc@.html"
-    - title: Flex Subscription et Active IQ Digital Advisor
+    - title: Keystone et le conseiller digital Active IQ
       url: "/nkfsosm-keystone-and-aiq.html"
       entries:
       - title: Affichez et générez des rapports à partir du conseiller digital Active
@@ -57,10 +57,10 @@ sidebar:
       url: "/rn_fixed_issues.html"
     - title: Problèmes connus
       url: "/rn_known_issues.html"
-  - title: FAQ sur l'abonnement Flex
+  - title: FAQ sur les abonnements Keystone
     url: "/nkfsfaq_overview.html"
     entries:
-    - title: Abonnement Flex
+    - title: Abonnements Keystone
       url: "/nkfsfaq_keystone_subscription.html"
     - title: Détails de l'offre de service
       url: "/nkfsfaq_service_offer_details.html"
@@ -85,7 +85,7 @@ sidebar:
         url: "/sewebiug_select_tenant.html"
       - title: Afficher l'interface Web du moteur de services NetApp
         url: "/sewebiug_netapp_service_engine_web_interface_overview.html"
-    - title: Afficher le tableau de bord des abonnements Flex
+    - title: Afficher le tableau de bord des abonnements Keystone
       url: "/sewebiug_dashboard.html"
     - title: Afficher la facturation
       url: "/sewebiug_billing.html"

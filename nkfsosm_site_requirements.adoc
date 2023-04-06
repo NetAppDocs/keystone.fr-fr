@@ -14,13 +14,13 @@ summary: Exigences du site Keystone
 
 
 [role="lead"]
-L'activation des services d'abonnement NetApp Keystone Flex (Flex Subscription) dans votre environnement est très obligatoire, notamment en termes d'espace, de racks, de PDU, d'alimentation, et le refroidissement, avec des exigences supplémentaires en matière de réseau et de sécurité abordées plus loin.
+L'activation des services NetApp Keystone dans votre environnement requiert plusieurs options : espace, racks, PDU, alimentation, et de refroidissement, avec des exigences supplémentaires en matière de réseau et de sécurité abordées plus loin.
 
 
 
 == Espace
 
-Espace au sol pour héberger l'équipement d'infrastructure Flex Subscription (à fournir par les clients). NetApp fournit les spécifications de poids en fonction de la configuration finale.
+Espace au sol nécessaire pour héberger l'équipement d'infrastructure Keystone (à fournir par les clients). NetApp fournit les spécifications de poids en fonction de la configuration finale.
 
 
 
@@ -52,4 +52,4 @@ NetApp peut fournir les spécifications relatives à la climatisation (BTU typiq
 
 Selon les besoins du client et les contrôleurs de stockage utilisés, NetApp peut fournir une connectivité 10 Gib, 40 Gib et 100 Gib sur le site du client.
 
-NetApp fournit les émetteurs-récepteurs nécessaires uniquement pour les dispositifs d'infrastructure à abonnement Flex fournis par NetApp. Vous devez fournir les émetteurs-récepteurs requis pour les périphériques du client et le câblage aux périphériques d'infrastructure Flex Subscription fournis par NetApp.
+NetApp fournit uniquement les émetteurs-récepteurs requis pour les appareils d'infrastructure Keystone fournis par NetApp. Vous devez fournir les émetteurs-récepteurs requis pour les périphériques du client et le câblage aux périphériques d'infrastructure Keystone fournis par NetApp.

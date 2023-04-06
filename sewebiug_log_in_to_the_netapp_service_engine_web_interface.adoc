@@ -44,7 +44,7 @@ Le tableau suivant répertorie les descriptions d'accès basées sur les rôles.
 | Administrateur NetApp (lecture) | Accès en lecture seule pour tous les composants. 
 
 
-| Admin NetApp | Accès complet et autorisations d'exécution de toutes les fonctions sur le portail Web du moteur de services NetApp pour la gestion des abonnements NetApp Keystone Flex, et de toutes les activités d'administration des partenaires et des locataires. 
+| Admin NetApp | Accès complet et autorisations d'exécution de toutes les fonctions du portail web NetApp Service Engine permettant de gérer les services d'abonnement NetApp Keystone et toutes les activités pour l'administration des partenaires et des locataires. 
 |===
 
 
@@ -83,7 +83,7 @@ Pour vous connecter avec NetApp SSO, vous avez besoin :
 . Sélectionnez NetApp SSO.
 . Sur la page de connexion SSO, entrez votre nom d'utilisateur et votre mot de passe et cliquez sur *connexion*.
 +
-Une fois la connexion établie, l'interface Web du moteur de services NetApp se charge, le tableau de bord d'abonnement Flex s'affiche. Pour une vue d'ensemble de l'interface graphique, voir link:sewebiug_netapp_service_engine_web_interface_overview.html#netapp-service-engine-web-interface-overview["Présentation de l'interface Web du moteur de service NetApp"].
+Une fois la connexion établie, le tableau de bord des services d'abonnement Keystone s'affiche lorsque l'interface web du moteur de services NetApp se charge. Pour une vue d'ensemble de l'interface graphique, voir link:sewebiug_netapp_service_engine_web_interface_overview.html#netapp-service-engine-web-interface-overview["Présentation de l'interface Web du moteur de service NetApp"].
 
 
 

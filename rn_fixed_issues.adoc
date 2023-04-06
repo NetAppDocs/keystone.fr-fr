@@ -14,7 +14,7 @@ summary: Problèmes résolus dans le moteur de service NetApp
 
 
 [role="lead"]
-Les problèmes suivants rencontrés dans une précédente version du moteur de services NetApp ont été résolus pour que vous puissiez utiliser correctement les services d'abonnement NetApp Keystone Flex.
+Les problèmes suivants rencontrés dans une version précédente de NetApp Service Engine ont été résolus pour que vous puissiez utiliser efficacement vos services NetApp Keystone.
 
 [cols="3*"]
 |===

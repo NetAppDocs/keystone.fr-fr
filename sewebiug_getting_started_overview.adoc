@@ -27,7 +27,7 @@ Pour commencer vos activités sur ce portail :
 ** Pour plus d'informations, connectez-vous avec NetApp SSO. Consultez link:sewebiug_log_in_to_the_netapp_service_engine_web_interface.html["Connectez-vous à l'interface Web du moteur de services NetApp"]
 
 
-* Sélectionnez le locataire. Le tableau de bord s'affiche. Pour plus d'informations, reportez-vous à la section link:sewebiug_dashboard.html["Afficher le tableau de bord des abonnements Flex"]
+* Sélectionnez le locataire. Le tableau de bord s'affiche. Pour plus d'informations, reportez-vous à la section link:sewebiug_dashboard.html["Afficher le tableau de bord Keystone"]
 
 
 Pour en savoir plus sur l'interface Web du moteur de service NetApp, consultez la section link:sewebiug_netapp_service_engine_web_interface_overview.html["Présentation de l'interface Web du moteur de service NetApp"]

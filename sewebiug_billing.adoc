@@ -14,9 +14,9 @@ summary: Afficher et télécharger les détails de facturation
 
 
 [role="lead"]
-Vous pouvez consulter les frais mensuels de tous les services souscrits sur votre abonnement NetApp Keystone Flex (Flex Subscription) sur le tableau de bord du moteur de service NetApp et l'écran de facturation.
+Vous pouvez afficher les frais mensuels de tous les services souscrits dans vos services d'abonnement NetApp Keystone sur le tableau de bord du moteur de services NetApp et sur l'écran facturation.
 
-Vous pouvez consulter les détails de facturation de tous vos services souscrits pour l'abonnement Flex pour les mois précédents. La facturation en fonction de la capacité en rafale est mise en évidence pour chaque mois.
+Vous pouvez afficher les détails de facturation de tous les services auxquels vous avez souscrit pour les services d'abonnement Keystone des mois précédents. La facturation en fonction de la capacité en rafale est mise en évidence pour chaque mois.
 
 image:billing.png[""]
 
@@ -37,4 +37,4 @@ NOTE: Vous pouvez également cliquer sur la flèche dans le coin supérieur droi
 . Sélectionnez un mois dans le tableau. Tous vos abonnements pour le mois, ainsi que la facturation associée, sont affichés dans le tableau. Les frais sont répartis en fonction de la capacité engagée et de l'utilisation en rafale.
 
 
-Pour plus d'informations sur la facturation, voir link:nkfsosm_kfs_billing.html["Facturation de l'abonnement Flex"]
+Pour plus d'informations sur la facturation, voir link:nkfsosm_kfs_billing.html["La facturation Keystone"]

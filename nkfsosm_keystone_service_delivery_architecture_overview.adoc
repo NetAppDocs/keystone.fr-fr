@@ -4,7 +4,7 @@ permalink: nkfsosm_keystone_service_delivery_architecture_overview.html
 keywords: netapp, keystone, service, delivery, architecture, overview, 
 summary: 'Présentation de l"architecture de réalisation des services' 
 ---
-= Infrastructure d'abonnement Flex
+= Infrastructure Keystone
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,9 +14,9 @@ summary: 'Présentation de l"architecture de réalisation des services'
 
 
 [role="lead"]
-Cette section décrit l'architecture d'infrastructure NetApp Keystone Flex Subscription (Flex Subscription) et l'application de gestion pour les environnements NetApp et clients.
+Cette section décrit l'architecture de l'infrastructure NetApp Keystone et l'application de gestion pour les environnements NetApp et exploités par le client.
 
-L'architecture, le design, le choix de technologies et de composants de l'infrastructure d'abonnement Flex appartiennent exclusivement à NetApp. NetApp se réserve le droit de prendre les mesures suivantes :
+L'architecture, la conception, le choix de la technologie et les composants de l'infrastructure Keystone résident uniquement auprès de NetApp. NetApp se réserve le droit de prendre les mesures suivantes :
 
 * Sélectionnez, remplacez ou requalifiez des produits.
 * Actualisez les produits avec une nouvelle technologie lorsque cela est approprié.
@@ -24,11 +24,11 @@ L'architecture, le design, le choix de technologies et de composants de l'infras
 * Modification de l'architecture, de la technologie et/ou des produits pour répondre aux exigences en matière de services
 
 
-L'infrastructure Flex Subscription comprend plusieurs composants :
+L'infrastructure Keystone comprend plusieurs composants :
 
 * Interface utilisateur (portail Web) du moteur de service NetApp.
 * API du moteur de service NetApp pour l'intégration.
-* L'infrastructure Flex Subscription qui inclut des contrôleurs de stockage
+* Infrastructure Keystone incluant des contrôleurs de stockage
 * Outils de gestion et d'utilisation du service tels que OpsRamp, Active IQ et Active IQ Unified Manager.
 
 
@@ -40,7 +40,7 @@ image:nkfsosm_image8.png["Erreur : image graphique manquante"]
 
 == Moteur de service NetApp
 
-Vous pouvez utiliser le portail Web Service Engine de NetApp pour gérer et contrôler votre service d'abonnement Flex sur un modèle NetApp, partenaire ou client. Le portail se compose des fonctionnalités suivantes :
+Vous pouvez utiliser le portail web NetApp Service Engine pour gérer et contrôler votre service Keystone dans un modèle exploité par NetApp, partenaire ou client. Le portail se compose des fonctionnalités suivantes :
 
 * Une interface graphique (interface web NetApp Service Engine) qui prend en charge la surveillance et le provisionnement simple du stockage.
 * Un ensemble d'API REST NetApp Service Engine qui permettent des actions plus avancées dans la configuration et la gestion du stockage.

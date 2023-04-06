@@ -26,7 +26,7 @@ Faire une demande de service pour :
 * La restauration des sauvegardes
 * Basculement de reprise d'activité
 * Problème technique avec le moteur de service NetApp
-* Volumes non standard : les volumes importés dans votre abonnement Flex partagent la même norme que les disques et partages de fichiers existants sur le moteur de services NetApp. Après importation, ces disques et partages de fichiers sont classés avec le statut «non standard». Vous pouvez soumettre une demande de service pour changer leur statut à un état standard.
+* Volumes non standard : les volumes importés dans vos services d'abonnement Keystone partagent la même norme que les disques et partages de fichiers existants sur NetApp Service Engine. Après l'importation, ces disques et partages de fichiers sont classés par catégorie `Non-Standard` état. Vous pouvez soumettre une demande de service pour changer leur statut à un état standard.
 * Tout autre problème qui n'est pas couvert dans cette liste.
 
 

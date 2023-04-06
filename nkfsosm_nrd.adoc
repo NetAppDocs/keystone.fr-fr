@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: nkfsosm_nrd.html 
 keywords: netapp, keystone, NRD, Non-returnable disk 
-summary: Abonnement Keystone Flex et Equinix 
+summary: Keystone et Equinix 
 ---
 = Offre de disque non retournable
 :hardbreaks:
@@ -14,14 +14,14 @@ summary: Abonnement Keystone Flex et Equinix
 
 
 [role="lead"]
-Dans le cadre de l'abonnement NetApp Keystone Flex (Flex Subscription), NetApp étend l'offre NRD (non-returnable Disk).
+Dans le cadre des services NetApp Keystone, NetApp étend l'offre de disques qui ne peuvent pas être retournés (NRD).
 
-Si vous achetez l'offre NRD pour souscrire un abonnement Flex, NetApp ne récupère pas le support de stockage physique utilisé pendant l'ensemble de la durée du service en raison des activités de support et de maintenance, ou à la fin du service lorsque NetApp récupère sinon toutes ses ressources physiques utilisées pour la prestation du service.
+Si vous achetez l'offre NRD pour Keystone, NetApp ne récupère pas le support de stockage physique utilisé pendant toute la durée du service à cause des activités de support et de maintenance, ou à la fin du service lorsque NetApp récupère autrement l'ensemble de ses actifs physiques utilisés dans la prestation du service.
 
 Si vous avez acheté ce service, notez ce qui suit :
 
 * Même si vous achetez ce service, vous pouvez choisir de restaurer le support de stockage physique par NetApp.
-* Si NetApp n'est pas responsable de la récupération du support, vous avez le droit de détruire le ou les disques de stockage utilisés pour la livraison du service d'abonnement Flex à la fin de la durée du service.
+* Si NetApp n'est pas responsable de la restauration du support, vous êtes autorisé à détruire les supports de stockage ou les disques utilisés dans la prestation du service Keystone à la fin de la période de service.
 * Vous pouvez ajouter, modifier ou mettre fin à l'offre NRD au cours du renouvellement de l'abonnement et non au milieu de la durée.
 * Coût associé aux modifications de l'offre NRD en fonction de la capacité engagée de l'abonnement. En d'autres termes, si vous optez pour augmenter votre capacité engagée au milieu de la période d'abonnement, le coût de la solution NRD est révisé de la même façon. L'augmentation est proportionnelle à l'augmentation de la capacité engagée.
 * Vous pouvez conserver uniquement le support de stockage physique utilisé dans votre service. Contrôleurs, tiroirs, câbles, commutateurs, cartes réseau, Et tout autre équipement détenu par NetApp sera restauré par NetApp.

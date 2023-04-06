@@ -4,7 +4,7 @@ permalink: nkfsosm_service_terms_and_description_overview.html
 keywords: netapp, keystone, service, terms, description, overview, 
 summary: Présentation des termes et description du service Keystone 
 ---
-= Les termes et descriptions du service de souscription Flex
+= Conditions générales et descriptions du service Keystone
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,9 +14,9 @@ summary: Présentation des termes et description du service Keystone
 
 
 [role="lead"]
-L'abonnement NetApp Keystone Flex (abonnement Flex) est guidé par les termes et descriptions des services suivants.
+Les conditions et descriptions de service NetApp Keystone sont guidées par les descriptions suivantes.
 
-* L'abonnement Flex est disponible pendant au moins un an et jusqu'à trois ans. Après la période initiale, le service est renouvelable sur une base annuelle. La capacité peut être augmentée par incréments de 1 Tio.
+* Les services Keystone sont disponibles pendant un an et trois ans au minimum. Après la période initiale, le service est renouvelable sur une base annuelle. La capacité peut être augmentée par incréments de 1 Tio.
 * La capacité minimale est de 100 Tio par site et chaque site peut disposer d'un ou de plusieurs clusters pour répondre aux besoins de capacité minimale. Dans le cas d'un modèle opéré par les partenaires, les abonnements aux ressources minimales flexibles sont créés pour un client, par site et selon les niveaux de service.
 * La capacité de 100 Tio peut être un seul niveau de service ou une combinaison de niveaux.
 * Les abonnements aux locataires sont limités aux niveaux de service auxquels les partenaires sont abonnés.

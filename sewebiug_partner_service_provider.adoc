@@ -22,22 +22,22 @@ En fonction de votre rôle de fournisseur de services ou de partenaire (utilisé
 
 En tant qu'administrateur de fournisseurs de services dans un environnement mutualisé, vous pouvez effectuer les fonctions de provisionnement, de création de rapports, de facturation et de gestion des clients possédant leurs propres abonnements, via l'interface utilisateur Web du moteur de services NetApp. Vous pouvez effectuer les opérations suivantes :
 
-* Afficher le stockage souscrit et provisionné dans le cadre de leur service Flex Subscription.
+* Affichez le stockage souscrit et provisionné dans le cadre de leur service d'abonnement Keystone.
 +
 
-NOTE: À titre de prestation de services, vous pouvez vendre plus de capacité à vos clients qu'à l'achat de services de NetApp (sursouscription). Les abonnements aux locataires peuvent s'étendre au-delà de la période d'abonnement Flex actuelle, mais un avertissement s'affiche au moment de la création de l'abonnement et dans les tableaux de bord/rapports.
+NOTE: À titre de prestation de services, vous pouvez vendre plus de capacité à vos clients qu'à l'achat de services de NetApp (sursouscription). Les abonnements aux locataires peuvent s'étendre au-delà de la période d'abonnement Keystone en cours. Toutefois, un avertissement s'affiche au moment de la création de l'abonnement et dans les tableaux de bord/rapports.
 
 * Créer, afficher, modifier et supprimer des locataires, sous-locataires, et aux utilisateurs.
 * Afficher les zones et les régions de vos abonnements.
-* Gérez et hébergez plusieurs locataires dans le service Flex Subscription : créez et gérez les abonnements des locataires et consultez vos propres détails d'abonnement Flex.
+* Gérez et hébergez plusieurs locataires dans le service d'abonnement Keystone : créez et gérez des abonnements de locataires et consultez les détails de votre abonnement Keystone.
 +
 
-NOTE: Les abonnements locataires peuvent être créés en fonction des zones correspondantes et des abonnements Keystone Flex. Elles sont créées selon les niveaux de service fournis sous la capacité souscrite de votre abonnement Flex.
+NOTE: Les abonnements des locataires peuvent être créés en fonction des zones correspondantes et des abonnements Keystone. Ils sont créés conformément aux niveaux de service fournis dans le cadre de la capacité souscrite de votre abonnement Keystone.
 
 * Créez des serveurs de fichiers ou des magasins de blocs et initialisez le stockage en mode bloc, fichier et objet, comme vous le savez, des exigences réseau pour provisionner chaque type de stockage pour vos locataires.
 * Vous pouvez également créer et gérer des sous-réseaux pour vos locataires,
-* Afficher les partages de fichiers, les disques et les compartiments créés dans le cadre de votre abonnement Flex. La création et la gestion des groupes de stockage objet ainsi que des utilisateurs.
-* Créez des rapports de consommation sur votre abonnement NetApp Keystone Flex et sur vos abonnements aux locataires, ainsi que sur leur utilisation pour tous les locataires, pour l'utiliser dans les systèmes de facturation et de notation respectifs.
+* Affichez les partages de fichiers, les disques et les compartiments créés dans le cadre de votre abonnement Keystone. La création et la gestion des groupes de stockage objet ainsi que des utilisateurs.
+* Créez des rapports de consommation en fonction de votre abonnement Keystone et de vos abonnements aux locataires, et utilisez-les pour tous les locataires, afin de les utiliser dans les systèmes de facturation et de tarification respectifs.
 * Affichez la facturation et le reporting pour tous les locataires et clients, et pour l'espace de stockage souscrit ou provisionné uniquement.
 * Afficher et gérer les demandes de service émises par les clients dans votre propre outil de demande de service (intégré à OpsRamp/GSSC).
 

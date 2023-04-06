@@ -14,15 +14,15 @@ summary: Gestion des abonnements Keystone
 
 
 [role="lead"]
-La gestion des abonnements implique l'attribution de niveaux de service à votre abonnement NetApp Keystone Flex (Flex Subscription) et aux services d'abonnement aux locataires, ou l'allocation et la modification des capacités aux niveaux de service à l'aide de l'interface du moteur de services NetApp.
+La gestion des abonnements inclut l'attribution de niveaux de service à votre abonnement NetApp Keystone et aux services d'abonnement des locataires, ou l'allocation et la modification des capacités aux niveaux de service à l'aide de l'interface du moteur de services NetApp.
 
-Les abonnements flexibles représentés par la relation entre les fournisseurs/partenaires de services et NetApp et les abonnements aux locataires représentent la relation entre le fournisseur de services et ses locataires et sous-locataires (clients finaux). Lorsque les administrateurs NetApp ou GSSC créent des services d'abonnement Flex pour les partenaires et les locataires, cela implique que l'allocation du stockage a été réalisée. Toutefois, à moins que les niveaux de service ne soient créés et que la capacité allouée correspondante ne soit complète, le stockage ne peut pas être consommé par les sous-locataires ou les clients finaux. Les administrateurs partenaires peuvent gérer le stockage de leurs abonnements Flex Subscription et locataires. Les administrateurs de locataires ne peuvent voir que les détails de l'abonnement aux locataires et les services pour leur propre location.
+Les services d'abonnement représentés par la relation entre les fournisseurs de services/partenaires et NetApp et les abonnements des locataires représentent la relation entre le fournisseur de services et ses locataires et sous-locataires (clients finaux). Lorsque les administrateurs NetApp ou GSSC créent des services d'abonnement Keystone pour les partenaires et les locataires, cela implique que l'allocation du stockage a été effectuée. Toutefois, à moins que les niveaux de service ne soient créés et que la capacité allouée correspondante ne soit complète, le stockage ne peut pas être consommé par les sous-locataires ou les clients finaux. Les administrateurs partenaires peuvent gérer le stockage pour leurs services d'abonnement Keystone et leurs abonnements aux locataires. Les administrateurs de locataires ne peuvent voir que les détails de l'abonnement aux locataires et les services pour leur propre location.
 
 
 
-== Gestion de l'abonnement Flex (abonnements Keystone)
+== Gérez les abonnements Keystone
 
-Si vous êtes un administrateur partenaire, vous pouvez afficher et gérer vos services d'abonnement Flex à partir de *ABONNEMENTS* > *abonnements Keystone*. *Les abonnements Keystone* représentent les services d'abonnement Flex créés par les administrateurs NetApp pour les partenaires. Les administrateurs partenaires peuvent consulter leurs services d'abonnement Flex et créer des demandes de service pour :
+Si vous êtes administrateur partenaire, vous pouvez afficher et gérer vos services d'abonnement Keystone à partir de *ABONNEMENTS* > *abonnements Keystone*. *Les abonnements Keystone* représentent les services d'abonnement Keystone créés par les administrateurs NetApp pour les partenaires. Les administrateurs partenaires peuvent afficher leurs services d'abonnement Keystone et créer des demandes de service pour :
 
 * Augmentez la capacité d'un abonnement
 * Ajouter un service à un abonnement (attribuer un niveau de service et de la capacité)

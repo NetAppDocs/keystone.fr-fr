@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: nkfsosm_performance.html 
-keywords: netapp, keystone, performance, 
-summary: 'Performances de l"abonnement Keystone Flex' 
+keywords: netapp, keystone, performance, service levels 
+summary: Niveau de service des performances Keystone 
 ---
 = Niveaux de services
 :hardbreaks:
@@ -14,11 +14,11 @@ summary: 'Performances de l"abonnement Keystone Flex'
 
 
 [role="lead"]
-NetApp Keystone Flex Subscription (Flex Subscription) offre de la capacité à des niveaux de service de performances prédéfinis (niveaux de service).
+NetApp Keystone propose la capacité aux niveaux de service (niveaux de service) de performances prédéfinis.
 
 Chaque niveau de service est défini par sa densité d'E/S, qui correspond au rapport de performance (opérations d'entrée/sortie par seconde [IOPS]) et de stockage utilisé (Tio de données stockées), correspondant aux IOPS/Tio.
 
-Chaque volume géré par les services Flex Subscription est associé à un niveau de service. Toutes les opérations d'E/S et tous les stockages utilisés sur le volume respectif sont pris en compte dans le calcul de la densité d'E/S du volume.
+Chaque volume géré par les services Keystone est associé à un niveau de service. Toutes les opérations d'E/S et tout le stockage utilisé sur le volume correspondant sont pris en compte dans le calcul de la densité des E/S du volume.
 
 Le tableau ci-dessous définit les niveaux de service.
 
@@ -129,4 +129,4 @@ NOTE: ^1^ capacité minimale de 100 Tio pour une combinaison de partage de fichi
 
 NOTE: ^1^ capacité minimale de 100 Tio pour une combinaison de partage de fichiers et de niveaux de service bloc pour les opportunités directes NetApp. ^2^ durée minimale d'un an et capacité minimale déclarée par niveau de service sélectionnée pour les opportunités de canal. ^3^ durée minimale d'un an et capacité minimale déclarée par niveau de service sélectionnée pour l'un ou l'autre type d'opportunité.
 
-Vous pouvez attribuer des niveaux de service à vos abonnements depuis plusieurs écrans de l'interface utilisateur du moteur de service NetApp. Pour plus d'informations, voir link:nkfsosm_tenancy_overview.html["Colocation et colocation dans Flex Subscription"].
+Vous pouvez attribuer des niveaux de service à vos abonnements depuis plusieurs écrans de l'interface utilisateur du moteur de service NetApp. Pour plus d'informations, voir link:nkfsosm_tenancy_overview.html["Location et colocation dans Keystone"].

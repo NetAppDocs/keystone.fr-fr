@@ -21,7 +21,7 @@ NOTE: Les sauvegardes sont automatiquement créées sur votre système lorsque v
 
 Pour plus d'informations, reportez-vous à la section link:seapiref_backups_apis.html["API de sauvegarde"]
 
-La sauvegarde de vos volumes source est activée via la technologie NetApp SnapMirror activée dans votre abonnement Flex. Pour plus d'informations, reportez-vous à la section link:index.html#flex-subscription["ici"].
+La sauvegarde de vos volumes source est activée via la technologie NetApp SnapMirror avec les services d'abonnement Keystone. Pour plus d'informations, reportez-vous à la section link:index.html#flex-subscription["ici"].
 
 Lorsque vous créez ou modifiez un volume, vous définissez sa planification de sauvegarde. La sauvegarde est effectuée aux intervalles prévus et stockée sur un système de destination. Pour que les sauvegardes fonctionnent, la relation SnapMirror doit être établie avec l'environnement de destination. Les partages de fichiers répliqués et les disques de différentes zones sont stockés sur une VM de stockage de sauvegarde dédiée (SVM, également appelée Storage Virtual machine) sur chaque cluster. Les sauvegardes peuvent être réalisées entre deux clusters ONTAP distincts dans des zones différentes.
 

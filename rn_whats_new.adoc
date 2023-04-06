@@ -4,7 +4,7 @@ permalink: rn_whats_new.html
 keywords: 'netapp, keystone, release notes, new features, what"s new,' 
 summary: Nouvelles fonctionnalités du moteur de service NetApp 
 ---
-= Nouveautés de cette version des services d'abonnement NetApp Keystone Flex
+= Nouveautés de cette version des services NetApp Keystone
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,9 +14,9 @@ summary: Nouvelles fonctionnalités du moteur de service NetApp
 
 
 [role="lead"]
-Les notes de mise à jour vous informent des nouvelles fonctionnalités et améliorations introduites dans les services NetApp Keystone Flex Subscription (Flex Subscription), ainsi que des limitations et correctifs connus.
+Les notes de version vous informent des nouvelles fonctionnalités et améliorations introduites dans les services d'abonnement NetApp Keystone, ainsi que des limitations et correctifs connus.
 
-Les fonctionnalités suivantes ont été introduites dans différentes versions du moteur de services NetApp pour prendre en charge les fonctionnalités améliorées offertes par l'abonnement NetApp Keystone Flex (Flex Subscription) :
+Différentes versions de NetApp Service Engine proposent les fonctionnalités améliorées offertes par les services d'abonnement Keystone :
 
 
 
@@ -33,7 +33,7 @@ Le tableau de bord du moteur de services NetApp a été repensé pour inclure le
 * *Utilisation de la capacité* pour afficher la capacité utilisée pour vos services abonnés.
 * *Frais mensuels (facturation)* pour l'affichage des frais mensuels agrégés pour tous vos abonnements.
 * *Alertes* pour afficher le résumé des alertes les plus récentes dans votre environnement.
-* *Demandes de service* pour afficher la liste des demandes de service les plus récentes générées dans votre environnement. Pour plus d'informations, voir link:sewebiug_dashboard.html["Afficher le tableau de bord des abonnements Flex"].
+* *Demandes de service* pour afficher la liste des demandes de service les plus récentes générées dans votre environnement. Pour plus d'informations, voir link:sewebiug_dashboard.html["Afficher le tableau de bord Keystone"].
 
 
 
@@ -64,17 +64,17 @@ L'interface utilisateur du moteur de service NetApp a apporté les amélioration
 
 == Fonctionnalités introduites dans NetApp Service Engine 2.1
 
-Cette version prend notamment en charge la colocation dans un environnement Flex Subscription et une fonctionnalité de hiérarchisation qui facilite le déplacement des données inactives vers un niveau local ou cloud à moindre coût.
+Les nouvelles fonctionnalités de cette version incluent la prise en charge de la colocation dans un environnement Keystone et la fonctionnalité de Tiering qui facilite le déplacement des données inactives vers un Tier cloud ou local moins coûteux.
 
 
 
-=== Présentation des services d'abonnement Flex pour les fournisseurs de services
+=== Présentation des services d'abonnement Keystone pour les fournisseurs de services
 
 Le moteur de services NetApp prend désormais en charge la gestion d'un environnement mutualisé par un fournisseur de services. Vous pouvez exécuter les fonctions de provisionnement, de création de rapports, de facturation et de gestion des clients possédant leurs propres abonnements. Pour la prise en charge de cette fonctionnalité, les améliorations suivantes ont été apportées :
 
-* *Tableau de bord:* le tableau de bord affiche des informations sur les abonnements au stockage, tels que les niveaux de service, l'utilisation de la capacité pour chaque niveau de service et les services complémentaires de protection des données, pour un numéro d'abonnement spécifique. En tant que fournisseur de services, vous pouvez consulter les détails de votre abonnement NetApp Keystone Flex et de vos abonnements aux locataires. En tant qu'administrateur de tenant, vous pouvez afficher les détails de tous les abonnements de tenant pour votre location.
-* *Rapports :* vous pouvez créer des rapports de capacité et de performances en fonction de votre utilisation de l'abonnement NetApp Keystone Flex et aussi pour votre utilisation par locataire. En tant qu'administrateur partenaire, vous pouvez consulter le rapport sur la capacité de votre abonnement Flex à partir de *Rapports* > *utilisation Keystone*. En tant qu'administrateur partenaire, vous pouvez afficher les rapports d'utilisation de la capacité d'un locataire spécifique dans *Rapports* > *utilisation du tenant*/*utilisation de la capacité*. En tant qu'administrateur de tenant, vous pouvez afficher les rapports de location à partir de *Rapports* > *utilisation de tenant*.
-* *Abonnement:* en tant qu'administrateur partenaire, vous pouvez afficher et mettre à jour vos abonnements Flex et locataires à partir de *ABONNEMENTS* > *abonnements Keystone* et *ABONNEMENTS* > *abonnements tenant* respectivement. En tant qu'administrateur de tenant, vous ne pouvez consulter que les abonnements de vos locataires.
+* *Tableau de bord:* le tableau de bord affiche des informations sur les abonnements au stockage, tels que les niveaux de service, l'utilisation de la capacité pour chaque niveau de service et les services complémentaires de protection des données, pour un numéro d'abonnement spécifique. En tant que fournisseur de services, vous pouvez afficher les détails de votre abonnement NetApp Keystone et de vos abonnements de locataires. En tant qu'administrateur de tenant, vous pouvez afficher les détails de tous les abonnements de tenant pour votre location.
+* *Rapports :* vous pouvez créer des rapports sur la capacité et les performances en fonction de l'utilisation de votre abonnement NetApp Keystone, ainsi que pour l'utilisation de votre locataire. En tant qu'administrateur partenaire, vous pouvez consulter le rapport sur la capacité de votre abonnement dans *Reports* > *Keystone usage*. En tant qu'administrateur partenaire, vous pouvez afficher les rapports d'utilisation de la capacité d'un locataire spécifique dans *Rapports* > *utilisation du tenant*/*utilisation de la capacité*. En tant qu'administrateur de tenant, vous pouvez afficher les rapports de location à partir de *Rapports* > *utilisation de tenant*.
+* *Abonnement:* en tant qu'administrateur partenaire, vous pouvez afficher et mettre à jour vos abonnements et vos abonnements de locataires à partir de *ABONNEMENTS* > *abonnements Keystone* et *ABONNEMENTS* > *abonnements de locataires* respectivement. En tant qu'administrateur de tenant, vous ne pouvez consulter que les abonnements de vos locataires.
 * *Utilisateurs :* en fonction de votre rôle, vous pouvez attribuer des privilèges à un nouvel utilisateur ou à un utilisateur existant dans une location selon les besoins. Le rôle peut être l'administrateur NetApp et l'administrateur NetApp avec des privilèges en lecture seule, l'administrateur partenaire ou l'administrateur du locataire. En tant qu'administrateur partenaire, vous pouvez uniquement attribuer des rôles d'administrateur partenaire ou d'administrateur de tenant aux nouveaux utilisateurs. Un utilisateur administrateur de tenant ne peut attribuer que le rôle d'administrateur de tenant à d'autres utilisateurs.
 * *Menu réseaux :* en tant qu'administrateur partenaire, vous pouvez afficher les réseaux définis pour votre location. Vous pouvez également créer des sous-réseaux pour votre sous-tenant et votre zone à partir de *RÉSEAUX* > *sous-réseaux*. Cela est nécessaire lors du provisionnement du stockage par les clients finaux ou les sous-locataires.
 * Prise en charge de l'API : les API `/tenants/{tenant_ID}/zones/{zone_name}/sous-réseaux` et `/tenants/{tenant_ID}/zones/{zone_name}/sous-réseaux/{ID}/tags` sont proposées dans le cadre de cette version pour créer et afficher les sous-réseaux des sous-locataires.
@@ -83,8 +83,8 @@ Le moteur de services NetApp prend désormais en charge la gestion d'un environn
 Pour plus d'informations sur cette fonction, consultez les liens suivants :
 
 * link:nkfsosm_overview.html["Modèle opérationnel, rôles et responsabilités"]
-* link:nkfsosm_tenancy_overview.html["Colocation et colocation dans Flex Subscription"]
-* link:sewebiug_dashboard.html["Afficher le tableau de bord des abonnements Flex"]
+* link:nkfsosm_tenancy_overview.html["Location et colocation dans Keystone"]
+* link:sewebiug_dashboard.html["Afficher le tableau de bord Keystone"]
 * link:sewebiug_working_with_reports.html["Afficher les rapports"]
 * link:sewebiug_managing_subscriptions.html["Gestion des abonnements"]
 * link:sewebiug_managing_tenants_and_subtenants.html["Gestion des locataires et sous-locataires"]
@@ -95,7 +95,7 @@ Pour plus d'informations sur cette fonction, consultez les liens suivants :
 
 === Tiering
 
-Le service d'abonnement NetApp Keystone Flex inclut désormais une fonctionnalité de hiérarchisation qui tire parti de la technologie FabricPool de NetApp. Il identifie les données les moins utilisées et les transfère vers un stockage à froid qui est détenu, déployé et géré par NetApp sur site. Vous pouvez opter pour la hiérarchisation en vous abonnant aux niveaux de service de Tiering extrême ou Premium.
+Le service NetApp Keystone Keystone inclut désormais une fonctionnalité de Tiering qui exploite la technologie NetApp FabricPool. Il identifie les données les moins utilisées et les transfère vers un stockage à froid qui est détenu, déployé et géré par NetApp sur site. Vous pouvez opter pour la hiérarchisation en vous abonnant aux niveaux de service de Tiering extrême ou Premium.
 
 Les API suivantes ont été modifiées pour inclure de nouvelles valeurs d'attribut pour les nouveaux niveaux de service de Tiering :
 
@@ -130,7 +130,7 @@ NOTE: Les abonnements aux services Cloud volumes sont gérés en dehors du moteu
 
 === Capacité à gérer les objets provisionnés en dehors du NetApp Service Engine
 
-Les volumes (disques et partages de fichiers) qui existent déjà dans l'environnement du client et qui appartiennent aux machines virtuelles de stockage configurées dans NetApp Service Engine, peuvent à présent être affichés et gérés dans le cadre de votre abonnement NetApp Keystone Flex (abonnement Flex). Les volumes provisionnés en dehors du moteur de service NetApp sont désormais répertoriés sur les pages *partages* et *disques* avec les codes d'état appropriés. Un processus en arrière-plan s'exécute à intervalles réguliers et importe les charges de travail étrangères dans votre instance du moteur de services NetApp.
+Les volumes (disques et partages de fichiers) qui existent déjà dans l'environnement du client et appartiennent aux VM de stockage configurés dans NetApp Service Engine, peuvent désormais être affichés et gérés dans le cadre de votre abonnement NetApp Keystone. Les volumes provisionnés en dehors du moteur de service NetApp sont désormais répertoriés sur les pages *partages* et *disques* avec les codes d'état appropriés. Un processus en arrière-plan s'exécute à intervalles réguliers et importe les charges de travail étrangères dans votre instance du moteur de services NetApp.
 
 Les disques et partages de fichiers importés ne doivent pas être conformes à la norme des disques et partages de fichiers existants sur le moteur de services NetApp. Après importation, ces disques et partages de fichiers sont classés avec le statut «non standard». Vous pouvez soumettre une demande de service à l'aide du portail *support > demande de service > nouvelle demande de service*, qui leur sera standardisée et gérée par le biais du portail NetApp Service Engine.
 

@@ -14,7 +14,7 @@ summary: Protection des données
 
 
 [role="lead"]
-Le service de protection des données NetApp Keystone Flex Subscription (Flex Subscription) peut sauvegarder vos données et les récupérer si nécessaire. Les services de protection des données disponibles sont les suivants :
+Le service de protection des données NetApp Keystone peut sauvegarder vos données et les restaurer si nécessaire. Les services de protection des données disponibles sont les suivants :
 
 * Snapshots de disques et partages
 * Sauvegardes de disques et partages (service de protection des données requis dans le cadre de l'abonnement)
@@ -42,4 +42,4 @@ NOTE: Les services de sauvegarde et de reprise après incident sont disponibles 
 ^1^capacité de stockage supplémentaire à inscrire
 
 
-NOTE: L'abonnement à un service d'abonnement Flex de base ne sauvegarde pas automatiquement vos données. Vous devez vous abonner à des services supplémentaires de protection des données et configurer votre système pour les services de sauvegarde de données et de reprise sur incident. Si votre système de stockage n'est pas géré par les services Flex Subscription, NetApp peut toujours prendre en charge la protection des données de votre système de stockage et vous aider à le connecter à vos services Flex Subscription. Toutefois, NetApp n'est pas responsable des défaillances des sauvegardes.
+NOTE: L'abonnement au service Keystone de base ne sauvegarde pas automatiquement vos données. Vous devez vous abonner à des services supplémentaires de protection des données et configurer votre système pour les services de sauvegarde de données et de reprise sur incident. Si votre système de stockage n'est pas géré par les services Keystone, NetApp peut continuer à prendre en charge la protection des données sur votre système de stockage et vous aider à le connecter à vos services Keystone. Toutefois, NetApp n'est pas responsable des défaillances des sauvegardes.

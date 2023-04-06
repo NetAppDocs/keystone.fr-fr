@@ -14,7 +14,7 @@ summary: Problèmes connus dans le moteur de service NetApp
 
 
 [role="lead"]
-Les problèmes connus suivants ont été signalés dans le moteur de service NetApp. Vous pouvez être confronté à ces problèmes lorsque vous provisionnez ou utilisez votre stockage dans le cadre de votre abonnement Flex.
+Les problèmes connus suivants ont été signalés dans le moteur de service NetApp. Ces problèmes peuvent se produire lorsque vous provisionnez ou utilisez votre stockage dans le cadre de vos abonnements Keystone.
 
 [cols="3*"]
 |===

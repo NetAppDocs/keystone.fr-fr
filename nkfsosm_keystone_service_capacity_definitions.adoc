@@ -1,26 +1,21 @@
----
-sidebar: sidebar 
-permalink: nkfsosm_keystone_service_capacity_definitions.html 
-keywords: netapp, keystone, service, capacity, definitions, burst, committed capacity, consumed capacity, billed capacity 
-summary: Définitions de capacité des services Keystone 
----
-= Définitions de la capacité du service Flex Subscription
-:hardbreaks:
+= Définitions de capacité des services Keystone
 :allow-uri-read: 
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
+
+---definitions barre latérale: permalink: nkfsosm_keystone_service_capacity_definitions.html mots-clés: netapp, keystone, service, capacité, définitions, Rafale, capacité allouée, capacité consommée, Récapitulatif de la capacité facturée : définitions de la capacité du service Keystone ---
+
+
+
+= Définitions de capacité des services Keystone
 
 [role="lead"]
-Les capacités du service NetApp Keystone Flex Subscription (Flex Subscription) comprennent :
+Les capacités du service NetApp Keystone sont les suivantes :
 
 
 
 == Capacité logique
 
-Il s'agit des données placées dans l'infrastructure Flex Subscription par un client. Toutes les capacités d'abonnement Flex font référence à une capacité logique. Par exemple, si un fichier de 1 To est stocké sur l'infrastructure Flex Subscription, vous devez acheter au moins 1 Tio de capacité.
+Il s'agit des données placées dans l'infrastructure Keystone par un client. Toutes les capacités Keystone font référence à une capacité logique. Par exemple, si un fichier de 1 To est stocké dans l'infrastructure Keystone, vous devez acheter au moins 1 To de capacité.
 
 
 
@@ -50,7 +45,7 @@ Pendant la durée d'un abonnement, vous pouvez modifier les capacités engagées
 
 Il s'agit de la capacité logique qui a dépassé la capacité engagée. Notez les points suivants :
 
-* Le service d'abonnement Flex offre une capacité supérieure de 20 % à la capacité engagée.
+* Le service Keystone fournit une capacité de 20 % supérieure à la capacité engagée.
 * En effet, la capacité en rafale peut être consommée selon une base élastique et elle est facturée sur la base quotidienne de la moyenne consommée.
 * La capacité en rafale peut atteindre 20 % à la même vitesse que la capacité engagée.
 * La capacité en rafale supérieure à 20 % de la demande est facturée à un tarif élevé. Contactez l'assistance pour toute autre demande de rafale supérieure à 20 %.
@@ -60,7 +55,7 @@ Il s'agit de la capacité logique qui a dépassé la capacité engagée. Notez l
 
 == Capacité consommée/provisionnée
 
-La capacité consommée fait référence à la capacité en Tio de stockage actuellement consommée sur le service. Le service Flex Subscription prend en compte la somme des tailles provisionnées (et non la capacité logique ou physique utilisée) de tous les volumes d'un niveau de service particulier à considérer comme la capacité consommée pour ce niveau de service. Les points suivants sont notamment :
+La capacité consommée fait référence à la capacité en Tio de stockage actuellement consommée sur le service. Le service Keystone considère que la somme des tailles provisionnées (et non la capacité logique ou physique utilisée) de tous les volumes d'un niveau de services donné est considérée comme la capacité consommée pour ce niveau de services. Les points suivants sont notamment :
 
 * Capacité provisionnée via la création, la modification, la suppression ou la croissance automatique potentielle des volumes.
 * Copies et clones Snapshot
@@ -76,4 +71,4 @@ NOTE: La quantité de données stockées dans la capacité provisionnée, ou le 
 
 Facture mensuelle = (capacité de production [Tio] * taux d'engagement [$/Tio]) + (capacité moyenne approvisionnée par jour [Tio] * taux de bursting [$/Tio]). La facture mensuelle contient un montant minimal en fonction de la capacité engagée.
 
-La facture mensuelle varie au-delà de la charge minimale, en fonction de la consommation moyenne quotidienne de capacité en rafale. Pour plus d'informations sur la facturation, voir link:nkfsosm_kfs_billing.html["Facturation de l'abonnement Flex"].
+La facture mensuelle varie au-delà de la charge minimale, en fonction de la consommation moyenne quotidienne de capacité en rafale. Pour plus d'informations sur la facturation, voir link:nkfsosm_kfs_billing.html["La facturation Keystone"].

@@ -26,7 +26,7 @@ La figure ci-dessous illustre l'interface Web du moteur de service NetApp. Elle 
 * *Logo NetApp.* cliquez sur ce bouton à tout moment pour revenir à la vue du tableau de bord.
 * *Tenant.* affiche le locataire actuellement sélectionné. Pour modifier le locataire, voir link:sewebiug_select_tenant.html["Sélectionnez le locataire"].
 * *Jobs.* cliquez sur pour afficher l'état des tâches de provisionnement les plus récentes. L'icône change de couleur pour afficher l'état du travail de configuration. Pour plus d'informations, voir link:sewebiug_netapp_service_engine_web_interface_overview.html#jobs-and-job-status-indicator["Tâches et indicateur d'état du travail"].
-* *Connexion utilisateur.* affiche le nom de l'utilisateur actuellement connecté. Cliquez sur cette icône pour vous déconnecter. Pour plus d'informations, voir link:sewebiug_log_in_to_the_netapp_service_engine_web_interface.html#log-out-of-the-netapp-service-engine-web-interface["Déconnectez-vous de l'interface Web du moteur de services NetApp"].
+* *Connexion utilisateur.* affiche le nom nKeytoneame de l'utilisateur actuellement connecté. Cliquez sur cette icône pour vous déconnecter. Pour plus d'informations, voir link:sewebiug_log_in_to_the_netapp_service_engine_web_interface.html#log-out-of-the-netapp-service-engine-web-interface["Déconnectez-vous de l'interface Web du moteur de services NetApp"].
 
 
 image:sewebiug_image9_dashboard1.png["Tableau de bord NSE-1"]
@@ -37,7 +37,7 @@ image:sewebiug_image9_dashboard2.png["NSE Tableau de bord-2"]
 
 == Vue tableau de bord
 
-Le tableau de bord affiche des informations sur vos abonnements au stockage NetApp Keystone, telles que la capacité utilisée, la facturation en fonction de votre utilisation, ainsi que les alertes récentes et les demandes de service. C'est la vue par défaut lorsque vous vous connectez pour la première fois au moteur de service NetApp. Pour plus d'informations sur le tableau de bord, reportez-vous à la section link:sewebiug_dashboard.html["Afficher le tableau de bord des abonnements Flex"].
+Le tableau de bord affiche des informations sur vos abonnements au stockage NetApp Keystone, telles que la capacité utilisée, la facturation en fonction de votre utilisation, ainsi que les alertes récentes et les demandes de service. C'est la vue par défaut lorsque vous vous connectez pour la première fois au moteur de service NetApp. Pour plus d'informations sur le tableau de bord, reportez-vous à la section link:sewebiug_dashboard.html["Afficher le tableau de bord Keystone"].
 
 
 
@@ -88,15 +88,15 @@ Survient lorsqu'une modification est apportée à la ressource de stockage (serv
 * *Opérationnel.* indique que la ressource de stockage a été correctement provisionnée/modifiée et qu'elle est disponible, en ligne et fonctionnelle.
 * *Suppression.* l'objet est en cours de suppression et est en cours de traitement.
 * *L'objet en file d'attente.* est à l'état en file d'attente et est en cours de traitement.
-* *Les objets importés* approvisionnés en dehors du moteur de services NetApp sont importés avec ce statut lorsqu'ils ne remplissent pas les critères de l'abonnement NetApp Keystone Flex (Flex Subscription).
+* *Les objets importés* provisionnés en dehors du moteur de services NetApp sont importés avec ce statut lorsqu'ils ne remplissent pas les critères d'abonnement NetApp Keystone.
 +
 
-NOTE: Ce statut indique généralement qu'aucune politique de QoS n'est appliquée à l'objet et ne peut donc pas être gérée par NetApp Service Engine dans le cadre de votre abonnement Flex. Vous pouvez modifier l'objet (à l'aide de la plume d'édition) et attribuer un niveau de service approprié. Le statut de cet objet est alors opérationnel.
+NOTE: Ce statut implique généralement qu'aucune politique de QoS n'est appliquée à l'objet et ne peut donc pas être gérée par NetApp Service Engine dans le cadre de votre abonnement Keystone. Vous pouvez modifier l'objet (à l'aide de la plume d'édition) et attribuer un niveau de service approprié. Le statut de cet objet est alors opérationnel.
 
-* *Les objets non-standard* provisionnés en dehors du moteur de service NetApp sont importés avec ce statut lorsqu'ils ne remplissent pas les critères d'abonnement NetApp Keystone Flex (abonnement Flex).
+* *Non standard.* les objets provisionnés en dehors du moteur de services NetApp sont importés avec ce statut lorsqu'ils ne remplissent pas les critères d'abonnement NetApp Keystone.
 +
 
-NOTE: Ce statut implique généralement que l'objet ne passe pas à un ou plusieurs critères gérés par le moteur de services NetApp, dans le cadre de votre abonnement Flex. C'est possible link:https://docs.netapp.com/us-en/keystone/sewebiug_raise_a_service_request.html["demander un service"] Afin qu'ils soient standardisés et gérés via le portail NetApp Service Engine et opérationnels par l'équipe de support.
+NOTE: Cet état implique généralement que l'objet manque un ou plusieurs critères à gérer par NetApp Service Engine, dans le cadre de votre abonnement Keystone. C'est possible link:https://docs.netapp.com/us-en/keystone/sewebiug_raise_a_service_request.html["demander un service"] Afin qu'ils soient standardisés et gérés via le portail NetApp Service Engine et opérationnels par l'équipe de support.
 
 * *Contact support.* cet état se produit lorsque la tâche de provisionnement ou de modification ne s'effectue pas complètement. Pour les éléments dans cet état, envoyez une demande de support pour résoudre le problème.
 * *Opérationnel (pour l'objet source d'une sauvegarde).* les États suivants sont les États possibles :

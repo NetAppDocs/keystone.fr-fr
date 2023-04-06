@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: nkfsosm_overview.html 
 keywords: netapp, keystone, kfs, overview, 
-summary: 'Présentation de l"abonnement NetApp Flex' 
+summary: Présentation de NetApp Keystone 
 ---
 = Modèle opérationnel, rôles et responsabilités
 :hardbreaks:
@@ -14,9 +14,9 @@ summary: 'Présentation de l"abonnement NetApp Flex'
 
 
 [role="lead"]
-L'abonnement NetApp Keystone Flex (abonnement Flex) repose sur le modèle de location.
+NetApp Keystone est basé sur le modèle de location.
 
-L'abonnement Flex offre trois modèles opérationnels pour la prestation de services.
+Keystone propose trois modèles opérationnels pour la prestation de services.
 
 * *Le modèle exploité par NetApp* permet au client de souscrire aux services proposés (selon les tiers de performance et les types de service de stockage sélectionnés) et de sélectionner l'option gérée par NetApp à un coût supplémentaire. NetApp définit l'architecture et les produits, installe les installations sur site du client et gère les opérations quotidiennes de gestion de l'infrastructure à l'aide des ressources informatiques et du stockage NetApp. Les types de services de stockage disponibles sont les suivants : fichier, bloc et objet. Les abonnements au stockage basés sur Cloud Volumes Service pour GCP et AWS peuvent également être gérés via votre instance NetApp Keystone.
 * *Modèle* * exploité par nos partenaires* est similaire au modèle opéré par NetApp, mais avec les partenaires qui exploitent le service pour leurs clients finaux. Dans ce modèle, le partenaire est la partie sous contrat référencée. Les locataires sont des clients de partenaires ou de fournisseurs de services et n'ont aucune relation de facturation avec NetApp. Un modèle opéré par le partenaire se compose généralement d'un environnement mutualisé, où les locataires et clients finaux/sous-locataires disposent de leurs propres abonnements facturés par le fournisseur de services/partenaire. L'administrateur partenaire effectue les tâches administratives de tous les locataires. Les fonctions qu'un administrateur peut exécuter sur un modèle géré par des partenaires sont différentes de celles d'un administrateur sur un modèle géré par NetApp.

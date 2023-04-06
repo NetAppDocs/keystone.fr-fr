@@ -4,7 +4,7 @@ permalink: nkfsfaq_service_offer_details.html
 keywords: netapp, keystone, service, offer, details, 
 summary: 'Détails de l"offre de service' 
 ---
-= Détails de l'offre de service de souscription Flex
+= Offre de services Keystone
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,15 +14,15 @@ summary: 'Détails de l"offre de service'
 
 
 [role="lead"]
-Les questions suivantes donnent des réponses à vos questions fréquentes sur l'offre de service de maintenance NetApp Keystone Flex.
+Les questions suivantes donnent des réponses à vos questions fréquentes sur l'offre de service NetApp Keystone Keystone.
 
 *Quelle est la capacité minimale engagée?*
 
-La capacité minimale engagée pour un abonnement NetApp Keystone Flex (Flex Subscription) est de 100 Tio, par site sur un ou plusieurs niveaux de service.
+Pour un service d'abonnement NetApp Keystone, la capacité minimale allouée est de 100 Tio par site pour un ou plusieurs tiers de service.
 
-*Quelle est la durée type d'un contrat d'abonnement Flex?*
+*Quelle est la durée type d'un contrat de services Keystone?*
 
-L'abonnement Flex offre des périodes de 12, 24 et 36 mois.
+Le service Keystone propose des durées de 12, 24 et 36 mois.
 
 *Comment puis-je accéder au stockage?*
 
@@ -54,7 +54,7 @@ Oui, les nouveaux abonnements peuvent avoir de nouvelles conditions distinctes d
 
 *Les conditions d'abonnement du locataire peuvent-elles s'étendre au-delà de la durée d'abonnement du partenaire?*
 
-Les abonnements aux locataires peuvent s'étendre au-delà des conditions d'abonnement Flex actuelles du partenaire. Un avertissement s'affiche lors de la création des abonnements ainsi que dans les rapports d'utilisation.
+Les abonnements aux locataires peuvent dépasser la période de validité des services Keystone en cours chez le partenaire. Un avertissement s'affiche lors de la création des abonnements ainsi que dans les rapports d'utilisation.
 
 *Puis-je combiner plusieurs abonnements sur le même cluster ONTAP ?*
 

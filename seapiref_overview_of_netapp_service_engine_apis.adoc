@@ -56,7 +56,7 @@ image:seapiref_image1.png["Erreur : image graphique manquante"]
 
 Une seule instance du moteur de services NetApp peut prendre en charge un ou plusieurs locataires. NetApp Service Engine utilise les concepts de locataire et de sous-locataire comme entités hiérarchiques qui possèdent ou gèrent le service de stockage.
 
-Un locataire peut être un client, un partenaire ou une entité de facturation. Un locataire détient l'abonnement (ou plusieurs abonnements) au service Flex Subscription.
+Un locataire peut être un client, un partenaire ou une entité de facturation. Un locataire conserve l'abonnement (ou plusieurs abonnements) au service Keystone.
 
 Un sous-locataire est une entité entièrement au sein du locataire. Il peut être utilisé pour la justification et la séparation de sécurité, etc.
 

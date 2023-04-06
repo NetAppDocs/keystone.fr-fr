@@ -14,13 +14,13 @@ summary: Keystone utilisation des rapports
 
 
 [role="lead"]
-Vous pouvez créer des rapports de capacité et de performance concernant l'utilisation de votre abonnement NetApp Keystone Flex, mais également pour l'utilisation de votre locataire.
+Vous pouvez créer des rapports de capacité et de performance concernant l'utilisation de votre abonnement NetApp Keystone ainsi que l'utilisation de vos locataires.
 
 
 
 == Rapport sur l'utilisation de la capacité par abonnement Keystone
 
-La page utilisation de la capacité des abonnements Keystone affiche l'utilisation de la capacité pour chaque niveau de service de stockage dans un abonnement sur la durée. En tant qu'administrateur NetApp, vous pouvez consulter le rapport d'utilisation de la capacité pour tous les locataires et partenaires par abonnement. En tant qu'administrateur partenaire, vous pouvez consulter le rapport de capacité de votre abonnement Flex pour chaque niveau de service souscrit.
+La page utilisation de la capacité des abonnements Keystone affiche l'utilisation de la capacité pour chaque niveau de service de stockage dans un abonnement sur la durée. En tant qu'administrateur NetApp, vous pouvez consulter le rapport d'utilisation de la capacité pour tous les locataires et partenaires par abonnement. En tant qu'administrateur partenaire, vous pouvez afficher le rapport de capacité correspondant à l'utilisation de votre abonnement pour chaque niveau de service souscrit.
 
 Utilisez les rapports graphiques sur cette page pour afficher les tendances d'utilisation pour tous les niveaux de service et les services complémentaires de protection des données dans des onglets séparés. Lorsqu'un service est en rafale, une bannière affiche la capacité de rafale utilisée dans le cycle de facturation actuel.
 
@@ -40,7 +40,7 @@ Pour afficher l'utilisation de la capacité d'un service, effectuez les opérati
 
 == Rapport sur l'utilisation de la capacité par abonnement aux locataires
 
-La page utilisation de la capacité pour les abonnements aux locataires affiche l'utilisation de la capacité pour chaque locataire pour les services de stockage souscrits dans le logiciel Flex Subscription. Cette page est accessible aux administrateurs NetApp, partenaires et locataires ou clients pour consulter les rapports d'utilisation de la capacité pour un locataire spécifique.
+La page utilisation de la capacité pour les abonnements des locataires affiche l'utilisation de la capacité au fil du temps pour chaque locataire pour les services de stockage souscrits dans l'abonnement Keystone. Cette page est accessible aux administrateurs NetApp, partenaires et locataires ou clients pour consulter les rapports d'utilisation de la capacité pour un locataire spécifique.
 
 
 NOTE: Pour l'administrateur tenant, la page apparaît sous la forme « utilisation de la capacité ».

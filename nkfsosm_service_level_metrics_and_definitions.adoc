@@ -14,7 +14,7 @@ summary: Définitions et metrics de niveau de service Keystone
 
 
 [role="lead"]
-Les termes et définitions suivants sont utilisés dans le service NetApp Keystone Flex Subscription (Flex Subscription) :
+Les termes et définitions suivants sont utilisés dans le NetApp Keystone :
 
 * *Gio, Tio et Pio.* mesures de la capacité de stockage de données utilisant la base de 1024 (1 Gio = 1024^3^ octets, 1 Tio = 1024^4^ octets et 1 Pio = 1024^5^ octets).
 * *IOPS/Tio* opérations de protocole par seconde demandées par l'application, divisées par la taille logique allouée du volume.
