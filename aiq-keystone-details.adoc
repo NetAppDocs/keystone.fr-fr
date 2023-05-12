@@ -72,16 +72,12 @@ image:icon-grey.png["icône"]: Pas d'utilisation de capacité enregistrée par r
 
 == Afficher l'historique des données d'abonnement
 
-L'onglet *série horaire d'abonnement* affiche les données historiques de vos abonnements Keystone pour une période spécifique. Les graphiques verticaux affichent les détails d'utilisation de la plage de temps sélectionnée, ainsi que les indicateurs appropriés pour vous permettre de comparer et de générer des rapports.
+a514224616890dbac3dede8f0d533add
 
 .Étapes
 . Cliquez sur l'onglet *Subscription Time Series*.
 . Sélectionnez l'abonnement requis pour lequel vous souhaitez afficher les détails. Le premier abonnement dans votre nom de compte est sélectionné par défaut.
 . Sélectionnez la plage horaire dans les icônes de calendrier des champs *Date de début* et *Date de fin*. La plage horaire par défaut va de la date de début de la période de facturation à la date actuelle.
-+
-
-NOTE: Pour des performances et une expérience utilisateur optimales, limitez la plage de dates de votre requête à trois mois maximum.
-
 . Cliquez sur *Afficher les détails*. Les données historiques de consommation de l'abonnement pour chaque niveau de service s'affichent en fonction de la plage horaire sélectionnée. Vous pouvez placer le curseur de la souris sur les graphiques pour afficher la répartition de l'utilisation en termes de données validées, consommées, en rafale et au-dessus de la limite de rafale à ce point de collecte de données.
 
 
