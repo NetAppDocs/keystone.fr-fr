@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: index.html 
 keywords: netapp, keystone, service, offering, 
-summary: Bienvenue dans le portail de documentation Keystone. 
+summary: 'NetApp Keystone est une offre de stockage en tant que service avec paiement basé sur l"utilisation. Disponible sous forme d"un seul abonnement, elle couvre à la fois les services de stockage de données sur site et dans le cloud. Elle permet de réaffecter les dépenses de stockage sur plusieurs clouds.' 
 ---
 = Documentation relative à NetApp Keystone
 :hardbreaks:
@@ -15,7 +15,7 @@ summary: Bienvenue dans le portail de documentation Keystone.
 
 NetApp Keystone est une gamme d'alternatives aux dépenses d'investissement (CapEx) sur site qui permet d'accélérer votre transition vers le cloud. NetApp Keystone assure une expérience fluide du cloud hybride avec des services de stockage qui s'étendent sur site et dans le cloud. Pour plus d'informations sur NetApp Keystone, voir link:https://www.netapp.com/services/subscriptions/keystone/["NetApp Keystone"]
 
-Pour plus d'informations sur NetApp Keystone, voir https://www.netapp.com/services/keystone/["NetApp Keystone"].
+Pour plus d'informations sur NetApp Keystone, voir https://["NetApp Keystone"].
 
 Keystone est une offre de stockage en tant que service qui propose une expérience de type cloud sur vos systèmes sur site avec une connectivité au cloud, selon vos conditions.
 
@@ -25,7 +25,7 @@ Keystone est une offre de stockage en tant que service qui propose une expérien
 
 Keystone est un modèle de service d'abonnement flexible avec paiement à l'utilisation. Il offre une expérience de cloud hybride fluide si vous préférez un modèle OpEx plutôt que CapEx ou leasing. Il permet aux clients d'accélérer le retour sur investissement en réduisant les obstacles liés à la gestion de la croissance imprévisible de la capacité et à la complexité des cycles d'approvisionnement. Keystone permet aux clients d'aligner le modèle économique et les opérations sur leurs priorités métier.
 
-image:nkfsosm_image2.png["Erreur : image graphique manquante"]
+image:nkfsosm_image2.png["arche keystone"]
 
 Keystone est une offre de service basée sur un abonnement qui fournit de la capacité de stockage avec des niveaux de service à performances prédéfinies (niveaux de service) pour les types de données de niveau bloc, fichier et objet pouvant être déployés sur site et exploités par NetApp, un partenaire ou le client. En plus du service de base fourni par Keystone, des services complémentaires peuvent être choisis moyennant des frais supplémentaires. Ces services sont décrits dans la figure ci-dessous.
 
@@ -36,7 +36,7 @@ Keystone est une offre de service basée sur un abonnement qui fournit de la cap
 
 NOTE: Keystone utilise la technologie SnapVault pour les opérations de sauvegarde et SnapMirror pour la reprise d'activité afin de répliquer les données à distance. Le basculement et la restauration des applications ne sont pas automatiques.
 
-image:nkfsosm_image3.png["Erreur : image graphique manquante"]
+image:nkfsosm_image3.png["services keystone"]
 
 
 
@@ -53,4 +53,4 @@ Keystone offre de nombreux avantages :
 * Permet un contrôle approprié de la conformité, des performances et de la sécurité
 
 
-image:nkfsosm_image4.png["Erreur : image graphique manquante"]
+image:nkfsosm_image4.png["avantages"]

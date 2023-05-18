@@ -114,8 +114,8 @@ NOTE: Le nom de l'utilisateur ou du groupe doit suivre le format AD standard. Si
 .Une fois que vous avez terminé
 * Pour les partages de type CIFS uniquement : pour rendre les partages disponibles par nom d'hôte, votre administrateur de domaine doit mettre à jour les enregistrements DNS avec le nom du serveur CIFS et l'adresse IP. Dans le cas contraire, le partage n'est accessible que via l'adresse IP. Par exemple :
 +
-** Lorsque les enregistrements DNS sont mis à jour, utilisez le nom d'hôte ou l'adresse IP pour accéder au partage, par exemple file://hostname/share["\\hostname\share"^] ou file://IP/share["\\IP\share"^]
-** En l'absence d'enregistrement DNS mis à jour, vous devez utiliser l'adresse IP pour accéder au partage, c'est-à-dire file://IP/share["\\IP\share"^]
+** Lorsque les enregistrements DNS sont mis à jour, utilisez le nom d'hôte ou l'adresse IP pour accéder au partage, par exemple file://["\\hostname\share"^] ou file://["\\IP\share"^]
+** En l'absence d'enregistrement DNS mis à jour, vous devez utiliser l'adresse IP pour accéder au partage, c'est-à-dire file://["\\IP\share"^]
 
 
 * Créer un partage est exécuté comme une tâche asynchrone. Vous pouvez :

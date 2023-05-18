@@ -50,7 +50,7 @@ Le tableau suivant répertorie les attributs de l'instance StorageGRID.
 | `admin_rest_uri' | Chaîne($uri) | Le noeud final du noeud d'administration StorageGRID. 
 
 
-| `s3_noeuds finauxs' | Chaîne($uri) | Terminaux StorageGRID Par exemple : [ `"https://s3.examplegrid.com"[], "https://s3.location.company.com"`[] ] 
+| `s3_noeuds finauxs' | Chaîne($uri) | Terminaux StorageGRID Par exemple : [ `"https://[], "https://[] ] 
 
 
 | `nom_de_grille' | Chaîne | Nom d'utilisateur StorageGRID. 

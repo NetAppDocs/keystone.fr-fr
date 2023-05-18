@@ -40,10 +40,10 @@ L'utilisation en rafale est autorisée sur les services jusqu'à un certain poin
 
 Pour plus d'informations, voir :
 
-* https://docs.netapp.com/us-en/keystone/sewebiug_working_with_block_storage_overview.html["Stockage basé sur des blocs"]
-* https://docs.netapp.com/us-en/keystone/sewebiug_working_with_file_services_overview.html["Services de fichiers"]
-* https://docs.netapp.com/us-en/keystone/sewebiug_working_with_object_storage_overview.html["Stockage objet"]
-* https://docs.netapp.com/us-en/ontap-metrocluster/index.html["Documentation MetroCluster"]
+* https://["Stockage basé sur des blocs"]
+* https://["Services de fichiers"]
+* https://["Stockage objet"]
+* https://["Documentation MetroCluster"]
 
 
 

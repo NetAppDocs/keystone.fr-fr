@@ -18,7 +18,7 @@ Vous pouvez afficher les frais mensuels de tous les services souscrits dans vos 
 
 Vous pouvez afficher les détails de facturation de tous les services auxquels vous avez souscrit pour les services d'abonnement Keystone des mois précédents. La facturation en fonction de la capacité en rafale est mise en évidence pour chaque mois.
 
-image:billing.png[""]
+image:billing.png["tableaux de facturation"]
 
 En tant qu'administrateur partenaire, vous pouvez voir l'interruption mensuelle de la facturation d'un sous-locataire sélectionné.
 

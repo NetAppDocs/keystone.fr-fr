@@ -21,6 +21,8 @@ sidebar:
         url: "/nkfsosm_performance.html"
       - title: Metrics et définitions de niveaux de service
         url: "/nkfsosm_service_level_metrics_and_definitions.html"
+      - title: Qualité de service adaptative dans Keystone
+        url: "/aqos-kfs.html"
       - title: Facturation
         url: "/nkfsosm_kfs_billing.html"
       - title: Protection des données

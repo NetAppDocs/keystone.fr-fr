@@ -1,0 +1,57 @@
+---
+sidebar: sidebar 
+permalink: aqos-kfs.html 
+keywords: aqos, qos, adaptive quality of service, quality of service 
+summary: 'Qualité de service adaptative (AQoS) Keystone' 
+---
+= Qualité de service adaptative dans Keystone
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+La qualité de service (QoS) du stockage est une technologie stratégique qui permet aux applications d'obtenir des performances cohérentes et prévisibles. Sans la QoS, certaines charges de travail, telles que celles pour le démarrage de plusieurs systèmes, peuvent consommer la plupart ou la totalité des ressources pendant une période et affecter d'autres charges de travail. Pour plus d'informations sur la QoS, reportez-vous à la section https://["Débit garanti avec les QoS"^].
+
+
+
+== La QoS adaptative
+
+La QoS adaptative (AQoS) est utilisée par les services Keystone pour maintenir dynamiquement le ratio IOPS/Tio en fonction de la taille du volume. Pour plus d'informations sur les stratégies AQoS, voir https://["À propos de la QoS adaptative"^].
+
+Keystone vous fournit des règles AQoS que vous pouvez configurer une fois que votre cluster est en production. Vous devez vous assurer que tous vos volumes sont associés aux règles AQoS correctes qui sont déjà créées et disponibles dans votre système.
+
+Un volume ONTAP n'est pas conforme s'il n'a pas de politique AQoS appliquée. Un volume sans politique QoS est la dernière dans la liste de priorité pour que le système puisse réaliser des opérations d'entrée/sortie. Cependant, si des opérations d'entrée-sortie sont disponibles, le volume pourrait consommer toutes les E/S disponibles.
+
+
+NOTE: Si vous n'avez pas appliqué de règles AQoS à vos volumes, ces volumes seront mesurés et facturés au niveau de service le plus élevé, conformément à votre abonnement. Cela peut entraîner des frais d'éclatement intempestive.
+
+
+
+=== Paramètres de QoS adaptative
+
+Les paramètres de QoS adaptative (AQoS) varient en fonction des niveaux de service.
+
+|===
+
+
+| *Nom de la politique* | *Extreme* et *Extreme Tiering* | *Premium* et *Premium Tiering* | *Standard* | *Valeur* 
+
+
+| *IOPS attendues* | 6,144 | 2,048 | 128 | 64 
+
+
+| *Allocation d'IOPS attendue* 4+| Espace alloué 
+
+
+| *Pic d'IOPS* | 12,288 | 4,096 | 512 | 128 
+
+
+| *Allocation maximale d'IOPS* 4+| Espace alloué 
+
+
+| *Taille de bloc* 4+| 32 KO 
+|===

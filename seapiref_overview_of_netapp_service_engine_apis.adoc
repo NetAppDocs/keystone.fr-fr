@@ -52,7 +52,7 @@ Ce document divise les descriptions de l'API en deux sections :
 
 NetApp Service Engine prend en charge les concepts de régions et de zones, comme le montre la figure ci-dessous. Une région représente un data Center ou un site, alors qu'une zone représente une sous-unité de stockage au sein de la région (techniquement, un cluster au sein d'un data Center/site). Prendre en charge les fonctionnalités de disponibilité et de protection des données (DP) de plusieurs zones.
 
-image:seapiref_image1.png["Erreur : image graphique manquante"]
+image:seapiref_image1.png["zones et relations régionales"]
 
 Une seule instance du moteur de services NetApp peut prendre en charge un ou plusieurs locataires. NetApp Service Engine utilise les concepts de locataire et de sous-locataire comme entités hiérarchiques qui possèdent ou gèrent le service de stockage.
 

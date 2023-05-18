@@ -14,25 +14,17 @@ summary: Niveau de service des performances Keystone
 
 
 [role="lead"]
-NetApp Keystone propose la capacité aux niveaux de service (niveaux de service) de performances prédéfinis.
+Keystone propose une capacité de stockage des données avec des niveaux de service à performances prédéfinies (niveaux de service) sur la base d'un abonnement. Chaque volume géré par les services Keystone est associé à un niveau de service.
 
-Chaque niveau de service est défini par sa densité d'E/S, qui correspond au rapport de performance (opérations d'entrée/sortie par seconde [IOPS]) et de stockage utilisé (Tio de données stockées), correspondant aux IOPS/Tio.
+Chaque niveau de services est défini par sa densité d'E/S, à savoir IOPS/Tio/volume. Il s'agit du rapport entre les performances (opérations d'entrée/sortie par seconde [IOPS]) et la capacité de stockage allouée (Tio), qui correspond au nombre d'IOPS/Tio à la latence moyenne par volume.
 
-Chaque volume géré par les services Keystone est associé à un niveau de service. Toutes les opérations d'E/S et tout le stockage utilisé sur le volume correspondant sont pris en compte dans le calcul de la densité des E/S du volume.
+La densité d'E/S d'un volume est calculée à un intervalle horaire pour indiquer la densité d'E/S maximale. Les rapports de densité des E/S pour les volumes sont générés chaque mois.
 
-Le tableau ci-dessous définit les niveaux de service.
-
-
-
-== Des niveaux de service pour les différents types de stockage
-
-Les niveaux de service pour le stockage fichier, bloc et objet sont répertoriés ici.
-
-Les calculs de densité des E/S au niveau du volume sont rapportés pour indiquer le pic de densité des E/S au cours de la semaine précédente. Les performances maximales sont déterminées sur un intervalle horaire. Les rapports de densité d'E/S par volume sont générés tous les mois pour évaluer le respect des niveaux de service respectifs.
+Les niveaux de service pour les types de stockage fichier, bloc et objet sont répertoriés ici.
 
 
 
-=== Service de fichiers
+== Niveaux de service pour le stockage de fichiers
 
 *Protocoles pris en charge* : NFS, CIFS, iSCSI et FC
 
@@ -45,29 +37,46 @@ Les calculs de densité des E/S au niveau du volume sont rapportés pour indique
 | *Type de charge de travail* | Analytique, bases de données | VDI, applications de virtualisation, développement logiciel | Partages de fichiers, serveurs web | Sauvegarde 
 
 
-| *IOPS cibles/Tio* | 6,144 | 2,048 | 128 | S/O 
+| *Nombre maximal d'IOPS/Tio logique alloué par volume* | 12,288 | 4,096 | 512 | S/O 
 
 
-| *IOPS max./Tio* | 12,288 | 4,096 | 512 | S/O 
+| *IOPS cible/Tio logique allouées par volume* | 6,144 | 2,048 | 128 | S/O 
 
 
-| *Débit max. Mbit/s (32 Ko/IOP)* | 384 | 128 | 16 | S/O 
+| *Nombre maximal de Mo/sec/Tio logique alloué par volume* | 384 | 128 | 16 | S/O 
 
 
-| * Latence* | <1 ms | <2 ms | <17 ms | S/O 
+| * Latence moyenne* | <1 ms | <2 ms | <17 ms | S/O 
 
 
-.2+| *Capacité minimale*^1,2^ 4+| 100 Tio^1^ 
-
-
-| 15 Tio^2^ | 25 Tio^2^ | 50 Tio^2^ | 50 Tio^2^ 
+| *Taille de bloc* 4+| 32 KO 
 |===
 
-NOTE: ^1^ capacité minimale de 100 Tio pour une combinaison de partage de fichiers et de niveaux de service bloc pour les opportunités directes NetApp. ^2^ durée minimale d'un an et capacité minimale déclarée par niveau de service sélectionné pour les opportunités de canal.
+
+=== En savoir plus sur les niveaux de service pour le stockage de fichiers
+
+Les indicateurs de niveau de service dépendent des conditions suivantes :
+
+* Les niveaux de service pour le stockage fichier et bloc prennent en charge ONTAP 9.7 et versions ultérieures.
+* Les valeurs d'IOPS/Tio/volume, de Mo/sec/Tio/volume et de latence pour les niveaux de services sont basées sur la quantité de données logiques stockées dans le volume, la taille de bloc de 32 Ko et une combinaison aléatoire d'opérations d'E/S de 70 % en lecture et 30 % en écriture.
+* La quantité réelle d'IOPS/Tio/volume et de Mo/sec/Tio/volume peut varier en fonction de la taille de bloc réelle ou estimée, de la simultanéité des workloads du système ou des opérations d'entrée/sortie.
+* La latence n'inclut pas les éléments suivants :
++
+** latence de l'hôte ou de l'application
+** latence du réseau du client vers ou depuis les ports du contrôleur
+** Frais généraux associés au transfert des données vers le magasin d'objets en cas de FabricPool
+** La latence est automatiquement appliquée par la QoS pour maintenir les E/S dans les limites des limites maximales du niveau de service
+
+
+* Les valeurs de latence ne s'appliquent pas aux opérations d'écriture MetroCluster. Ces opérations d'écriture dépendent de la distance entre les systèmes distants.
+* Si une règle AQoS n'est pas attribuée à un ou plusieurs volumes d'un système de stockage, ces volumes sont considérés comme des volumes non conformes et aucun niveau de service cible n'est applicable à ces systèmes.
+* La règle _IOPS attendues_ est destinée à FabricPool uniquement si la règle de Tiering est définie sur « aucun » et qu'aucun bloc n'est dans le cloud. _IOPS attendues_ est destiné aux volumes qui ne font pas partie d'une relation synchrone SnapMirror.
+* Les opérations d'E/S des workloads doivent être équilibrées sur tous les contrôleurs déployés, comme le détermine l'ordre Keystone.
 
 
 
-=== Stockage basé sur des blocs
+
+== Niveaux de service pour le stockage bloc
 
 *Protocoles pris en charge* : FC et iSCSI
 
@@ -83,23 +92,20 @@ NOTE: ^1^ capacité minimale de 100 Tio pour une combinaison de partage de fichi
 | *IOPS cibles/Tio* 3+| S/O 
 
 
-| *IOPS max./Tio* | 5.500 | 4,000 | S/O 
+| *IOPS max./Tio* | 5,500 | 4,000 | S/O 
 
 
 | *Débit max. Mbit/s (32 Ko/IOP)* | 43 | 31 | S/O 
 
 
-| * Latence* | <0.5 ms | <0.5 ms | S/O 
+| * Latence moyenne* | <0.5 ms | <0.5 ms | S/O 
 
 
-| *Capacité minimale*^1,2^ | 100 Tio^3^ | 100 Tio^3^ | 300 Tio^3^ 
+| *Taille de bloc* 3+| 32 KO 
 |===
 
-NOTE: ^1^ capacité minimale de 100 Tio pour une combinaison de partage de fichiers et de niveaux de service bloc pour les opportunités directes NetApp. ^2^ durée minimale d'un an et capacité minimale déclarée par niveau de service sélectionnée pour les opportunités de canal. ^3^ durée minimale d'un an et capacité minimale déclarée par niveau de service sélectionnée pour l'un ou l'autre type d'opportunité.
 
-
-
-=== Stockage objet
+== Niveaux de service pour le stockage objet
 
 *Protocole pris en charge* : S3
 
@@ -121,12 +127,5 @@ NOTE: ^1^ capacité minimale de 100 Tio pour une combinaison de partage de fichi
 | *Débit max. Mbit/s (32 Ko/IOP)* | S/O 
 
 
-| * Latence* | S/O 
-
-
-| *Capacité minimale*^1,2^ | 500 Tio^3^ 
+| * Latence moyenne* | S/O 
 |===
-
-NOTE: ^1^ capacité minimale de 100 Tio pour une combinaison de partage de fichiers et de niveaux de service bloc pour les opportunités directes NetApp. ^2^ durée minimale d'un an et capacité minimale déclarée par niveau de service sélectionnée pour les opportunités de canal. ^3^ durée minimale d'un an et capacité minimale déclarée par niveau de service sélectionnée pour l'un ou l'autre type d'opportunité.
-
-Vous pouvez attribuer des niveaux de service à vos abonnements depuis plusieurs écrans de l'interface utilisateur du moteur de service NetApp. Pour plus d'informations, voir link:nkfsosm_tenancy_overview.html["Location et colocation dans Keystone"].

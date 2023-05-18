@@ -14,7 +14,7 @@ summary: Gestion des abonnements Cloud Volume sur Google Cloud Platform
 
 
 [role="lead"]
-Les abonnements à Cloud Volumes Service pour Google Cloud Platform (GCP) sont associés à des sous-locataires spécifiques sous un locataire. Un sous-locataire est abonné à un seul service Google Cloud. Vous pouvez créer et gérer des services Cloud (instances Google Cloud) pour vos locataires et sous-locataires, et provisionner le stockage sur Google Cloud en fonction des locations. Les comptes Cloud Volumes Service des locataires et sous-locataires doivent être configurés avant de gérer les instances Google Cloud via NetApp Service Engine. Pour plus d'informations sur Cloud Volumes Service sur GCP, reportez-vous à https://docs.netapp.com/us-en/occm/concept_cvs_gcp.html["En savoir plus sur Cloud Volumes Service pour Google Cloud"].
+Les abonnements à Cloud Volumes Service pour Google Cloud Platform (GCP) sont associés à des sous-locataires spécifiques sous un locataire. Un sous-locataire est abonné à un seul service Google Cloud. Vous pouvez créer et gérer des services Cloud (instances Google Cloud) pour vos locataires et sous-locataires, et provisionner le stockage sur Google Cloud en fonction des locations. Les comptes Cloud Volumes Service des locataires et sous-locataires doivent être configurés avant de gérer les instances Google Cloud via NetApp Service Engine. Pour plus d'informations sur Cloud Volumes Service sur GCP, reportez-vous à https://["En savoir plus sur Cloud Volumes Service pour Google Cloud"].
 
 
 NOTE: Les comptes Cloud Volumes Service des locataires et sous-locataires doivent déjà être configurés pour GCP. Contactez l'assistance technique pour obtenir les détails du compte de service. Pour gérer Google Cloud volumes, vous avez besoin d'un accès administrateur client.
@@ -30,7 +30,7 @@ Vous devez vous assurer que :
 
 * Le sous-locataire est abonné au service Google Cloud.
 * Vous disposez du fichier JSON pour le compte de service de l'abonné et vous connaissez le numéro de projet GCP associé à l'instance Google Cloud.
-* Pour vous assurer que Cloud Volumes Service pour GCP est déjà configuré sur BlueXP par votre équipe de support. Pour plus d'informations, voir https://docs.netapp.com/us-en/occm/task_setup_cvs_gcp.html["Configuration de Cloud Volumes Service pour Google Cloud"].
+* Pour vous assurer que Cloud Volumes Service pour GCP est déjà configuré sur BlueXP par votre équipe de support. Pour plus d'informations, voir https://["Configuration de Cloud Volumes Service pour Google Cloud"].
 
 
 .Étapes

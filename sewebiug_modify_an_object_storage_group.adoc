@@ -23,7 +23,7 @@ Utilisez cette méthode pour modifier les détails d'un groupe de stockage objet
 +
 Pour plus d'informations sur l'utilisation des éléments dans les listes, reportez-vous à la section link:sewebiug_netapp_service_engine_web_interface_overview.html#list-view-actions["Actions de vue de liste"].
 
-. Dans la boîte de dialogue *Modifier le groupe*, modifiez la stratégie S3 applicable au groupe. Pour plus d'informations sur les règles S3, reportez-vous à la section https://docs.netapp.com/us-en/storagegrid-116/s3/bucket-and-group-access-policies.html#specify-permissions-in-a-policy["Spécifiez les autorisations dans une stratégie"].
+. Dans la boîte de dialogue *Modifier le groupe*, modifiez la stratégie S3 applicable au groupe. Pour plus d'informations sur les règles S3, reportez-vous à la section https://["Spécifiez les autorisations dans une stratégie"].
 . Vous pouvez ajouter des énoncés de police supplémentaires si nécessaire.
 . Cliquez sur *mettre à jour*. Cela crée un travail pour modifier le groupe avec les paramètres spécifiés. Pour plus d'informations sur le suivi des travaux, reportez-vous à la section link:sewebiug_netapp_service_engine_web_interface_overview.html#jobs-and-job-status-indicator["ici"].
 

@@ -19,7 +19,7 @@ Le tableau de bord Active IQ Digital Advisor (conseiller digital) vous permet de
 
 NOTE: Les informations disponibles ici s'appliquent à ONTAP et à StorageGRID. Des exceptions ont été signalées dans les sections pertinentes.
 
-Pour plus d'informations sur le widget Keystone Digital Advisor, reportez-vous à la section https://docs.netapp.com/us-en/active-iq/view_keystone_capacity_utilization.html["Consultez l'utilisation de la capacité sur l'abonnement NetApp Keystone"^].
+Pour plus d'informations sur le widget Keystone Digital Advisor, reportez-vous à la section https://["Consultez l'utilisation de la capacité sur l'abonnement NetApp Keystone"^].
 
 Pour afficher les détails, procédez comme suit :
 
@@ -31,7 +31,7 @@ Pour afficher les détails, procédez comme suit :
 Les détails des abonnements, des graphiques d'utilisation pour chaque niveau de service et des détails sur le volume s'affichent dans les différents onglets de l'écran *abonnements Keystone*.
 
 
-NOTE: La consommation de capacité des abonnements Keystone s'affiche dans les tibides des tableaux de bord et des rapports, avec un maximum de deux décimales. Si l'utilisation est inférieure à 0.01 Tio, la valeur est indiquée comme `0` ou `No Usage`. Pour les autres mesures d'utilisation, voir https://docs.netapp.com/us-en/keystone/nkfsosm_service_level_metrics_and_definitions.html["Metrics et définitions de niveaux de service"]. Pour plus d'informations sur les différentes capacités utilisées dans Keystone, reportez-vous à https://docs.netapp.com/us-en/keystone/nkfsosm_keystone_service_capacity_definitions.html["Définitions de capacité des services Keystone"].
+NOTE: La consommation de capacité des abonnements Keystone s'affiche dans les tibides des tableaux de bord et des rapports, avec un maximum de deux décimales. Si l'utilisation est inférieure à 0.01 Tio, la valeur est indiquée comme `0` ou `No Usage`. Pour les autres mesures d'utilisation, voir https://["Metrics et définitions de niveaux de service"]. Pour plus d'informations sur les différentes capacités utilisées dans Keystone, reportez-vous à https://["Définitions de capacité des services Keystone"].
 
 
 
@@ -39,7 +39,7 @@ NOTE: La consommation de capacité des abonnements Keystone s'affiche dans les t
 
 Vous pouvez afficher tous les abonnements pour un nom de compte dans l'onglet *Détails de l'abonnement*.
 
-image:aiq-ks-dtls.png[""]
+image:aiq-ks-dtls.png["onglet détails de l'abonnement"]
 
 Pour chaque numéro d'abonnement, vous pouvez consulter les informations suivantes :
 
@@ -49,34 +49,43 @@ Pour chaque numéro d'abonnement, vous pouvez consulter les informations suivant
 * *Date de début* : la date de début de l'abonnement.
 * *Date de fin* : date de fin de l'abonnement. En fonction de cette date, il se peut que vous voyiez des messages d'information pour les abonnements qui approchent de leur expiration.
 * *Statut d'utilisation* : indique la quantité d'abonnement utilisée ou excédentaire. Vous pouvez trier la liste en fonction de cette colonne si vous souhaitez afficher les enregistrements de consommation les plus élevés.
-* image:aiq-ks-time-icon.png[""]: Cliquez sur cette icône pour ouvrir l'onglet *Subscription Time Series* où vous pouvez voir les données d'utilisation historiques pour chaque niveau de service inclus dans cet abonnement.
+* image:aiq-ks-time-icon.png["icône"]: Cliquez sur cette icône pour ouvrir l'onglet *Subscription Time Series* où vous pouvez voir les données d'utilisation historiques pour chaque niveau de service inclus dans cet abonnement.
 
 
-Pour plus de détails, cliquez sur la flèche vers le bas pour obtenir un enregistrement d'abonnement. Les détails, tels que le nom du niveau de service, engagé, consommé, capacités disponibles et utilisation actuelle et en rafale sont affichés en Tio. Les niveaux de service spécifiques qui enregistrent une plus forte consommation sont mis en évidence. Tous les avertissements et alertes générés pour vos volumes sont également affichés.
+Pour plus de détails, cliquez sur la flèche vers le bas pour obtenir un enregistrement d'abonnement. Les détails, tels que le nom du niveau de service, engagé, consommé, capacités disponibles et utilisation actuelle et en rafale sont affichés en Tio.
 
-Pour plus d'informations sur vos services de stockage Keystone et sur les niveaux de service appropriés, reportez-vous à la section https://docs.netapp.com/us-en/keystone/nkfsosm_performance.html["Niveaux de services"].
+
+NOTE: Les niveaux de service spécifiques qui enregistrent une plus forte consommation sont mis en évidence. Vous pouvez également afficher les avertissements et les alertes générés pour vos volumes.
+
+Pour plus d'informations sur vos services de stockage Keystone et sur les niveaux de service appropriés, reportez-vous à la section https://["Niveaux de services"].
 
 Vous pouvez consulter les indicateurs d'utilisation suivants pour vérifier l'état d'utilisation de chaque abonnement :
 
-image:usage-indicator.png[""]
+image:usage-indicator.png["icônes"]
 
 .Indexer
-image:icon-grey.png[""]: Pas d'utilisation de capacité enregistrée par rapport à la capacité engagée du niveau de serviceimage:icon-green.png[""]: La consommation est normale, à moins de 80 % de la capacité engagéeimage:icon-amber.png[""]: Consommation maximale, c'est-à-dire que l'utilisation est sur le point d'atteindre 100 % ou plus de la capacité allouée. La colonne *Uconsommé* affiche cet indicateur pour toute consommation supérieure à 80 % de la capacité engagéeimage:icon-red.png[""]: La consommation est dans la limite de rafale. La consommation en rafale est la consommation qui occupe la capacité engagement de 100 % d'un niveau de service. Elle est conforme à la limite convenue d'utilisation en rafale, notamment 120 %image:icon-purple.png[""]: Indique la consommation au-dessus de la limite de rafale stipulée
+image:usage-indicator.png["icône"]
+image:usage-indicator.png["icône"]
+image:icon-grey.png["icône"]: Pas d'utilisation de capacité enregistrée par rapport à la capacité engagée du niveau de serviceimage:icon-green.png["icône"]: La consommation est normale, à moins de 80 % de la capacité engagéeimage:icon-amber.png["icône"]: Consommation maximale, c'est-à-dire que l'utilisation est sur le point d'atteindre 100 % ou plus de la capacité allouée. La colonne *Uconsommé* affiche cet indicateur pour toute consommation supérieure à 80 % de la capacité engagéeimage:icon-red.png["icône"]: La consommation est dans la limite de rafale. La consommation en rafale est la consommation qui occupe la capacité engagement de 100 % d'un niveau de service. Elle est conforme à la limite convenue d'utilisation en rafale, notamment 120 %image:icon-purple.png["icône"]: Indique la consommation au-dessus de la limite de rafale stipulée
 
 
 
 == Afficher l'historique des données d'abonnement
 
-L'onglet *Subscription Time Series* affiche les données historiques de vos abonnements pour une période donnée. Les graphiques verticaux affichent les détails d'utilisation de la plage de temps sélectionnée, ainsi que les indicateurs appropriés pour vous permettre de comparer et de générer des rapports.
+L'onglet *série horaire d'abonnement* affiche les données historiques de vos abonnements Keystone pour une période spécifique. Les graphiques verticaux affichent les détails d'utilisation de la plage de temps sélectionnée, ainsi que les indicateurs appropriés pour vous permettre de comparer et de générer des rapports.
 
 .Étapes
 . Cliquez sur l'onglet *Subscription Time Series*.
 . Sélectionnez l'abonnement requis pour lequel vous souhaitez afficher les détails. Le premier abonnement dans votre nom de compte est sélectionné par défaut.
 . Sélectionnez la plage horaire dans les icônes de calendrier des champs *Date de début* et *Date de fin*. La plage horaire par défaut va de la date de début de la période de facturation à la date actuelle.
-. Cliquez sur *Afficher les détails*. Les données historiques de consommation de l'abonnement pour chaque niveau de service s'affichent en fonction de la plage horaire sélectionnée. Vous pouvez placer le curseur de la souris sur les graphiques pour afficher la répartition de l'utilisation en termes de données validées, consommées, en rafale et au-dessus de la limite de rafale à ce point de données.
++
+
+NOTE: Pour des performances et une expérience utilisateur optimales, limitez la plage de dates de votre requête à trois mois maximum.
+
+. Cliquez sur *Afficher les détails*. Les données historiques de consommation de l'abonnement pour chaque niveau de service s'affichent en fonction de la plage horaire sélectionnée. Vous pouvez placer le curseur de la souris sur les graphiques pour afficher la répartition de l'utilisation en termes de données validées, consommées, en rafale et au-dessus de la limite de rafale à ce point de collecte de données.
 
 
-image:aiq-ks-subtime-2.png[""]
+image:aiq-ks-subtime-2.png["données historiques"]
 
 Les détails suivants s'affichent :
 
@@ -84,7 +93,7 @@ Les détails suivants s'affichent :
 * *Tableaux d'utilisation* : les graphiques à barres affichent le nom du niveau de service et la capacité consommée par rapport à ce niveau de service pour la plage de dates. La date et l'heure de la collection sont affichées en bas du graphique.
 +
 
-NOTE: En fonction de la plage de dates de votre requête, les graphiques d'utilisation sont affichés dans une plage de 30 points de données.
+NOTE: En fonction de la plage de dates de votre requête, les graphiques d'utilisation sont affichés dans une plage de 30 points de collecte de données.
 
 +
 Les couleurs suivantes dans les graphiques à barres indiquent la capacité consommée telle que définie dans le niveau de service :
@@ -121,6 +130,45 @@ NOTE: Les indicateurs *courant consommé*, *courant Burst* et *Accrued Burst* d�
 
 
 
+.Détails du <strong> pour la protection des </strong>
+[%collapsible]
+====
+Si vous vous êtes abonné au service de protection des données (DP), vous pouvez afficher la répartition des données de consommation en fonction des sites principaux et miroir MetroCluster dans l'onglet *série horaire d'abonnement*.
+
+Pour plus d'informations sur la protection des données, reportez-vous à la section https://["La protection des données"].
+
+Si les clusters de votre environnement de stockage ONTAP sont configurés dans une configuration MetroCluster, les données de consommation de votre abonnement Keystone sont réparties dans le même graphique afin d'afficher la consommation au niveau des sites principaux et en miroir pour les niveaux de service de base.
+
+
+NOTE: Les graphiques à barres de consommation sont divisés uniquement pour les niveaux de service de base. Pour les niveaux de service DP, cette démarcation n'apparaît pas.
+
+.Niveaux de service de protection des données
+Pour les niveaux de service DP, la consommation totale est divisée et l'utilisation sur chaque site est reflétée et facturée dans un abonnement distinct, c'est-à-dire un abonnement pour le site principal et un autre pour le site miroir. C'est pourquoi, lorsque vous sélectionnez le numéro d'abonnement pour le site principal dans l'onglet *série de temps d'abonnement*, les graphiques de consommation pour les niveaux de service DP affichent les détails de consommation discrète pour le site principal uniquement. Étant donné que chaque site d'une configuration MetroCluster fait office de source et de miroir, la consommation totale sur chaque site inclut les volumes source et miroir créés sur ce site.
+
+.Niveaux de services de base
+Pour les niveaux de service de base, cependant, chaque volume est facturé comme provisionné sur le site primaire et le site miroir. Le même graphique à barres est donc divisé en fonction de la consommation au niveau des sites primaire et miroir.
+
+.Ce que vous pouvez voir pour l'abonnement principal
+L'image suivante affiche les graphiques pour le niveau de service _Extreme_ et un numéro d'abonnement principal. Le même tableau de séries chronologiques marque la consommation du site miroir dans une nuance plus claire du code de couleur utilisé pour le site principal. L'infobulle qui s'affiche lorsque vous passez la souris, affiche l'éclatement de la consommation (en Tio) pour les sites principaux et miroirs, 1.02 Tio et 1.05 Tio respectivement.
+
+image:mcc-chart.png["mcc principal"]
+
+Pour le niveau de service _Data-Protect Extreme_, les graphiques apparaissent comme suit :
+
+image:dp-src.png["base principale mcc"]
+
+.Ce que vous pouvez voir pour l'abonnement secondaire (site miroir)
+Lorsque vous vérifiez l'abonnement secondaire, vous pouvez constater que le graphique à barres du niveau de service _Extreme_ au même point de collecte de données est inversé et que l'éclatement de la consommation au niveau des sites primaire et miroir est respectivement de 1.05 Tio et 1.02 Tio.
+
+image:mcc-chart-mirror.png["miroir mcc"]
+
+Pour le niveau de service _Data-Protect Extreme_, le graphique apparaît comme suit au même point de collecte :
+
+image:dp-mir.png["base de rétroviseur mcc"]
+
+Pour plus d'informations sur la protection de vos données par MetroCluster, reportez-vous à la section https://["Tout savoir sur la protection des données et la reprise après incident MetroCluster"^].
+
+====
 
 
 == Afficher les détails du système
@@ -136,11 +184,15 @@ Pour ONTAP, l'onglet *Détails du système* affiche des informations telles que 
 . Cliquez sur l'onglet *Détails du système*.
 . Sélectionnez le numéro d'abonnement. Par défaut, le premier numéro d'abonnement disponible est sélectionné.
 +
-Les détails du volume s'affichent. Vous pouvez faire défiler les colonnes et en savoir plus en passant votre souris sur les icônes d'information à côté des en-têtes de colonne. Vous pouvez trier les différentes colonnes et filtrer les listes pour afficher des informations spécifiques. Vous pouvez copier des numéros de série de nœud individuels en cliquant sur le bouton *Copier les séries de nœud*.
+Les détails du volume s'affichent. Vous pouvez faire défiler les colonnes et en savoir plus en passant votre souris sur les icônes d'information à côté des en-têtes de colonne. Vous pouvez trier les différentes colonnes et filtrer les listes pour afficher des informations spécifiques.
+
++
+
+NOTE: Pour les services de protection des données, une colonne supplémentaire apparaît pour indiquer si le volume est un volume primaire ou miroir dans la configuration MetroCluster. Vous pouvez copier des numéros de série de nœud individuels en cliquant sur le bouton *Copier les séries de nœud*.
 
 
 
-image:aiq-ks-sysdtls.png[""]
+image:aiq-ks-sysdtls.png["onglet détails du système"]
 
 ====
 .Nœuds <strong> et description de la consommations </strong>
@@ -152,11 +204,11 @@ Pour StorageGRID, cet onglet affiche l'utilisation logique des nœuds de l'envir
 . Cliquez sur l'onglet *Détails du système*.
 . Sélectionnez le numéro d'abonnement. Par défaut, le premier numéro d'abonnement disponible est sélectionné. Lorsque vous sélectionnez le numéro d'abonnement, le lien pour les détails du stockage objet est activé.
 +
-image:sg-link.png[""]
+image:sg-link.png["Détails du système SG"]
 
 . Cliquez sur le lien pour afficher les noms des nœuds et les détails d'utilisation logique de chaque nœud.
 +
-image:sg-link-2.png[""]
+image:sg-link-2.png["Fenêtre contextuelle SG"]
 
 
 
@@ -165,17 +217,17 @@ image:sg-link-2.png[""]
 
 == Générer des rapports
 
-Vous pouvez générer et afficher des rapports pour les détails de votre abonnement, les données d'utilisation historiques pour une plage horaire et les détails du système à partir de chacun des onglets en cliquant sur le bouton *Télécharger CSV* : image:download-icon.png[""]
+Vous pouvez générer et afficher des rapports pour les détails de votre abonnement, les données d'utilisation historiques pour une plage horaire et les détails du système à partir de chacun des onglets en cliquant sur le bouton *Télécharger CSV* : image:download-icon.png["icône de téléchargement de rapports"]
 
 Les détails sont générés au format CSV que vous pouvez enregistrer pour une utilisation ultérieure.
 
-Dans l'onglet *série d'heures d'abonnement*, vous avez la possibilité de télécharger le rapport pour les 30 points de données par défaut de la plage de dates de votre requête ou les rapports quotidiens.
+Dans l'onglet *série horaire de l'abonnement*, vous avez la possibilité de télécharger le rapport pour les 30 points de collecte de données par défaut de la plage de dates de votre requête, ou les rapports quotidiens.
 
-image:aiq-report-dnld.png[""]
+image:aiq-report-dnld.png["exemple de rapports"]
 
 Un exemple de rapport pour l'onglet *Subscription Time Series*, où les données graphiques sont converties :
 
-image:report.png[""]
+image:report.png["exemple de rapports"]
 
 
 
@@ -188,10 +240,10 @@ Les alertes peuvent être de deux types :
 * *Information* : pour les problèmes, tels que vos abonnements qui approchent d'une fin, vous pouvez voir les alertes d'information. Placez le curseur sur l'icône d'information pour en savoir plus sur le problème.
 * *Avertissement* : les problèmes, tels que non-conformité, sont affichés comme avertissements. Par exemple, si des volumes dans vos clusters gérés ne sont pas associés à des règles AQoS adaptative (Adaptive QoS), un message d'avertissement s'affiche. Vous pouvez cliquer sur le lien du message d'avertissement pour afficher la liste des volumes non conformes dans l'onglet *Détails du système*.
 +
-Pour plus d'informations sur les stratégies AQoS, voir https://docs.netapp.com/us-en/keystone/nkfsosm_kfs_billing.html#billing-and-adaptive-qos-policies["Facturation et règles de QoS adaptatives"].
+Pour plus d'informations sur les stratégies AQoS, voir https://["Facturation et règles de QoS adaptatives"].
 
 
 
-image:alert-aiq.png[""]
+image:alert-aiq.png["alertes"]
 
-Pour plus d'informations sur ces messages d'avertissement et d'avertissement, contactez le support NetApp. Pour plus d'informations, reportez-vous à la section https://docs.netapp.com/us-en/keystone/sewebiug_raise_a_service_request.html["Demander un service"].
+Pour plus d'informations sur ces messages d'avertissement et d'avertissement, contactez le support NetApp. Pour plus d'informations, reportez-vous à la section https://["Demander un service"].

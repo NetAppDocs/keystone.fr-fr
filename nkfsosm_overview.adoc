@@ -46,7 +46,7 @@ Installation et tâches associées
 * Déployez
 * Intégration
 
-| image:check.png[""] | Aucune 
+| image:check.pngcheck["fait"] | Aucune 
 
 
  a| 
@@ -57,7 +57,7 @@ Administration et contrôle
 * Effectuer des tâches administratives
 * Alerte
 
-| Aucune | image:check.png[""] 
+| Aucune | image:check.png["fait"] 
 
 
  a| 
@@ -67,7 +67,7 @@ Opérations et optimisation
 * Gestion des performances
 * Gestion du niveau de service
 
-| Aucune | image:check.png[""] 
+| Aucune | image:check.png["fait"] 
 
 
  a| 
@@ -78,7 +78,7 @@ Assistance
 * Support logiciel
 * Mises à niveau et correctifs
 
-| image:check.png[""] | Aucune 
+| image:check.png["fait"] | Aucune 
 |===
 
 

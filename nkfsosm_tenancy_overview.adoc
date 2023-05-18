@@ -27,7 +27,7 @@ Dans une colocation, un partenaire est un locataire/client de NetApp dans un env
 .Sous-locataires
 Les sous-locataires Keystone existent entièrement dans un locataire parent avec une relation plusieurs-à-un. Les sous-locataires fournissent une séparation des ressources logiques au sein d'une location et servent de base au reporting à la démonstration. Toutes les ressources de stockage (c'est-à-dire les services de fichiers, le stockage bloc et le stockage objet) appartiennent à un sous-locataire.
 
-image:nkfsosm_image10.png[""]
+image:nkfsosm_image10.png["architecture de location"]
 
 
 

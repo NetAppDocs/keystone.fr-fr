@@ -25,7 +25,7 @@ Assurez-vous de capturer la clé immédiatement après sa création. Il n'existe
 +
 Pour plus d'informations sur l'utilisation des éléments dans les listes, reportez-vous à la section link:sewebiug_netapp_service_engine_web_interface_overview.html#list-view-actions["Actions de vue de liste"].
 
-. La boîte de dialogue *gérer les clés S3* affiche la liste des clés pour l'utilisateur. Pour plus d'informations sur les touches, reportez-vous à la section https://docs.netapp.com/us-en/storagegrid-116/s3/bucket-and-group-access-policies.html#specify-permissions-in-a-policy["Spécifiez les autorisations dans une stratégie"].
+. La boîte de dialogue *gérer les clés S3* affiche la liste des clés pour l'utilisateur. Pour plus d'informations sur les touches, reportez-vous à la section https://["Spécifiez les autorisations dans une stratégie"].
 . S'il n'y a pas de clés existantes pour l'utilisateur, cliquez sur *Créer clé S3* pour afficher les champs permettant de créer une clé.
 . Si vous souhaitez que la clé expire, spécifiez la date d'expiration et l'heure d'expiration dans UTC. Sinon, conservez les valeurs par défaut dans ces champs.
 . Pour créer la clé, cliquez sur la coche. La boîte de dialogue *S3 Key Details* s'affiche et affiche la clé d'accès et la clé secrète.

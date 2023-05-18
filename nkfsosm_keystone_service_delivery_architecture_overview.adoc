@@ -34,7 +34,7 @@ L'infrastructure Keystone comprend plusieurs composants :
 
 Pour plus d'informations sur l'intégration de NetApp Keystone à Active IQ, reportez-vous à la section link:https://docs.netapp.com/us-en/active-iq/["Documentation Active IQ sur le conseiller digital"]
 
-image:nkfsosm_image8.png["Erreur : image graphique manquante"]
+image:nkfsosm_image8.png["ks-infrastructure"]
 
 
 
@@ -46,7 +46,7 @@ Vous pouvez utiliser le portail web NetApp Service Engine pour gérer et contrô
 * Un ensemble d'API REST NetApp Service Engine qui permettent des actions plus avancées dans la configuration et la gestion du stockage.
 
 
-image:nkfsosm_image9.png["Erreur : image graphique manquante"]
+image:nkfsosm_image9.png["architecture ks"]
 
 Le portail NetApp Service Engine est une interface unique qui permet aux clients d'effectuer les tâches suivantes :
 
