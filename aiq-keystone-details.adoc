@@ -19,7 +19,7 @@ Le tableau de bord Active IQ Digital Advisor (conseiller digital) vous permet de
 
 NOTE: Les informations disponibles ici s'appliquent à ONTAP et à StorageGRID. Des exceptions ont été signalées dans les sections pertinentes.
 
-Pour plus d'informations sur le widget Keystone Digital Advisor, reportez-vous à la section https://["Consultez l'utilisation de la capacité sur l'abonnement NetApp Keystone"^].
+Pour plus d'informations sur le widget Keystone Digital Advisor, reportez-vous à la section https://docs.netapp.com/us-en/active-iq/view_keystone_capacity_utilization.html["Consultez l'utilisation de la capacité sur l'abonnement NetApp Keystone"^].
 
 Pour afficher les détails, procédez comme suit :
 
@@ -31,7 +31,7 @@ Pour afficher les détails, procédez comme suit :
 Les détails des abonnements, des graphiques d'utilisation pour chaque niveau de service et des détails sur le volume s'affichent dans les différents onglets de l'écran *abonnements Keystone*.
 
 
-NOTE: La consommation de capacité des abonnements Keystone s'affiche dans les tibides des tableaux de bord et des rapports, avec un maximum de deux décimales. Si l'utilisation est inférieure à 0.01 Tio, la valeur est indiquée comme `0` ou `No Usage`. Pour les autres mesures d'utilisation, voir https://["Metrics et définitions de niveaux de service"]. Pour plus d'informations sur les différentes capacités utilisées dans Keystone, reportez-vous à https://["Définitions de capacité des services Keystone"].
+NOTE: La consommation de capacité des abonnements Keystone s'affiche dans les tibides des tableaux de bord et des rapports, avec un maximum de deux décimales. Si l'utilisation est inférieure à 0.01 Tio, la valeur est indiquée comme `0` ou `No Usage`. Pour les autres mesures d'utilisation, voir https://docs.netapp.com/us-en/keystone/nkfsosm_service_level_metrics_and_definitions.html["Metrics et définitions de niveaux de service"]. Pour plus d'informations sur les différentes capacités utilisées dans Keystone, reportez-vous à https://docs.netapp.com/us-en/keystone/nkfsosm_keystone_service_capacity_definitions.html["Définitions de capacité des services Keystone"].
 
 
 
@@ -57,7 +57,7 @@ Pour plus de détails, cliquez sur la flèche vers le bas pour obtenir un enregi
 
 NOTE: Les niveaux de service spécifiques qui enregistrent une plus forte consommation sont mis en évidence. Vous pouvez également afficher les avertissements et les alertes générés pour vos volumes.
 
-Pour plus d'informations sur vos services de stockage Keystone et sur les niveaux de service appropriés, reportez-vous à la section https://["Niveaux de services"].
+Pour plus d'informations sur vos services de stockage Keystone et sur les niveaux de service appropriés, reportez-vous à la section https://docs.netapp.com/us-en/keystone/nkfsosm_performance.html["Niveaux de services"].
 
 Vous pouvez consulter les indicateurs d'utilisation suivants pour vérifier l'état d'utilisation de chaque abonnement :
 
@@ -72,12 +72,16 @@ image:icon-grey.png["icône"]: Pas d'utilisation de capacité enregistrée par r
 
 == Afficher l'historique des données d'abonnement
 
-a514224616890dbac3dede8f0d533add
+L'onglet *série horaire d'abonnement* affiche les données historiques de vos abonnements Keystone pour une période spécifique. Les graphiques verticaux affichent les détails d'utilisation de la plage de temps sélectionnée, ainsi que les indicateurs appropriés pour vous permettre de comparer et de générer des rapports.
 
 .Étapes
 . Cliquez sur l'onglet *Subscription Time Series*.
 . Sélectionnez l'abonnement requis pour lequel vous souhaitez afficher les détails. Le premier abonnement dans votre nom de compte est sélectionné par défaut.
 . Sélectionnez la plage horaire dans les icônes de calendrier des champs *Date de début* et *Date de fin*. La plage horaire par défaut va de la date de début de la période de facturation à la date actuelle.
++
+
+NOTE: Pour des performances et une expérience utilisateur optimales, limitez la plage de dates de votre requête à trois mois maximum.
+
 . Cliquez sur *Afficher les détails*. Les données historiques de consommation de l'abonnement pour chaque niveau de service s'affichent en fonction de la plage horaire sélectionnée. Vous pouvez placer le curseur de la souris sur les graphiques pour afficher la répartition de l'utilisation en termes de données validées, consommées, en rafale et au-dessus de la limite de rafale à ce point de collecte de données.
 
 
@@ -131,7 +135,7 @@ NOTE: Les indicateurs *courant consommé*, *courant Burst* et *Accrued Burst* d�
 ====
 Si vous vous êtes abonné au service de protection des données (DP), vous pouvez afficher la répartition des données de consommation en fonction des sites principaux et miroir MetroCluster dans l'onglet *série horaire d'abonnement*.
 
-Pour plus d'informations sur la protection des données, reportez-vous à la section https://["La protection des données"].
+Pour plus d'informations sur la protection des données, reportez-vous à la section https://docs.netapp.com/us-en/keystone/nkfsosm_data_protection.html["La protection des données"].
 
 Si les clusters de votre environnement de stockage ONTAP sont configurés dans une configuration MetroCluster, les données de consommation de votre abonnement Keystone sont réparties dans le même graphique afin d'afficher la consommation au niveau des sites principaux et en miroir pour les niveaux de service de base.
 
@@ -162,7 +166,7 @@ Pour le niveau de service _Data-Protect Extreme_, le graphique apparaît comme s
 
 image:dp-mir.png["base de rétroviseur mcc"]
 
-Pour plus d'informations sur la protection de vos données par MetroCluster, reportez-vous à la section https://["Tout savoir sur la protection des données et la reprise après incident MetroCluster"^].
+Pour plus d'informations sur la protection de vos données par MetroCluster, reportez-vous à la section https://docs.netapp.com/us-en/ontap-metrocluster/manage/concept_understanding_mcc_data_protection_and_disaster_recovery.html["Tout savoir sur la protection des données et la reprise après incident MetroCluster"^].
 
 ====
 
@@ -236,10 +240,10 @@ Les alertes peuvent être de deux types :
 * *Information* : pour les problèmes, tels que vos abonnements qui approchent d'une fin, vous pouvez voir les alertes d'information. Placez le curseur sur l'icône d'information pour en savoir plus sur le problème.
 * *Avertissement* : les problèmes, tels que non-conformité, sont affichés comme avertissements. Par exemple, si des volumes dans vos clusters gérés ne sont pas associés à des règles AQoS adaptative (Adaptive QoS), un message d'avertissement s'affiche. Vous pouvez cliquer sur le lien du message d'avertissement pour afficher la liste des volumes non conformes dans l'onglet *Détails du système*.
 +
-Pour plus d'informations sur les stratégies AQoS, voir https://["Facturation et règles de QoS adaptatives"].
+Pour plus d'informations sur les stratégies AQoS, voir https://docs.netapp.com/us-en/keystone/nkfsosm_kfs_billing.html#billing-and-adaptive-qos-policies["Facturation et règles de QoS adaptatives"].
 
 
 
 image:alert-aiq.png["alertes"]
 
-Pour plus d'informations sur ces messages d'avertissement et d'avertissement, contactez le support NetApp. Pour plus d'informations, reportez-vous à la section https://["Demander un service"].
+Pour plus d'informations sur ces messages d'avertissement et d'avertissement, contactez le support NetApp. Pour plus d'informations, reportez-vous à la section https://docs.netapp.com/us-en/keystone/sewebiug_raise_a_service_request.html["Demander un service"].

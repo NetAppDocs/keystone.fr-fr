@@ -14,13 +14,13 @@ summary: 'Qualité de service adaptative (AQoS) Keystone'
 
 
 [role="lead"]
-La qualité de service (QoS) du stockage est une technologie stratégique qui permet aux applications d'obtenir des performances cohérentes et prévisibles. Sans la QoS, certaines charges de travail, telles que celles pour le démarrage de plusieurs systèmes, peuvent consommer la plupart ou la totalité des ressources pendant une période et affecter d'autres charges de travail. Pour plus d'informations sur la QoS, reportez-vous à la section https://["Débit garanti avec les QoS"^].
+La qualité de service (QoS) du stockage est une technologie stratégique qui permet aux applications d'obtenir des performances cohérentes et prévisibles. Sans la QoS, certaines charges de travail, telles que celles pour le démarrage de plusieurs systèmes, peuvent consommer la plupart ou la totalité des ressources pendant une période et affecter d'autres charges de travail. Pour plus d'informations sur la QoS, reportez-vous à la section https://docs.netapp.com/us-en/ontap/performance-admin/guarantee-throughput-qos-task.html["Débit garanti avec les QoS"^].
 
 
 
 == La QoS adaptative
 
-La QoS adaptative (AQoS) est utilisée par les services Keystone pour maintenir dynamiquement le ratio IOPS/Tio en fonction de la taille du volume. Pour plus d'informations sur les stratégies AQoS, voir https://["À propos de la QoS adaptative"^].
+La QoS adaptative (AQoS) est utilisée par les services Keystone pour maintenir dynamiquement le ratio IOPS/Tio en fonction de la taille du volume. Pour plus d'informations sur les stratégies AQoS, voir https://docs.netapp.com/us-en/ontap/performance-admin/guarantee-throughput-qos-task.html#about-adaptive-qos["À propos de la QoS adaptative"^].
 
 Keystone vous fournit des règles AQoS que vous pouvez configurer une fois que votre cluster est en production. Vous devez vous assurer que tous vos volumes sont associés aux règles AQoS correctes qui sont déjà créées et disponibles dans votre système.
 

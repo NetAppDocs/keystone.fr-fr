@@ -18,7 +18,7 @@ Les questions suivantes donnent des réponses à vos questions fréquentes sur N
 
 *Qu'est-ce que NetApp Keystone?*
 
-NetApp Keystone est une gamme d'alternatives aux dépenses d'investissement (CapEx) sur site. Pour plus d'informations, voir https://["NetApp Keystone"].
+NetApp Keystone est une gamme d'alternatives aux dépenses d'investissement (CapEx) sur site. Pour plus d'informations, voir https://www.netapp.com/services/keystone/["NetApp Keystone"].
 
 *En quoi NetApp Keystone profite-t-il à mes clients?*
 

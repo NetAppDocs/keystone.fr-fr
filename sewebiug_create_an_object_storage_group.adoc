@@ -21,7 +21,7 @@ Utilisez cette méthode pour créer un groupe de stockage d'objet.
 . Assurez-vous que le sous-locataire correct est sélectionné et que vous avez cliqué sur l'onglet *groupes*.
 . Cliquez sur *Créer un groupe*.
 . Dans la boîte de dialogue Créer un groupe, entrez le nom du groupe.
-. Sélectionnez la règle S3 dans la liste. Pour plus d'informations sur les règles S3, reportez-vous à la section https://["Spécifiez les autorisations dans une stratégie"].
+. Sélectionnez la règle S3 dans la liste. Pour plus d'informations sur les règles S3, reportez-vous à la section https://docs.netapp.com/us-en/storagegrid-116/s3/bucket-and-group-access-policies.html#specify-permissions-in-a-policy["Spécifiez les autorisations dans une stratégie"].
 . Cliquez sur *Créer*. Cela crée un travail pour créer le groupe avec les paramètres spécifiés.
 
 
