@@ -47,7 +47,7 @@ Pour chaque numéro d'abonnement, vous pouvez consulter les informations suivant
 * *ID de suivi* : ID de suivi attribué au moment de l'activation de l'abonnement. Il s'agit d'un identifiant unique pour chaque abonnement et site, utilisé pour le suivi de l'abonnement.
 * *Période de facturation* : période de facturation de l'abonnement, telle que mensuelle, trimestrielle ou annuelle.
 * *Date de début* : la date de début de l'abonnement.
-* *Date de fin* : date de fin de l'abonnement. En fonction de cette date, il se peut que vous voyiez des messages d'information pour les abonnements qui approchent de leur expiration.
+* *Date de fin* : date de fin de l'abonnement. Une date vide indique que l'abonnement n'a pas de date de fin et qu'il est renouvelé automatiquement. En fonction de cette date, il est possible que des messages d'information s'affichent pour les abonnements qui approchent de leur expiration ou auxquels des polices de renouvellement automatique sont jointes.
 * *Statut d'utilisation* : indique la quantité d'abonnement utilisée ou excédentaire. Vous pouvez trier la liste en fonction de cette colonne si vous souhaitez afficher les enregistrements de consommation les plus élevés.
 * image:aiq-ks-time-icon.png["icône"]: Cliquez sur cette icône pour ouvrir l'onglet *Subscription Time Series* où vous pouvez voir les données d'utilisation historiques pour chaque niveau de service inclus dans cet abonnement.
 
@@ -105,7 +105,7 @@ Les couleurs suivantes dans les graphiques à barres indiquent la capacité cons
 ** Violet : au-dessus de la limite d'éclatement ou `Above Limit`.
 +
 
-NOTE: Lorsque vous placez le curseur de la souris sur un graphique à barres, vous pouvez afficher les données _usage provisoire_. Il s'agit de l'utilisation enregistrée lorsque les données exactes de la période ne sont pas disponibles et sont remplacées par les données disponibles au point de collecte des données précédent.
+NOTE: Un graphique vide indique qu'aucune donnée n'est disponible dans votre environnement à ce point de collecte de données.
 
 
 
