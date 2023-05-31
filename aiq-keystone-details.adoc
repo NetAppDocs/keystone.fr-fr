@@ -64,9 +64,11 @@ Vous pouvez consulter les indicateurs d'utilisation suivants pour vérifier l'é
 image:usage-indicator.png["icônes"]
 
 .Indexer
-image:usage-indicator.png["icône"]
-image:usage-indicator.png["icône"]
-image:icon-grey.png["icône"]: Pas d'utilisation de capacité enregistrée par rapport à la capacité engagée du niveau de serviceimage:icon-green.png["icône"]: La consommation est normale, à moins de 80 % de la capacité engagéeimage:icon-amber.png["icône"]: Consommation maximale, c'est-à-dire que l'utilisation est sur le point d'atteindre 100 % ou plus de la capacité allouée. La colonne *Uconsommé* affiche cet indicateur pour toute consommation supérieure à 80 % de la capacité engagéeimage:icon-red.png["icône"]: La consommation est dans la limite de rafale. La consommation en rafale est la consommation qui occupe la capacité engagement de 100 % d'un niveau de service. Elle est conforme à la limite convenue d'utilisation en rafale, notamment 120 %image:icon-purple.png["icône"]: Indique la consommation au-dessus de la limite de rafale stipulée
+image:icon-grey.png["icône"]: Pas d'utilisation de capacité enregistrée par rapport à la capacité engagée du niveau de service
+image:icon-green.png["icône"]: La consommation est normale, à moins de 80 % de la capacité engagée
+image:icon-amber.png["icône"]: Consommation maximale, c'est-à-dire que l'utilisation est sur le point d'atteindre 100 % ou plus de la capacité allouée. La colonne *Uconsommé* affiche cet indicateur pour toute consommation supérieure à 80 % de la capacité engagée
+image:icon-red.png["icône"]: La consommation est dans la limite de rafale. La consommation en rafale est la consommation qui occupe la capacité engagement de 100 % d'un niveau de service. Elle est conforme à la limite convenue d'utilisation en rafale, notamment 120 %
+image:icon-purple.png["icône"]: Indique la consommation au-dessus de la limite de rafale stipulée
 
 
 
