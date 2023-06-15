@@ -14,7 +14,7 @@ summary: Niveau de service des performances Keystone
 
 
 [role="lead"]
-Keystone propose une capacité de stockage des données avec des niveaux de service à performances prédéfinies (niveaux de service) sur la base d'un abonnement. Chaque volume géré par les services Keystone est associé à un niveau de service.
+Keystone offre une capacité de stockage des données avec des niveaux de service (niveaux de service) de performance prédéfinis ou des forfaits sur la base d'un abonnement. Chaque volume géré par les services Keystone est associé à un niveau de service.
 
 Chaque niveau de services est défini par sa densité d'E/S, à savoir IOPS/Tio/volume. Il s'agit du rapport entre les performances (opérations d'entrée/sortie par seconde [IOPS]) et la capacité de stockage allouée (Tio), qui correspond au nombre d'IOPS/Tio à la latence moyenne par volume.
 
