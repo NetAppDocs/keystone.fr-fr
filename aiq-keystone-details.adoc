@@ -31,7 +31,7 @@ Pour afficher les détails, procédez comme suit :
 Les détails des abonnements, des graphiques d'utilisation pour chaque niveau de service et des détails sur le volume s'affichent dans les différents onglets de l'écran *abonnements Keystone*.
 
 
-NOTE: La consommation de capacité des abonnements Keystone s'affiche dans les tibides des tableaux de bord et des rapports, avec un maximum de deux décimales. Si l'utilisation est inférieure à 0.01 Tio, la valeur est indiquée comme `0` ou `No Usage`. Pour les autres mesures d'utilisation, voir https://docs.netapp.com/us-en/keystone/nkfsosm_service_level_metrics_and_definitions.html["Metrics et définitions de niveaux de service"]. Pour plus d'informations sur les différentes capacités utilisées dans Keystone, reportez-vous à https://docs.netapp.com/us-en/keystone/nkfsosm_keystone_service_capacity_definitions.html["Définitions de capacité des services Keystone"].
+NOTE: Dans les abonnements Keystone, la consommation de capacité s'affiche en Tibs sur les tableaux de bord et les rapports, puis est arrondie à deux décimales. Si l'utilisation est inférieure à 0.01 Tio, la valeur est indiquée comme `0` ou `No Usage`. Pour les autres mesures d'utilisation, voir https://docs.netapp.com/us-en/keystone/nkfsosm_service_level_metrics_and_definitions.html["Metrics et définitions de niveaux de service"]. Pour plus d'informations sur les différentes capacités utilisées dans Keystone, reportez-vous à https://docs.netapp.com/us-en/keystone/nkfsosm_keystone_service_capacity_definitions.html["Définitions de capacité des services Keystone"].
 
 
 
@@ -144,36 +144,39 @@ NOTE: Les indicateurs *courant consommé*, *courant Burst* et *Accrued Burst* d�
 .Cliquez ici
 [%collapsible]
 ====
-Si vous avez souscrit au service de protection des données (DP), vous pouvez afficher la répartition des données de consommation selon les sites partenaires MetroCluster dans l'onglet *série de temps d'abonnement*.
+Si vous vous êtes abonné au service de protection des données, vous pouvez voir l'éclatement des données de consommation pour les sites partenaires MetroCluster dans l'onglet *série de temps d'abonnement*.
 
-Pour plus d'informations sur la protection des données, reportez-vous à la section https://docs.netapp.com/us-en/keystone/nkfsosm_data_protection.html["La protection des données"].
+Pour plus d'informations sur la protection des données, reportez-vous à la section https://docs.netapp.com/us-en/keystone/nkfsosm_data_protection.html["Protection des données"].
 
 Si les clusters de votre environnement de stockage ONTAP sont configurés dans une configuration MetroCluster, les données de consommation de votre abonnement Keystone sont réparties dans le même graphique afin d'afficher la consommation au niveau des sites principaux et en miroir pour les niveaux de service de base.
 
 
-NOTE: Les graphiques à barres de consommation sont divisés uniquement pour les niveaux de service de base. Pour les niveaux de service DP, cette démarcation n'apparaît pas.
+NOTE: Les graphiques à barres de consommation sont divisés uniquement pour les niveaux de service de base. Pour les niveaux de service de protection des données, cette démarcation n'apparaît pas.
 
 .Niveaux de service de protection des données
-Pour les niveaux de service de protection des données, la consommation totale est répartie et l'utilisation sur chaque site partenaire est reflétée et facturée dans un abonnement séparé, c'est-à-dire un abonnement pour le site principal et un autre pour le site miroir. C'est pourquoi, lorsque vous sélectionnez le numéro d'abonnement pour le site principal dans l'onglet *série de temps d'abonnement*, les graphiques de consommation pour les niveaux de service DP affichent les détails de consommation discrète pour le site principal uniquement. Étant donné MetroCluster que chaque site partenaire fait office de source et de miroir, la consommation totale sur chaque site inclut la source et les volumes en miroir créés sur ce site.
+Pour les niveaux de service de protection des données, la consommation totale est répartie entre les sites partenaires, et l'utilisation sur chaque site partenaire est reflétée et facturée dans un abonnement séparé, c'est-à-dire un abonnement pour le site principal et un autre pour le site miroir. C'est pourquoi, lorsque vous sélectionnez le numéro d'abonnement pour le site principal dans l'onglet *série de temps d'abonnement*, les graphiques de consommation pour les niveaux de service DP affichent les détails de consommation discrète pour le site principal uniquement. Étant donné MetroCluster que chaque site partenaire fait office de source et de miroir, la consommation totale sur chaque site inclut la source et les volumes en miroir créés sur ce site.
+
+
+TIP: L'info-bulle en regard de l'ID de sélection de votre abonnement dans l'onglet *Détails de l'abonnement* vous aide à identifier l'abonnement partenaire dans la configuration MetroCluster.
 
 .Niveaux de services de base
-Pour les niveaux de service de base, cependant, chaque volume est facturé comme provisionné sur le site primaire et le site miroir. Le même graphique à barres est donc divisé en fonction de la consommation au niveau des sites primaire et miroir.
+Pour les niveaux de service de base, chaque volume est facturé comme provisionné sur le site primaire et le site miroir. Le même graphique à barres est donc divisé en fonction de la consommation au niveau des sites primaire et miroir.
 
 .Ce que vous pouvez voir pour l'abonnement principal
-L'image suivante affiche les graphiques pour le niveau de service _Extreme_ et un numéro d'abonnement principal. Le même tableau de séries chronologiques marque la consommation du site miroir dans une nuance plus claire du code de couleur utilisé pour le site principal. L'infobulle qui s'affiche lorsque vous passez la souris, affiche l'éclatement de la consommation (en Tio) pour les sites principaux et miroirs, 1.02 Tio et 1.05 Tio respectivement.
+L'image suivante affiche les graphiques pour le niveau de service _Extreme_ (niveau de service de base) et un numéro d'abonnement principal. Le même tableau de séries chronologiques marque la consommation du site miroir dans une nuance plus claire du code de couleur utilisé pour le site principal. L'infobulle qui s'affiche lorsque vous passez la souris, affiche l'éclatement de la consommation (en Tio) pour les sites principaux et miroirs, 1.02 Tio et 1.05 Tio respectivement.
 
 image:mcc-chart.png["mcc principal"]
 
-Pour le niveau de service _Data-Protect Extreme_, les graphiques apparaissent comme suit :
+Pour le niveau de service _Data-Protect Extreme_ (niveau de service de protection des données), les graphiques apparaissent comme suit :
 
 image:dp-src.png["base principale mcc"]
 
 .Ce que vous pouvez voir pour l'abonnement secondaire (site miroir)
-Lorsque vous vérifiez l'abonnement secondaire, vous pouvez constater que le graphique à barres du niveau de service _Extreme_ au même point de collecte de données est inversé et que l'éclatement de la consommation au niveau des sites primaire et miroir est respectivement de 1.05 Tio et 1.02 Tio.
+Lorsque vous cochez l'abonnement secondaire, vous constatez que le graphique à barres du niveau de service _Extreme_ (niveau de service de base) au même point de collecte de données que le site partenaire est inversé, et que l'éclatement de la consommation au niveau des sites principal et miroir est respectivement de 1.05 Tio et 1.02 Tio.
 
 image:mcc-chart-mirror.png["miroir mcc"]
 
-Pour le niveau de service _Data-Protect Extreme_, le graphique apparaît comme suit au même point de collecte :
+Pour le niveau de service _Data-Protect Extreme_ (niveau de service de protection des données), le graphique apparaît comme suit au même point de collecte que le site partenaire :
 
 image:dp-mir.png["base de rétroviseur mcc"]
 

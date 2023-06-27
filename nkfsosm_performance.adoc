@@ -20,7 +20,9 @@ Chaque niveau de services est défini par sa densité d'E/S, à savoir IOPS/Tio/
 
 La densité d'E/S d'un volume est calculée à un intervalle horaire pour indiquer la densité d'E/S maximale. Les rapports de densité des E/S pour les volumes sont générés chaque mois.
 
-Les niveaux de service pour les types de stockage fichier, bloc et objet sont répertoriés ici.
+Vous sélectionnez des niveaux de service en fonction de votre environnement de stockage, ainsi que des besoins de stockage et de consommation. Les niveaux de service de base sont disponibles par défaut. D'autres niveaux de service sont également disponibles si vous avez opté pour des services spécifiques. Par exemple, pour le service de protection des données, le niveau de service _Data-Protect <base-service-level>_ est attribué à votre abonnement.
+
+Les niveaux de service de base pour les types de stockage fichier, bloc et objet sont répertoriés ici.
 
 
 
@@ -55,7 +57,7 @@ Les niveaux de service pour les types de stockage fichier, bloc et objet sont r�
 
 === En savoir plus sur les niveaux de service pour le stockage de fichiers
 
-Les indicateurs de niveau de service dépendent des conditions suivantes :
+Les indicateurs de niveau de service de base dépendent des conditions suivantes :
 
 * Les niveaux de service pour le stockage fichier et bloc prennent en charge ONTAP 9.7 et versions ultérieures.
 * Les valeurs d'IOPS/Tio/volume, de Mo/sec/Tio/volume et de latence pour les niveaux de services sont basées sur la quantité de données logiques stockées dans le volume, la taille de bloc de 32 Ko et une combinaison aléatoire d'opérations d'E/S de 70 % en lecture et 30 % en écriture.

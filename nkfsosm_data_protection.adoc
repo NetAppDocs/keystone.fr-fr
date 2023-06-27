@@ -4,7 +4,7 @@ permalink: nkfsosm_data_protection.html
 keywords: netapp, keystone, data, protection, 
 summary: Protection des données 
 ---
-= La protection des données
+= Protection des données
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -23,6 +23,8 @@ Le service de protection des données NetApp Keystone peut sauvegarder vos donn�
 
 
 NOTE: Les services de sauvegarde et de reprise après incident sont disponibles en tant que services d'extension, tandis que les snapshots sont disponibles dans le service de stockage de base.
+
+Si vous avez souscrit à des services de protection des données, des niveaux de service spécifiques sont attribués à vos abonnements, par exemple _Data-Protect Extreme_, _Data-Protect Premium_, etc. Pour plus d'informations, reportez-vous à la section https://docs.netapp.com/us-en/keystone/aiq-keystone-details.html#additional-details-for-data-protection["Informations supplémentaires sur la protection des données"]
 
 |===
 |  | Snapshots d'une seule région (disponibles dans le cadre du service de stockage de base) | Sauvegarde dans plusieurs régions (extension de protection des données) | Reprise après incident dans plusieurs régions (extension de protection des données) 
