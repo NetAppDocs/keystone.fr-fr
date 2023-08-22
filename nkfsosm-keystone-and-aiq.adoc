@@ -14,9 +14,38 @@ summary: Ce que les clients peuvent voir dans Active IQ pour la clé de voûte
 
 
 [role="lead"]
-Si vous vous êtes abonné aux services NetApp Keystone, vous pouvez consulter les rapports d'utilisation et les graphiques du tableau de bord Active IQ Digital Advisor (Digital Advisor).
+Si vous vous êtes abonné aux services NetApp Keystone, vous obtenez une présentation de vos abonnements via le widget *abonnements Keystone* du tableau de bord Active IQ Digital Advisor (Digital Advisor).
 
-Lors de la connexion à Digital Advisor, le widget *abonnements Keystone* qui résume l'utilisation de la capacité par rapport aux services Keystone achetés s'affiche.
+Digital Advisor propose un tableau de bord unifié qui vous donne des informations sur les différents niveaux de données d'abonnement et d'utilisation via le bouton *passer à l'ancien/nouveau tableau de bord*.
+
+.Tableau de bord par défaut (ancien)
+Vous pouvez afficher votre numéro d'abonnement, le nom de votre compte, les dates de début et de fin de l'abonnement, ainsi que les graphiques d'utilisation de la capacité en fonction de vos niveaux de service souscrits.
+
+image:old-db.png["ancien tableau de bord"]
+
+.Tableau de bord alternatif (nouveau)
+Vous pouvez voir l'éclatement de l'utilisation de la capacité selon vos abonnements, ainsi que les avertissements et alertes qui requièrent une intervention immédiate ou immédiate. Les informations s'affichent de manière sélective, en fonction de vos abonnements et de l'état de votre utilisation. Vous pouvez afficher ces informations :
+
+* Utilisation de la capacité, par exemple :
++
+** Aucune utilisation.
+** Consommation supérieure à 80 % de la capacité allouée.
+** Utilisation en rafale.
+** Consommations au-delà de la capacité supplémentaire.
+
+
+* Des avertissements divers s'affichent s'ils s'appliquent à vous.
++
+** *Expire bientôt* : en cas d'expiration de vos abonnements dans un délai de 90 jours.
+** *Mises à niveau matérielles critiques* : si des mises à niveau matérielles critiques sont en attente.
+** *AQoS Avertissements* : vous avez des volumes sans stratégies AQoS attribuées.
++
+
+TIP: Cliquez sur le lien *abonnements* pour afficher la liste des abonnements filtrés dans l'onglet *abonnements*.
+
+
+
+
 
 Pour plus d'informations sur Digital Advisor, reportez-vous à la section link:https://docs.netapp.com/us-en/active-iq/index.html["Documentation de Digital Advisor"].
 
