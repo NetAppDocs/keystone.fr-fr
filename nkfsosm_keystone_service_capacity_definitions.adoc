@@ -41,7 +41,7 @@ Pendant la durée d'un abonnement, vous pouvez modifier les capacités engagées
 
 * La capacité engagée ne peut pas être réduite
 * La capacité engagée ne peut pas être augmentée 90 jours avant l'expiration de votre abonnement, à moins que l'abonnement ne soit renouvelé pour une durée supplémentaire de 12 mois.
-* Vous pouvez demander des modifications de la capacité engagée à l'aide de l'interface du moteur de services NetApp ou de Keystone Success Manager. Pour plus d'informations sur la demande de modifications, reportez-vous à la section link:sewebiug_raise_a_service_request.html["Demander un service"].
+* Vous pouvez demander des modifications de la capacité allouée via Keystone Success Manager.
 
 
 

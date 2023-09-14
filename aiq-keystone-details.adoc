@@ -51,7 +51,7 @@ TIP: Si un niveau de service de protection des données ou un plan tarifaire est
 * *Type d'utilisation* : vous avez peut-être souscrit à plusieurs abonnements Keystone (version 1) ou Keystone STaaS (version 2). Les règles de plan tarifaire pour les niveaux de service peuvent varier selon les deux types d'abonnement. En regardant la valeur de cette colonne, vous savez si le type d'utilisation est facturé en fonction de l'utilisation provisionnée ou logique pour l'un ou l'autre `v1` ou `v2`. Pour plus d'informations sur le stockage en tant que service Keystone, voir https://docs.netapp.com/us-en/keystone-staas/index.html["Documentation Keystone STaaS"^].
 * *Période de facturation* : période de facturation de l'abonnement, telle que mensuelle, trimestrielle ou annuelle.
 * *Date de début* : la date de début de l'abonnement.
-* *Date de fin* : date de fin de l'abonnement. Une date vide indique que l'abonnement n'a pas de date de fin et qu'il est renouvelé automatiquement. En fonction de cette date, il est possible que des messages d'information s'affichent pour les abonnements qui approchent de leur expiration ou auxquels des polices de renouvellement automatique sont jointes.
+* *Date de fin* : date de fin de l'abonnement. Si vous avez un abonnement mensuel qui se renouvelle automatiquement tous les mois, vous voyez `Month-on-month` au lieu de la date de fin. En fonction de cette date, il est possible que des messages d'information s'affichent pour les abonnements qui approchent de leur expiration ou auxquels des polices de renouvellement automatique sont jointes.
 * *Statut d'utilisation* : indique la quantité d'abonnement utilisée ou excédentaire. Vous pouvez trier la liste en fonction de cette colonne si vous souhaitez afficher les enregistrements de consommation les plus élevés.
 * image:subs-dtls-icon.png["icône"]: Cliquer sur cette icône pour un abonnement ouvre l'onglet *Current usage* avec des détails supplémentaires sur cet abonnement.
 * image:aiq-ks-time-icon.png["icône"]: Cliquez sur cette icône pour ouvrir l'onglet *Capacity Trend*, dans lequel vous pouvez afficher l'historique des données d'utilisation pour chaque niveau de service inclus dans cet abonnement.
@@ -91,10 +91,10 @@ L'onglet *Capacity Trend* affiche les données historiques de vos abonnements Ke
 .Étapes
 . Cliquez sur l'onglet *tendance capacité*.
 . Sélectionnez l'abonnement requis pour lequel vous souhaitez afficher les détails. Le premier abonnement dans votre nom de compte est sélectionné par défaut.
-. Sélectionnez la plage horaire dans les icônes de calendrier des champs *Date de début* et *Date de fin*. La plage horaire par défaut va de la date de début de la période de facturation à la date actuelle.
+. Sélectionnez la plage horaire dans les icônes de calendrier des champs *Date de début* et *Date de fin*. Pour les abonnements qui ont expiré, la plage de dates par défaut est les dates de début et de fin de l'abonnement. Pour les abonnements existants, la plage horaire par défaut va de la date de début de la période de facturation à la date actuelle. Vous ne pouvez pas sélectionner une date future.
 +
 
-TIP: Pour des performances et une expérience utilisateur optimales, limitez la plage de dates de votre requête à trois mois maximum.
+TIP: Pour des performances et une expérience utilisateur optimales, limitez la plage de dates de votre requête à trois mois.
 
 . Cliquez sur *Afficher les détails*. Les données historiques de consommation de l'abonnement pour chaque niveau de service s'affichent en fonction de la plage horaire sélectionnée. Vous pouvez placer le curseur de la souris sur les graphiques pour afficher la répartition de l'utilisation en termes de données validées, consommées, en rafale et au-dessus de la limite de rafale à ce point de collecte de données.
 
@@ -123,17 +123,18 @@ NOTE: Un graphique vide indique qu'aucune donnée n'est disponible dans votre en
 
 
 
-* *Courant consommé* : indicateur de la capacité consommée (en Tio) définie pour le niveau de service. Ce champ utilise des couleurs spécifiques pour l'utilisation :
+* *Courant consommé* : indicateur de la capacité consommée (en Tio) définie pour le niveau de service. Ce champ utilise des couleurs spécifiques :
 +
-** Gris : aucun.
+** Pas de couleur : utilisation en rafale ou supérieure.
+** Gris : aucune utilisation.
 ** Vert : dans un délai de 80 % de la capacité allouée.
-** Orange : toute consommation supérieure à 80 % de la capacité allouée.
+** Orange : 80 % de la capacité allouée à la capacité de rafale.
 
 
-* *Burst courant* : indicateur de la capacité consommée dans la limite de rafale définie ou au-dessus. Toute utilisation comprise dans la limite de capacité supplémentaire convenue, par exemple, 20 % de plus que la capacité allouée se situe dans la limite de capacité supplémentaire. Autre utilisation : utilisation supérieure à la limite d'augmentation. Ce champ utilise des couleurs spécifiques pour l'utilisation :
+* *Burst courant* : indicateur de la capacité consommée dans la limite de rafale définie ou au-dessus. Toute utilisation comprise dans la limite de capacité supplémentaire convenue, par exemple, 20 % de plus que la capacité allouée se situe dans la limite de capacité supplémentaire. Autre utilisation : utilisation supérieure à la limite d'augmentation. Ce champ affiche des couleurs spécifiques :
 +
-** Gris : aucun.
-** Rouge : rafale.
+** Pas de couleur : pas d'utilisation de rafale.
+** Rouge : utilisation en rafale.
 ** Violet : au-dessus de la limite d'éclatement.
 
 
@@ -282,4 +283,4 @@ Pour plus d'informations sur les stratégies AQoS, voir https://docs.netapp.com/
 
 image:alert-aiq.png["alertes"]
 
-Pour plus d'informations sur ces messages d'avertissement et d'avertissement, contactez le support NetApp. Pour plus d'informations, reportez-vous à la section https://docs.netapp.com/us-en/keystone/sewebiug_raise_a_service_request.html["Demander un service"].
+Pour plus d'informations sur ces messages d'avertissement et d'avertissement, contactez le support NetApp.

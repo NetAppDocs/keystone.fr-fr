@@ -26,15 +26,16 @@ Le service Keystone propose des durées de 12, 24 et 36 mois.
 
 *Comment puis-je accéder au stockage?*
 
-Dans le modèle NetApp (standard), les contrôleurs de stockage (ONTAP System Manager ou l'accès administratif aux systèmes) sont détenus et gérés par NetApp. Vous ne pouvez contrôler et gérer votre stockage que via l'interface utilisateur et les API du moteur de service NetApp. Dans un déploiement géré par le client (ou Lite), où l'interface utilisateur et les API du moteur de service NetApp sont utilisées principalement pour les fonctions de facturation, vous pouvez accéder aux contrôleurs de stockage, tels que Active IQ Unified Manager et ONTAP System Manager, et accéder directement aux clusters ONTAP.
+Dans le modèle NetApp (standard), les contrôleurs de stockage (ONTAP System Manager ou l'accès administratif aux systèmes) sont détenus et gérés par NetApp. Vous pouvez contrôler votre stockage uniquement via l'interface utilisateur de Active IQ Digital Advisor.
+Dans un déploiement géré par le client (ou Lite), où l'interface utilisateur de Active IQ Digital Advisor est principalement utilisée pour les fonctions de facturation, vous pouvez accéder aux contrôleurs de stockage, tels que Active IQ Unified Manager et ONTAP System Manager, et accéder directement aux clusters ONTAP.
 
 *Comment puis-je gérer le service?*
 
-NetApp Service Engine est l'outil de gestion et d'orchestration qui vous permet de provisionner le stockage et d'obtenir des rapports sur l'utilisation des services.
+Vous pouvez générer des tickets de support en fonction de vos besoins.
 
 *Comment puis-je augmenter la capacité engagée dans un abonnement?*
 
-Vous pouvez envoyer une demande d'ajout de capacité par le biais de l'outil de gestion des moteurs de services NetApp ou via leur responsable NetApp Keystone Success Manager.
+Grâce à votre responsable NetApp Keystone Success Manager.
 
 *L'augmentation de la capacité prolonge-t-elle le terme?*
 

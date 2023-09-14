@@ -47,6 +47,8 @@ TIP: Cliquez sur le lien *abonnements* pour afficher la liste des abonnements fi
 
 
 
+image:db-card.png["sans sla"]
+
 Pour plus d'informations sur Digital Advisor, reportez-vous à la section link:https://docs.netapp.com/us-en/active-iq/index.html["Documentation de Digital Advisor"].
 
 Pour plus d'informations sur l'onglet *abonnements Keystone*, reportez-vous à la section _Tableau de bord et reporting Digital Advisor pour Keystone_.

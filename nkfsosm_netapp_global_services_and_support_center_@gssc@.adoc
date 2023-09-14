@@ -23,7 +23,7 @@ NetApp propose des services d'exploitation à distance aux clients NetApp Keysto
 
 L'équipe du Centre de support et de services NetApp (GSSC) soutient principalement les services fournis aux clients NetApp Keystone.
 
-Tickets directement à partir du portail NetApp Service Engine (*support > demandes de service*) contenant les informations appropriées sur le problème pour obtenir de l'aide.
+Émettre un ticket avec les détails appropriés du problème pour obtenir de l'aide.
 
 Vous pouvez également utiliser les informations suivantes pour contacter l'équipe de support.
 

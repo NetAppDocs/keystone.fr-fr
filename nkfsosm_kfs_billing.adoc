@@ -30,8 +30,6 @@ La facturation de Keystone repose sur la capacité engagement et sur la consomma
 
 Pour plus d'informations sur l'utilisation de la capacité engagée et en rafale, reportez-vous à la section link:nkfsosm_keystone_service_capacity_definitions.html["Définitions de capacité des services Keystone"].
 
-Pour plus d'informations sur l'affichage des détails de facturation, reportez-vous à la section link:sewebiug_billing.html["Afficher la facturation"].
-
 
 
 == Facturation en fonction de la capacité engagement

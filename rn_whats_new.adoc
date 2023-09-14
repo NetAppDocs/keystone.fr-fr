@@ -33,7 +33,7 @@ Le tableau de bord du moteur de services NetApp a été repensé pour inclure le
 * *Utilisation de la capacité* pour afficher la capacité utilisée pour vos services abonnés.
 * *Frais mensuels (facturation)* pour l'affichage des frais mensuels agrégés pour tous vos abonnements.
 * *Alertes* pour afficher le résumé des alertes les plus récentes dans votre environnement.
-* *Demandes de service* pour afficher la liste des demandes de service les plus récentes générées dans votre environnement. Pour plus d'informations, voir link:sewebiug_dashboard.html["Afficher le tableau de bord Keystone"].
+* *Demandes de service* pour afficher la liste des demandes de service les plus récentes générées dans votre environnement.
 
 
 
@@ -42,13 +42,13 @@ Le tableau de bord du moteur de services NetApp a été repensé pour inclure le
 
 Un nouvel écran *Billing* a été ajouté pour faciliter l'accessibilité et le calcul de vos données historiques de facturation. L'écran fournit une vue globale des frais mensuels associés à tous vos services souscrits.
 
-Accédez à cet écran à partir du widget *charges mensuelles* du tableau de bord ou de *ADMINISTRATION > facturation* pour afficher une répartition mensuelle des frais de tous vos services abonnés. Les données de facturation sont basées sur votre utilisation de la capacité engagé et en rafale. Elles sont disponibles pour votre utilisation au cours des mois précédents. Pour plus d'informations, voir link:sewebiug_billing.html["Afficher la facturation"].
+Accédez à cet écran à partir du widget *charges mensuelles* du tableau de bord ou de *ADMINISTRATION > facturation* pour afficher une répartition mensuelle des frais de tous vos services abonnés. Les données de facturation sont basées sur votre utilisation de la capacité engagé et en rafale. Elles sont disponibles pour votre utilisation au cours des mois précédents.
 
 
 
 === Nouvel écran alertes
 
-Un nouvel écran *alertes* est introduit dans cette version qui répertorie toutes les alertes générées par le système et générées par l'utilisateur. L'écran vous permet également de créer des messages d'alerte personnalisés pour les événements critiques concernant votre environnement et de les transmettre à d'autres utilisateurs. Ils peuvent consulter et rejeter les alertes, le cas échéant. Pour plus d'informations, voir link:sewebiug_alerts.html["Création et gestion des alertes"].
+Un nouvel écran *alertes* est introduit dans cette version qui répertorie toutes les alertes générées par le système et générées par l'utilisateur. L'écran vous permet également de créer des messages d'alerte personnalisés pour les événements critiques concernant votre environnement et de les transmettre à d'autres utilisateurs. Ils peuvent consulter et rejeter les alertes, le cas échéant.
 
 
 
@@ -77,18 +77,6 @@ Le moteur de services NetApp prend désormais en charge la gestion d'un environn
 * *Abonnement:* en tant qu'administrateur partenaire, vous pouvez afficher et mettre à jour vos abonnements et vos abonnements de locataires à partir de *ABONNEMENTS* > *abonnements Keystone* et *ABONNEMENTS* > *abonnements de locataires* respectivement. En tant qu'administrateur de tenant, vous ne pouvez consulter que les abonnements de vos locataires.
 * *Utilisateurs :* en fonction de votre rôle, vous pouvez attribuer des privilèges à un nouvel utilisateur ou à un utilisateur existant dans une location selon les besoins. Le rôle peut être l'administrateur NetApp et l'administrateur NetApp avec des privilèges en lecture seule, l'administrateur partenaire ou l'administrateur du locataire. En tant qu'administrateur partenaire, vous pouvez uniquement attribuer des rôles d'administrateur partenaire ou d'administrateur de tenant aux nouveaux utilisateurs. Un utilisateur administrateur de tenant ne peut attribuer que le rôle d'administrateur de tenant à d'autres utilisateurs.
 * *Menu réseaux :* en tant qu'administrateur partenaire, vous pouvez afficher les réseaux définis pour votre location. Vous pouvez également créer des sous-réseaux pour votre sous-tenant et votre zone à partir de *RÉSEAUX* > *sous-réseaux*. Cela est nécessaire lors du provisionnement du stockage par les clients finaux ou les sous-locataires.
-* Prise en charge de l'API : les API `/tenants/{tenant_ID}/zones/{zone_name}/sous-réseaux` et `/tenants/{tenant_ID}/zones/{zone_name}/sous-réseaux/{ID}/tags` sont proposées dans le cadre de cette version pour créer et afficher les sous-réseaux des sous-locataires.
-
-
-Pour plus d'informations sur cette fonction, consultez les liens suivants :
-
-* link:nkfsosm_overview.html["Modèle opérationnel, rôles et responsabilités"]
-* link:nkfsosm_tenancy_overview.html["Location et colocation dans Keystone"]
-* link:sewebiug_dashboard.html["Afficher le tableau de bord Keystone"]
-* link:sewebiug_working_with_reports.html["Afficher les rapports"]
-* link:sewebiug_managing_subscriptions.html["Gestion des abonnements"]
-* link:sewebiug_managing_tenants_and_subtenants.html["Gestion des locataires et sous-locataires"]
-* link:sewebiug_define_network_configurations.html["Définissez des réseaux pour les locataires et les sous-locataires"]
 
 
 
@@ -150,7 +138,7 @@ Le nouvel écran *Backup* vous permet d'afficher et de gérer les sauvegardes de
 
 === Provisionnement permettant de restreindre l'accès des utilisateurs aux partages CIFS
 
-Vous pouvez désormais spécifier la liste de contrôle d'accès (ACL) pour restreindre l'accès des utilisateurs sur un partage CIFS (SMB) ou multi-protocole. Vous pouvez spécifier des utilisateurs ou des groupes Windows en fonction des paramètres Active Directory (AD) à ajouter à la liste de contrôle d’accès.link:https://docs.netapp.com/us-en/keystone/sewebiug_create_a_new_file_share.html#steps["En savoir plus >>"].
+Vous pouvez désormais spécifier la liste de contrôle d'accès (ACL) pour restreindre l'accès des utilisateurs sur un partage CIFS (SMB) ou multi-protocole. Vous pouvez spécifier des utilisateurs ou des groupes Windows en fonction des paramètres Active Directory (AD) à ajouter à la liste de contrôle d’accès.
 
 
 
@@ -201,19 +189,19 @@ Certains abonnements au stockage pris en charge par le moteur de services NetApp
 
 ==== Notification lorsqu'une modification proposée entraîne l'utilisation de la capacité en rafale
 
-Notification d'affichage d'une modification du provisionnement proposé pour faire en rafale d'un abonnement. L'utilisateur peut choisir de continuer, sachant que l'abonnement sera mis en rafale ou choisir de ne pas continuer l'action.link:sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html#burst-usage-notifications["En savoir plus >>"].
+Notification d'affichage d'une modification du provisionnement proposé pour faire en rafale d'un abonnement. L'utilisateur peut choisir de continuer, sachant que l'abonnement sera mis en rafale ou choisir de ne pas continuer l'action.
 
 
 
 ==== Notification lorsque l'abonnement est en rafale
 
-Une bannière de notification s'affiche lorsqu'un abonnement est en rafale.link:sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html#burst-usage-notifications["En savoir plus >>"].
+Une bannière de notification s'affiche lorsqu'un abonnement est en rafale.
 
 
 
 ==== Le rapport sur la capacité indique l'utilisation en rafale
 
-Rapport de capacité indiquant le nombre de jours pendant lesquels l'abonnement a été en rafale et la quantité de capacité en rafale utilisée.link:sewebiug_working_with_reports.html#capacity-usage["En savoir plus >>"].
+Rapport de capacité indiquant le nombre de jours pendant lesquels l'abonnement a été en rafale et la quantité de capacité en rafale utilisée.
 
 
 

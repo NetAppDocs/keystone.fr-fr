@@ -23,7 +23,7 @@ Keystone propose trois modèles opérationnels pour la prestation de services.
 * *Exploité par le client* *model* permet au client de souscrire à un service offert, selon les niveaux de performance et les types de service de stockage choisis. NetApp définit l'architecture, les produits et les installations sur site du client et permet aux clients de gérer l'infrastructure à l'aide de leurs ressources de stockage et IT. Les clients peuvent être liés à NetApp ou à un partenaire/fournisseur de services. Selon cela, les demandes de service peuvent être formulées et adressées à NetApp ou au fournisseur de services. Un administrateur client peut effectuer les tâches administratives dans un environnement géré par le client. Ces tâches sont liées aux locataires et sous-locataires du client spécifique.
 
 
-Les caractéristiques et options de l'offre varient en fonction des modèles. Pour plus d'informations, reportez-vous à la section link:https://docs.netapp.com/us-en/keystone/sewebiug_partner_service_provider.html["Rôles et opérations des fournisseurs de services et des clients"]
+Les caractéristiques et options de l'offre varient en fonction des modèles.
 
 
 
@@ -86,7 +86,7 @@ Assistance
 
 La liste suivante résume les rôles et les responsabilités de NetApp :
 
-* NetApp fournit, installe, configure et active le service concerné (y compris la version applicable du moteur de services NetApp dans un data Center ou une colocation). NetApp est responsable de la désinstallation à la fin de la période du contrat ou si le client décide de mettre un terme au contrat plus rapidement.
+* NetApp fournit, installe, configure et active le service applicable. NetApp est responsable de la désinstallation à la fin de la période du contrat ou si le client décide de mettre un terme au contrat plus rapidement.
 * Lors d'une liaison avec d'autres fournisseurs DE services IT, NetApp coopère avec les fournisseurs de services IT du client ou avec leur équipe technique.
 * Les performances des services gérés par NetApp sont incluses, avec l'hypothèse que des responsabilités partagées sont applicables à l'environnement pris en charge.
 

@@ -30,8 +30,6 @@ Les questions suivantes donnent des réponses à vos questions fréquentes sur l
 
 *Les partenaires peuvent-ils vendre plus de capacités qu'ils ont achetées auprès de NetApp à leurs clients ?* les abonnements aux locataires ne sont pas limités par la capacité que le partenaire a achetée. Les partenaires peuvent vendre plus de capacité qu'ils n'ont acheté auprès de NetApp à leurs clients. La capacité excédentaire de la capacité achetée est appelée sursouscription
 
-*Des API sont-elles fournies pour s'intégrer aux outils du client?* Oui, des API RESTful sont disponibles pour s'intégrer à vos propres applications. Accédez à *SUPPORT> Documentation de l'API* pour consulter la documentation de l'API pour les services Keystone. Pour plus d'informations, reportez-vous à la section link:https://docs.netapp.com/us-en/keystone/seapiref_overview_of_netapp_service_engine_apis.html["Guide de l'API Keystone"].
-
 *Qu'est-ce que la capacité en rafale?* vous pouvez augmenter et diminuer l'utilisation jusqu'à 20% au-dessus de la capacité engagée. L'utilisation de la capacité en rafale est mesurée quotidiennement et facturée uniquement en cas d'utilisation. Par exemple, si la capacité de stockage engagée est de 100 Tio, vous pouvez augmenter jusqu'à 120 Tio.
 
 *Y a-t-il des frais supplémentaires pour l'utilisation de la rafale?* la capacité de rafale jusqu'à 20 % de la capacité engagée est facturée au même taux que la capacité engagée, toute utilisation supérieure à 20 % de la capacité engagée est facturée à 50 % de la prime.
@@ -40,11 +38,14 @@ Les questions suivantes donnent des réponses à vos questions fréquentes sur l
 
 *Comment la capacité en rafale est-elle allouée aux locataires?* la capacité en rafale est-elle allouée aux partenaires, qui l'attribuent davantage à leurs clients en fonction des besoins.
 
-*Où puis-je voir l'utilisation de la capacité engagée et en rafale ?* le moteur de services NetApp dispose de tableaux de bord intégrés pour signaler la capacité consommée par rapport à la capacité occupée.
+*Où puis-je voir l'utilisation de la capacité allouée et en rafale ?*
+Dans le tableau de bord Active IQ Digital Advisor.
 
-*Y aura-t-il des notifications si j'aurai accès à un certain pourcentage d'utilisation de la capacité engagée ?* Oui, les outils de gestion fournissent des notifications sur l'utilisation de la capacité via le tableau de bord des moteurs de services NetApp.
+*Y aura-t-il des notifications si j'atteignit un certain pourcentage d'utilisation de la capacité allouée?*
+Oui. Les outils de gestion fournissent des notifications sur l'utilisation de la capacité via le tableau de bord Active IQ Digital Advisor.
 
-*Comment consulter l'utilisation de Keystone ?* le moteur de services NetApp fournit une vue de tableau de bord, avec des informations sur tous les services souscrits et la quantité consommée. Pour plus d'informations sur le moteur de service NetApp, reportez-vous à link:https://docs.netapp.com/us-en/keystone/sewebiug_overview.html["ici"].
+*Comment afficher l'utilisation de Keystone ?*
+Le conseiller digital Active IQ propose une vue tableau de bord qui fournit des informations sur tous les services auxquels vous êtes abonné, ainsi que sur la quantité consommée.
 
 *Comment puis-je signaler des problèmes avec le service?* le support NetApp Keystone peut être accessible par l'intermédiaire de ces différents canaux :
 
@@ -52,7 +53,8 @@ Les questions suivantes donnent des réponses à vos questions fréquentes sur l
 * Courriel de remontée : mailto:keystone.escalations@netapp.com[keystone.escalations@netapp.com^]
 
 
-*Puis-je commander un nouveau service de stockage ?* Oui, il est possible de demander un nouveau service de stockage ou une extension au service de stockage sur le portail NetApp Service Engine. La demande est traitée par l'équipe NetApp Keystone chargée des opérations avant de la mettre à disposition des clients.
+*Puis-je commander un nouveau service de stockage ?*
+Oui, vous pouvez demander un nouveau service de stockage ou une extension au service de stockage. La demande est traitée par l'équipe NetApp Keystone chargée des opérations avant de la mettre à disposition des clients.
 
 *Les augmentations des engagements en matière de stockage sont-elles disponibles immédiatement?* en fonction du montant de la capacité demandée, on détermine si la capacité est déjà déployée ou si un équipement supplémentaire doit être expédié et installé.
 
