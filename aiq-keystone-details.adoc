@@ -248,6 +248,71 @@ image:sg-link-2.png["Fenêtre contextuelle SG"]
 ====
 
 
+== Afficher les performances des volumes ONTAP
+
+Vous pouvez cliquer sur l'onglet *Performance* pour afficher les détails de performances des volumes ONTAP gérés par vos abonnements Keystone.
+
+Il se peut que vous ne puissiez pas accéder à cet onglet pour afficher les metrics de performances de vos volumes ONTAP. Contactez le support technique pour afficher cet onglet.
+
+.Étapes
+. Cliquez sur l'onglet *Performance*.
+. Sélectionnez le numéro d'abonnement. Par défaut, le premier numéro d'abonnement est sélectionné.
+. Sélectionnez le nom du volume souhaité dans la liste.
++
+Vous pouvez également cliquer sur image:aiq-ks-time-icon.png["icône graphique"] Icône en regard d'un volume ONTAP dans l'onglet *volumes* pour accéder à cet onglet.
+
+. Sélectionnez la plage de dates de la requête. La plage de dates peut être le début du mois, la date de début de l'abonnement à la date actuelle ou la date de fin de l'abonnement.
+
+
+Les informations récupérées sont basées sur l'objectif de niveau de service pour chaque niveau de service. Par exemple, les pics d'IOPS, le débit maximal, la latence cible et d'autres mesures sont déterminés par les paramètres individuels du niveau de service. Pour plus d'informations sur les paramètres, reportez-vous à la section https://docs.netapp.com/us-en/keystone/nkfsosm_performance.html["Niveaux de services"].
+
+
+NOTE: Si vous cochez la case *SLO Reference Line*, les graphiques IOPS, débit et latence sont affichés en fonction de l'objectif de niveau de service pour le niveau de service. Sinon, elles sont affichées en nombres réels.
+
+Les données de performances affichées sur le graphique horizontal représentent une moyenne toutes les cinq minutes et sont organisées selon la plage de dates de la requête. Vous pouvez faire défiler les graphiques et passer le curseur de la souris sur des points de données spécifiques pour explorer plus en détail les données collectées.
+
+Vous pouvez afficher et comparer les mesures de performances dans les sections suivantes en fonction de la combinaison du numéro d'abonnement, du nom du volume et de la plage de dates sélectionnée. Les détails s'affichent selon le niveau de service attribué au volume. Vous pouvez afficher le nom du cluster et le type de volume, c'est-à-dire les autorisations de lecture et d'écriture attribuées au volume. Tout message d'avertissement associé au volume s'affiche également.
+
+
+
+=== IOPS/Tio
+
+Cette section affiche les graphiques d'entrées-sorties des charges de travail du volume en fonction de la plage de dates de la requête. Les valeurs d'IOPS maximales pour le niveau de service et d'IOPS actuelles (au cours des cinq dernières minutes, non basées sur la plage de dates de la requête) sont affichées, ainsi que les valeurs d'IOPS minimales, maximales et moyennes pour la plage de temps, en IOPS/Tio.
+
+image:perf-iops.png["Section IOPS du graphique"]
+
+
+
+=== Débit (Mbit/s/Tio)
+
+Cette section affiche les graphiques de débit des charges de travail du volume en fonction de la plage de dates de la requête. Le débit maximal pour le niveau de service (SLO Max) et le débit actuel (au cours des cinq dernières minutes, non basé sur la plage de dates de la requête) s'affichent, ainsi que le débit minimal, maximal et moyen pour la plage de temps, en Mbit/s.
+
+image:perf-thr.png["Graphiques de débit"]
+
+
+
+=== Latence (ms)
+
+Cette section affiche les graphiques de latence des charges de travail du volume en fonction de la plage de dates de la requête. Les valeurs de latence maximale pour le niveau de service (cible SLO) et de latence actuelle (au cours des cinq dernières minutes, et non pas en fonction de la plage de dates de la requête) s'affichent, ainsi que la latence minimale, maximale et moyenne de la plage de temps, en millisecondes.
+
+Ce graphique présente les couleurs suivantes :
+
+* Bleu clair : _latence_. Il s'agit de la latence réelle qui inclut toute latence autre que votre service Keystone. Cela peut inclure une latence supplémentaire, telle que la latence entre votre réseau et votre client.
+* Bleu foncé : _latence effective_. La latence effective est la latence applicable uniquement à votre service Keystone en ce qui concerne votre SLA.
+
+
+image:perf-lat.png["graphiques de performances"]
+
+
+
+=== Logique utilisée (Tio)
+
+Cette section affiche les capacités provisionnées et logiques utilisées du volume. La capacité logique utilisée actuelle (au cours des cinq dernières minutes, non basée sur la plage de dates de la requête), ainsi que l'utilisation minimale, maximale et moyenne de la plage de temps sont affichées en Tibs. Sur ce graphique, la zone grise représente la capacité allouée et le graphique jaune indique l'utilisation logique.
+
+image:perf-log-usd.png["graphique de capacité logique utilisée"]
+
+
+
 == Générer des rapports
 
 Vous pouvez générer et afficher des rapports pour les détails de votre abonnement, les données d'utilisation historiques pour une plage de temps et les détails des volumes à partir de chacun des onglets en cliquant sur le bouton *Télécharger CSV* : image:download-icon.png["icône de téléchargement de rapports"]

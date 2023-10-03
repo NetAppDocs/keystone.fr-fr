@@ -37,7 +37,7 @@ Pour plus d'informations sur l'utilisation de la capacité engagée et en rafale
 Les capacités engagées désignent les capacités des différents services dans un seul abonnement, convenues par les parties concernées (NetApp/partenaire et client). Cette capacité est indiquée sur chaque commande Keystone et facturée indépendamment de la consommation réelle.
 
 .Mesure de la capacité consommée
-Dans le cadre du déploiement du service Keystone, NetApp contrôle en continu et mesure la consommation du service. Toutes les cinq minutes, un enregistrement de consommation est généré par le système, en détaillant la capacité actuelle consommée pour l'abonnement. Ces enregistrements sont agrégés au cours de la période de facturation afin de générer des factures et des rapports d'utilisation.
+Dans le cadre du déploiement du service Keystone, NetApp contrôle en continu et mesure la consommation du service. Au moins une fois toutes les cinq minutes, un enregistrement de consommation est généré par le système, détaillant la capacité consommée actuelle de l'abonnement. Ces enregistrements sont agrégés au cours de la période de facturation afin de générer des factures et des rapports d'utilisation.
 
 
 
@@ -74,8 +74,9 @@ Si les volumes sont clonés dans ONTAP et que vous les utilisez pour la sauvegar
 
 Notez ce qui suit :
 
-* La consommation des volumes clonés n'est pas prise en compte au cours des 24 premières heures de la création des clones. Aucun frais n'est engagé au cours de cette période.
-* Les volumes clonés avec les niveaux de service Standard et Value ne sont pas pris en compte pour la consommation, si de nouvelles données ne sont pas écrites sur le volume. Par exemple, dans le cas d'une sauvegarde ou d'une restauration, la sauvegarde ou la restauration des données à partir d'un volume cloné ne modifie pas les données du volume cloné lui-même et n'est pas considérée comme une consommation.
+* Les volumes clones sont libres de se charger tant que leur taille est inférieure à 10 % du volume parent (capacité physique utilisée dans le volume clone par rapport à la capacité physique utilisée dans le volume parent).
+* Il n'y a pas de période de grâce de 24 heures pour les volumes clonés, seule la taille du clone est prise en compte.
+* Une fois que le volume clone dépasse 10 % de la taille physique du parent, le clone est facturé comme volume standard (capacité logique utilisée).
 
 
 
