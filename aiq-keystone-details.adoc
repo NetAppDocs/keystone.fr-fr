@@ -30,7 +30,9 @@ Les détails des abonnements, des graphiques d'utilisation pour chaque niveau de
 
 
 
-NOTE: Dans les abonnements Keystone, la consommation de capacité s'affiche en Tibs sur les tableaux de bord et les rapports, puis est arrondie à deux décimales. Si l'utilisation est inférieure à 0.01 Tio, la valeur est indiquée comme `0` ou `No Usage`. Pour les autres mesures d'utilisation, voir https://docs.netapp.com/us-en/keystone/nkfsosm_service_level_metrics_and_definitions.html["Metrics et définitions de niveaux de service"]. Pour plus d'informations sur les différentes capacités utilisées dans Keystone, reportez-vous à https://docs.netapp.com/us-en/keystone/nkfsosm_keystone_service_capacity_definitions.html["Définitions de capacité des services Keystone"].
+NOTE: Dans les abonnements Keystone, la consommation de capacité s'affiche en Tibs sur les tableaux de bord et les rapports, puis est arrondie à deux décimales. Si l'utilisation est inférieure à 0.01 Tio, la valeur est indiquée comme `0` ou `No Usage`. L'heure locale saisie pour la requête dans ces onglets est convertie en heure UTC. Par conséquent, vous pouvez voir des différences mineures dans les données renvoyées en fonction de l'heure de la requête.
+
+Pour plus d'informations sur les mesures d'utilisation, reportez-vous à la section https://docs.netapp.com/us-en/keystone/nkfsosm_service_level_metrics_and_definitions.html["Metrics et définitions de niveaux de service"]. Pour plus d'informations sur les différentes capacités utilisées dans Keystone, reportez-vous à https://docs.netapp.com/us-en/keystone/nkfsosm_keystone_service_capacity_definitions.html["Définitions de capacité des services Keystone"].
 
 
 
@@ -91,37 +93,43 @@ L'onglet *Capacity Trend* affiche les données historiques de vos abonnements Ke
 .Étapes
 . Cliquez sur l'onglet *tendance capacité*.
 . Sélectionnez l'abonnement requis pour lequel vous souhaitez afficher les détails. Le premier abonnement dans votre nom de compte est sélectionné par défaut.
-. Sélectionnez la plage horaire dans les icônes de calendrier des champs *Date de début* et *Date de fin*. Pour les abonnements qui ont expiré, la plage de dates par défaut est les dates de début et de fin de l'abonnement. Pour les abonnements existants, la plage horaire par défaut va de la date de début de la période de facturation à la date actuelle. Vous ne pouvez pas sélectionner une date future.
+. Sélectionnez *tendance capacité* si vous souhaitez afficher les données historiques et analyser la tendance d'utilisation de la capacité. Sélectionnez *Accrued Burst* si vous souhaitez afficher les données historiques d'utilisation en rafale et analyser l'utilisation facturée selon votre facture.
+
+
+
+
+=== Affichez la tendance de la capacité
+
+.En savoir plus >>
+[%collapsible]
+====
+Si vous avez sélectionné l'option *Capacity Trend*, procédez comme suit :
+
+.Étapes
+. Sélectionnez la plage horaire dans les icônes de calendrier des champs *Date de début* et *Date de fin*. Sélectionnez la plage de dates de la requête. La plage de dates peut être le début du mois, la date de début de l'abonnement à la date actuelle ou la date de fin de l'abonnement. Vous ne pouvez pas sélectionner une date future.
 +
 
 TIP: Pour des performances et une expérience utilisateur optimales, limitez la plage de dates de votre requête à trois mois.
 
-. Cliquez sur *Afficher les détails*. Les données historiques de consommation de l'abonnement pour chaque niveau de service s'affichent en fonction de la plage horaire sélectionnée. Vous pouvez placer le curseur de la souris sur les graphiques pour afficher la répartition de l'utilisation en termes de données validées, consommées, en rafale et au-dessus de la limite de rafale à ce point de collecte de données.
+. Cliquez sur *Afficher les détails*. Les données historiques de consommation de l'abonnement pour chaque niveau de service s'affichent en fonction de la plage horaire sélectionnée.
 
+
+Les graphiques à barres affichent le nom du niveau de service et la capacité consommée par rapport à ce niveau de service pour la plage de dates. La date et l'heure de la collection sont affichées en bas du graphique. En fonction de la plage de dates de votre requête, les graphiques d'utilisation sont affichés dans une plage de 30 points de collecte de données. Vous pouvez placer le curseur de la souris sur les graphiques pour afficher la répartition de l'utilisation en termes de données validées, consommées, en rafale et au-dessus de la limite de rafale à ce point de collecte de données.
 
 image:aiq-ks-subtime-2.png["données historiques"]
 
-Les détails suivants s'affichent :
+Les couleurs suivantes dans les graphiques à barres indiquent la capacité consommée comme défini dans le niveau de service. Les données mensuelles dans les graphiques sont séparées par une ligne verticale.
 
-* *Utilisation actuelle* : les dates de début et de fin de l'abonnement, ainsi que la période de facturation, par exemple, trimestrielle, annuelle, etc.
-* *Tableaux d'utilisation* : les graphiques à barres affichent le nom du niveau de service et la capacité consommée par rapport à ce niveau de service pour la plage de dates. La date et l'heure de la collection sont affichées en bas du graphique.
-+
+* Vert : à moins de 80 %.
+* Ambre: 80% - 100%.
+* Rouge : utilisation en rafale (100 % de la capacité validée par rapport à la limite de rafale convenue)
+* Violet : au-dessus de la limite d'éclatement ou `Above Limit`.
 
-NOTE: En fonction de la plage de dates de votre requête, les graphiques d'utilisation sont affichés dans une plage de 30 points de collecte de données.
 
-+
-Les couleurs suivantes dans les graphiques à barres indiquent la capacité consommée telle que définie dans le niveau de service :
-
-+
-** Vert : à moins de 80 %.
-** Ambre: 80% - 100%.
-** Rouge : utilisation en rafale (100 % de la capacité validée par rapport à la limite de rafale convenue)
-** Violet : au-dessus de la limite d'éclatement ou `Above Limit`.
-+
 
 NOTE: Un graphique vide indique qu'aucune donnée n'est disponible dans votre environnement à ce point de collecte de données.
 
-
+Vous pouvez cliquer sur le bouton à bascule *Afficher l'utilisation actuelle* pour afficher la consommation actuelle et l'utilisation en rafale par rapport à la période de facturation de l'abonnement. Ils ne sont pas basés sur la plage de dates de la requête.
 
 * *Courant consommé* : indicateur de la capacité consommée (en Tio) définie pour le niveau de service. Ce champ utilise des couleurs spécifiques :
 +
@@ -138,13 +146,26 @@ NOTE: Un graphique vide indique qu'aucune donnée n'est disponible dans votre en
 ** Violet : au-dessus de la limite d'éclatement.
 
 
-* *Burst cumulé* : indicateur de l'utilisation ou de la capacité consommée cumulée calculée par mois pour la période de facturation en cours. L'utilisation des rafales cumulées est calculée en fonction de la capacité engagée et consommée pour un niveau de service : `(consumed - committed)/365.25/12`.
-+
-
-NOTE: Les indicateurs *courant consommé*, *courant Burst* et *Accrued Burst* déterminent la consommation par rapport à la période de facturation de l'abonnement et ne sont pas basés sur la plage de dates de la requête.
 
 
+====
 
+
+=== Afficher l'historique des données de rafale
+
+.En savoir plus >>
+[%collapsible]
+====
+Si vous avez sélectionné l'option *Accrued Burst*, par défaut, vous pouvez voir les données d'utilisation de la capacité supplémentaire cumulée mensuelle des 12 derniers mois. Vous pouvez effectuer une requête par période allant jusqu'à 30 mois.
+
+
+TIP: L'utilisation de capacité supplémentaire ou la capacité consommée est calculée par mois pour la période de facturation en cours. L'utilisation de capacité supplémentaire cumulée est calculée sur la base de la capacité allouée et consommée pour un niveau de service grâce à la formule suivante : `(consumed - committed)/365.25/12`.
+
+image:accr-burst.png["graphiques d'utilisation des ressources supplémentaires cumulées"]
+
+Cette fonctionnalité est disponible en mode d'aperçu uniquement. Contactez votre KSM pour en savoir plus sur cette fonctionnalité.
+
+====
 
 
 === Des graphiques de référence pour la protection des données
@@ -261,7 +282,7 @@ Il se peut que vous ne puissiez pas accéder à cet onglet pour afficher les met
 +
 Vous pouvez également cliquer sur image:aiq-ks-time-icon.png["icône graphique"] Icône en regard d'un volume ONTAP dans l'onglet *volumes* pour accéder à cet onglet.
 
-. Sélectionnez la plage de dates de la requête. La plage de dates peut être le début du mois, la date de début de l'abonnement à la date actuelle ou la date de fin de l'abonnement.
+. Sélectionnez la plage de dates de la requête. La plage de dates peut être le début du mois, la date de début de l'abonnement à la date actuelle ou la date de fin de l'abonnement. Vous ne pouvez pas sélectionner une date future.
 
 
 Les informations récupérées sont basées sur l'objectif de niveau de service pour chaque niveau de service. Par exemple, les pics d'IOPS, le débit maximal, la latence cible et d'autres mesures sont déterminés par les paramètres individuels du niveau de service. Pour plus d'informations sur les paramètres, reportez-vous à la section https://docs.netapp.com/us-en/keystone/nkfsosm_performance.html["Niveaux de services"].

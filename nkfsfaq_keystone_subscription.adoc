@@ -54,7 +54,7 @@ Le conseiller digital Active IQ propose une vue tableau de bord qui fournit des 
 
 
 *Puis-je commander un nouveau service de stockage ?*
-Oui, vous pouvez demander un nouveau service de stockage ou une extension au service de stockage. La demande est traitée par l'équipe NetApp Keystone chargée des opérations avant de la mettre à disposition des clients.
+Oui, un nouveau service de stockage ou une extension au service de stockage peuvent être demandés via KSM. La demande est traitée par l'équipe NetApp Keystone chargée des opérations avant de la mettre à disposition des clients.
 
 *Les augmentations des engagements en matière de stockage sont-elles disponibles immédiatement?* en fonction du montant de la capacité demandée, on détermine si la capacité est déjà déployée ou si un équipement supplémentaire doit être expédié et installé.
 
