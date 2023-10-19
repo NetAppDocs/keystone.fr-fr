@@ -129,7 +129,7 @@ Les couleurs suivantes dans les graphiques à barres indiquent la capacité cons
 
 NOTE: Un graphique vide indique qu'aucune donnée n'est disponible dans votre environnement à ce point de collecte de données.
 
-Vous pouvez cliquer sur le bouton à bascule *Afficher l'utilisation actuelle* pour afficher la consommation actuelle et l'utilisation en rafale par rapport à la période de facturation de l'abonnement. Ils ne sont pas basés sur la plage de dates de la requête.
+Vous pouvez cliquer sur le bouton à bascule *Afficher l'utilisation actuelle* pour afficher les données de consommation, d'utilisation en rafale et d'accumulation en rafale pour la période de facturation en cours. Ces détails ne sont pas basés sur la plage de dates de la requête.
 
 * *Courant consommé* : indicateur de la capacité consommée (en Tio) définie pour le niveau de service. Ce champ utilise des couleurs spécifiques :
 +
@@ -146,6 +146,7 @@ Vous pouvez cliquer sur le bouton à bascule *Afficher l'utilisation actuelle* p
 ** Violet : au-dessus de la limite d'éclatement.
 
 
+* *Augmentation cumulée* : indicateur de l'utilisation ou de la capacité consommée cumulée calculée par mois pour la période de facturation en cours. L'utilisation des rafales cumulées est calculée en fonction de la capacité engagée et consommée pour un niveau de service : `(consumed - committed)/365.25/12`.
 
 
 ====
