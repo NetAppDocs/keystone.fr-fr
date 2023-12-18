@@ -16,6 +16,10 @@ summary: Ce que les clients peuvent voir dans Active IQ pour la clé de voûte
 [role="lead"]
 Si vous vous êtes abonné aux services NetApp Keystone, vous obtenez une présentation de vos abonnements via le widget *abonnements Keystone* du tableau de bord Active IQ Digital Advisor (Digital Advisor).
 
+Vous pouvez rechercher les détails d'un abonnement Keystone en effectuant une recherche par nom de client ou par nom de liste de suivi qui inclut plusieurs clients. Pour plus d'informations sur la recherche d'abonnements Keystone par listes de surveillance, reportez-vous à la section https://docs.netapp.com/us-en/keystone/nkfsosm-keystone-and-aiq.html#search-by-using-keystone-watchlists["Effectuez une recherche à l'aide des listes de surveillance Keystone"].
+
+Digital Advisor offre un tableau de bord unifié qui fournit des informations sur les différents niveaux de données d'abonnement et d'utilisation via le bouton *passer à l'ancien/nouveau tableau de bord*.
+
 Digital Advisor propose un tableau de bord unifié qui vous donne des informations sur les différents niveaux de données d'abonnement et d'utilisation via le bouton *passer à l'ancien/nouveau tableau de bord*.
 
 .Tableau de bord par défaut (ancien)
@@ -49,6 +53,27 @@ TIP: Cliquez sur le lien *abonnements* pour afficher la liste des abonnements fi
 
 image:db-card.png["sans sla"]
 
-Pour plus d'informations sur Digital Advisor, reportez-vous à la section link:https://docs.netapp.com/us-en/active-iq/index.html["Documentation de Digital Advisor"].
+Pour plus d'informations sur Digital Advisor, reportez-vous à la section link:https://docs.netapp.com/us-en/active-iq/index.html["Documentation de Digital Advisor"^].
 
 Pour plus d'informations sur l'onglet *abonnements Keystone*, reportez-vous à la section _Tableau de bord et reporting Digital Advisor pour Keystone_.
+
+
+
+== Effectuez une recherche à l'aide des listes de surveillance Keystone
+
+La liste de surveillance est une fonction du conseiller numérique Active IQ (conseiller numérique). Pour plus d'informations, reportez-vous à la section https://docs.netapp.com/us-en/active-iq/concept_overview_dashboard.html["Comprendre la liste de surveillance"^]. Pour plus d'informations sur la création de listes de contrôle, reportez-vous à la section https://docs.netapp.com/us-en/active-iq/task_add_watchlist.html["Créer une liste de surveillance"^].
+
+Keystone prend en charge la création de listes de suivi et les recherches effectuées pour afficher les détails de l'abonnement de plusieurs clients. La procédure suivante permet de créer une liste de suivi pour les clients Keystone :
+
+. Sur l'écran *Créer une liste de surveillance*, indiquez un nom pour la liste de surveillance Keystone.
+. Sélectionnez *Catégorie* dans le champ *Ajouter des systèmes par*. *Client* est sélectionné par défaut dans le champ *choisir une catégorie*.
+. Recherchez les clients requis par leur nom et ajoutez-les. Vous pouvez uniquement ajouter des clients dont vous avez le droit de consulter les détails.
+. Cliquez sur *Créer une liste de surveillance*. L'écran Conseiller numérique affiche les données de la nouvelle liste de surveillance.
+
+
+Lorsque vous effectuez une recherche par liste de surveillance sur l'écran Digital Advisor, vous pouvez afficher les clients et leurs abonnements dans la liste déroulante *abonnement* du widget *abonnements Keystone*.
+
+
+TIP: Si vous affichez le tableau de bord _New_ sur le widget *abonnements Keystone*, cliquez sur *basculer vers l'ancien tableau de bord* pour afficher la liste.
+
+image:watchlist.png["écran liste de surveillance"]

@@ -30,13 +30,13 @@ Les détails des abonnements, des graphiques d'utilisation pour chaque niveau de
 
 
 
-NOTE: Dans les abonnements Keystone, la consommation de capacité s'affiche en Tibs sur les tableaux de bord et les rapports, puis est arrondie à deux décimales. Si l'utilisation est inférieure à 0.01 Tio, la valeur est indiquée comme `0` ou `No Usage`. L'heure locale saisie pour la requête dans ces onglets est convertie en heure UTC. Par conséquent, vous pouvez voir des différences mineures dans les données renvoyées en fonction de l'heure de la requête.
+NOTE: Dans les abonnements Keystone, la consommation de capacité s'affiche en Tibs sur les tableaux de bord et les rapports, puis est arrondie à deux décimales. Si l'utilisation est inférieure à 0.01 Tio, la valeur est indiquée comme `0` ou `No Usage`. Les données de ces écrans sont affichées en heure UTC (fuseau horaire du serveur). Lorsque vous saisissez une date pour la requête, elle est automatiquement considérée comme étant en heure UTC.
 
 Pour plus d'informations sur les mesures d'utilisation, reportez-vous à la section https://docs.netapp.com/us-en/keystone/nkfsosm_service_level_metrics_and_definitions.html["Metrics et définitions de niveaux de service"]. Pour plus d'informations sur les différentes capacités utilisées dans Keystone, reportez-vous à https://docs.netapp.com/us-en/keystone/nkfsosm_keystone_service_capacity_definitions.html["Définitions de capacité des services Keystone"].
 
 
 
-== Afficher les abonnements
+== Abonnements
 
 Vous pouvez afficher la liste de vos abonnements dans l'onglet *abonnements*.
 
@@ -71,7 +71,7 @@ image:icon-purple.png["icône"]: Indique la consommation au-dessus de la limite 
 
 
 
-== Afficher les détails d'utilisation de vos abonnements
+== Utilisation actuelle
 
 Pour connaître les détails de vos abonnements, cliquez sur l'onglet *utilisation actuelle* et sélectionnez le numéro d'abonnement requis.
 
@@ -86,7 +86,7 @@ Pour plus d'informations sur vos services de stockage Keystone et sur les niveau
 
 
 
-== Afficher l'historique des données d'utilisation
+== Tendance de la capacité
 
 L'onglet *Capacity Trend* affiche les données historiques de vos abonnements Keystone pour une période spécifique. Les graphiques verticaux affichent les détails d'utilisation de la plage de temps sélectionnée, ainsi que les indicateurs appropriés pour vous permettre de comparer et de générer des rapports.
 
@@ -215,7 +215,7 @@ Pour plus d'informations sur la protection de vos données par MetroCluster, rep
 ====
 
 
-== Afficher les détails des volumes et des objets
+== Volumes et objets
 
 Dans l'onglet *volumes et objets*, vous pouvez afficher la consommation et d'autres détails pour vos volumes dans ONTAP. Pour StorageGRID, cet onglet affiche les nœuds et leur utilisation individuelle dans votre environnement de stockage objet.
 
@@ -224,7 +224,7 @@ NOTE: Le nom de cet onglet varie selon la nature du déploiement sur votre site.
 
 
 
-=== Détails du volume ONTAP
+=== Afficher les détails du volume ONTAP
 
 .En savoir plus >>
 [%collapsible]
@@ -248,12 +248,12 @@ image:aiq-ks-sysdtls.png["Volumes  amp; objets"]
 ====
 
 
-=== Nœuds StorageGRID et détails de consommation
+=== Afficher les nœuds StorageGRID et la consommation
 
 .En savoir plus >>
 [%collapsible]
 ====
-Pour StorageGRID, cet onglet affiche l'utilisation logique des nœuds de l'environnement de stockage objet.
+Pour StorageGRID, cet onglet affiche l'utilisation logique des nœuds pour le stockage objet.
 
 .Étapes
 . Cliquez sur l'onglet *objets*.
@@ -270,11 +270,12 @@ image:sg-link-2.png["Fenêtre contextuelle SG"]
 ====
 
 
-== Afficher les performances des volumes ONTAP
+== Performance
 
-Vous pouvez cliquer sur l'onglet *Performance* pour afficher les détails de performances des volumes ONTAP gérés par vos abonnements Keystone.
+L'onglet *Performance* vous permet de consulter les metrics de performances des volumes ONTAP gérés par vos abonnements Keystone.
 
-Il se peut que vous ne puissiez pas accéder à cet onglet pour afficher les metrics de performances de vos volumes ONTAP. Contactez le support technique pour afficher cet onglet.
+
+TIP: Cet onglet est disponible en option. Contactez le support technique pour afficher cet onglet.
 
 .Étapes
 . Cliquez sur l'onglet *Performance*.

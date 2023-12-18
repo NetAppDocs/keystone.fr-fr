@@ -13,9 +13,8 @@ summary: 'NetApp Keystone est une offre de stockage en tant que service avec pai
 :imagesdir: ./media/
 
 
-NetApp Keystone est une gamme d'alternatives aux dépenses d'investissement (CapEx) sur site qui permet d'accélérer votre transition vers le cloud. NetApp Keystone assure une expérience fluide du cloud hybride avec des services de stockage qui s'étendent sur site et dans le cloud. Pour plus d'informations sur NetApp Keystone, voir link:https://www.netapp.com/services/subscriptions/keystone/["NetApp Keystone"]
-
-Keystone est une offre de stockage en tant que service qui propose une expérience de type cloud sur vos systèmes sur site avec une connectivité au cloud, selon vos conditions.
+NetApp Keystone est un portefeuille d'alternatives aux dépenses d'investissement (CapEx) sur site qui permet d'accélérer votre transition vers le cloud. NetApp Keystone assure une expérience fluide du cloud hybride avec des services de stockage qui s'étendent sur site et dans le cloud.
+Pour plus d'informations sur NetApp Keystone, voir link:https://www.netapp.com/services/subscriptions/keystone/["NetApp Keystone"]
 
 
 
@@ -53,4 +52,4 @@ Keystone offre de nombreux avantages :
 
 image:nkfsosm_image4.png["avantages"]
 
-Les services Keystone sont différents de l'offre de stockage en tant que service NetApp Keystone. Pour plus d'informations sur STaaS, https://docs.netapp.com/us-en/keystone-staas/index.html[Keystone NetApp Keystone STaaS].
+Les services Keystone sont différents de l'offre de stockage en tant que service NetApp Keystone. Pour plus d'informations sur NetApp Keystone STaaS, https://docs.netapp.com/us-en/keystone-staas/index.html[Keystone STaaS^].
