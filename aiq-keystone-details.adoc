@@ -93,7 +93,7 @@ L'onglet *Capacity Trend* affiche les données historiques de vos abonnements Ke
 .Étapes
 . Cliquez sur l'onglet *tendance capacité*.
 . Sélectionnez l'abonnement requis pour lequel vous souhaitez afficher les détails. Le premier abonnement dans votre nom de compte est sélectionné par défaut.
-. Sélectionnez *tendance capacité* si vous souhaitez afficher les données historiques et analyser la tendance d'utilisation de la capacité. Sélectionnez *Accrued Burst* si vous souhaitez afficher les données historiques d'utilisation en rafale et analyser l'utilisation facturée selon votre facture.
+. Sélectionnez *tendance capacité* si vous souhaitez afficher les données historiques et analyser la tendance d'utilisation de la capacité. Sélectionnez *facturé Burst cumulé* si vous souhaitez afficher les données historiques d'utilisation en rafale, pour lesquelles des factures ont été générées. Vous pouvez utiliser ces données pour analyser l'utilisation facturée selon votre facture.
 
 
 
@@ -152,15 +152,15 @@ Vous pouvez cliquer sur le bouton à bascule *Afficher l'utilisation actuelle* p
 ====
 
 
-=== Afficher l'historique des données de rafale
+=== Afficher les frais supplémentaires facturés
 
 .En savoir plus >>
 [%collapsible]
 ====
-Si vous avez sélectionné l'option *Accrued Burst*, par défaut, vous pouvez voir les données d'utilisation de la capacité supplémentaire cumulée mensuelle des 12 derniers mois. Vous pouvez effectuer une requête par période allant jusqu'à 30 mois.
+Si vous avez sélectionné l'option *facturé Burst cumulé*, par défaut, vous pouvez voir les données d'utilisation de la capacité supplémentaire cumulée mensuelle des 12 derniers mois qui ont été facturés. Vous pouvez effectuer une requête par période allant jusqu'à 30 mois. Les graphiques à barres sont affichés pour les données facturées et si l'utilisation n'a pas encore été facturée, vous voyez _Pending_ pour ce mois-ci.
 
 
-TIP: L'utilisation de capacité supplémentaire ou la capacité consommée est calculée par mois pour la période de facturation en cours. L'utilisation de capacité supplémentaire cumulée est calculée sur la base de la capacité allouée et consommée pour un niveau de service grâce à la formule suivante : `(consumed - committed)/365.25/12`.
+TIP: L'utilisation de capacité supplémentaire facturée accumulée est calculée par période de facturation en fonction de la capacité allouée et consommée pour un niveau de service.
 
 image:accr-burst.png["graphiques d'utilisation des ressources supplémentaires cumulées"]
 
